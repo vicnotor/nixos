@@ -1,4 +1,4 @@
-{ config, lib, pkgs, inputs ... }:
+{ config, lib, pkgs, inputs, ... }:
 
 with pkgs;
 let
@@ -16,7 +16,7 @@ in
   imports =
     [ 
       ./hardware-configuration.nix
-      <home-manager/nixos>
+      inputs.home-manager.nixosModules.default
     ];
 
   # Nix settings
@@ -161,11 +161,11 @@ in
 
         # Gammastep
         night = "gammastep -m wayland -P -O";
-        nighty = "gammastep -m wayland -P -O 2800";
-        nightmax = "gammastep -m wayland -P -O 1000";
-        nightlight = "gammastep -m wayland -P -O 4100";
-        nightlighter = "gammastep -m wayland -P -O 5500";
-        nightoff = "gammastep -m wayland -P -O 6500";
+        nighty = "night 2800";
+        nightmax = "night 1000";
+        nightlight = "night 4100";
+        nightlighter = "night 5500";
+        nightoff = "night 6500";
 
         # Nice ones
         H = "Hyprland";

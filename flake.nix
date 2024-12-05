@@ -13,7 +13,7 @@
   in
   {
     nixosConfigurations.nixlap = nixpkgs.lib.nixosSystem {
-      specialArgs = { inherit inputs };
+      specialArgs = { inherit inputs; };
       modules = [
         ./configuration.nix
       ];
