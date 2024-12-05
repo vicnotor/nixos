@@ -92,8 +92,11 @@ in
     extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
   };
 
-  home-manager.users.vic = { pkgs, ... }: {
-    home.stateVersion = "24.11";
+  home-manager = {
+    extraSpecialArgs = { inherit inputs; };
+    users = {
+      vic = import ./home.nix ;
+    };
   };
 
   programs = {
