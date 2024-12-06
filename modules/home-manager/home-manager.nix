@@ -2,9 +2,9 @@
   home-manager.vic = {
     extraSpecialArgs = { inherit inputs; };
     users = {
-      vic = import ../../hosts/default/home.nix;
+      vic = import ./home.nix;
       modules = [
-        ../../hosts/default/home.nix
+        ./home.nix
         inputs.self.outputs.homeManagerModules.default
       ];
     };
