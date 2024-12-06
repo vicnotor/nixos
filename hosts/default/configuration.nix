@@ -92,13 +92,6 @@ in
     extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
   };
 
-  home-manager = {
-    extraSpecialArgs = { inherit inputs; };
-    users = {
-      vic = import ./home.nix ;
-    };
-  };
-
   programs = {
     hyprland = {
       enable = true;
