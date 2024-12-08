@@ -1,29 +1,14 @@
 { config, lib, pkgs, inputs, ... }:
 
-with pkgs;
-let
-    R-with-packages = rWrapper.override{ packages = with rPackages; [
-    ggplot2
-    dplyr
-    deSolve
-    rootSolve
-    coda
-    FME
-    ]; };
-in
-
 {
   imports =
     [ 
       ./hardware-configuration.nix
-      inputs.home-manager.nixosModules.default
     ];
 
-  # Nix settings
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
 
-  # Use the systemd-boot EFI boot loader.
   boot = {
     loader.systemd-boot.enable = true;
     loader.efi.canTouchEfiVariables = true;
@@ -32,25 +17,31 @@ in
     '';
   };
 
+  hardware = {
+    graphics.enable = true;
+    nvidia.modesetting.enable = true;
+    bluetooth.enable = true;
+    bluetooth.powerOnBoot = false;
+  };
+  powerManagement.enable = true;
+
   networking = {
     hostName = "nixlap";
     networkmanager.enable = true;
     firewall = {
       enable = true;
-      allowedTCPPorts = [ 57621 ];
-      allowedUDPPorts = [ 5353 ];
+      allowedTCPPorts = [ 57621 ]; # For Spotify
+      allowedUDPPorts = [ 5353 ]; # For Spotify
     };
   };
 
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  };
+
   time.timeZone = "Europe/Amsterdam";
-
-  # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-
-  powerManagement.enable = true;
 
   # Services
   services = {
@@ -78,13 +69,12 @@ in
     };
     blueman.enable = true;
 
-    # Touchpad
+    # Other
     libinput.enable = true;
-
     openssh.enable = true;
+    printing.enable = true;
   };
   
-  # User account. Don't forget to set a password with ‘passwd’.
   users.defaultUserShell = pkgs.zsh;
   users.users.vic = {
     isNormalUser = true;
@@ -93,22 +83,12 @@ in
     initialPassword = "password";
   };
 
-  home-manager = {
-    extraSpecialArgs = { inherit inputs; };
-    users = {
-      vic = import ./home.nix;
-    };
-  };
-
   programs = {
     hyprland = {
       enable = true;
+      package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
       xwayland.enable = true;
     };
-
-    # AppImage support
-    appimage.enable = true;
-    appimage.binfmt = true;
 
     thunar = {
       enable = true;
@@ -116,6 +96,11 @@ in
         pkgs.xfce.thunar-archive-plugin
       ];
     };
+
+    # AppImage support
+    appimage.enable = true;
+    appimage.binfmt = true;
+
     zsh = {
       enable = true;
       enableCompletion = true;
@@ -191,45 +176,20 @@ in
 
   environment = {
     systemPackages = with pkgs; [
-      git
-      vim
-      neovim
-      wget
-      alacritty
-      rofi-wayland
-      google-chrome
-      (waybar.overrideAttrs (oldAttrs: {
-          mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
-        })
-      )
-      dunst
-      libnotify
-      swww
       fastfetch
-      brightnessctl
-      playerctl
-      htop
-      tmux
-      onedrive
-      networkmanagerapplet
-      pavucontrol
-      killall
-      R-with-packages
-      gcc
-      nodejs
-      ripgrep
-      unzip
-      wl-clipboard
-      fzf
       fd
-      pandoc
-      texlive.combined.scheme-full
+      fzf
+      gcc
+      git
       gnumake
-      yarn
+      htop
+      killall
+      neovim
+      ripgrep
+      tmux
+      unzip
+      wget
       zoxide
-      spotify
-      gammastep
-      whatsapp-for-linux
     ];
     sessionVariables = {
       WLR_NO_HARDWARE_CURSORS = "1";
@@ -247,37 +207,17 @@ in
       nerd-fonts.ubuntu-sans
       noto-fonts-emoji
     ];
-  
+
     fontconfig = {
       defaultFonts = {
         serif = [  "Ubuntu Nerd Font" ];
         sansSerif = [ "UbuntuSans Nerd Font" ];
         monospace = [ "UbuntuMono Nerd Font" ];
-	emoji = [ "Noto Color Emoji" ];
+        emoji = [ "Noto Color Emoji" ];
       };
     };
   };
 
-
-  hardware = {
-    graphics.enable = true;
-    nvidia.modesetting.enable = true;
-    bluetooth.enable = true;
-    bluetooth.powerOnBoot = false;
-  };
-
-  xdg.portal = {
-    enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-  };
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
   # DO NOT CHANGE!!!!!!!!!!! See https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
-  system.stateVersion = "24.11"; # Did you read the comment?
+  system.stateVersion = "24.11";
 }

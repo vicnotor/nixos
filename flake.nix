@@ -7,21 +7,29 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    hyprland.url = "github:hyprwm/Hyprland";
   };
 
-  outputs = { nixpkgs, home-manager, ... } @ inputs:
+  outputs = { nixpkgs, home-manager, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
     in
       {
-      nixosConfigurations.nixlap = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.default = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
+        inherit system;
         modules = [
           ./hosts/default/configuration.nix
-          # ./modules/nixos
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.vic = import ./hosts/default/home.nix;
+            };
+          }
         ];
       };
-      homeManagerModules.default = ./modules/home-manager;
     };
 }
