@@ -90,6 +90,14 @@ in
     isNormalUser = true;
     home = "/home/vic";
     extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
+    initialPassword = "password";
+  };
+
+  home-manager = {
+    extraSpecialArgs = { inherit inputs; };
+    users = {
+      vic = import ./home.nix;
+    };
   };
 
   programs = {
@@ -152,7 +160,7 @@ in
         syncreboot = "onedrive --sync && reboot";
         
         # NixOS
-        rebuild = "sudo nixos-rebuild switch --flake ~/Git/xxheyhey/nixos-xx";
+        rebuild = "sudo nixos-rebuild switch --flake ~/Git/xxheyhey/nixos-xx#default";
         cvim = "sudo nvim /etc/nixos/configuration.nix";
 
         # Gammastep
