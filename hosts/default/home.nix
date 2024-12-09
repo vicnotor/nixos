@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports =
@@ -35,7 +35,6 @@
       texlive.combined.scheme-full
       yarn
       spotify
-      whatsapp-for-linux
       qimgv
       wl-gammarelay-rs
       wev
@@ -46,6 +45,7 @@
       fzf
       tmux
       zoxide
+      whatsie
 
       # # You can also create simple shell scripts directly inside your
       # # configuration. For example, this adds a command 'my-hello' to your
@@ -78,4 +78,12 @@
   programs = {
     home-manager.enable = true;
   };
+  # wayland.windowManager.hyprland = {
+  #   enable = true;
+  #   xwayland.enable = true;
+  #   # ...
+  #   plugins = [
+  #     inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
+  #   ];
+  # };
 }
