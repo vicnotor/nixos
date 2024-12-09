@@ -35,9 +35,10 @@
       texlive.combined.scheme-full
       yarn
       spotify
-      gammastep
       whatsapp-for-linux
       qimgv
+      wl-gammarelay-rs
+      wev
 
       # # You can also create simple shell scripts directly inside your
       # # configuration. For example, this adds a command 'my-hello' to your
