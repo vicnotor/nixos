@@ -176,9 +176,6 @@
 
   environment = {
     systemPackages = with pkgs; [
-      fastfetch
-      fd
-      fzf
       gcc
       git
       gnumake
@@ -186,10 +183,8 @@
       killall
       neovim
       ripgrep
-      tmux
       unzip
       wget
-      zoxide
     ];
     sessionVariables = {
       WLR_NO_HARDWARE_CURSORS = "1";

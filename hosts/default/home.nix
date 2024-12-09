@@ -39,6 +39,13 @@
       qimgv
       wl-gammarelay-rs
       wev
+      xorg.xeyes
+      evince
+      fastfetch
+      fd
+      fzf
+      tmux
+      zoxide
 
       # # You can also create simple shell scripts directly inside your
       # # configuration. For example, this adds a command 'my-hello' to your
