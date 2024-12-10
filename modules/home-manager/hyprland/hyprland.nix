@@ -221,7 +221,7 @@
             "$MOD2, E, exec, $fileManager"
             "$MOD2, S, exec, spotify"
             "$MOD2, I, exec, blueman-manager"
-            "$MOD2, W, exec, whatsie"
+            "$MOD2, W, exec, zapzap"
             "$MOD2, A, exec, pavucontrol"
 
             # Commands
