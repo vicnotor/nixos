@@ -165,6 +165,7 @@
         ff = "fastfetch";
         goto = "source";
         chx = "chmod +x";
+        open = "xdg-open";
       };
       ohMyZsh = {
         enable = true;
