@@ -3,6 +3,7 @@
 {
   imports =
     [ 
+      ../../modules/home-manager/default.nix
     ];
   home = {
 
@@ -77,11 +78,5 @@
 
   programs = {
     home-manager.enable = true;
-  };
-  wayland.windowManager.hyprland = {
-    enable = true;
-    plugins = [
-      inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
-    ];
   };
 }

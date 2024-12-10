@@ -1,7 +1,7 @@
 { pkgs, lib, ... }: {
 
   imports = [
-    ./main-setup/hyprland.nix
+    ./hyprland/hyprland.nix
   ];
 
   hyprland.enable = 
