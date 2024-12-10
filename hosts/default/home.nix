@@ -46,7 +46,6 @@
       fzf
       tmux
       zoxide
-      whatsie
       zapzap
 
       # # You can also create simple shell scripts directly inside your
