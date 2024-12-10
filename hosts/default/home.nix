@@ -17,10 +17,6 @@
       alacritty
       rofi-wayland
       google-chrome
-      (waybar.overrideAttrs (oldAttrs: {
-          mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
-        })
-      )
       libnotify
       dunst
       swww

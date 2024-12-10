@@ -8,11 +8,16 @@
   config = lib.mkIf config.waybar.enable {
     programs.waybar = {
       enable = true;
-      style = builtins.readFile ~/Git/xxheyhey/nixos-xx/modules/home-manager/waybar/style.css;
+      package = (
+        pkgs.waybar.overrideAttrs (oldAttrs: {
+          mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
+        })
+      );
+      style = builtins.readFile ./style.css;
 
       settings = [{
         layer = "top";
-        margin = 0;
+        margin = "0px";
         height = 24;
         modules-left = [ "hyprland/workspaces" ];
         modules-center = [ "hyprland/window" ];
@@ -96,4 +101,5 @@
         };
       }];
     };
-  }
+  };
+}
