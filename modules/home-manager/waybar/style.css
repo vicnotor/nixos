@@ -1,0 +1,169 @@
+@import "colors.css";
+
+* {
+  font-family: "Ubuntu Nerd Font", "Helvetica Neue LT Std", sans-serif;
+  font-size: 15px;
+}
+
+window#waybar {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0px;
+  transition-property: background-color;
+  transition-duration: .5s;
+}
+
+window#waybar.empty {  
+  background-color: rgba(0, 0, 0, 0);
+}
+
+window#waybar.empty #window {
+  background-color: transparent;
+}
+
+button {
+  /* Use box-shadow instead of border so the text isn't offset */
+  box-shadow: inset 0 -3px transparent;
+  /* Avoid rounded borders under each button name */
+  border: none;
+  border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+  background: inherit;
+  box-shadow: inset 0 -3px #ffffff;
+}
+
+/* you can set a style on hover for any module like this */
+#custom-wl-gammarelay:hover,
+#pulseaudio:hover,
+#memory:hover {
+  background-color: @surface2;
+}
+
+#workspaces button {
+  padding: 0 5px;
+  background-color: transparent;
+  color: @red;
+}
+
+
+#workspaces button:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#workspaces button.focused {
+  background-color: @lavender;
+  box-shadow: inset 0 -3px #ffffff;
+}
+
+#workspaces button.active {
+  color: @green;
+  font-weight: bold;
+}
+
+#workspaces button.urgent {
+  color: @crust;
+  background-color: #eb4d4b;
+}
+
+#mode {
+  background-color: #64727D;
+  box-shadow: inset 0 -3px #ffffff;
+}
+
+#tray {
+  padding: 0 10px 0 0;
+}
+
+#pulseaudio,
+#backlight,
+#network,
+#temperature,
+#cpu,
+#memory,
+#battery,
+#clock {
+  padding: 0 6px;
+}
+
+#pulseaudio {
+  color: @maroon;
+}
+
+#custom-wl-gammarelay {
+  color: @peach;
+}
+#backlight {
+  color: @yellow;
+}
+
+#memory {
+  color: @sky;
+}
+
+#cpu {
+  color: @rosewater;
+}
+
+#battery {
+  color: @green;
+}
+
+#clock {
+  color: @flamingo;
+}
+
+#window {
+  color: @rosewater;
+}
+
+.modules-right,
+.modules-left {
+  background-color: @base;
+}
+
+.modules-right {
+  padding: 0 10px;
+  border-radius: 15px 0 0 15px;
+}
+
+.modules-left {
+  padding: 0 20px;
+  border-radius: 0 15px 15px 0;
+}
+
+.modules-center {
+  padding: 0 10px;
+  border-radius: 15px;
+}
+
+#battery.charging,
+#battery.plugged {
+  color: @sapphire;
+}
+
+@keyframes blink {
+  to {
+    color: #000000;
+  }
+}
+
+/* Using steps() instead of linear as a timing function to limit cpu usage */
+#battery.critical:not(.charging) {
+  background-color: #f53c3c;
+  color: #ffffff;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#battery.warning:not(.charging) {
+  color: @peach;
+}
+
+label:focus {
+  background-color: #000000;
+}

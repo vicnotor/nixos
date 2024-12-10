@@ -32,6 +32,7 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               users.vic = import ./hosts/default/home.nix;
+              backupFileExtension = "hmbak";
             };
           }
         ];

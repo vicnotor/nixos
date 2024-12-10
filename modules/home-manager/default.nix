@@ -1,9 +1,12 @@
 { pkgs, lib, ... }: {
 
   imports = [
-    ./hyprland/hyprland.nix
+    ./hyprland
+    ./waybar
   ];
 
   hyprland.enable = 
+    lib.mkDefault true;
+  waybar.enable = 
     lib.mkDefault true;
 }

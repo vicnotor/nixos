@@ -6,8 +6,7 @@
   };
 
   config = lib.mkIf config.hyprland.enable {
-    wayland.windowManager.hyprland =
-      {
+    wayland.windowManager.hyprland = {
         enable = true;
         # plugins = [
         #   inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
