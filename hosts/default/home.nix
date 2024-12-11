@@ -17,32 +17,33 @@
       alacritty
       rofi-wayland
       google-chrome
-      libnotify
-      dunst
-      swww
+      dunst # Notification service ( TODO: Change this to a service daemon that auto starts)
+      libnotify # Needed for dunst
+      swww # Wallpaper service
       brightnessctl
       playerctl
       onedrive
+      openssl # Needed for onedrive
       networkmanagerapplet
-      pavucontrol
+      pavucontrol # Audio controls
       R
       nodejs
       wl-clipboard
-      pandoc
+      pandoc # markdown to pdf
       texlive.combined.scheme-full
-      yarn
+      yarn # Needed for vim ( TODO: find out what for exactly)
       spotify
-      qimgv
-      wl-gammarelay-rs
-      wev
+      qimgv # Image viewer
+      wl-gammarelay-rs # Blue light filter
+      wev # xev for wayland
       xorg.xeyes
-      evince
-      fastfetch
+      evince # pdf
+      fastfetch # Neofetch
       fd
       fzf
       tmux
-      zoxide
-      zapzap
+      zoxide # better cd command (and cdi command)
+      zapzap # Whatsapp
       libreoffice
       teams-for-linux
 
