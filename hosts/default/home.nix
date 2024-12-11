@@ -73,6 +73,33 @@
     sessionVariables = {
       EDITOR = "nvim";
     };
+
+    pointerCursor = {
+      gtk.enable = true;
+      # x11.enable = true;
+      package = pkgs.bibata-cursors;
+      name = "Bibata-Modern-Classic";
+      size = 16;
+    };
+
+  };
+  gtk = {
+    enable = true;
+
+    theme = {
+      package = pkgs.rose-pine-gtk-theme;
+      name = "rose-pine";
+    };
+
+    iconTheme = {
+      package = pkgs.papirus-icon-theme;
+      name = "Papirus";
+    };
+
+    font = {
+      name = "Ubuntu Nerd Font";
+      size = 14;
+    };
   };
 
   programs = {
