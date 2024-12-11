@@ -98,7 +98,7 @@
 
     font = {
       name = "Ubuntu Nerd Font";
-      size = 14;
+      size = 11;
     };
   };
 
