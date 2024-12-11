@@ -42,10 +42,13 @@
           hide-empty-text = true;
         };
         "custom/wl-gammarelay" = {
-          format = "";
+          format = " ";
+          exec = "wl-gammarelay-rs watch {t}";
           on-scroll-up = "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n +100";
           on-scroll-down = "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n -100";
           on-click-middle = "busctl --user set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 6500";
+          tooltip = true;
+          tooltip-format = " {}K";
         };
         tray = {
           icon-size = 18;
@@ -53,8 +56,9 @@
           reverse-direction = true;
         };
         backlight = {
-          format = "{icon}  {percent}%";
+          format = "{icon} {percent}%";
           format-icons = [ "󰃞" "󰃠" ];
+          tooltip = false;
         };
         clock = {
           interval = 1;
@@ -66,23 +70,24 @@
           tooltip = false;
         };
         memory = {
-          format = "󰍛  {}%";
+          format = "󰍛 {}%";
           on-click = "alacritty -e htop";
         };
         temperature = {
           critical-threshold = 80;
-          format = "{icon}  {temperatureC}°C";
+          format = "{icon} {temperatureC}°C";
           format-icons = [ "" ];
         };
         battery = {
+          interval = 30;
           states = {
             warning = 30;
             critical = 15;
           };
           format = "{icon}  {capacity}%";
-          format-full = "  {capacity}%";
-          format-charging = "  {capacity}%";
-          format-plugged = "  {capacity}%";
+          format-full = " {capacity}%";
+          format-charging = "󱐌 {capacity}%";
+          format-plugged = " {capacity}%";
           format-alt = "{icon}  {time}";
           format-icons = [ "" "" "" "" "" ];
         };
