@@ -79,7 +79,7 @@
           format-icons = [ "" ];
         };
         battery = {
-          interval = 30;
+          interval = 10;
           states = {
             warning = 30;
             critical = 15;
