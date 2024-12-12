@@ -7,4 +7,3 @@ nm-applet --indicator &
 blueman-applet &
 wl-gammarelay-rs &
 waybar &
-hyprctl setcursor "Bibata-Modern-Classic" 16

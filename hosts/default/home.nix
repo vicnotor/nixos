@@ -46,6 +46,7 @@
       zapzap # Whatsapp
       libreoffice
       teams-for-linux
+      inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
 
       # # You can also create simple shell scripts directly inside your
       # # configuration. For example, this adds a command 'my-hello' to your
@@ -77,9 +78,9 @@
     pointerCursor = {
       gtk.enable = true;
       # x11.enable = true;
-      package = pkgs.bibata-cursors;
-      name = "Bibata-Modern-Classic";
-      size = 16;
+      package = pkgs.rose-pine-cursor;
+      name = "BreezeX-RosePine-Linux";
+      size = 20;
     };
 
   };
