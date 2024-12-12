@@ -99,10 +99,6 @@ button:hover {
   box-shadow: inset 0 -3px #ffffff;
 }
 
-#tray {
-  padding: 0 10px 0 0;
-}
-
 #pulseaudio,
 #backlight,
 #network,
@@ -112,6 +108,10 @@ button:hover {
 #battery,
 #clock {
   padding: 0 6px;
+}
+
+#tray {
+  padding: 0 10px 0 0;
 }
 
 #pulseaudio {
