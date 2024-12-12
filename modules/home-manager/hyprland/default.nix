@@ -199,17 +199,17 @@
         bind = [
           # General
           "$MOD, Q, killactive,"
-          "$MOD SHIFT, Q, uwsm stop,"
+          "$MOD SHIFT, Q, exec, uwsm stop"
           "$MOD, SPACE, togglefloating,"
           "$MOD, O, togglesplit," # dwindle
           "$MOD, f, pseudo," # dwindle
 
           # Open programs
           "$MOD, RETURN, exec, uwsm app -- $terminal"
-          "$MOD, P, exec, uwsm app -- $menu2"
+          "$MOD, P, exec, $menu2"
 
           "$MOD2, RETURN, exec, uwsm app -- $terminal"
-          "$MOD2, P, exec, uwsm app -- $menu"
+          "$MOD2, P, exec, $menu"
           "$MOD2, B, exec, uwsm app -- $browser"
           "$MOD2, E, exec, uwsm app -- $fileManager"
           "$MOD2, S, exec, uwsm app -- spotify"
