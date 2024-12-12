@@ -7,23 +7,19 @@
 
   config = lib.mkIf config.dotfiles.enable {
     home.file = {
-      # # Building this configuration will create a copy of 'dotfiles/screenrc' in
-      # # the Nix store. Activating the configuration will then make '~/.screenrc' a
-      # # symlink to the Nix store copy.
-      # ".screenrc".source = dotfiles/screenrc;
-      ".config/Thunar".source = ./Thunar;
-      ".config/alacritty".source = ./alacritty;
-      ".config/dunst".source = ./dunst;
-      ".config/htop".source = ./htop;
-      ".config/nvim".source = ./nvim;
-      ".config/onedrive".source = ./onedrive;
-      ".config/rofi".source = ./rofi;
-      ".config/tmux".source = ./tmux;
-      ".config/zsh".source = ./zsh;
-      ".config/mimeapps.list".source = ./mimeapps.list;
-      ".config/pavucontrol.ini".source = ./pavucontrol.ini;
-      ".config/user-dirs.dirs".source = ./user-dirs.dirs;
-      ".zshenv".source = ./.zshenv;
+      ".config/Thunar".source = config.lib.file.mkOutOfStoreSymlink /home/vic/Git/xxheyhey/nixos-xx/dotfiles/Thunar;
+      ".config/alacritty".source = config.lib.file.mkOutOfStoreSymlink /home/vic/Git/xxheyhey/nixos-xx/dotfiles/alacritty;
+      ".config/dunst".source = config.lib.file.mkOutOfStoreSymlink /home/vic/Git/xxheyhey/nixos-xx/dotfiles/dunst;
+      ".config/htop".source = config.lib.file.mkOutOfStoreSymlink /home/vic/Git/xxheyhey/nixos-xx/dotfiles/htop;
+      ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink /home/vic/Git/xxheyhey/nixos-xx/dotfiles/nvim;
+      ".config/onedrive".source = config.lib.file.mkOutOfStoreSymlink /home/vic/Git/xxheyhey/nixos-xx/dotfiles/onedrive;
+      ".config/rofi".source = config.lib.file.mkOutOfStoreSymlink /home/vic/Git/xxheyhey/nixos-xx/dotfiles/rofi;
+      ".config/tmux".source = config.lib.file.mkOutOfStoreSymlink /home/vic/Git/xxheyhey/nixos-xx/dotfiles/tmux;
+      ".config/zsh".source = config.lib.file.mkOutOfStoreSymlink /home/vic/Git/xxheyhey/nixos-xx/dotfiles/zsh;
+      ".config/mimeapps.list".source = config.lib.file.mkOutOfStoreSymlink /home/vic/Git/xxheyhey/nixos-xx/dotfiles/mimeapps.list;
+      ".config/pavucontrol.ini".source = config.lib.file.mkOutOfStoreSymlink /home/vic/Git/xxheyhey/nixos-xx/dotfiles/pavucontrol.ini;
+      ".config/user-dirs.dirs".source = config.lib.file.mkOutOfStoreSymlink /home/vic/Git/xxheyhey/nixos-xx/dotfiles/user-dirs.dirs;
+      ".zshenv".source = config.lib.file.mkOutOfStoreSymlink /home/vic/Git/xxheyhey/nixos-xx/dotfiles/.zshenv;
     };
   };
 }
