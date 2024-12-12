@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
-swww init &
+uwsm app -- swww init &
 swww img ~/personal/Pictures/wallpapers/dune_2_top_down.jpeg &
-dunst &
-nm-applet --indicator &
-blueman-applet &
-wl-gammarelay-rs &
-waybar &
+
+uwsm app -- dunst &
+uwsm app -- nm-applet --indicator &
+uwsm app -- blueman-applet &
+uwsm app -- wl-gammarelay-rs &
+uwsm app -- waybar &

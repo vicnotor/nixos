@@ -63,11 +63,16 @@
       # # symlink to the Nix store copy.
       # ".screenrc".source = dotfiles/screenrc;
 
-      # # You can also set the file content immediately.
-      # ".gradle/gradle.properties".text = ''
-      #   org.gradle.console=verbose
-      #   org.gradle.daemon.idletimeout=3600000
-      # '';
+      # Or set the file content immediately:
+      ".config/uwsm/env".text = ''
+          export XCURSOR_THEME,BreezeX-RosePine-Linux
+          export XCURSOR_SIZE,20
+      '';
+      ".config/uwsm/env-hyprland".text = ''
+          export HYPRCURSOR_THEME,rose-pine-hyprcursor
+          export HYPRCURSOR_SIZE,20
+          export AQ_DRM_DEVICES="/dev/dri/card2;/dev/dri/card1"
+      '';
     };
 
     # Session variables

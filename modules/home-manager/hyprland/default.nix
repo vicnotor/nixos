@@ -8,6 +8,7 @@
   config = lib.mkIf config.hyprland.enable {
     wayland.windowManager.hyprland = {
       enable = true;
+      systemd.enable = false;
       package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
 
       # plugins = [
@@ -28,26 +29,14 @@
 
         "$terminal" = "alacritty";
         "$fileManager" = "thunar";
-        "$menu" = "rofi -show drun -show-icons";
-        "$menu2" = "rofi -show run";
+        "$menu" = "rofi -show drun -show-icons -run-command 'uwsm app -- {cmd}'";
+        "$menu2" = "rofi -show run -run-command 'uwsm app -- {cmd}' ";
         "$browser" = "google-chrome-stable";
 
         #################
         ### AUTOSTART ###
         #################
         exec-once = "bash ~/Git/xxheyhey/nixos-xx/modules/home-manager/hyprland/start.sh";
-
-        #############################
-        ### ENVIRONMENT VARIABLES ###
-        #############################
-
-        # See https://wiki.hyprland.org/Configuring/Environment-variables/
-        env = [
-          "HYPRCURSOR_THEME,rose-pine-hyprcursor"
-          "HYPRCURSOR_SIZE,20"
-          "XCURSOR_THEME,BreezeX-RosePine-Linux"
-          "XCURSOR_SIZE,20"
-        ];
 
         #####################
         ### LOOK AND FEEL ###
@@ -210,22 +199,23 @@
         bind = [
           # General
           "$MOD, Q, killactive,"
-          "$MOD SHIFT, Q, exit,"
+          "$MOD SHIFT, Q, uwsm stop,"
           "$MOD, SPACE, togglefloating,"
           "$MOD, O, togglesplit," # dwindle
           "$MOD, f, pseudo," # dwindle
 
           # Open programs
-          "$MOD, RETURN, exec, $terminal"
-          "$MOD, P, exec, $menu2"
-          "$MOD2, RETURN, exec, $terminal"
-          "$MOD2, P, exec, $menu"
-          "$MOD2, B, exec, $browser"
-          "$MOD2, E, exec, $fileManager"
-          "$MOD2, S, exec, spotify"
-          "$MOD2, I, exec, blueman-manager"
-          "$MOD2, W, exec, zapzap"
-          "$MOD2, A, exec, pavucontrol"
+          "$MOD, RETURN, exec, uwsm app -- $terminal"
+          "$MOD, P, exec, uwsm app -- $menu2"
+
+          "$MOD2, RETURN, exec, uwsm app -- $terminal"
+          "$MOD2, P, exec, uwsm app -- $menu"
+          "$MOD2, B, exec, uwsm app -- $browser"
+          "$MOD2, E, exec, uwsm app -- $fileManager"
+          "$MOD2, S, exec, uwsm app -- spotify"
+          "$MOD2, I, exec, uwsm app -- blueman-manager"
+          "$MOD2, W, exec, uwsm app -- zapzap"
+          "$MOD2, A, exec, uwsm app -- pavucontrol"
 
           # Commands
           "$MOD, End, exec, busctl --user set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 6500"
