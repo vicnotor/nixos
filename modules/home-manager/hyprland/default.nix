@@ -169,6 +169,7 @@
 
         cursor = {
           no_warps = true;
+          inactive_timeout = 10;
         };
 
         # https://wiki.hyprland.org/Configuring/Variables/#gestures
