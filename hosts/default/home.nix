@@ -46,7 +46,6 @@
       zapzap # Whatsapp
       libreoffice
       teams-for-linux
-      inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
 
       # # You can also create simple shell scripts directly inside your
       # # configuration. For example, this adds a command 'my-hello' to your
@@ -67,14 +66,10 @@
       ".config/uwsm/env".text = ''
           export XCURSOR_THEME,BreezeX-RosePine-Linux
           export XCURSOR_SIZE,20
+          # export AQ_DRM_DEVICES="/dev/dri/card2;/dev/dri/card1"
           if [ -d "$HOME/personal/bin" ] ; then
             export PATH="$HOME/personal/bin:$PATH"
           fi
-      '';
-      ".config/uwsm/env-hyprland".text = ''
-          export HYPRCURSOR_THEME,rose-pine-hyprcursor
-          export HYPRCURSOR_SIZE,20
-          # export AQ_DRM_DEVICES="/dev/dri/card2;/dev/dri/card1"
       '';
     };
 
