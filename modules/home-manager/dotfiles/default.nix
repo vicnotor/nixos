@@ -23,6 +23,7 @@
       ".config/mimeapps.list".source = ./mimeapps.list;
       ".config/pavucontrol.ini".source = ./pavucontrol.ini;
       ".config/user-dirs.dirs".source = ./user-dirs.dirs;
+      ".zshenv".source = ./.zshenv";
     };
   };
 }
