@@ -1,2 +1,5 @@
 **/*.bak
 **/*.zcompdump*
+**/*items.sqlite3
+**/*refresh_token
+**/*lazy-lock.json
