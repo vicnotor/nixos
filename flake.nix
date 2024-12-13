@@ -25,7 +25,16 @@
         inherit system;
         modules = [
           ./hosts/default/configuration.nix
-          ./hosts/default/home-manager.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              extraSpecialArgs = specialArgs;
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.vic = import ./hosts/default/home.nix;
+              backupFileExtension = "hmbak";
+            };
+          }
         ];
       };
       homeManagerModules = import ./modules/home-manager { inherit inputs; };
