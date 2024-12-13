@@ -36,7 +36,10 @@
         #################
         ### AUTOSTART ###
         #################
-        exec-once = "bash ~/Git/xxheyhey/nixos-xx/modules/home-manager/hyprland/start.sh";
+        exec-once = [
+          "bash ~/Git/xxheyhey/nixos-xx/modules/home-manager/hyprland/start.sh"
+          "[workspace special] alacritty --title scratchpad"
+        ];
 
         #####################
         ### LOOK AND FEEL ###
@@ -237,8 +240,8 @@
           "$MOD SHIFT, J, movewindow, d"
 
           # # Example special workspace (scratchpad)
-          # bind = $MOD, S, togglespecialworkspace, magic
-          # bind = $MOD SHIFT, S, movetoworkspace, special:magic
+          "$MOD, grave, togglespecialworkspace,"
+          "$MOD SHIFT, grave, movetoworkspace, special"
 
           # Scroll through existing workspaces with MOD + scroll
           "$MOD, mouse_down, workspace, e+1"
@@ -297,11 +300,14 @@
         # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
         # See https://wiki.hyprland.org/Configuring/Workspace-Rules/ for workspace rules
 
-        windowrule = "opacity 0.88, ^(Alacritty)$";
+        windowrule = [
+          "opacity 0.88, ^(Alacritty)$"
+          "float, title:^(scratchpad)$"
+        ];
         # windowrule = input.touchpad.scroll_factor 1.0, ^(Alacritty)$
 
-        # Ignore maximize requests from apps. You'll probably like this.
         windowrulev2 = [
+          # Ignore maximize requests from apps. You'll probably like this.
           "suppressevent maximize, class:.*"
 
           # Fix some dragging issues with XWayland
@@ -314,7 +320,7 @@
         #     columns = 3;
         #     gap_size = 5;
         #     bg_col = "rgb(111111)";
-        #     workspace_method = "center current"; # [center/first] [workspace] e.g. first 1 or center m+1
+        #     workspace_method = "first 1"; # [center/first] [workspace] e.g. first 1 or center m+1
         #
         #     enable_gesture = false; # laptop touchpad
         #     gesture_fingers = 3;  # 3 or 4
