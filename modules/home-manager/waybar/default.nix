@@ -88,7 +88,6 @@
           format-full = " {capacity}%";
           format-charging = "󱐌 {capacity}%";
           format-plugged = " {capacity}%";
-          format-alt = "{icon}  {time}";
           format-icons = [ "" "" "" "" "" ];
         };
         pulseaudio = {
