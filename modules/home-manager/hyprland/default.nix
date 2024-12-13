@@ -38,7 +38,6 @@
         #################
         exec-once = [
           "bash ~/Git/xxheyhey/nixos-xx/modules/home-manager/hyprland/start.sh"
-          "[workspace special] alacritty --title scratchpad"
         ];
 
         #####################
@@ -239,9 +238,8 @@
           "$MOD SHIFT, K, movewindow, u"
           "$MOD SHIFT, J, movewindow, d"
 
-          # # Example special workspace (scratchpad)
-          "$MOD, grave, togglespecialworkspace,"
-          "$MOD SHIFT, grave, movetoworkspace, special"
+          # Special scratchpad workspace 
+          "$MOD, grave, togglespecialworkspace, scratchpad"
 
           # Scroll through existing workspaces with MOD + scroll
           "$MOD, mouse_down, workspace, e+1"
@@ -302,7 +300,6 @@
 
         windowrule = [
           "opacity 0.88, ^(Alacritty)$"
-          "float, title:^(scratchpad)$"
         ];
         # windowrule = input.touchpad.scroll_factor 1.0, ^(Alacritty)$
 
@@ -312,6 +309,15 @@
 
           # Fix some dragging issues with XWayland
           "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
+
+          # Special workspace rules
+          "float, onworkspace:special:scratchpad"
+          "bordersize 4, onworkspace:special:scratchpad"
+          "size 900 700, onworkspace:special:scratchpad"
+        ];
+
+        workspace = [
+          "special:scratchpad, on-created-empty:uwsm app -- $terminal"
         ];
 
         # Plugins
