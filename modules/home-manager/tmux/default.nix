@@ -9,17 +9,20 @@
     programs.tmux = {
       enable = true;
       shell = "${pkgs.zsh}/bin/zsh";
-      terminal = "tmux-256color";
-      escapeTime = 1;
       shortcut = "a";
       baseIndex = 1;
       mouse = true;
-      historyLimit = 5000;
       keyMode = "vi";
       clock24 = true;
       disableConfirmationPrompt = true;
 
       plugins = with pkgs; [
+        {
+          plugin = tmuxPlugins.sensible;
+          extraConfig = ''
+            set -g @plugin 'tmux-plugins/tmux-sensible'
+          '';
+        }
         {
           plugin = tmuxPlugins.resurrect;
           extraConfig = ''
@@ -38,6 +41,10 @@
         extraConfig = ''
         set -ga terminal-overrides ",screen-256color*:Tc" # Colors stuff
         set-option -sg set-titles # Title in DWM bar
+
+        # These must exist
+        bind C-a send-prefix
+        bind a last-window
 
         # Copying and pasting in tmux
         bind -T copy-mode-vi v send-keys -X begin-selection
@@ -75,10 +82,6 @@
 
         # Undercurl support
         set-option -ga terminal-features ",alacritty:usstyle"
-
-        # Neovim wants this
-        set-option -g focus-events on
-
 
         # vim-tmux-navigator
         # Smart pane switching with awareness of Vim splits.
