@@ -11,13 +11,10 @@
       iconTheme = {
         name = "Papirus";
         package = pkgs.papirus-icon-theme;
-        size = "32x32";
+        size = "16x16";
       };
       settings = {
         global = {
-          width = 300;
-          height = 300;
-          offset = "30x50";
           origin = "top-right";
           transparency = 10;
           font = "Ubuntu Nerd Font";
