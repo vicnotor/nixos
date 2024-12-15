@@ -11,9 +11,6 @@
       enableCompletion = true;
       autocd = true;
       dotDir = ".config/zsh";
-      history = {
-        path = ".config/zsh/.zsh_history";
-      };
       initExtra = ''
         # Keybindings
         bindkey -s ^f "tmux-sessionizer\n"

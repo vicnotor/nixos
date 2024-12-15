@@ -5,6 +5,7 @@
     ./waybar
     ./dotfiles
     ./zsh
+    ./tmux
   ];
 
   hyprland.enable = 
@@ -14,5 +15,7 @@
   dotfiles.enable = 
     lib.mkDefault true;
   zsh.enable = 
+    lib.mkDefault true;
+  tmux.enable = 
     lib.mkDefault true;
 }

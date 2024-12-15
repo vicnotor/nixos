@@ -41,7 +41,6 @@
       fastfetch # Neofetch
       fd
       fzf
-      tmux
       zapzap # Whatsapp
       libreoffice
       teams-for-linux
