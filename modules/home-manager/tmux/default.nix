@@ -18,7 +18,6 @@
       keyMode = "vi";
       clock24 = true;
       disableConfirmationPrompt = true;
-      newSession = true;
 
       plugins = with pkgs; [
         {
@@ -27,7 +26,14 @@
             set -g @plugin 'tmux-plugins/tmux-resurrect'
           '';
         }
-      ]
+        {
+          plugin = tmuxPlugins.continuum;
+          extraConfig = ''
+            set -g @plugin 'tmux-plugins/tmux-continuum'
+            set -g @continuum-save-interval '5'
+          '';
+        }
+      ];
 
         extraConfig = ''
         set -ga terminal-overrides ",screen-256color*:Tc" # Colors stuff
