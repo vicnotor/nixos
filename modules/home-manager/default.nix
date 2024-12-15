@@ -6,6 +6,7 @@
     ./dotfiles
     ./zsh
     ./tmux
+    ./dunst
   ];
 
   hyprland.enable = 
@@ -17,5 +18,7 @@
   zsh.enable = 
     lib.mkDefault true;
   tmux.enable = 
+    lib.mkDefault true;
+  dunst.enable = 
     lib.mkDefault true;
 }

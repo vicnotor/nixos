@@ -73,6 +73,10 @@
     };
     blueman.enable = true;
 
+    # Thunar
+    gvfs.enable = true; # Mount, trash, and other functionalities
+    tumbler.enable = true; # Thumbnail support for images
+
     # Other
     libinput.enable = true;
     openssh.enable = true;
@@ -107,8 +111,8 @@
 
     thunar = {
       enable = true;
-      plugins = [
-        pkgs.xfce.thunar-archive-plugin
+      plugins = with pkgs.xfce; [
+        thunar-archive-plugin
       ];
     };
 
