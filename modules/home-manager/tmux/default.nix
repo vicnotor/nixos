@@ -10,7 +10,7 @@
       enable = true;
       shell = "${pkgs.zsh}/bin/zsh";
       terminal = "tmux-256color";
-      escapeTime = 1000;
+      escapeTime = 1;
       shortcut = "a";
       baseIndex = 1;
       mouse = true;
@@ -20,7 +20,16 @@
       disableConfirmationPrompt = true;
       newSession = true;
 
-      extraConfig = ''
+      plugins = with pkgs; [
+        {
+          plugin = tmuxPlugins.resurrect;
+          extraConfig = ''
+            set -g @plugin 'tmux-plugins/tmux-resurrect'
+          '';
+        }
+      ]
+
+        extraConfig = ''
         set -ga terminal-overrides ",screen-256color*:Tc" # Colors stuff
         set-option -sg set-titles # Title in DWM bar
 

@@ -31,6 +31,8 @@
 
         # Nobody need flow control anymore.
         setopt noflowcontrol
+
+        cd . # tmux-sessionizer fix that fixes the current dir not showing in the prompt
       '';
       oh-my-zsh = {
         enable = true;
