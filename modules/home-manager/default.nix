@@ -4,6 +4,7 @@
     ./hyprland
     ./waybar
     ./dotfiles
+    ./zsh
   ];
 
   hyprland.enable = 
@@ -11,5 +12,7 @@
   waybar.enable = 
     lib.mkDefault true;
   dotfiles.enable = 
+    lib.mkDefault true;
+  zsh.enable = 
     lib.mkDefault true;
 }

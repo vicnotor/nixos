@@ -42,7 +42,6 @@
       fd
       fzf
       tmux
-      zoxide # better cd command (and cdi command)
       zapzap # Whatsapp
       libreoffice
       teams-for-linux

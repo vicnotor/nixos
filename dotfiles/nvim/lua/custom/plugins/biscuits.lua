@@ -4,7 +4,7 @@ return {
 		opts = {
 			default_config = {
 				min_distance = 15,
-				prefix_string = " 👁  ",
+				prefix_string = "",
 			},
 			cursor_line_only = true,
 			language_config = {

@@ -178,9 +178,11 @@
         off = "poweroff";
         browser = "google-chrome";
         ff = "fastfetch";
+        nf = "fastfetch";
         goto = "source";
         chx = "chmod +x";
         open = "xdg-open";
+        py = "python";
       };
       ohMyZsh = {
         enable = true;
@@ -190,6 +192,13 @@
     };
   };
 
+  # virtualisation
+  virtualisation.podman = {
+    enable = true;
+    dockerCompat = true;
+  };
+
+  # Env
   environment = {
     systemPackages = with pkgs; [
       gcc
@@ -201,11 +210,13 @@
       ripgrep
       unzip
       wget
+      distrobox
     ];
     sessionVariables = {
       WLR_NO_HARDWARE_CURSORS = "1";
       NIXOS_OZONE_WL = "1";
     };
+    pathsToLink = [ "/share/zsh" ];
   };
 
   #----=[ Fonts ]=----#
