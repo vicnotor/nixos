@@ -17,7 +17,7 @@
         global = {
           origin = "top-right";
           transparency = 10;
-          font = "Ubuntu Nerd Font";
+          font = "Ubuntu Nerd Font 11";
         };
 
         urgency_low = {

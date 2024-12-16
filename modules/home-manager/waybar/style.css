@@ -1,4 +1,5 @@
 /* Colors */
+@define-color white #fff0e0;
 @define-color rosewater #f4dbd6;
 @define-color flamingo #f0c6c6;
 @define-color pink #f5bde6;
@@ -90,7 +91,7 @@ button:hover {
 }
 
 #workspaces button.urgent {
-  color: @crust;
+  color: @white;
   background-color: #eb4d4b;
 }
 
@@ -139,7 +140,7 @@ button:hover {
 }
 
 #clock {
-  color: @flamingo;
+  color: @rosewater;
 }
 
 #window {
@@ -180,7 +181,7 @@ button:hover {
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
   background-color: #f53c3c;
-  color: #fff0e0;
+  color: @white;
   animation-name: blink;
   animation-duration: 2s;
   animation-timing-function: steps(12);

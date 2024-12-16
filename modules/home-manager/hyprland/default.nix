@@ -126,7 +126,7 @@
 
         # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
         dwindle = {
-          pseudotile = true; # Master switch for pseudotiling. Enabling is bound to MOD + P in the keybinds section below
+          pseudotile = true; # Master switch for pseudotiling. Bound to MOD + f.
           preserve_split = true; # You probably want this
           force_split = 2;
         };
@@ -263,8 +263,8 @@
 
         bindl = [
           # Laptop multimedia keys for volume and LCD brightness
-          ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-          ",XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+          ",XF86AudioMute, exec, changeVolume mute"
+          ",XF86AudioMicMute, exec, changeVolume mute"
 
           # Requires playerctl
           ", XF86AudioNext, exec, playerctl next"
@@ -279,8 +279,8 @@
           "$MOD SHIFT, Next, exec, busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n -100"
 
           # Laptop multimedia keys for volume and LCD brightness
-          ",XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+"
-          ",XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-"
+          ",XF86AudioRaiseVolume, exec, changeVolume 2%+"
+          ",XF86AudioLowerVolume, exec, changeVolume 2%-"
           ",XF86MonBrightnessUp, exec, brightnessctl s 400+"
           ",XF86MonBrightnessDown, exec, brightnessctl s 400-"
         ];
