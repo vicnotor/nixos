@@ -20,7 +20,7 @@
       pkgs = nixpkgs.legacyPackages.${system};
     in
       {
-      nixosConfigurations.default = nixpkgs.lib.nixosSystem rec {
+      nixosConfigurations.default = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         inherit system;
         modules = [
@@ -28,7 +28,7 @@
           home-manager.nixosModules.home-manager
           {
             home-manager = {
-              extraSpecialArgs = specialArgs;
+              extraSpecialArgs = { inherit inputs; };
               useGlobalPkgs = true;
               useUserPackages = true;
               users.vic = import ./hosts/default/home.nix;
