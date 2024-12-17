@@ -8,6 +8,7 @@
     ./tmux
     ./dunst
     ./alacritty
+    ./htop
   ];
 
   hyprland.enable = 
@@ -23,5 +24,7 @@
   dunst.enable = 
     lib.mkDefault true;
   alacritty.enable = 
+    lib.mkDefault true;
+  htop.enable = 
     lib.mkDefault true;
 }
