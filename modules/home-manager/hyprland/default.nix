@@ -275,8 +275,8 @@
 
         bindel = [
           # Commands
-          "$MOD SHIFT, Prior, exec, busctl --user call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n 100"
-          "$MOD SHIFT, Next, exec, busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n -100"
+          "$MOD, Prior, exec, busctl --user call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n 100"
+          "$MOD, Next, exec, busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n -100"
 
           # Laptop multimedia keys for volume and LCD brightness
           ",XF86AudioRaiseVolume, exec, changeVolume 2%+"

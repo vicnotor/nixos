@@ -18,6 +18,7 @@
           origin = "top-right";
           transparency = 10;
           font = "Ubuntu Nerd Font 11";
+          timeout = 5000;
         };
 
         urgency_low = {

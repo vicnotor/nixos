@@ -17,8 +17,6 @@
       alacritty
       rofi-wayland
       google-chrome
-      # dunst # Notification service ( TODO: Change this to a service daemon that auto starts)
-      libnotify # Needed for dunst
       swww # Wallpaper service
       brightnessctl
       playerctl

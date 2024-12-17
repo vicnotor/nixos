@@ -7,6 +7,7 @@
     ./zsh
     ./tmux
     ./dunst
+    ./alacritty
   ];
 
   hyprland.enable = 
@@ -20,5 +21,7 @@
   tmux.enable = 
     lib.mkDefault true;
   dunst.enable = 
+    lib.mkDefault true;
+  alacritty.enable = 
     lib.mkDefault true;
 }
