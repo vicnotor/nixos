@@ -4,7 +4,6 @@ local set = vim.keymap.set
 set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 set({ "n", "v" }, "<CR>", "<Nop>", { silent = true })
 set({ "n", "v", "i" }, "◆", "<C-i>", { silent = true })
-set({ "n", "v", "i" }, "✗", "<C-i>", { silent = true })
 
 -- Diagnostics
 set("n", "[d", function()

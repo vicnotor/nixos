@@ -70,6 +70,10 @@
             export PATH="$HOME/personal/bin:$PATH"
           fi
       '';
+      ".config/onedrive/config".text = ''
+        sync_dir="~/personal"
+        skip_dir=".git"
+      '';
     };
 
     # Session variables

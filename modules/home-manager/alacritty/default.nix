@@ -73,32 +73,32 @@
             action = "ToggleViMode";
           }
           {
-            chars = "\u2717";
+            chars = "✗";
             key = "Return";
             mods = "Control";
           }
           {
-            chars = "\u2713";
+            chars = "✓";
             key = "Return";
             mods = "Control|Shift";
           }
           {
-            chars = "\u25C6";
+            chars = "◆";
             key = "I";
             mods = "Control";
           }
           {
-            chars = "\u25B6";
+            chars = "▶";
             key = "M";
             mods = "Control";
           }
           {
-            chars = "\u2605";
+            chars = "★";
             key = ",";
             mods = "Control";
           }
           {
-            chars = "\u25CF";
+            chars = "●";
             key = "H";
             mods = "Control|Shift";
           }
