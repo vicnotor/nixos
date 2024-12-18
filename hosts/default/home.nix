@@ -74,6 +74,9 @@
         sync_dir="~/personal"
         skip_dir=".git"
       '';
+      ".config/rofi/config.rasi".text = ''
+        @theme "${pkgs.rofi-wayland}/share/rofi/themes/arthur.rasi"
+      '';
     };
 
     # Session variables
