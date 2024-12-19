@@ -300,6 +300,7 @@
 
         windowrule = [
           "opacity 0.88, ^(Alacritty)$"
+          "scrollmouse 1.2, ^(ZapZap)$"
         ];
         # windowrule = input.touchpad.scroll_factor 1.0, ^(Alacritty)$
 
