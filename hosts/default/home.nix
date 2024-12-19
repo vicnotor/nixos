@@ -44,6 +44,7 @@
       obs-studio
       mpv # Video player
       alejandra # Nix formatting
+      nixd # Nix lsp
 
       # Languages
       nodejs

@@ -53,7 +53,7 @@ return {
 			null_ls.setup({
 				sources = {
 					null_ls.builtins.formatting.gdformat,
-          null_ls.builtins.formatting.alejandra,
+          -- null_ls.builtins.formatting.alejandra,
 				},
 			})
 		end,
