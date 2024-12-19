@@ -3,20 +3,19 @@
   imports = [
     ./hyprland
     ./waybar
-    ./dotfiles
+    ./extraDotfiles
     ./zsh
     ./tmux
     ./dunst
     ./alacritty
     ./htop
-    ./nixvim
   ];
 
   hyprland.enable = 
     lib.mkDefault true;
   waybar.enable = 
     lib.mkDefault true;
-  dotfiles.enable = 
+  extraDotfiles.enable = 
     lib.mkDefault true;
   zsh.enable = 
     lib.mkDefault true;
@@ -27,7 +26,5 @@
   alacritty.enable = 
     lib.mkDefault true;
   htop.enable = 
-    lib.mkDefault true;
-  nixvim.enable = 
     lib.mkDefault true;
 }
