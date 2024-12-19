@@ -89,17 +89,17 @@ return {
 			--  the `settings` field of the server config. You must look up that documentation yourself.
 			--
 			--  If you want to override the default filetypes that your language server will attach to you can
-			--  define the property 'filetypes' to the map in question.
-			local servers = {
-				-- clangd = {},
-				--             		python = {
-				--             		    analysis = {
-				--             		        diagnosticSeverityOverrides = {
-				--             			reportUnusedVariable = false,
-				--             		    	},
-				--             	            },
-				--             		},
-				-- ts_ls = {},
+      --  define the property 'filetypes' to the map in question.
+      local servers = {
+        -- clangd = {},
+        -- pyright = {
+        --   analysis = {
+        --     diagnosticSeverityOverrides = {
+        --       reportUnusedVariable = false,
+        --     },
+        --   },
+        -- },
+        -- ts_ls = {},
 				-- html = { filetypes = { "html", "twig", "hbs" } },
 				-- lua_ls = {
 				-- 	Lua = {
@@ -123,14 +123,14 @@ return {
 				-- 		"ocaml.cram",
 				-- 	},
 				-- },
-				-- hls = {
-				--     haskell = {
-				-- 	plugin = {
-				-- 	    rename = { config = { crossModule = true } },
-				-- 	},
-				--     },
-				-- },
-			}
+        -- hls = {
+        --   haskell = {
+        --     plugin = {
+        --       rename = { config = { crossModule = true } },
+        --     },
+        --   },
+        -- },
+      }
 
 			-- Setup neovim lua configuration
 			require("neodev").setup()
