@@ -10,7 +10,10 @@ return {
 			local null_ls = require("null-ls")
 
 			require("mason-null-ls").setup({
-				ensure_installed = {},
+				ensure_installed = {
+          "stylua",
+          "mdformat"
+        },
 				-- Will automatically install masons tools based on selected sources in `null-ls`.
 				-- Example: `automatic_installation = { exclude = { "rust_analyzer", "solargraph" } }`
 				automatic_installation = false,

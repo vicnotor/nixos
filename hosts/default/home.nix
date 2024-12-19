@@ -24,11 +24,8 @@
       openssl # Needed for onedrive
       networkmanagerapplet
       pavucontrol # Audio controls
-      R
-      nodejs
       wl-clipboard
       pandoc # markdown to pdf
-      yarn # Needed for vim ( TODO: find out what for exactly)
       spotify
       qimgv # Image viewer
       wl-gammarelay-rs # Blue light filter
@@ -44,7 +41,13 @@
       thunderbird-latest # Mail client
       obs-studio
       mpv # Video player
-      pandoc
+
+      # Languages
+      nodejs
+      python312
+      python312Packages.m2crypto # Needed for Python SSL support
+      R
+      yarn # Needed for vim ( TODO: find out what for exactly)
 
       # # You can also create simple shell scripts directly inside your
       # # configuration. For example, this adds a command 'my-hello' to your

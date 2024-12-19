@@ -127,6 +127,12 @@
     appimage.binfmt = true;
 
     zsh.enable = true;
+    nix-ld = {
+      enable = true;
+      libraries = with pkgs; [
+        icu # Needed for marksman
+      ];
+    };
   };
 
   # virtualisation
