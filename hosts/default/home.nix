@@ -28,7 +28,6 @@
       nodejs
       wl-clipboard
       pandoc # markdown to pdf
-      texlive.combined.scheme-full
       yarn # Needed for vim ( TODO: find out what for exactly)
       spotify
       qimgv # Image viewer
