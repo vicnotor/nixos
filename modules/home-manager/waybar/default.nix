@@ -1,4 +1,4 @@
-{ pkgs, lib, config, ... }: {
+{ pkgs, lib, config, inputs, ... }: {
 
   options = {
     waybar.enable = 
@@ -9,7 +9,8 @@
     programs.waybar = {
       enable = true;
       package = (
-        pkgs.waybar.overrideAttrs (oldAttrs: {
+      inputs.waybar.packages.${pkgs.stdenv.hostPlatform.system}.waybar.overrideAttrs
+        (oldAttrs: {
           mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
         })
       );
