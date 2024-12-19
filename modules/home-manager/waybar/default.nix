@@ -2,7 +2,7 @@
 
   options = {
     waybar.enable = 
-      lib.mkEnableOption "enables hyprland module";
+      lib.mkEnableOption "enables waybar module";
   };
 
   config = lib.mkIf config.waybar.enable {

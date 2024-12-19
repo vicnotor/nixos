@@ -2,7 +2,7 @@
 
   options = {
     tmux.enable = 
-      lib.mkEnableOption "enables zsh module";
+      lib.mkEnableOption "enables tmux module";
   };
 
   config = lib.mkIf config.tmux.enable {

@@ -9,6 +9,7 @@
     ./dunst
     ./alacritty
     ./htop
+    ./nixvim
   ];
 
   hyprland.enable = 
@@ -26,5 +27,7 @@
   alacritty.enable = 
     lib.mkDefault true;
   htop.enable = 
+    lib.mkDefault true;
+  nixvim.enable = 
     lib.mkDefault true;
 }

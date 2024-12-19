@@ -2,7 +2,7 @@
 
   options = {
     dunst.enable = 
-      lib.mkEnableOption "enables zsh module";
+      lib.mkEnableOption "enables dunst module";
   };
 
   config = lib.mkIf config.dunst.enable {

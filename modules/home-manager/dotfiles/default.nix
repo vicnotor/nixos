@@ -2,7 +2,7 @@
 
   options = {
     dotfiles.enable = 
-      lib.mkEnableOption "enables importing of all dotfiles";
+      lib.mkEnableOption "enables importing of all temporary dotfiles";
   };
 
   config = lib.mkIf config.dotfiles.enable {
