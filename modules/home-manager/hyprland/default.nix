@@ -1,7 +1,12 @@
-{ pkgs, lib, config, inputs, ... }: {
-
+{
+  pkgs,
+  lib,
+  config,
+  inputs,
+  ...
+}: {
   options = {
-    hyprland.enable = 
+    hyprland.enable =
       lib.mkEnableOption "enables hyprland module";
   };
 
@@ -17,7 +22,6 @@
 
       # Actual Hyprland config
       settings = {
-
         # See https://wiki.hyprland.org/Configuring/Monitors/
         monitor = ",preferred,auto,auto";
 
@@ -142,7 +146,6 @@
           disable_splash_rendering = true;
         };
 
-
         #############
         ### INPUT ###
         #############
@@ -199,65 +202,67 @@
         "$MOD" = "ALT";
         "$MOD2" = "SUPER";
 
-        bind = [
-          # General
-          "$MOD, Q, killactive,"
-          "$MOD SHIFT, Q, exec, uwsm stop"
-          "$MOD, SPACE, togglefloating,"
-          "$MOD, O, togglesplit," # dwindle
-          "$MOD, f, pseudo," # dwindle
+        bind =
+          [
+            # General
+            "$MOD, Q, killactive,"
+            "$MOD SHIFT, Q, exec, uwsm stop"
+            "$MOD, SPACE, togglefloating,"
+            "$MOD, O, togglesplit," # dwindle
+            "$MOD, f, pseudo," # dwindle
 
-          # Open programs
-          "$MOD, RETURN, exec, uwsm app -- $terminal"
-          "$MOD, P, exec, $menu2"
+            # Open programs
+            "$MOD, RETURN, exec, uwsm app -- $terminal"
+            "$MOD, P, exec, $menu2"
 
-          "$MOD2, RETURN, exec, uwsm app -- $terminal"
-          "$MOD2, P, exec, $menu"
-          "$MOD2, B, exec, uwsm app -- $browser"
-          "$MOD2, E, exec, uwsm app -- $fileManager"
-          "$MOD2, S, exec, uwsm app -- spotify"
-          "$MOD2, I, exec, uwsm app -- blueman-manager"
-          "$MOD2, W, exec, uwsm app -- zapzap"
-          "$MOD2, A, exec, uwsm app -- pavucontrol"
-          "$MOD2, M, exec, uwsm app -- thunderbird"
+            "$MOD2, RETURN, exec, uwsm app -- $terminal"
+            "$MOD2, P, exec, $menu"
+            "$MOD2, B, exec, uwsm app -- $browser"
+            "$MOD2, E, exec, uwsm app -- $fileManager"
+            "$MOD2, S, exec, uwsm app -- spotify"
+            "$MOD2, I, exec, uwsm app -- blueman-manager"
+            "$MOD2, W, exec, uwsm app -- zapzap"
+            "$MOD2, A, exec, uwsm app -- pavucontrol"
+            "$MOD2, M, exec, uwsm app -- thunderbird"
 
-          # Commands
-          "$MOD, End, exec, busctl --user set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 6500"
-          "$MOD, B, exec, pkill -SIGUSR1 waybar"
-          "$MOD SHIFT, B, exec, pkill -SIGUSR2 waybar"
+            # Commands
+            "$MOD, End, exec, busctl --user set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 6500"
+            "$MOD, B, exec, pkill -SIGUSR1 waybar"
+            "$MOD SHIFT, B, exec, pkill -SIGUSR2 waybar"
 
-          # Move focus with MOD + arrow keys
-          "$MOD, H, movefocus, l"
-          "$MOD, L, movefocus, r"
-          "$MOD, K, movefocus, u"
-          "$MOD, J, movefocus, d"
+            # Move focus with MOD + arrow keys
+            "$MOD, H, movefocus, l"
+            "$MOD, L, movefocus, r"
+            "$MOD, K, movefocus, u"
+            "$MOD, J, movefocus, d"
 
-          # Move windows
-          "$MOD SHIFT, H, movewindow, l"
-          "$MOD SHIFT, L, movewindow, r"
-          "$MOD SHIFT, K, movewindow, u"
-          "$MOD SHIFT, J, movewindow, d"
+            # Move windows
+            "$MOD SHIFT, H, movewindow, l"
+            "$MOD SHIFT, L, movewindow, r"
+            "$MOD SHIFT, K, movewindow, u"
+            "$MOD SHIFT, J, movewindow, d"
 
-          # Special scratchpad workspace 
-          "$MOD, grave, togglespecialworkspace, scratchpad"
+            # Special scratchpad workspace
+            "$MOD, grave, togglespecialworkspace, scratchpad"
 
-          # Scroll through existing workspaces with MOD + scroll
-          "$MOD, mouse_down, workspace, e+1"
-          "$MOD, mouse_up, workspace, e-1"
+            # Scroll through existing workspaces with MOD + scroll
+            "$MOD, mouse_down, workspace, e+1"
+            "$MOD, mouse_up, workspace, e-1"
 
-          # Hyprexpo
-          # "$MOD2, 0, hyprexpo:expo, toggle" # can be: toggle, off/disable or on/enable
-        ]
+            # Hyprexpo
+            # "$MOD2, 0, hyprexpo:expo, toggle" # can be: toggle, off/disable or on/enable
+          ]
           ++ (
             # workspaces
             # binds $mod + [shift +] {1..10} to [move to] workspace {1..10}
-            builtins.concatLists (builtins.genList (i:
-              let ws = i + 1;
-              in [
-                "$MOD, code:1${toString i}, workspace, ${toString ws}"
-                "$MOD SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
-              ]
-            )
+            builtins.concatLists (builtins.genList (
+                i: let
+                  ws = i + 1;
+                in [
+                  "$MOD, code:1${toString i}, workspace, ${toString ws}"
+                  "$MOD SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
+                ]
+              )
               10)
           );
 
@@ -337,7 +342,6 @@
         #   };
         # };
       };
-
     };
   };
 }

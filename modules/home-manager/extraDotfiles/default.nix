@@ -1,7 +1,11 @@
-{ pkgs, lib, config, ... }: {
-
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}: {
   options = {
-    extraDotfiles.enable = 
+    extraDotfiles.enable =
       lib.mkEnableOption "enables importing of all temporary dotfiles";
   };
 

@@ -1,5 +1,8 @@
-{ pkgs, lib, ... }: {
-
+{
+  pkgs,
+  lib,
+  ...
+}: {
   imports = [
     ./hyprland
     ./waybar
@@ -11,20 +14,20 @@
     ./htop
   ];
 
-  hyprland.enable = 
+  hyprland.enable =
     lib.mkDefault true;
-  waybar.enable = 
+  waybar.enable =
     lib.mkDefault true;
-  extraDotfiles.enable = 
+  extraDotfiles.enable =
     lib.mkDefault true;
-  zsh.enable = 
+  zsh.enable =
     lib.mkDefault true;
-  tmux.enable = 
+  tmux.enable =
     lib.mkDefault true;
-  dunst.enable = 
+  dunst.enable =
     lib.mkDefault true;
-  alacritty.enable = 
+  alacritty.enable =
     lib.mkDefault true;
-  htop.enable = 
+  htop.enable =
     lib.mkDefault true;
 }

@@ -1,7 +1,11 @@
-{ pkgs, lib, config, ... }: {
-
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}: {
   options = {
-    dunst.enable = 
+    dunst.enable =
       lib.mkEnableOption "enables dunst module";
   };
 
@@ -18,7 +22,6 @@
           origin = "top-right";
           transparency = 10;
           font = "Ubuntu Nerd Font 11";
-          timeout = 5000;
         };
 
         urgency_low = {

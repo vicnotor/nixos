@@ -1,7 +1,11 @@
-{ pkgs, lib, config, ... }: {
-
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}: {
   options = {
-    zsh.enable = 
+    zsh.enable =
       lib.mkEnableOption "enables zsh module";
   };
 
@@ -37,7 +41,7 @@
       oh-my-zsh = {
         enable = true;
         plugins = [
-          "git" 
+          "git"
           "sudo"
         ];
         theme = "robbyrussell";

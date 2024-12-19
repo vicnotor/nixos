@@ -1,13 +1,16 @@
-{ config, lib, pkgs, inputs, ... }:
-
 {
-  imports =
-    [ 
-      ./hardware-configuration.nix
-    ];
+  config,
+  lib,
+  pkgs,
+  inputs,
+  ...
+}: {
+  imports = [
+    ./hardware-configuration.nix
+  ];
 
   nix.settings = {
-    experimental-features = [ "nix-command" "flakes" ];
+    experimental-features = ["nix-command" "flakes"];
     substituters = [
       "https://hyprland.cachix.org"
       "https://nix-community.cachix.org"
@@ -40,14 +43,14 @@
     networkmanager.enable = true;
     firewall = {
       enable = true;
-      allowedTCPPorts = [ 57621 ]; # For Spotify
-      allowedUDPPorts = [ 5353 ]; # For Spotify
+      allowedTCPPorts = [57621]; # For Spotify
+      allowedUDPPorts = [5353]; # For Spotify
     };
   };
 
   xdg.portal = {
     enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    extraPortals = [pkgs.xdg-desktop-portal-gtk];
   };
 
   time.timeZone = "Europe/Amsterdam";
@@ -60,12 +63,12 @@
     auto-cpufreq.enable = true;
     auto-cpufreq.settings = {
       battery = {
-	      governor = "powersave";
-	      turbo = "never";
-            };
+        governor = "powersave";
+        turbo = "never";
+      };
       charger = {
-	      governor = "performance";
-	      turbo = "auto";
+        governor = "performance";
+        turbo = "auto";
       };
     };
 
@@ -88,12 +91,12 @@
     openssh.enable = true;
     printing.enable = true;
   };
-  
+
   users.defaultUserShell = pkgs.zsh;
   users.users.vic = {
     isNormalUser = true;
     home = "/home/vic";
-    extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
+    extraGroups = ["wheel" "networkmanager"]; # Enable ‘sudo’ for the user.
     initialPassword = "password";
   };
 
@@ -110,7 +113,7 @@
     };
     hyprland = {
       enable = true;
-      withUWSM  = true;
+      withUWSM = true;
       package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
       portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
     };
@@ -159,13 +162,13 @@
       WLR_NO_HARDWARE_CURSORS = "1";
       NIXOS_OZONE_WL = "1";
     };
-    pathsToLink = [ "/share/zsh" ];
+    pathsToLink = ["/share/zsh"];
   };
 
   #----=[ Fonts ]=----#
   fonts = {
     enableDefaultPackages = true;
-    packages = with pkgs; [ 
+    packages = with pkgs; [
       helvetica-neue-lt-std
       nerd-fonts.ubuntu
       nerd-fonts.ubuntu-mono
@@ -175,10 +178,10 @@
 
     fontconfig = {
       defaultFonts = {
-        serif = [  "Ubuntu Nerd Font" ];
-        sansSerif = [ "UbuntuSans Nerd Font" ];
-        monospace = [ "UbuntuMono Nerd Font" ];
-        emoji = [ "Noto Color Emoji" ];
+        serif = ["Ubuntu Nerd Font"];
+        sansSerif = ["UbuntuSans Nerd Font"];
+        monospace = ["UbuntuMono Nerd Font"];
+        emoji = ["Noto Color Emoji"];
       };
     };
   };

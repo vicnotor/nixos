@@ -1,7 +1,11 @@
-{ pkgs, lib, config, ... }: {
-
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}: {
   options = {
-    tmux.enable = 
+    tmux.enable =
       lib.mkEnableOption "enables tmux module";
   };
 
@@ -38,7 +42,7 @@
         }
       ];
 
-        extraConfig = ''
+      extraConfig = ''
         set -ga terminal-overrides ",screen-256color*:Tc" # Colors stuff
         set-option -sg set-titles # Title in DWM bar
 

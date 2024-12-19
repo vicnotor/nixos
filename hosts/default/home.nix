@@ -1,12 +1,13 @@
-{ config, pkgs, inputs, ... }:
-
 {
-  imports =
-    [ 
-      ../../modules/home-manager/default.nix
-    ];
+  config,
+  pkgs,
+  inputs,
+  ...
+}: {
+  imports = [
+    ../../modules/home-manager/default.nix
+  ];
   home = {
-
     # Home Manager stuff
     username = "vic";
     homeDirectory = "/home/vic";
@@ -26,6 +27,7 @@
       pavucontrol # Audio controls
       wl-clipboard
       pandoc # markdown to pdf
+      texlive.combined.scheme-small # Needed for pandoc
       spotify
       qimgv # Image viewer
       wl-gammarelay-rs # Blue light filter
@@ -41,6 +43,7 @@
       thunderbird-latest # Mail client
       obs-studio
       mpv # Video player
+      alejandra # Nix formatting
 
       # Languages
       nodejs
@@ -66,12 +69,12 @@
 
       # Or set the file content immediately:
       ".config/uwsm/env".text = ''
-          export XCURSOR_THEME,BreezeX-RosePine-Linux
-          export XCURSOR_SIZE,20
-          # export AQ_DRM_DEVICES="/dev/dri/card2;/dev/dri/card1"
-          if [ -d "$HOME/personal/bin" ] ; then
-            export PATH="$HOME/personal/bin:$PATH"
-          fi
+        export XCURSOR_THEME,BreezeX-RosePine-Linux
+        export XCURSOR_SIZE,20
+        # export AQ_DRM_DEVICES="/dev/dri/card2;/dev/dri/card1"
+        if [ -d "$HOME/personal/bin" ] ; then
+          export PATH="$HOME/personal/bin:$PATH"
+        fi
       '';
       ".config/onedrive/config".text = ''
         sync_dir="~/personal"
@@ -94,7 +97,6 @@
       name = "BreezeX-RosePine-Linux";
       size = 20;
     };
-
   };
   gtk = {
     enable = true;

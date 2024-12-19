@@ -1,7 +1,11 @@
-{ pkgs, lib, config, ... }: {
-
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}: {
   options = {
-    alacritty.enable = 
+    alacritty.enable =
       lib.mkEnableOption "enables alacritty module";
   };
 
