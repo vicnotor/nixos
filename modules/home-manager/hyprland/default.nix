@@ -249,6 +249,9 @@
             "$MOD, mouse_down, workspace, e+1"
             "$MOD, mouse_up, workspace, e-1"
 
+            # Screenshot
+            ", Print, exec, screenshot"
+
             # Hyprexpo
             # "$MOD2, 0, hyprexpo:expo, toggle" # can be: toggle, off/disable or on/enable
           ]

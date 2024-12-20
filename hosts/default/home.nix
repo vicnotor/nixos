@@ -45,6 +45,8 @@
       mpv # Video player
       alejandra # Nix formatting
       nixd # Nix lsp
+      grim # screenshot tool
+      slurp # select part of screen for screenshot
 
       # Languages
       nodejs
