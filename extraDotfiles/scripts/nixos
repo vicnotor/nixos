@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+sudo mount /dev/disk/by-label/nixos ~/mounts/nixos
+
+cd ~/mounts/nixos/home/vic

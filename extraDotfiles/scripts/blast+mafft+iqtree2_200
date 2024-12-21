@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+
+# Script for BLASTing, aligning and making a phylogenetic tree with a .fasta file that contains one or more Russula DNA sequences.
+# This script requires the following third-party packages:
+# 	NCBI's BLAST+ package (check their website)
+#	seqkit
+#	mafft
+#	iqtree2
+
+
+# Take a user .fasta file that contains one or more sequences as argument:
+input=$1
+
+# blastn with NCBI's BLAST+ package (with the Russula_FAN_referentie database) and make a .fasta file that contains a list of the BLAST output sequences with headers (max. 200):
+blastn -query $input -db Russula_FAN_referentie -outfmt "6 sallseqid" -out uniekbestand.fasta -max_target_seqs 200
+blastdbcmd -entry_batch uniekbestand.fasta -db Russula_FAN_referentie -out BLAST_$input
+
+# Replace all spaces in the headers with "_":
+sed -e 's/ /_/g' BLAST_$input > halffixed_BLAST_$input
+
+# Remove all duplicate sequences (and headers):
+seqkit rmdup -s < halffixed_BLAST_$input > fixed_BLAST_$input
+
+# Concatenate the input sequence(s) and the two Lactifluus root sequences to the BLAST output file:
+cat fixed_BLAST_$input $input /home/vic/Documents/mycologie/databasedocs/FAN_root_seqs_Lactifluus.fasta > BLAST+root+query_$input
+
+# L-INS-i alignment:
+mafft --adjustdirection --localpair --maxiterate 1000 "BLAST+root+query_$input" > "Alignment_$input"
+
+# Phylogenetic tree generation with iqtree2:
+iqtree2 -s Alignment_$input -m TEST --prefix Boom_$input --mrate I,G4,G5,G6,G7,G8 -mfreq E,F,FQ,FO -B 5000 -alrt 5000 --keep-ident -T AUTO --redo
+
+# Delete all unnecessary files:
+rm uniekbestand.fasta
+rm BLAST_$input
+rm fixed_BLAST_$input
+rm halffixed_BLAST_$input
+rm Boom_$input.bionj
+rm Boom_$input.ckp.gz
+rm Boom_$input.contree
+rm Boom_$input.iqtree
+rm Boom_$input.log
+rm Boom_$input.mldist
+rm Boom_$input.model.gz
+rm Boom_$input.splits.nex
+rm Boom_$input.parstree

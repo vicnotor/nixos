@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+command=$1
+input=$2
+
+"$command" "$input" > /dev/null 2>&1 &

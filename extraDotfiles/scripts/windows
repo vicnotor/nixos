@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+sudo mount /dev/disk/by-label/Acer ~/mounts/windows
+
+cd ~/mounts/windows/Users/victe/

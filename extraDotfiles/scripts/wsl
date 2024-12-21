@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+mkdir -p ~/mounts/wsl
+
+sudo dpkg-statoverride --add --update root root 0644 /boot/vmlinuz-$(uname -r)
+
+guestmount --add ~/mounts/windows/Users/victe/AppData/Local/Packages/CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc/LocalState/ext4.vhdx --inspector --ro ~/mounts/wsl
+
+
+cd ~/mounts/wsl/home/vic/

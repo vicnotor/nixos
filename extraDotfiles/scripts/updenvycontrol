@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+sudo echo -n
+
+if [ -d ~/Git/web/envycontrol ]; then
+    cd ~/Git/web/envycontrol
+    git pull
+else
+    git clone https://github.com/bayasdev/envycontrol.git ~/Git/web/envycontrol
+    cd ~/Git/web/envycontrol
+fi
+
+sudo pip install . --break-system-packages

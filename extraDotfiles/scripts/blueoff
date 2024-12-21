@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+sudo bluetoothctl power off
+
+sudo rfkill block bluetooth

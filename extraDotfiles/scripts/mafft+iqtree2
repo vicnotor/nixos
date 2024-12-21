@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+# Custom script for L-INS-i alignment and iqtree2.
+
+# Take a user .fasta file that contains one or more sequences as argument:
+input=$1
+
+# L-INS-i alignment:
+mafft --adjustdirection --localpair --maxiterate 1000 "$input" > "Alignment_$input"
+
+# Phylogenetic tree generation with iqtree2:
+iqtree2 -s Alignment_$input -m TEST --prefix Boom_$input --mrate I,G4,G5,G6,G7,G8 -mfreq E,F,FQ,FO -B 5000 -alrt 5000 --keep-ident -T AUTO --redo
+
+
+rm Boom_$input.bionj
+rm Boom_$input.ckp.gz
+rm Boom_$input.contree
+rm Boom_$input.iqtree
+rm Boom_$input.log
+rm Boom_$input.mldist
+rm Boom_$input.model.gz
+rm Boom_$input.splits.nex
+rm Boom_$input.parstree

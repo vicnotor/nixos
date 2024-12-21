@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+name="home"
+directory="$HOME"
+output="/dev/null"
+
+debug() {
+    echo "$@" &>"$output"
+}
+
+no_tmux() {
+    [[ -z $TMUX ]]
+}
+
+has_session() {
+    tmux has-session -t "$1" &>/dev/null
+}
+
+new_session() {
+    tmux new-session -s "$1" -c "$2"
+}
+
+new_session_uwsm() {
+    uwsm app -- tmux new-session -s "$1" -c "$2"
+}
+
+
+if no_tmux; then
+    if has_session $name; then
+        debug "Attach to tmux session $name"
+        tmux attach-session -t $name
+    else
+        debug "Create new session $name"
+        new_session_uwsm $name $directory
+    fi
+else
+    if ! has_session $name; then
+        debug "Tmux active. Create new session $name"
+        new_session $name $directory -d
+    fi
+    debug "Switch to tmux session $name"
+    tmux switch-client -t $name
+fi

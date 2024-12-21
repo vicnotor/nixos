@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+sudo echo -n
+
+if [ -d ~/Git/web/picom ]; then
+    cd ~/Git/web/picom
+    git pull
+else
+    git clone https://github.com/yshui/picom.git ~/Git/web/picom
+    cd ~/Git/web/picom
+fi
+
+sudo rm -r build
+meson setup --buildtype=release -Dregex=false build
+ninja -C build
+sudo ninja -C build install

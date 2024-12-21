@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+# Script for BLASTing, aligning and making a phylogenetic tree with a .fasta file that contains one or more DNA sequences.
+# This script requires the following third-party packages:
+# 	NCBI's BLAST+ package (check their website)
+#	seqkit
+#	mafft
+
+
+# Take a user .fasta file that contains one or more sequences as first argument:
+input=$1
+# Take the name of the database as second argument:
+database=$2
+# Take one or more root sequences in one .fasta file as third argument:
+root=$3
+
+# remote blastn with NCBI's BLAST+ package and make a .fasta file that contains a list of the BLAST output sequences with headers (max. 100):
+blastn -query $input -db $database -remote -outfmt "6 sallseqid" -out uniekbestand.fasta -max_target_seqs 100
+blastdbcmd -entry_batch uniekbestand.fasta -remote -db $database -out BLAST_$input
+
+# Replace all spaces in the headers with "_":
+sed -e 's/ /_/g' BLAST_$input > halffixed_BLAST_$input
+
+# Remove all duplicate sequences (and headers):
+seqkit rmdup -s < halffixed_BLAST_$input > fixed_BLAST_$input
+
+# Concatenate the input sequence(s) and root sequence(s) (if given) to the BLAST output file:
+cat $input $root >  query+rootseq.fasta
+if [[ -z "$root" ]];then
+        cat fixed_BLAST_$input query+rootseq.fasta > BLAST+query_$input
+else
+        cat fixed_BLAST_$input query+rootseq.fasta > BLAST+root+query_$input
+fi
+
+# L-INS-i alignment:
+mafft --adjustdirection --localpair --maxiterate 1000 "BLAST+root+query_$input" > "Alignment_$input"
+
+# Delete all unnecessary files:
+rm uniekbestand.fasta
+rm query+rootseq.fasta
+rm BLAST_$input
+rm fixed_BLAST_$input
+rm halffixed_BLAST_$input

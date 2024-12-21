@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+sudo mount /dev/disk/by-label/SATA ~/mounts/sata
+
+cd ~/mounts/sata

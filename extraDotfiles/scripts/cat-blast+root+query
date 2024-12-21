@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+
+# Script for fixing the headers and getting rid of duplicates in a blast output file and concatenating that file with root and query sequences.
+
+
+$1=blastfile
+$2=root
+$3=query
+
+# Concatenate the input sequence(s) and root sequence(s) to the BLAST output file:
+cat $blastfile $root $query > unfixed_list.fasta
+
+# Replace all spaces in the headers with "_":
+sed -e 's/ /_/g' unfixed_list.fasta > halffixed_list.fasta
+
+# Remove all duplicate sequences (and headers):
+seqkit rmdup -s < halffixed_list.fasta > BLAST+root+query_$query
+
+# Delete all unnecessary files:
+rm unfixed_list.fasta
+rm halffixed_list.fasta
+
+

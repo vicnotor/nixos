@@ -70,9 +70,6 @@
         export XCURSOR_THEME,BreezeX-RosePine-Linux
         export XCURSOR_SIZE,20
         # export AQ_DRM_DEVICES="/dev/dri/card2;/dev/dri/card1"
-        if [ -d "$HOME/personal/bin" ] ; then
-          export PATH="$HOME/personal/bin:$PATH"
-        fi
       '';
       ".config/onedrive/config".text = ''
         sync_dir="~/personal"

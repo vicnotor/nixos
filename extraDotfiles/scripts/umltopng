@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+input=$1
+output=$2
+
+java -jar "$HOME"/.local/bin/plantuml -pipe < "$input" > "$output" && open "$output"

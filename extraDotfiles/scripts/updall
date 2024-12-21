@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+sudo echo -n
+
+printf "apt upgrade\n\n"
+
+sudo apt update
+sudo apt upgrade -y
+sudo apt dist-upgrade -y
+sudo apt full-upgrade -y
+
+printf "\nNeovim upgrade\n\n"
+updvim # Neovim
+printf "\nOCaml upgrade\n\n"
+updocaml # OCaml/Opam
+printf "\nRust upgrade\n\n"
+updrust # Rust
+printf "\nAlacritty upgrade\n\n"
+updalacritty # Alacritty
+printf "\nEnvycontrol upgrade\n\n"
+updenvycontrol # Enycontrol
+printf "\nOvolctl upgrade\n\n"
+updvolctl # volctl
+printf "\nPicom upgrade\n\n"
+updpicom # Picom
+printf "\nAnaconda upgrade\n\n"
+conda update --all # Anaconda
+printf "\nGHCup upgrade\n\n"
+ghcup upgrade # Haskell GHCup update
+printf "\nCabal upgrade\n\n"
+cabal update # Update Cabal index (Haskell lib installer)
+
+# General cleaning
+printf "\napt cleaning\n\n"
+sudo apt autoremove -y
+sudo apt clean
+sudo apt autoclean -y
+
+printf "\nYou should run 'omz update' to update Oh My Zsh\n"
+printf "\nCheck for a newer LocalSend version: https://github.com/localsend/localsend\n"
+printf "\nCheck for a newer Nvidia driver: at https://www.nvidia.com/en-us/drivers/\n"
+printf "current version:"
+nvidia-persistenced --version | grep "version" | sed 's/.*version \([0-9.]*\)/\1/'

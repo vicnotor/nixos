@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+sudo echo -n
+
+if [ -d ~/Git/web/volctl ]; then
+    cd ~/Git/web/volctl
+    git pull
+else
+    git clone git clone https://github.com/buzz/volctl.git ~/Git/web/volctl
+    cd ~/Git/web/volctl
+fi
+
+sudo python3 ./setup.py install
+sudo cp ./data/apps.volctl.gschema.xml /usr/share/glib-2.0/schemas/apps.volctl.gschema.xml
+sudo update-desktop-database
+sudo glib-compile-schemas /usr/share/glib-2.0/schemas/

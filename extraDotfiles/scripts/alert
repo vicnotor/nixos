@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+pw-play ~/personal/Documents/sounds/wrong-answer-129254.mp3 &

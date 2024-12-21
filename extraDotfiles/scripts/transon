@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# Change picom transparency
+sed -i 's/100/88/g' ~/.config/picom/picom.conf

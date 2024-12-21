@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+current=$(brightnessctl g)
+max=$(brightnessctl m)
+percentage=$(( (current * 100) / max ))
+
+echo "$percentage"

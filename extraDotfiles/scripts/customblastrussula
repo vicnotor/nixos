@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+# Script for remote BLASTing Russula sequences and outputting a .fasta file with BLAST output sequences, the user sequence(s) and the root sequence(s) (if given), all with correct headers.
+# This script requires the following third-party packages:
+# 	NCBI's BLAST+ package (check their website)
+#	seqkit
+
+# Take a user .fasta file that contains one or more sequences as argument:
+input=$1
+
+# blastn with NCBI's BLAST+ package (with the Russula_FAN_referentie database) and make a .fasta file that contains a list of the BLAST output sequences with headers (max. 100):
+blastn -query $input -db Russula_FAN_referentie -outfmt "6 sallseqid" -out uniekbestand.fasta -max_target_seqs 100
+blastdbcmd -entry_batch uniekbestand.fasta -db Russula_FAN_referentie -out BLAST_$input
+
+# Replace all spaces in the headers with "_":
+sed -e 's/ /_/g' BLAST_$input > halffixed_BLAST_$input
+
+# Remove all duplicate sequences (and headers):
+seqkit rmdup -s < halffixed_BLAST_$input > fixed_BLAST_$input
+
+# Concatenate the input sequence(s) and the two Lactifluus root sequences to the BLAST output file:
+cat fixed_BLAST_$input $input /home/vic/Documents/mycologie/databasedocs/FAN_root_seqs_Lactifluus.fasta > BLAST+root+query_$input
+
+# Delete all unnecessary files:
+rm uniekbestand.fasta
+rm BLAST_$input
+rm fixed_BLAST_$input
+rm halffixed_BLAST_$input
