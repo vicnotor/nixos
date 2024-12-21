@@ -164,6 +164,7 @@
       NIXOS_OZONE_WL = "1";
     };
     pathsToLink = ["/share/zsh"];
+    localBinInPath = true;
   };
 
   #----=[ Fonts ]=----#

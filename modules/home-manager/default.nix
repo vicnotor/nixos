@@ -8,6 +8,7 @@
     ./dunst
     ./alacritty
     ./htop
+    ./scripts
   ];
 
   hyprland.enable =
@@ -25,5 +26,7 @@
   alacritty.enable =
     lib.mkDefault true;
   htop.enable =
+    lib.mkDefault true;
+  scripts.enable =
     lib.mkDefault true;
 }

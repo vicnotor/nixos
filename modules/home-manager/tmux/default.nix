@@ -46,10 +46,6 @@
         set -ga terminal-overrides ",screen-256color*:Tc" # Colors stuff
         set-option -sg set-titles # Title in DWM bar
 
-        # These must exist
-        bind C-a send-prefix
-        bind a last-window
-
         # Copying and pasting in tmux
         bind -T copy-mode-vi v send-keys -X begin-selection
         bind -T copy-mode-vi y send-keys -X copy-pipe-and-cancel 'xclip -in -selection clipboard'
