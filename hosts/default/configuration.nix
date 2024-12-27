@@ -31,21 +31,34 @@
     extraModprobeConfig = ''
       options snd_hda_intel power_save=0
     '';
-
-    # Recommended by nixos-hardware (see https://github.com/NixOS/nixos-hardware/blob/master/common/pc/default.nix)
-    blacklistedKernelModules = lib.optionals (!config.hardware.enableRedistributableFirmware) [
-      "ath3k"
-    ];
   };
 
   hardware = {
+    bluetooth.enable = true;
+    bluetooth.powerOnBoot = false;
+
     graphics = {
       enable = true;
       enable32Bit = true;
     };
-    nvidia.modesetting.enable = true;
-    bluetooth.enable = true;
-    bluetooth.powerOnBoot = false;
+    nvidia = {
+      modesetting.enable = true;
+      powerManagement = {
+        enable = true;
+        finegrained = true;
+      };
+      open = true;
+      nvidiaSettings = true;
+      package = config.boot.kernelPackages.nvidiaPackages.beta;
+      prime = {
+        offload = {
+          enable = true;
+          enableOffloadCmd = true;
+        };
+        intelBusId = "PCI:0:2:0";
+        nvidiaBusId = "PCI:1:0:0";
+      };
+    };
   };
   powerManagement.enable = true;
 
@@ -215,6 +228,22 @@
         Restart = "on-failure";
         RestartSec = 1;
         TimeoutStopSec = 10;
+      };
+    };
+  };
+
+  specialisation = {
+    # Nvidia sync specialisation
+    nvidia-sync.configuration = {
+      system.nixos.tags = ["nvidia-sync"];
+      hardware.nvidia = {
+        prime = {
+          offload = {
+            enable = lib.mkForce false;
+            enableOffloadCmd = lib.mkForce false;
+          };
+          sync.enable = lib.mkForce true;
+        };
       };
     };
   };
