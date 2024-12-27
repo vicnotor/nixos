@@ -27,19 +27,6 @@
             set -g @plugin 'tmux-plugins/tmux-sensible'
           '';
         }
-        {
-          plugin = tmuxPlugins.resurrect;
-          extraConfig = ''
-            set -g @plugin 'tmux-plugins/tmux-resurrect'
-          '';
-        }
-        {
-          plugin = tmuxPlugins.continuum;
-          extraConfig = ''
-            set -g @plugin 'tmux-plugins/tmux-continuum'
-            set -g @continuum-save-interval '5'
-          '';
-        }
       ];
 
       extraConfig = ''
