@@ -11,16 +11,18 @@
 
   config = lib.mkIf config.miscModule.enable {
     # Session variables
-    sessionVariables = {
-      EDITOR = "nvim";
-    };
+    home = {
+      sessionVariables = {
+        EDITOR = "nvim";
+      };
 
-    pointerCursor = {
-      gtk.enable = true;
-      # x11.enable = true;
-      package = pkgs.rose-pine-cursor;
-      name = "BreezeX-RosePine-Linux";
-      size = 20;
+      pointerCursor = {
+        gtk.enable = true;
+        # x11.enable = true;
+        package = pkgs.rose-pine-cursor;
+        name = "BreezeX-RosePine-Linux";
+        size = 20;
+      };
     };
   };
 }
