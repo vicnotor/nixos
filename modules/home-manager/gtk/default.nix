@@ -5,11 +5,11 @@
   ...
 }: {
   options = {
-    gtk.enable =
+    gtkModule.enable =
       lib.mkEnableOption "enables gtk config module";
   };
 
-  config = lib.mkIf config.gtk.enable {
+  config = lib.mkIf config.gtkModule.enable {
     gtk = {
       enable = true;
 

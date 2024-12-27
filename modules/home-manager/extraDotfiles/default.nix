@@ -5,11 +5,11 @@
   ...
 }: {
   options = {
-    extraDotfiles.enable =
+    extraDotfilesModule.enable =
       lib.mkEnableOption "enables importing of all extraa little dotfiles";
   };
 
-  config = lib.mkIf config.extraDotfiles.enable {
+  config = lib.mkIf config.extraDotfilesModule.enable {
     home.file = {
       # Setting file contents immediately:
       ".config/uwsm/env".text = ''

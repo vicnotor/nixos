@@ -6,11 +6,11 @@
   ...
 }: {
   options = {
-    hyprland.enable =
+    hyprlandModule.enable =
       lib.mkEnableOption "enables hyprland module";
   };
 
-  config = lib.mkIf config.hyprland.enable {
+  config = lib.mkIf config.hyprlandModule.enable {
     wayland.windowManager.hyprland = {
       enable = true;
       systemd.enable = false;

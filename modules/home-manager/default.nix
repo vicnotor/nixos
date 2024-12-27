@@ -18,26 +18,26 @@
     ./gtk
   ];
 
-  hyprland.enable =
+  hyprlandModule.enable =
     lib.mkDefault true;
-  waybar.enable =
+  waybarModule.enable =
     lib.mkDefault true;
-  extraDotfiles.enable =
+  extraDotfilesModule.enable =
     lib.mkDefault true;
-  zsh.enable =
+  zshModule.enable =
     lib.mkDefault true;
-  tmux.enable =
+  tmuxModule.enable =
     lib.mkDefault true;
-  dunst.enable =
+  dunstModule.enable =
     lib.mkDefault true;
-  alacritty.enable =
+  alacrittyModule.enable =
     lib.mkDefault true;
-  htop.enable =
+  htopModule.enable =
     lib.mkDefault true;
-  scripts.enable =
+  scriptsModule.enable =
     lib.mkDefault true;
-  nvim.enable =
+  nvimModule.enable =
     lib.mkDefault true;
-  gtk.enable =
+  gtkModule.enable =
     lib.mkDefault true;
 }

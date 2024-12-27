@@ -5,11 +5,11 @@
   ...
 }: {
   options = {
-    tmux.enable =
+    tmuxModule.enable =
       lib.mkEnableOption "enables tmux module";
   };
 
-  config = lib.mkIf config.tmux.enable {
+  config = lib.mkIf config.tmuxModule.enable {
     programs.tmux = {
       enable = true;
       shell = "${pkgs.zsh}/bin/zsh";

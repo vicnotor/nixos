@@ -6,11 +6,11 @@
   ...
 }: {
   options = {
-    waybar.enable =
+    waybarModule.enable =
       lib.mkEnableOption "enables waybar module";
   };
 
-  config = lib.mkIf config.waybar.enable {
+  config = lib.mkIf config.waybarModule.enable {
     programs.waybar = {
       enable = true;
       package = (

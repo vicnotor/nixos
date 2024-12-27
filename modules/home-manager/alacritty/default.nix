@@ -4,11 +4,11 @@
   ...
 }: {
   options = {
-    alacritty.enable =
+    alacrittyModule.enable =
       lib.mkEnableOption "enables alacritty module";
   };
 
-  config = lib.mkIf config.alacritty.enable {
+  config = lib.mkIf config.alacrittyModule.enable {
     programs.alacritty = {
       enable = true;
       settings = {

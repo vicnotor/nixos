@@ -5,11 +5,11 @@
   ...
 }: {
   options = {
-    misc.enable =
+    miscModule.enable =
       lib.mkEnableOption "enables module with all miscellaneous home-manager stuff";
   };
 
-  config = lib.mkIf config.misc.enable {
+  config = lib.mkIf config.miscModule.enable {
     # Session variables
     sessionVariables = {
       EDITOR = "nvim";

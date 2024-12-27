@@ -5,11 +5,11 @@
   ...
 }: {
   options = {
-    dunst.enable =
+    dunstModule.enable =
       lib.mkEnableOption "enables dunst module";
   };
 
-  config = lib.mkIf config.dunst.enable {
+  config = lib.mkIf config.dunstModule.enable {
     services.dunst = {
       enable = true;
       iconTheme = {

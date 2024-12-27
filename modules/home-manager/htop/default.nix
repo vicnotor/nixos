@@ -4,11 +4,11 @@
   ...
 }: {
   options = {
-    htop.enable =
+    htopModule.enable =
       lib.mkEnableOption "enables htop module";
   };
 
-  config = lib.mkIf config.htop.enable {
+  config = lib.mkIf config.htopModule.enable {
     programs.htop = {
       enable = true;
       settings =
