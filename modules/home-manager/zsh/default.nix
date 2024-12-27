@@ -116,8 +116,7 @@
         syncreboot = "onedrive --sync && reboot";
 
         # NixOS
-        rebuild = "sudo nixos-rebuild switch --flake ~/Git/xxheyhey/nixos-xx#default";
-        cvim = "sudo nvim /etc/nixos/configuration.nix";
+        rebuild = "sudo nixos-rebuild switch --flake ~/Git/xxheyhey/nixos-xx#nixlap";
 
         # Pandoc
         mdtopdf = "pandoc --from=markdown --to=pdf -o pdf.pdf";

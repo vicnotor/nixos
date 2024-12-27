@@ -29,24 +29,26 @@
   } @ inputs: let
     system = "x86_64-linux";
   in {
-    nixosConfigurations.default = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs;};
-      inherit system;
-      modules = [
-        ./hosts/default/configuration.nix
-        home-manager.nixosModules.home-manager
-        {
-          home-manager = {
-            extraSpecialArgs = {inherit inputs;};
-            useGlobalPkgs = true;
-            useUserPackages = true;
-            users.vic = import ./hosts/default/home.nix;
-            backupFileExtension = "hmbak";
-          };
-        }
-      ];
+    nixosConfigurations = {
+      nixlap = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs;};
+        inherit system;
+        modules = [
+          ./hosts/default/configuration.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              extraSpecialArgs = {inherit inputs;};
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.vic = import ./hosts/default/home.nix;
+              backupFileExtension = "hmbak";
+            };
+          }
+        ];
+      };
+      homeManagerModules = import ./modules/home-manager {inherit inputs;};
+      nixosModules = import ./modules/nixos {inherit inputs;};
     };
-    homeManagerModules = import ./modules/home-manager {inherit inputs;};
-    nixosModules = import ./modules/nixos {inherit inputs;};
   };
 }
