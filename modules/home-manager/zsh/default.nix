@@ -145,6 +145,7 @@
         thu = "silent thunar .";
         cabalclean = "rm -r dist-newstyle";
         R = "R --no-save --quiet";
+        pf = "fd --type f | fzf | xargs nvim";
       };
     };
   };

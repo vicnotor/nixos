@@ -224,6 +224,7 @@
             "$MOD2, W, exec, uwsm app -- zapzap"
             "$MOD2, A, exec, uwsm app -- pavucontrol"
             "$MOD2, M, exec, uwsm app -- thunderbird"
+            "$MOD2, C, exec, uwsm app -- hyprpicker --autocopy"
 
             # Commands
             "$MOD, End, exec, busctl --user set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 6500"

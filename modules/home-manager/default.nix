@@ -1,5 +1,10 @@
 {lib, ...}: {
   imports = [
+    # Always enabled
+    ./home-manager
+    ./packages
+
+    # Toggleable (see below)
     ./hyprland
     ./waybar
     ./extraDotfiles
@@ -9,6 +14,8 @@
     ./alacritty
     ./htop
     ./scripts
+    ./nvim
+    ./gtk
   ];
 
   hyprland.enable =
@@ -28,5 +35,9 @@
   htop.enable =
     lib.mkDefault true;
   scripts.enable =
+    lib.mkDefault true;
+  nvim.enable =
+    lib.mkDefault true;
+  gtk.enable =
     lib.mkDefault true;
 }
