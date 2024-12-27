@@ -173,21 +173,23 @@
   # Env
   environment = {
     systemPackages = with pkgs; [
-      gcc
+      gcc # C compiler
       git
-      gnumake
+      gnumake # Make
       htop
       killall
-      inputs.neovim-nightly-overlay.packages.${pkgs.system}.default
+      inputs.neovim-nightly-overlay.packages.${pkgs.system}.default # nvim nightly build
       ripgrep
       unzip
       wget
-      distrobox
+      distrobox # Escape route
       hyprpolkitagent # Polkit agent needed for apps that request elevated privileges
+      nh # nix helper command
     ];
     sessionVariables = {
       WLR_NO_HARDWARE_CURSORS = "1";
       NIXOS_OZONE_WL = "1";
+      FLAKE = "/home/vic/Git/xxheyhey/nixos-xx";
     };
     pathsToLink = ["/share/zsh"];
     localBinInPath = true;
