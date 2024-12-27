@@ -13,6 +13,7 @@
     ./hyprland
     ./misc
     ./nvim
+    ./pointerCursor
     ./scripts
     ./tmux
     ./waybar
@@ -34,6 +35,8 @@
   miscModule.enable =
     lib.mkDefault true;
   nvimModule.enable =
+    lib.mkDefault true;
+  pointerCursorModule.enable =
     lib.mkDefault true;
   scriptsModule.enable =
     lib.mkDefault true;

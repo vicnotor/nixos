@@ -42,6 +42,7 @@
         plugins = [
           "git"
           "sudo"
+          "direnv"
         ];
         theme = "robbyrussell";
       };
