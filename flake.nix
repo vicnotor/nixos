@@ -34,14 +34,14 @@
         specialArgs = {inherit inputs;};
         inherit system;
         modules = [
-          ./hosts/default/configuration.nix
+          ./hosts/nixlap/configuration.nix
           home-manager.nixosModules.home-manager
           {
             home-manager = {
               extraSpecialArgs = {inherit inputs;};
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.vic = import ./hosts/default/home.nix;
+              users.vic = import ./hosts/nixlap/home.nix;
               backupFileExtension = "hmbak";
             };
           }
