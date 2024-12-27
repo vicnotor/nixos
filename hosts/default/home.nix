@@ -47,6 +47,7 @@
       nixd # Nix lsp
       grim # screenshot tool
       slurp # select part of screen for screenshot
+      grimblast # Hyprland wrapper for grim and slurp
 
       # Languages
       nodejs

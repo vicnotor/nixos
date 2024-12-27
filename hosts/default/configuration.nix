@@ -158,6 +158,7 @@
       unzip
       wget
       distrobox
+      hyprpolkitagent # Polkit agent needed for apps that request elevated privileges
     ];
     sessionVariables = {
       WLR_NO_HARDWARE_CURSORS = "1";
@@ -184,6 +185,24 @@
         sansSerif = ["UbuntuSans Nerd Font"];
         monospace = ["UbuntuMono Nerd Font"];
         emoji = ["Noto Color Emoji"];
+      };
+    };
+  };
+
+  # Polkit
+  security.polkit.enable = true;
+  systemd = {
+    user.services.hyprpolkitagent = {
+      description = "Hyprpolkitagent service";
+      wantedBy = ["graphical-session.target"];
+      wants = ["graphical-session.target"];
+      after = ["graphical-session.target"];
+      serviceConfig = {
+        Type = "simple";
+        ExecStart = "${pkgs.hyprpolkitagent}/libexec/hyprpolkitagent";
+        Restart = "on-failure";
+        RestartSec = 1;
+        TimeoutStopSec = 10;
       };
     };
   };
