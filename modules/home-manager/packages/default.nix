@@ -1,9 +1,13 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   home.packages = with pkgs; [
     alacritty # Terminal
     rofi-wayland # App launcher
     google-chrome
-    swww # Wallpaper service
+    inputs.swww.packages.${pkgs.system}.swww # Wallpaper service
     brightnessctl
     playerctl # Needed for pausing, skipping songs, etc.
     onedrive

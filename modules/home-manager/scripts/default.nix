@@ -14,9 +14,6 @@
       file = {
         ".local/bin".source = config.lib.file.mkOutOfStoreSymlink /home/vic/Git/xxheyhey/nixos-xx/extraDotfiles/scripts;
       };
-      sessionVariables = {
-        EDITOR = "nvim";
-      };
     };
   };
 }

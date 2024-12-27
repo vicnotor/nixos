@@ -117,8 +117,9 @@
 
         # NixOS
         oldrebuild = "sudo nixos-rebuild switch --flake ~/Git/xxheyhey/nixos-xx#nixlap";
-        rebuild = "nh os switch";
-        update = "nh os switch --update";
+        rebuild = "sudo echo -n && nh os switch";
+        update = "sudo echo -n && nh os switch --update";
+        clean = "sudo echo -n && nh clean all --keep 5";
 
         # Pandoc
         mdtopdf = "pandoc --from=markdown --to=pdf -o pdf.pdf";
