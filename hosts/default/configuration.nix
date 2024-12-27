@@ -1,6 +1,8 @@
 {
   pkgs,
   inputs,
+  lib,
+  config,
   ...
 }: {
   imports = [
@@ -29,10 +31,18 @@
     extraModprobeConfig = ''
       options snd_hda_intel power_save=0
     '';
+
+    # Recommended by nixos-hardware (see https://github.com/NixOS/nixos-hardware/blob/master/common/pc/default.nix)
+    blacklistedKernelModules = lib.optionals (!config.hardware.enableRedistributableFirmware) [
+      "ath3k"
+    ];
   };
 
   hardware = {
-    graphics.enable = true;
+    graphics = {
+      enable = true;
+      enable32Bit = true;
+    };
     nvidia.modesetting.enable = true;
     bluetooth.enable = true;
     bluetooth.powerOnBoot = false;
@@ -91,6 +101,8 @@
     libinput.enable = true;
     openssh.enable = true;
     printing.enable = true;
+    fstrim.enable = true; # Weekly SSD trimming WARNING: Only on ssd systems
+    xserver.videoDrivers = ["nvidia"];
   };
 
   users.defaultUserShell = pkgs.zsh;

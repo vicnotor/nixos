@@ -15,7 +15,7 @@
       ".config/uwsm/env".text = ''
         export XCURSOR_THEME,BreezeX-RosePine-Linux
         export XCURSOR_SIZE,20
-        # export AQ_DRM_DEVICES="/dev/dri/card2;/dev/dri/card1"
+        export AQ_DRM_DEVICES="/dev/dri/renderD129;/dev/dri/renderD128"
       '';
       ".config/onedrive/config".text = ''
         sync_dir="~/personal"
