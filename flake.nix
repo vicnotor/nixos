@@ -16,6 +16,7 @@
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     swww.url = "github:LGFae/swww";
     nixd.url = "github:nix-community/nixd";
+    nix-flatpak.url = "github:gmodena/nix-flatpak";
   };
 
   outputs = {

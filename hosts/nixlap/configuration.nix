@@ -116,6 +116,7 @@
     printing.enable = true;
     fstrim.enable = true; # Weekly SSD trimming WARNING: Only on ssd systems
     xserver.videoDrivers = ["nvidia"];
+    flatpak.enable = true;
   };
 
   users.defaultUserShell = pkgs.zsh;
