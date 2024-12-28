@@ -39,6 +39,7 @@
     grimblast # Hyprland wrapper for grim and slurp
     webcord # Discord agent
     hyprpicker # Color picker
+    unrar
 
     # Languages
     nodejs

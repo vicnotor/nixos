@@ -148,6 +148,8 @@
         pf = "fd --type f | fzf | xargs nvim";
         direnvnix = "echo 'use nix' >> .envrc && direnv allow";
         direnvflake = "echo 'use flake' >> .envrc && direnv allow";
+        cp = "cp -v";
+        mv = "mv -v";
       };
     };
   };
