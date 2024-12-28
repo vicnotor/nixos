@@ -209,6 +209,8 @@
             "$MOD, Q, killactive,"
             "$MOD SHIFT, Q, exec, uwsm stop"
             "$MOD, SPACE, togglefloating,"
+            "$MOD, SPACE, resizeactive, exact 80% 80%"
+            "$MOD, SPACE, centerwindow,"
             "$MOD, O, togglesplit," # dwindle
             "$MOD, f, pseudo," # dwindle
 
