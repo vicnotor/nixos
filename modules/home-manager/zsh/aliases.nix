@@ -44,7 +44,7 @@
 
   # NixOS
   rebuild = "sudo nixos-rebuild switch --flake ~/Git/xxheyhey/nixos-xx#nixlap";
-  update = "nix flake update --flake ~/Git/xxheyhey/nixos-xx#nixlap";
+  update = "sudo echo -n && nix flake update --flake ~/Git/xxheyhey/nixos-xx && sudo nixos-rebuild switch --flake ~/Git/xxheyhey/nixos-xx#nixlap";
   clean = "sudo echo -n && nh clean all --keep 10";
 
   # Pandoc
