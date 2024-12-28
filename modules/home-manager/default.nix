@@ -8,6 +8,7 @@
     ./alacritty
     ./dunst
     ./extraDotfiles
+    ./git/
     ./gtk
     ./htop
     ./hyprland
@@ -25,6 +26,8 @@
   dunstModule.enable =
     lib.mkDefault true;
   extraDotfilesModule.enable =
+    lib.mkDefault true;
+  gitModule.enable =
     lib.mkDefault true;
   gtkModule.enable =
     lib.mkDefault true;
