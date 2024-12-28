@@ -190,7 +190,7 @@
     sessionVariables = {
       WLR_NO_HARDWARE_CURSORS = "1";
       NIXOS_OZONE_WL = "1";
-      FLAKE = "/home/vic/Git/xxheyhey/nixos-xx";
+      NH_FLAKE = "/home/vic/Git/xxheyhey/nixos-xx";
     };
     pathsToLink = ["/share/zsh"];
     localBinInPath = true;
