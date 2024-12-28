@@ -12,18 +12,10 @@
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
-    waybar = {
-      url = "github:Alexays/Waybar";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    neovim-nightly-overlay = {
-      url = "github:nix-community/neovim-nightly-overlay";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    swww = {
-      url = "github:LGFae/swww";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    waybar.url = "github:Alexays/Waybar";
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+    swww.url = "github:LGFae/swww";
+    nixd.url = "github:nix-community/nixd";
   };
 
   outputs = {

@@ -33,7 +33,7 @@
     obs-studio
     mpv # Video player
     alejandra # Nix formatting
-    nixd # Nix lsp
+    inputs.nixd.packages.${pkgs.system}.nixd # Nix lsp
     grim # screenshot tool
     slurp # select part of screen for screenshot
     grimblast # Hyprland wrapper for grim and slurp
