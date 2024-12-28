@@ -327,10 +327,20 @@
           "float, onworkspace:special:scratchpad"
           "bordersize 4, onworkspace:special:scratchpad"
           "size 900 700, onworkspace:special:scratchpad"
+
+          # Needed for smart gaps
+          "bordersize 0, floating:0, onworkspace:w[tv1]"
+          "rounding 0, floating:0, onworkspace:w[tv1]"
+          "bordersize 0, floating:0, onworkspace:f[1]"
+          "windowrulev2 = rounding 0, floating:0, onworkspace:f[1]"
         ];
 
         workspace = [
           "special:scratchpad, on-created-empty:uwsm app -- $terminal"
+
+          # Needed for smart gaps
+          "w[tv1], gapsout:0, gapsin:0"
+          "f[1], gapsout:0, gapsin:0"
         ];
 
         # Plugins
