@@ -142,8 +142,6 @@
         valias = "vim $HOME/Git/xxheyhey/nixos-xx/modules/home-manager/zsh/default.nix";
         view = "qimgv";
         wp = "swww img";
-        wpdefault = "swww img $HOME/personal/Pictures/wallpapers/dune_2_top_down.jpeg";
-        wpblack = "swww img $HOME/personal/Pictures/wallpapers/black.jpg";
         ev = "silent evince";
         thu = "silent thunar .";
         cabalclean = "rm -r dist-newstyle";

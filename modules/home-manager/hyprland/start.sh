@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-uwsm app -- swww init &
-swww img ~/personal/Pictures/wallpapers/dune_2_top_down.jpeg &
+swww-daemon &
+wpdefault
 
 uwsm app -- nm-applet --indicator &
 uwsm app -- blueman-applet &
