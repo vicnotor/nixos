@@ -65,7 +65,7 @@
   chx = "chmod +x";
   open = "xdg-open";
   py = "python";
-  valias = "vim $HOME/Git/xxheyhey/nixos-xx/modules/home-manager/zsh/default.nix";
+  valias = "vim $HOME/Git/xxheyhey/nixos-xx/modules/home-manager/zsh/aliases.nix";
   view = "qimgv";
   wp = "swww img";
   ev = "silent evince";
