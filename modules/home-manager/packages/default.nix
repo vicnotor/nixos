@@ -40,6 +40,7 @@
     webcord # Discord agent
     hyprpicker # Color picker
     unrar
+    godot4
 
     # Languages
     nodejs
