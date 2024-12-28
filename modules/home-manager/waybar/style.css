@@ -63,6 +63,7 @@ button:hover {
 }
 
 /* you can set a style on hover for any module like this */
+#backlight:hover,
 #custom-wl-gammarelay:hover,
 #pulseaudio:hover,
 #memory:hover {

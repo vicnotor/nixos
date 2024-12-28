@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-uwsm app -- swww-daemon &
+uwsm app -- swww init &
 swww img ~/personal/Pictures/wallpapers/dune_2_top_down.jpeg &
 
 uwsm app -- nm-applet --indicator &

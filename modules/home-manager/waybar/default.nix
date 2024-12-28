@@ -65,6 +65,7 @@
           backlight = {
             format = "{icon} {percent}%";
             format-icons = ["󰃞" "󰃠"];
+            on-click-middle = "brightnessctl s 9600";
             tooltip = false;
           };
           clock = {
