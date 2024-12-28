@@ -116,10 +116,9 @@
         syncreboot = "onedrive --sync && reboot";
 
         # NixOS
-        oldrebuild = "sudo nixos-rebuild switch --flake ~/Git/xxheyhey/nixos-xx#nixlap";
-        rebuild = "sudo echo -n && nh os switch";
-        update = "sudo echo -n && nh os switch --update";
-        clean = "sudo echo -n && nh clean all --keep 5";
+        rebuild = "sudo nixos-rebuild switch --flake ~/Git/xxheyhey/nixos-xx#nixlap";
+        update = "nix flake update --flake ~/Git/xxheyhey/nixos-xx#nixlap";
+        clean = "sudo echo -n && nh clean all --keep 10";
 
         # Pandoc
         mdtopdf = "pandoc --from=markdown --to=pdf -o pdf.pdf";

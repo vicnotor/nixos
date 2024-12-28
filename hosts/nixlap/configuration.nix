@@ -184,8 +184,7 @@
       wget
       distrobox # Escape route
       hyprpolkitagent # Polkit agent needed for apps that request elevated privileges
-      inputs.nh.packages.${pkgs.system}.nh # Nix helper command
-      nix-output-monitor # Colorful nix outputs
+      nh # Nix helper that I use to collect garbage except last couple rebuilds
     ];
     sessionVariables = {
       WLR_NO_HARDWARE_CURSORS = "1";
