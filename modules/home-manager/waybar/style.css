@@ -1,5 +1,5 @@
 /* Colors */
-@define-color white #fff0e0;
+@define-color white #fffae8;
 @define-color rosewater #f4dbd6;
 @define-color flamingo #f0c6c6;
 @define-color pink #f5bde6;
@@ -141,11 +141,11 @@ button:hover {
 }
 
 #clock {
-  color: @rosewater;
+  color: @white;
 }
 
 #window {
-  color: @rosewater;
+  color: @white;
 }
 
 .modules-right,

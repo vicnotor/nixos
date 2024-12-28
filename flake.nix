@@ -22,6 +22,7 @@
   outputs = {
     nixpkgs,
     home-manager,
+    nix-flatpak,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -42,6 +43,7 @@
               backupFileExtension = "hmbak";
             };
           }
+          nix-flatpak.nixosModules.nix-flatpak
         ];
       };
       homeManagerModules = import ./modules/home-manager {inherit inputs;};
