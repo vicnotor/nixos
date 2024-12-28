@@ -6,6 +6,7 @@
 @define-color mauve #c6a0f6;
 @define-color red #ed8796;
 @define-color maroon #ee99a0;
+@define-color orange #e87d2e;
 @define-color peach #f5a97f;
 @define-color yellow #eed49f;
 @define-color green #a6da95;
@@ -191,7 +192,7 @@ button:hover {
 }
 
 #battery.warning:not(.charging) {
-  background-color: @peach;
+  background-color: #f53c3c;
   color: #000000;
 }
 
