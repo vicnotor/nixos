@@ -8,7 +8,7 @@
     ./alacritty
     ./dunst
     ./extraDotfiles
-    ./git/
+    ./git
     ./gtk
     ./htop
     ./hyprland
