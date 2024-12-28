@@ -185,6 +185,7 @@
       distrobox # Escape route
       hyprpolkitagent # Polkit agent needed for apps that request elevated privileges
       nh # Nix helper that I use to collect garbage except last couple rebuilds
+      ntfs3g # Needed to mount windows drive
     ];
     sessionVariables = {
       WLR_NO_HARDWARE_CURSORS = "1";
