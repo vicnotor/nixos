@@ -216,6 +216,7 @@
             "$MOD, SPACE, centerwindow,"
             "$MOD, O, togglesplit," # dwindle
             "$MOD, f, pseudo," # dwindle
+            "$MOD, M, fullscreen, 1" # Fullscreen active window
 
             # Open programs
             "$MOD, RETURN, exec, uwsm app -- $terminal"
@@ -239,6 +240,9 @@
             "$MOD, B, exec, pkill -SIGUSR1 waybar"
             "$MOD SHIFT, B, exec, pkill -SIGUSR2 waybar"
 
+            # Screenshot
+            ", Print, exec, screenshot"
+
             # Move focus with MOD + arrow keys
             "$MOD, H, movefocus, l"
             "$MOD, L, movefocus, r"
@@ -257,9 +261,6 @@
             # Scroll through existing workspaces with MOD + scroll
             "$MOD, mouse_down, workspace, e+1"
             "$MOD, mouse_up, workspace, e-1"
-
-            # Screenshot
-            ", Print, exec, screenshot"
 
             # Hyprexpo
             # "$MOD2, 0, hyprexpo:expo, toggle" # can be: toggle, off/disable or on/enable
