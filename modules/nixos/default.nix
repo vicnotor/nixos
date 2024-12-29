@@ -1,11 +1,47 @@
 {lib, ...}: {
   imports = [
     # Always enabled
-    ./nix
+    ./always/boot
+    ./always/environment
+    ./always/general
+    ./always/keyboard
+    ./always/location
+    ./always/networking
+    ./always/nix
+    ./always/packages
+    ./always/users
 
     # Toggleable (see below)
+    ./toggleable/bluetooth
+    ./toggleable/fonts
+    ./toggleable/graphics
+    ./toggleable/hyprland
+    ./toggleable/laptop
+    ./toggleable/nix-ld
+    ./toggleable/nvidia
+    ./toggleable/nvidiahybrid
+    ./toggleable/polkit
+    ./toggleable/sound
+    ./toggleable/ssd
+    ./toggleable/thunar
+    ./toggleable/virtualisation
+    ./toggleable/xdgportal
+    ./toggleable/zsh
   ];
 
-  nixModule.enable =
-    lib.mkDefault true;
+  bluetoothModule.enable = lib.mkDefault true;
+  fontsModule.enable = lib.mkDefault true;
+  graphicsModule.enable = lib.mkDefault true;
+  hyprlandModule.enable = lib.mkDefault true;
+  laptopModule.enable = lib.mkDefault true;
+  nix-ldModule.enable = lib.mkDefault true;
+  nvidiaModule.enable = lib.mkDefault true;
+  nvidiahybridModule.enable = lib.mkDefault true;
+  polkitModule.enable = lib.mkDefault true;
+  soundModule.enable = lib.mkDefault true;
+  ssdModule.enable = lib.mkDefault true;
+  thunarModule.enable = lib.mkDefault true;
+  virtualisationModule.enable = lib.mkDefault true;
+  xdgportalModule.enable = lib.mkDefault true;
+  zshModule.enable = lib.mkDefault true;
 }
