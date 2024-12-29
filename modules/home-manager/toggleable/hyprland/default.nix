@@ -40,9 +40,7 @@
         #################
         ### AUTOSTART ###
         #################
-        exec-once = [
-          "bash ~/Git/xxheyhey/nixos-xx/modules/home-manager/hyprland/start.sh"
-        ];
+        exec-once = import ./start.nix;
 
         #####################
         ### LOOK AND FEEL ###
