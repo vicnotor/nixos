@@ -3,9 +3,9 @@
     # Always enabled
     ./always/boot
     ./always/environment
-    ./always/general
     ./always/keyboard
     ./always/location
+    ./always/misc
     ./always/networking
     ./always/nix
     ./always/packages
