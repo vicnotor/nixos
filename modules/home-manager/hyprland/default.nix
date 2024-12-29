@@ -288,6 +288,10 @@
           ", XF86AudioPause, exec, playerctl play-pause"
           ", XF86AudioPlay, exec, playerctl play-pause"
           ", XF86AudioPrev, exec, playerctl previous"
+
+          # Powersaving with NitroSense button on my Acer Nitro 5 laptop
+          "$MOD2, XF86Presentation, exec, batterysavingon"
+          "$MOD2 SHIFT, XF86Presentation, exec, batterysavingoff"
         ];
 
         bindel = [
@@ -370,12 +374,12 @@
       };
 
       # Extra lines added to hyprland.conf (useful for submaps)
-      extraConfig = ''
-        bind = , XF86Presentation, submap, clean
-        submap = clean
-        bind = , XF86Presentation, submap, reset
-        submap = reset
-      '';
+      # extraConfig = ''
+      #   bind = , XF86Presentation, submap, clean
+      #   submap = clean
+      #   bind = , XF86Presentation, submap, reset
+      #   submap = reset
+      # '';
     };
   };
 }

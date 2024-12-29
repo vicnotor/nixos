@@ -78,4 +78,5 @@
   cp = "cp -v";
   mv = "mv -v";
   godot = "godot4 --display-driver wayland";
+  batterystatus = "acpi";
 }

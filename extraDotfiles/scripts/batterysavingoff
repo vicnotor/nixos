@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
 hyprctl --batch "keyword animations:enabled true ; \
-  hyprctl keyword decoration:blur:enabled true : \
-  hyprctl keyword decoration:shadow true"
+  keyword decoration:blur:enabled true ; \
+  keyword decoration:shadow:enabled true"
