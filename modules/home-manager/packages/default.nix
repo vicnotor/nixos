@@ -40,7 +40,8 @@
     webcord # Discord agent
     hyprpicker # Color picker
     unrar
-    godot4
+    godot_4
+    pulsemixer # cli audio mixer
 
     # Languages
     nodejs

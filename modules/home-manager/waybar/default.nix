@@ -30,7 +30,8 @@
           modules-center = ["hyprland/window"];
           modules-right = [
             "tray"
-            "pulseaudio"
+            "pulseaudio#input"
+            "pulseaudio#output"
             "backlight"
             "custom/wl-gammarelay"
             "memory"
@@ -98,7 +99,7 @@
             format-plugged = " {capacity}%";
             format-icons = ["" "" "" "" ""];
           };
-          pulseaudio = {
+          "pulseaudio#output" = {
             format = "{icon}  {volume}%";
             format-muted = "";
             format-icons = {
@@ -109,8 +110,16 @@
               car = "";
               default = ["" "" ""];
             };
-            on-click = "pavucontrol";
+            on-click = "alacritty -T FloatingWindow -e pulsemixer";
             on-click-middle = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
+          };
+          "pulseaudio#input" = {
+            format-source = "󰍬 {volume}%";
+            format-source-muted = "󰍭";
+            format = "{format_source}";
+            on-click = "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
+            on-scroll-up = "wpctl set-volume @DEFAULT_SINK@ 1%+";
+            on-scroll-down = "wpctl set-volume @DEFAULT_SINK@ 1%-";
           };
         }
       ];

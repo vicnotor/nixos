@@ -160,7 +160,7 @@
           repeat_rate = 30;
           numlock_by_default = true;
 
-          follow_mouse = 2;
+          follow_mouse = 0;
 
           sensitivity = "-0.25"; # -1.0 - 1.0, 0 means no modification.
           accel_profile = "flat";
@@ -225,7 +225,7 @@
             "$MOD2, S, exec, uwsm app -- spotify"
             "$MOD2, I, exec, uwsm app -- blueman-manager"
             "$MOD2, W, exec, uwsm app -- zapzap"
-            "$MOD2, A, exec, uwsm app -- pavucontrol"
+            "$MOD2, A, exec, uwsm app -- alacritty -T FloatingWindow -e pulsemixer"
             "$MOD2, M, exec, uwsm app -- thunderbird"
             "$MOD2, C, exec, uwsm app -- hyprpicker --autocopy"
             "$MOD2, D, exec, uwsm app -- webcord"
@@ -277,8 +277,8 @@
 
         bindl = [
           # Laptop multimedia keys for volume and LCD brightness
-          ",XF86AudioMute, exec, changeVolume mute"
-          ",XF86AudioMicMute, exec, changeVolume mute"
+          ", XF86AudioMute, exec, changeVolume mute"
+          "SHIFT, F7, exec, changeVolume mutemic" # My mic mute button does not work
 
           # Requires playerctl
           ", XF86AudioNext, exec, playerctl next"
@@ -318,13 +318,17 @@
         # windowrule = input.touchpad.scroll_factor 1.0, ^(Alacritty)$
 
         windowrulev2 = [
+          # Some custom rules for certain things
           "scrollmouse 1.8, class:(com.rtosta.zapzap)"
 
-          # Ignore maximize requests from apps. You'll probably like this.
+          # Ignore maximize requests from apps.
           "suppressevent maximize, class:.*"
 
           # Fix some dragging issues with XWayland
           "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
+
+          # Any window that is titled as FloatingWindow will float
+          "float, title:FloatingWindow"
 
           # Special workspace rules
           "float, onworkspace:special:scratchpad"
