@@ -11,7 +11,6 @@
       git
       gnumake # Make
       htop
-      hyprpolkitagent # Polkit agent needed for apps that request elevated privileges
       inputs.neovim-nightly-overlay.packages.${pkgs.system}.default # nvim nightly build
       killall
       nh # Nix helper that I use to collect garbage except last couple rebuilds
