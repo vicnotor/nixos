@@ -16,13 +16,11 @@
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     swww.url = "github:LGFae/swww";
     nixd.url = "github:nix-community/nixd";
-    nix-flatpak.url = "github:gmodena/nix-flatpak";
   };
 
   outputs = {
     nixpkgs,
     home-manager,
-    nix-flatpak,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -43,7 +41,6 @@
               backupFileExtension = "hmbak";
             };
           }
-          nix-flatpak.nixosModules.nix-flatpak
         ];
       };
       homeManagerModules = import ./modules/home-manager {inherit inputs;};
