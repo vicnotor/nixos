@@ -43,8 +43,8 @@
           }
         ];
       };
-      homeManagerModules = import ./modules/home-manager {inherit inputs;};
       nixosModules = import ./modules/nixos {inherit inputs;};
+      homeManagerModules = import ./modules/home-manager {inherit inputs;};
     };
   };
 }
