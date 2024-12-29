@@ -9,6 +9,7 @@
     ./always/networking
     ./always/nix
     ./always/packages
+    ./always/users
 
     # Toggleable (see below)
     ./toggleable/bluetooth
@@ -23,7 +24,6 @@
     ./toggleable/sound
     ./toggleable/ssd
     ./toggleable/thunar
-    ./toggleable/users
     ./toggleable/virtualisation
     ./toggleable/xdgportal
     ./toggleable/zsh
@@ -44,7 +44,4 @@
   virtualisationModule.enable = lib.mkDefault true;
   xdgportalModule.enable = lib.mkDefault true;
   zshModule.enable = lib.mkDefault true;
-
-  # User modules
-  vicUserModule.enable = lib.mkDefault true;
 }

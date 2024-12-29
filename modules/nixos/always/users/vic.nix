@@ -4,11 +4,11 @@
   ...
 }: {
   options = {
-    vicUserModule.enable =
+    vic.enable =
       lib.mkEnableOption "enables vic user module";
   };
 
-  config = lib.mkIf config.vicUserModule.enable {
+  config = lib.mkIf config.vic.enable {
     users = {
       users.vic = {
         isNormalUser = true;
