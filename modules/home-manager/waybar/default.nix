@@ -54,6 +54,7 @@
             exec = "wl-gammarelay-rs watch {t}";
             on-scroll-up = "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n +100";
             on-scroll-down = "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n -100";
+            on-click-right = "busctl --user set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 6500";
             on-click-middle = "busctl --user set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 6500";
             tooltip = true;
             tooltip-format = " {}K";
@@ -65,9 +66,12 @@
           };
           backlight = {
             format = "{icon} {percent}%";
-            format-icons = ["󰃞" "󰃠"];
-            on-click-middle = "brightnessctl s 9600";
-            tooltip = false;
+            format-icons = ["󰃞" "󰃟" "󰃠"];
+            exec = "brightnessctl i";
+            on-click-right = "brightnessctl s 50%";
+            on-click-middle = "brightnessctl s 50%";
+            tooltip = true;
+            tooltip-format = "{}";
           };
           clock = {
             interval = 1;
@@ -111,15 +115,18 @@
               default = ["" "" ""];
             };
             on-click = "alacritty -T FloatingWindow -e pulsemixer";
-            on-click-middle = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
+            on-click-right = "wpctl set-mute @DEFAULT_SINK@ toggle";
+            on-click-middle = "wpctl set-mute @DEFAULT_SINK@ toggle";
           };
           "pulseaudio#input" = {
             format-source = "󰍬 {volume}%";
             format-source-muted = "󰍭";
             format = "{format_source}";
-            on-click = "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
-            on-scroll-up = "wpctl set-volume @DEFAULT_SINK@ 1%+";
-            on-scroll-down = "wpctl set-volume @DEFAULT_SINK@ 1%-";
+            on-click = "alacritty -T FloatingWindow -e pulsemixer";
+            on-click-right = "wpctl set-mute @DEFAULT_SOURCE@ toggle";
+            on-click-middle = "wpctl set-mute @DEFAULT_SOURCE@ toggle";
+            on-scroll-up = "wpctl set-volume @DEFAULT_SOURCE@ 1%+";
+            on-scroll-down = "wpctl set-volume @DEFAULT_SOURCE@ 1%-";
           };
         }
       ];

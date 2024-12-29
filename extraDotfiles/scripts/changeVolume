@@ -4,9 +4,9 @@
 msgTag="VolumeChange"
 
 if [[ "$@" == "mute" ]]; then
-  wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle > /dev/null 2>&1 &
+  wpctl set-mute @DEFAULT_SINK@ toggle > /dev/null 2>&1 &
 elif [[ "$@" == "mutemic" ]]; then
-  wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle > /dev/null 2>&1 &
+  wpctl set-mute @DEFAULT_SOURCE@ toggle > /dev/null 2>&1 &
 else
   wpctl set-volume @DEFAULT_SINK@ "$@" > /dev/null 2>&1 &
 fi

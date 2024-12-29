@@ -160,7 +160,7 @@
           repeat_rate = 30;
           numlock_by_default = true;
 
-          follow_mouse = 0;
+          follow_mouse = 2;
 
           sensitivity = "-0.25"; # -1.0 - 1.0, 0 means no modification.
           accel_profile = "flat";
