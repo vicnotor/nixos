@@ -42,6 +42,7 @@
     unrar
     godot_4
     pulsemixer # cli audio mixer
+    youtube-music
 
     # Languages
     nodejs
