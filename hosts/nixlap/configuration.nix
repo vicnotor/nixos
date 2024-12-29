@@ -115,8 +115,15 @@
     openssh.enable = true;
     printing.enable = true;
     fstrim.enable = true; # Weekly SSD trimming WARNING: Only on ssd systems
-    xserver.videoDrivers = ["nvidia"];
+    xserver = {
+      videoDrivers = ["nvidia"];
+      xkb = {
+        layout = "us";
+        options = "caps:swapescape,compose:ralt";
+      };
+    };
   };
+  i18n.consoleUseXkbConfig = true; # Use xkb keyboard config in tty
 
   users.defaultUserShell = pkgs.zsh;
   users.users.vic = {

@@ -13,7 +13,7 @@
   config = lib.mkIf config.hyprlandModule.enable {
     wayland.windowManager.hyprland = {
       enable = true;
-      systemd.enable = false;
+      systemd.enable = false; # Needed if using uwsm to launch Hyprland
       package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
 
       # plugins = [
@@ -89,17 +89,15 @@
             enabled = true;
             size = 3;
             passes = 4;
-
-            vibrancy = "0.1696";
+            popups = true;
           };
         };
 
         # https://wiki.hyprland.org/Configuring/Variables/#animations
         animations = {
-          enabled = "yes, please :)";
+          enabled = true;
 
-          # Default animations, see https://wiki.hyprland.org/Configuring/Animations/ for more
-
+          # Default animations from the generated config, see https://wiki.hyprland.org/Configuring/Animations/ for more
           bezier = [
             "easeOutQuint,0.23,1,0.32,1"
             "easeInOutCubic,0.65,0.05,0.36,1"
@@ -145,6 +143,12 @@
           disable_hyprland_logo = true;
           disable_splash_rendering = true;
           middle_click_paste = false;
+
+          font_family = "Ubuntu Nerd Font";
+        };
+
+        xwayland = {
+          force_zero_scaling = true;
         };
 
         #############
@@ -167,7 +171,6 @@
           scroll_factor = "0.7";
 
           touchpad = {
-            disable_while_typing = false;
             natural_scroll = true;
             scroll_factor = "0.15";
           };
@@ -243,10 +246,10 @@
             "$MOD, J, movefocus, d"
 
             # Move windows
-            "$MOD SHIFT, H, movewindow, l"
-            "$MOD SHIFT, L, movewindow, r"
-            "$MOD SHIFT, K, movewindow, u"
-            "$MOD SHIFT, J, movewindow, d"
+            "$MOD SHIFT, H, swapwindow, l"
+            "$MOD SHIFT, L, swapwindow, r"
+            "$MOD SHIFT, K, swapwindow, u"
+            "$MOD SHIFT, J, swapwindow, d"
 
             # Special scratchpad workspace
             "$MOD, grave, togglespecialworkspace, scratchpad"
@@ -365,6 +368,14 @@
         #   };
         # };
       };
+
+      # Extra lines added to hyprland.conf (useful for submaps)
+      extraConfig = ''
+        bind = , XF86Presentation, submap, clean
+        submap = clean
+        bind = , XF86Presentation, submap, reset
+        submap = reset
+      '';
     };
   };
 }
