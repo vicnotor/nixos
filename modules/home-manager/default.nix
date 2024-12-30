@@ -18,6 +18,8 @@
     ./toggleable/misc
     ./toggleable/nvim
     ./toggleable/pointerCursor
+    ./toggleable/python
+    ./toggleable/r
     ./toggleable/scripts
     ./toggleable/tmux
     ./toggleable/waybar
@@ -38,6 +40,8 @@
   miscModule.enable = lib.mkDefault true;
   nvimModule.enable = lib.mkDefault true;
   pointerCursorModule.enable = lib.mkDefault true;
+  pythonCursorModule.enable = lib.mkDefault true;
+  rModule.enable = lib.mkDefault true;
   scriptsModule.enable = lib.mkDefault true;
   tmuxModule.enable = lib.mkDefault true;
   waybarModule.enable = lib.mkDefault true;

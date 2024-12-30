@@ -45,14 +45,6 @@
 
     # Languages
     nodejs
-    (python3.withPackages (ps:
-      with ps; [
-        m2crypto # Needed for Python SSL support
-        numpy
-      ]))
-    # python312
-    # python312Packages.m2crypto # Needed for Python SSL support
-    R
     yarn # Needed for vim ( TODO: find out what for exactly)
     inputs.zig.packages.${pkgs.system}.default # Zig compiler
 
