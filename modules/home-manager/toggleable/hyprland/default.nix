@@ -255,7 +255,6 @@
 
             # Special workspaces
             "$MOD, grave, togglespecialworkspace, scratchpad"
-            "$MOD2 SHIFT, T, togglespecialworkspace, ghosttyfirstlaunch"
 
             # Scroll through existing workspaces with MOD + scroll
             "$MOD, mouse_down, workspace, e+1"
