@@ -23,7 +23,7 @@
         show_battery = true;
         show_disks = false;
         shown_boxes = "cpu mem proc";
-        presets = "cpu:0:default,mem:0:default,proc:0:default";
+        presets = "cpu:1:default,mem:0:default,proc:0:default";
         proc_sorting = "memory";
 
         # Other

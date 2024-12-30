@@ -42,7 +42,6 @@
     godot_4
     pulsemixer # cli audio mixer
     youtube-music
-    inputs.zig.packages.${pkgs.system}.default # Zig compiler
 
     # Languages
     nodejs
@@ -55,6 +54,7 @@
     # python312Packages.m2crypto # Needed for Python SSL support
     R
     yarn # Needed for vim ( TODO: find out what for exactly)
+    inputs.zig.packages.${pkgs.system}.default # Zig compiler
 
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your

@@ -84,7 +84,7 @@
           };
           memory = {
             format = "󰍛 {}%";
-            on-click = "alacritty -T LargeFloatingWindow -e btop";
+            on-click = "taskmanager";
           };
           temperature = {
             critical-threshold = 80;
