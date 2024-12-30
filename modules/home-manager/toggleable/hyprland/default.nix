@@ -337,7 +337,7 @@
           # Some useful floating window rules
           "float, title:FloatingWindow"
           "float, title:LargeFloatingWindow"
-          "size 1920 1080, title:LargeFloatingWindow"
+          "size 1200 800, title:LargeFloatingWindow"
 
           # Special workspace rules
           ## scratchpad
