@@ -40,7 +40,7 @@
   miscModule.enable = lib.mkDefault true;
   nvimModule.enable = lib.mkDefault true;
   pointerCursorModule.enable = lib.mkDefault true;
-  pythonCursorModule.enable = lib.mkDefault true;
+  pythonModule.enable = lib.mkDefault true;
   rModule.enable = lib.mkDefault true;
   scriptsModule.enable = lib.mkDefault true;
   tmuxModule.enable = lib.mkDefault true;

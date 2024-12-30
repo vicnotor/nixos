@@ -15,7 +15,7 @@
     pavucontrol # Audio controls
     wl-clipboard # Clipboard manager
     pandoc # markdown to pdf
-    texlive.combined.scheme-small # Needed for pandoc
+    texlive.combined.scheme-full # Needed for pandoc and for knitting RMarkdown
     spotify
     qimgv # Image viewer
     wl-gammarelay-rs # blue light filter
