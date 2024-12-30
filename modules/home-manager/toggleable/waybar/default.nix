@@ -84,7 +84,7 @@
           };
           memory = {
             format = "󰍛 {}%";
-            on-click = "ghostty --command=htop";
+            on-click = "alacritty -T LargeFloatingWindow -e btop";
           };
           temperature = {
             critical-threshold = 80;

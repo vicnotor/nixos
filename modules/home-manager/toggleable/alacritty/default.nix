@@ -19,7 +19,7 @@
           opacity = 1;
           dimensions = {
             columns = 110;
-            lines = 40;
+            lines = 25;
           };
         };
         font = {

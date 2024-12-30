@@ -46,7 +46,7 @@ return {
 								bg = "#45475a",
 							},
 						},
-						{ "filename" },
+						{ "filename", path = 4, },
 					},
 					lualine_x = { "progress", "filesize" },
 					lualine_y = { { "filetype" } },

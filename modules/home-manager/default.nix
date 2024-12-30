@@ -6,6 +6,7 @@
 
     # Toggleable (see below)
     ./toggleable/alacritty
+    ./toggleable/btop
     ./toggleable/direnv
     ./toggleable/dunst
     ./toggleable/extraDotfiles
@@ -24,6 +25,8 @@
   ];
 
   # Enabled by default
+  alacrittyModule.enable = lib.mkDefault true;
+  btopModule.enable = lib.mkDefault true;
   direnvModule.enable = lib.mkDefault true;
   dunstModule.enable = lib.mkDefault true;
   extraDotfilesModule.enable = lib.mkDefault true;
@@ -41,5 +44,4 @@
   zshModule.enable = lib.mkDefault true;
 
   # Disabled by default
-  alacrittyModule.enable = lib.mkDefault false;
 }

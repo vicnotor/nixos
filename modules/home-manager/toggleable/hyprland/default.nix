@@ -334,13 +334,21 @@
           # Fix some dragging issues with XWayland
           "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
 
-          # Any window that is titled as FloatingWindow will float
+          # Some useful floating window rules
           "float, title:FloatingWindow"
+          "float, title:LargeFloatingWindow"
+          "size 1920 1080, title:LargeFloatingWindow"
 
           # Special workspace rules
+          ## scratchpad
           "float, onworkspace:special:scratchpad"
           "bordersize 4, onworkspace:special:scratchpad"
           "size 900 700, onworkspace:special:scratchpad"
+
+          ## ghosttyfirstlaunch
+          "float, onworkspace:special:ghosttyfirstlaunch"
+          "bordersize 8, onworkspace:special:ghosttyfirstlaunch"
+          "size 600 400, onworkspace:special:ghosttyfirstlaunch"
 
           # Needed for smart gaps
           "bordersize 0, floating:0, onworkspace:w[tv1]"
@@ -351,6 +359,7 @@
 
         workspace = [
           "special:scratchpad, on-created-empty:uwsm app -- $terminal"
+          "special:ghosttyfirstlaunch, on-created-empty:uwsm app -- $terminal"
 
           # Needed for smart gaps
           "w[tv1], gapsout:0, gapsin:0"

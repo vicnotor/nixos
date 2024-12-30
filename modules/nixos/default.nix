@@ -45,4 +45,6 @@
   virtualisationModule.enable = lib.mkDefault true;
   xdgportalModule.enable = lib.mkDefault true;
   zshModule.enable = lib.mkDefault true;
+
+  # Disabled by default
 }
