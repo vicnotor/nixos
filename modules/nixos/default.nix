@@ -29,6 +29,7 @@
     ./toggleable/zsh
   ];
 
+  # Enabled by default
   bluetoothModule.enable = lib.mkDefault true;
   fontsModule.enable = lib.mkDefault true;
   graphicsModule.enable = lib.mkDefault true;

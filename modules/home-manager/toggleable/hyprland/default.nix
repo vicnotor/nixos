@@ -31,7 +31,7 @@
 
         # See https://wiki.hyprland.org/Configuring/Keywords/
 
-        "$terminal" = "alacritty";
+        "$terminal" = "ghostty";
         "$fileManager" = "thunar";
         "$menu" = "rofi -show drun -show-icons -run-command 'uwsm app -- {cmd}'";
         "$menu2" = "rofi -show run -run-command 'uwsm app -- {cmd}' ";
@@ -227,7 +227,7 @@
             "$MOD2, S, exec, uwsm app -- spotify"
             "$MOD2, I, exec, uwsm app -- blueman-manager"
             "$MOD2, W, exec, uwsm app -- zapzap"
-            "$MOD2, A, exec, uwsm app -- alacritty -T FloatingWindow -e pulsemixer"
+            "$MOD2, A, exec, uwsm app -- ghostty --title=FloatingWindow --command=pulsemixer"
             "$MOD2, M, exec, uwsm app -- thunderbird"
             "$MOD2, C, exec, uwsm app -- hyprpicker --autocopy"
             "$MOD2, D, exec, uwsm app -- webcord"
