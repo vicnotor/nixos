@@ -62,7 +62,7 @@
         set -g pane-active-border-style 'fg=#b4befe'
         set -g message-command-style bg=default,fg=#f2dcdc
         set -g message-style bg=default,fg=#f2dcdc
-        set -g mode-style bg=#3b3e40,fg=#ff6b00
+        set -g mode-style bg=#3b3e40,fg=#f06010
 
         # tmux-plugins/tmux-prefix-highlight support
         set -g @prefix_highlight_output_prefix "#[fg=#e0af68]#[bg=#16161e]#[fg=#16161e]#[bg=#e0af68]"

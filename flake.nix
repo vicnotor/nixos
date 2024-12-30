@@ -16,6 +16,8 @@
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     swww.url = "github:LGFae/swww";
     nixd.url = "github:nix-community/nixd";
+    ghostty.url = "github:ghostty-org/ghostty";
+    zig.url = "github:mitchellh/zig-overlay";
   };
 
   outputs = {

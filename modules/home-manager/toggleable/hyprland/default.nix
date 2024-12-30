@@ -320,6 +320,7 @@
 
         windowrule = [
           "opacity 0.88, ^(Alacritty)$"
+          "opacity 0.88, ^(com.mitchellh.ghostty)$"
         ];
         # windowrule = input.touchpad.scroll_factor 1.0, ^(Alacritty)$
 

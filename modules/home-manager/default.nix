@@ -9,6 +9,7 @@
     ./toggleable/direnv
     ./toggleable/dunst
     ./toggleable/extraDotfiles
+    ./toggleable/ghostty
     ./toggleable/git
     ./toggleable/gtk
     ./toggleable/htop
@@ -22,10 +23,11 @@
     ./toggleable/zsh
   ];
 
-  alacrittyModule.enable = lib.mkDefault true;
+  # Enabled by default
   direnvModule.enable = lib.mkDefault true;
   dunstModule.enable = lib.mkDefault true;
   extraDotfilesModule.enable = lib.mkDefault true;
+  ghosttyModule.enable = lib.mkDefault true;
   gitModule.enable = lib.mkDefault true;
   gtkModule.enable = lib.mkDefault true;
   htopModule.enable = lib.mkDefault true;
@@ -37,4 +39,7 @@
   tmuxModule.enable = lib.mkDefault true;
   waybarModule.enable = lib.mkDefault true;
   zshModule.enable = lib.mkDefault true;
+
+  # Disabled by default
+  alacrittyModule.enable = lib.mkDefault false;
 }

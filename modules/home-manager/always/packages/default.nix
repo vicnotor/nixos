@@ -4,10 +4,9 @@
   ...
 }: {
   home.packages = with pkgs; [
-    alacritty # Terminal
     rofi-wayland # App launcher
     google-chrome
-    inputs.swww.packages.${pkgs.system}.swww # Wallpaper service
+    inputs.swww.packages.${pkgs.system}.default # swww: wallpaper service
     brightnessctl
     playerctl # Needed for pausing, skipping songs, etc.
     onedrive
@@ -33,7 +32,7 @@
     obs-studio
     mpv # Video player
     alejandra # Nix formatting
-    inputs.nixd.packages.${pkgs.system}.nixd # Nix lsp
+    inputs.nixd.packages.${pkgs.system}.default # nixd: Nix lsp
     grim # screenshot tool
     slurp # select part of screen for screenshot
     grimblast # Hyprland wrapper for grim and slurp
@@ -43,6 +42,7 @@
     godot_4
     pulsemixer # cli audio mixer
     youtube-music
+    inputs.zig.packages.${pkgs.system}.default # Zig compiler
 
     # Languages
     nodejs

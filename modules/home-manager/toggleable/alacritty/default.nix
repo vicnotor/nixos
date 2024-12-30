@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  pkgs,
   ...
 }: {
   options = {
@@ -9,6 +10,10 @@
   };
 
   config = lib.mkIf config.alacrittyModule.enable {
+    home.packages = [
+      pkgs.alacritty
+    ];
+
     programs.alacritty = {
       enable = true;
       settings = {
@@ -36,8 +41,8 @@
         };
         colors = {
           cursor = {
-            cursor = "0xFFFFFF";
-            text = "0x000000";
+            cursor = "#FFFFFF";
+            text = "#000000";
           };
           primary = {
             background = "#1E1D23";
