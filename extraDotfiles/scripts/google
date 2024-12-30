@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-input=$1
-
-xdg-open https://www.google.com/search?q="$input"
+echo "" | \
+  rofi -dmenu rofi -theme-str '#mainbox { children: [ "inputbar" ]; }' -p "Google:" | \
+  xargs -I{} uwsm app -- xdg-open https://www.google.com/search?q={}

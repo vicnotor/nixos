@@ -224,6 +224,7 @@
             "$MOD2, P, exec, $menu"
             "$MOD2, B, exec, uwsm app -- $browser"
             "$MOD2, E, exec, uwsm app -- $fileManager"
+            "$MOD2, G, exec, google" # Launch script to search the web
             "$MOD2, S, exec, uwsm app -- spotify"
             "$MOD2, I, exec, uwsm app -- blueman-manager"
             "$MOD2, W, exec, uwsm app -- zapzap"
@@ -231,7 +232,6 @@
             "$MOD2, M, exec, uwsm app -- thunderbird"
             "$MOD2, C, exec, uwsm app -- hyprpicker --autocopy"
             "$MOD2, D, exec, uwsm app -- webcord"
-            "$MOD2, G, exec, uwsm app -- godot"
 
             # Commands
             "$MOD, End, exec, busctl --user set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 6500"
