@@ -228,7 +228,7 @@
             "$MOD2, S, exec, uwsm app -- spotify"
             "$MOD2, I, exec, uwsm app -- blueman-manager"
             "$MOD2, W, exec, uwsm app -- zapzap"
-            "$MOD2, A, exec, uwsm app -- ghostty --title=FloatingWindow --command=pulsemixer"
+            "$MOD2, A, exec, uwsm app -- audiomixer"
             "$MOD2, M, exec, uwsm app -- thunderbird"
             "$MOD2, C, exec, uwsm app -- hyprpicker --autocopy"
             "$MOD2, D, exec, uwsm app -- webcord"
@@ -255,6 +255,7 @@
 
             # Special workspaces
             "$MOD, grave, togglespecialworkspace, scratchpad"
+            "$MOD SHIFT, grave, togglespecialworkspace, ghosttyfirstlaunch"
 
             # Scroll through existing workspaces with MOD + scroll
             "$MOD, mouse_down, workspace, e+1"

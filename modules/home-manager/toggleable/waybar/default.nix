@@ -84,7 +84,7 @@
           };
           memory = {
             format = "󰍛 {}%";
-            on-click = "alacritty -e htop";
+            on-click = "ghostty --command=htop";
           };
           temperature = {
             critical-threshold = 80;
@@ -114,7 +114,7 @@
               car = "";
               default = ["" "" ""];
             };
-            on-click = "alacritty -T FloatingWindow -e pulsemixer";
+            on-click = "audiomixer";
             on-click-right = "wpctl set-mute @DEFAULT_SINK@ toggle";
             on-click-middle = "wpctl set-mute @DEFAULT_SINK@ toggle";
           };
@@ -122,7 +122,7 @@
             format-source = "󰍬 {volume}%";
             format-source-muted = "󰍭";
             format = "{format_source}";
-            on-click = "alacritty -T FloatingWindow -e pulsemixer";
+            on-click = "audiomixer";
             on-click-right = "wpctl set-mute @DEFAULT_SOURCE@ toggle";
             on-click-middle = "wpctl set-mute @DEFAULT_SOURCE@ toggle";
             on-scroll-up = "wpctl set-volume @DEFAULT_SOURCE@ 1%+";

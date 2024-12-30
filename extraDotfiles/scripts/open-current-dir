@@ -6,5 +6,5 @@ if [ -n "$TMUX" ]; then
     tmux split-window -h
 else
     # Not inside a tmux session, open a new terminal
-    uwsm app -- alacritty --working-directory="$PWD" &
+    uwsm app -- ghostty --working-directory="$PWD" &
 fi

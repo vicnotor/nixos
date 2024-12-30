@@ -1,5 +1,6 @@
 [
-  "ghostty --gtk-single-instance=true --quit-after-last-window-closed=false --initial-window=false" # Fixes slow ghostty window launches
+  "[workspace special:ghosttyfirstlaunch silent] ghostty" # Fixes slow ghostty window launches
+  # "ghostty --gtk-single-instance=true --quit-after-last-window-closed=false --initial-window=false" # Other (slower) ghostty fix
   "swww-daemon &"
   "wpdefault"
 

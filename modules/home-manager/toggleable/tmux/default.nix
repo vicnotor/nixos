@@ -69,10 +69,10 @@
         set -g @prefix_highlight_output_suffix ""
 
         # Proper colors
-        set-option -sa terminal-features ',alacritty:RGB' # Makes sure that colors in tmux are the same as without tmux
+        set-option -sa terminal-features ',ghostty:RGB' # Makes sure that colors in tmux are the same as without tmux
 
         # Undercurl support
-        set-option -ga terminal-features ",alacritty:usstyle"
+        set-option -ga terminal-features ",ghostty:usstyle"
 
         # vim-tmux-navigator
         # Smart pane switching with awareness of Vim splits.
