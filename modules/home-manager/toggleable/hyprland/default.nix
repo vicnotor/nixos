@@ -141,6 +141,7 @@
           disable_hyprland_logo = true;
           disable_splash_rendering = true;
           middle_click_paste = false;
+          focus_on_activate = true;
 
           font_family = "Ubuntu Nerd Font";
         };
