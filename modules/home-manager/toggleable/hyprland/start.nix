@@ -1,4 +1,5 @@
 [
+  "[workspace special:ghosttyfirstlaunch silent] ghostty"
   "swww-daemon &"
   "wpdefault"
 

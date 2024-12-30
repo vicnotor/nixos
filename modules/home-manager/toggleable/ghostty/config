@@ -28,13 +28,13 @@ window-height = 25
 # Keybinds
 keybind = ctrl+backspace=unbind
 keybind = ctrl+enter=text:✗
-keybind = ctrl+left_shift+enter=text:✓
-keybind = ctrl+right_shift+enter=text:✓
+keybind = ctrl+shift+enter=text:✓
+keybind = ctrl+shift+enter=text:✓
 keybind = ctrl+i=text:◆
 keybind = ctrl+m=text:▶
 keybind = ctrl+comma=text:★
-keybind = ctrl+left_shift+h=text:●
-keybind = ctrl+right_shift+h=text:●
+keybind = ctrl+shift+h=text:●
+keybind = ctrl+shift+h=text:●
 
 # Other
 clipboard-trim-trailing-spaces = true

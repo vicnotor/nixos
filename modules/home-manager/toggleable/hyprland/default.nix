@@ -253,8 +253,9 @@
             "$MOD SHIFT, K, swapwindow, u"
             "$MOD SHIFT, J, swapwindow, d"
 
-            # Special scratchpad workspace
+            # Special workspaces
             "$MOD, grave, togglespecialworkspace, scratchpad"
+            "$MOD2 SHIFT, T, togglespecialworkspace, ghosttyfirstlaunch"
 
             # Scroll through existing workspaces with MOD + scroll
             "$MOD, mouse_down, workspace, e+1"
@@ -289,8 +290,7 @@
           ", XF86AudioPrev, exec, playerctl previous"
 
           # Powersaving with NitroSense button on my Acer Nitro 5 laptop
-          "$MOD2, XF86Presentation, exec, batterysavingon"
-          "$MOD2 SHIFT, XF86Presentation, exec, batterysavingoff"
+          ", XF86Presentation, exec, gamemode"
         ];
 
         bindel = [

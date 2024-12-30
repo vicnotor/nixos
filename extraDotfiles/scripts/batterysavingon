@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-hyprctl --batch "keyword animations:enabled false ; \
-  keyword decoration:blur:enabled false ; \
-  keyword decoration:shadow:enabled false"
