@@ -27,6 +27,7 @@ window-height = 25
 
 # Keybinds
 keybind = ctrl+backspace=unbind
+keybind = shift+enter=unbind
 keybind = ctrl+enter=text:✗
 keybind = ctrl+shift+enter=text:✓
 keybind = ctrl+shift+enter=text:✓
