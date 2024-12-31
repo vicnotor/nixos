@@ -16,6 +16,7 @@
     ./toggleable/htop
     ./toggleable/hyprland
     ./toggleable/misc
+    ./toggleable/mpv
     ./toggleable/nvim
     ./toggleable/pointerCursor
     ./toggleable/python
@@ -37,6 +38,7 @@
   gtkModule.enable = lib.mkDefault true;
   hyprlandModule.enable = lib.mkDefault true;
   miscModule.enable = lib.mkDefault true;
+  mpvModule.enable = lib.mkDefault true;
   nvimModule.enable = lib.mkDefault true;
   pointerCursorModule.enable = lib.mkDefault true;
   pythonModule.enable = lib.mkDefault true;
