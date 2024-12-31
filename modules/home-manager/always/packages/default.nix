@@ -30,7 +30,6 @@
     teams-for-linux
     thunderbird-latest # Mail client
     obs-studio
-    mpv # Video player
     alejandra # Nix formatting
     inputs.nixd.packages.${pkgs.system}.default # nixd: Nix lsp
     grim # screenshot tool
@@ -42,6 +41,7 @@
     godot_4
     pulsemixer # cli audio mixer
     youtube-music
+    snes9x-gtk
 
     # Languages
     nodejs

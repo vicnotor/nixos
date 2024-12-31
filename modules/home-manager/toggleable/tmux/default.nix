@@ -18,7 +18,7 @@
       mouse = true;
       keyMode = "vi";
       clock24 = true;
-      disableConfirmationPrompt = true;
+      # disableConfirmationPrompt = true;
 
       plugins = with pkgs; [
         {

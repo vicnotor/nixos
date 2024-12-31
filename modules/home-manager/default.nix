@@ -35,7 +35,6 @@
   ghosttyModule.enable = lib.mkDefault true;
   gitModule.enable = lib.mkDefault true;
   gtkModule.enable = lib.mkDefault true;
-  htopModule.enable = lib.mkDefault true;
   hyprlandModule.enable = lib.mkDefault true;
   miscModule.enable = lib.mkDefault true;
   nvimModule.enable = lib.mkDefault true;
@@ -48,4 +47,5 @@
   zshModule.enable = lib.mkDefault true;
 
   # Disabled by default
+  htopModule.enable = lib.mkDefault false;
 }
