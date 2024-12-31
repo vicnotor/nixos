@@ -5,7 +5,6 @@
   inputs,
   ...
 }: {
-  imports = [./hypridle.nix];
   options = {
     hyprlandModule.enable =
       lib.mkEnableOption "enables hyprland module";
@@ -392,6 +391,5 @@
       #   submap = reset
       # '';
     };
-    hypridleModule.enable = true; # Enable hypridle
   };
 }
