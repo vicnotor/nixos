@@ -7,14 +7,15 @@ function Color(color)
 	vim.cmd.colorscheme(color)
 
 	-- Highlight groups
-	vim.api.nvim_set_hl(0, "BiscuitColor", { fg = "#494c57" })
+	vim.api.nvim_set_hl(0, "LineNr", { fg = "#7d86ad" })
+	vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#4d567d" })
+	vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#4d567d" })
 	vim.api.nvim_set_hl(0, "TreesitterContext", { bg = "#333033" })
 	vim.api.nvim_set_hl(0, "TreesitterContextLineNumber", { fg = "#999099", bg = "#333033" })
-	vim.api.nvim_set_hl(0, "StatusLine", {reverse = false})
-	vim.api.nvim_set_hl(0, "StatusLineNC", {reverse = false})
+	vim.api.nvim_set_hl(0, "BiscuitColor", { fg = "#494c57" })
 
-    -- StatusLine = { fg = colors.bg2, bg = colors.fg1, reverse = config.inverse },
-    -- StatusLineNC = { fg = colors.bg1, bg = colors.fg4, reverse = config.inverse },
+	vim.api.nvim_set_hl(0, "StatusLine", { reverse = false })
+	vim.api.nvim_set_hl(0, "StatusLineNC", { reverse = false })
 
 	-- The following is needed for some themes to fix the background
 	-- of some windows or parts of the screen (for transparent mode)
@@ -26,12 +27,12 @@ end
 function ToggleColorScheme()
 	if Mycolor == "gruvbox" then
 		Mycolor = "tokyonight"
-    elseif Mycolor == "tokyonight" then
-        Mycolor = "rose-pine"
+	elseif Mycolor == "tokyonight" then
+		Mycolor = "rose-pine"
 	elseif Mycolor == "rose-pine" then
 		Mycolor = "vague"
-    else
-        Mycolor = "gruvbox"
+	else
+		Mycolor = "gruvbox"
 	end
 	Color()
 end
@@ -50,7 +51,7 @@ return {
 					operators = false,
 					folds = false,
 				},
-                inverse = false, -- might be needed to fix some color issues
+				inverse = false, -- might be needed to fix some color issues
 				overrides = {
 					["@function.call"] = { fg = "#d1832e", bold = false },
 					["@variable"] = { fg = "#ebdbb2", bold = false },
@@ -62,7 +63,7 @@ return {
 		end,
 	},
 	{
-        -- Copied from Coding with Sphere (youtube)
+		-- Copied from Coding with Sphere (youtube)
 		"vague2k/vague.nvim",
 		config = function()
 			require("vague").setup({
@@ -128,7 +129,8 @@ return {
 					sidebars = "transparent", -- style for sidebars, see below
 					floats = "dark", -- style for floating windows
 				},
-				lualine_bold = true, -- When `true`, section headers in the lualine theme will be bold
+				dim_inactive = true,
+				lualine_bold = true, -- Bold ection headers in lualine
 
 				-- Custom colors
 				---@param colors ColorScheme
