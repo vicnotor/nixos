@@ -18,11 +18,13 @@
     nixd.url = "github:nix-community/nixd";
     ghostty.url = "github:ghostty-org/ghostty";
     zig.url = "github:mitchellh/zig-overlay";
+    stylix.url = "github:danth/stylix";
   };
 
   outputs = {
     nixpkgs,
     home-manager,
+    stylix,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -43,6 +45,7 @@
               backupFileExtension = "hmbak";
             };
           }
+          stylix.nixosModules.stylix
         ];
       };
       nixosModules = import ./modules/nixos {inherit inputs;};
