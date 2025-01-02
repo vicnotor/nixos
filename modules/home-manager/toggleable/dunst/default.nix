@@ -12,11 +12,11 @@
   config = lib.mkIf config.dunstModule.enable {
     services.dunst = {
       enable = true;
-      iconTheme = {
-        name = "Papirus";
-        package = pkgs.papirus-icon-theme;
-        size = "16x16";
-      };
+      # iconTheme = {
+      #   name = "Papirus";
+      #   package = pkgs.papirus-icon-theme;
+      #   size = "16x16";
+      # };
       settings = {
         global = {
           origin = "top-right";

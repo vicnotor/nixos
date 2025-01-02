@@ -23,7 +23,7 @@
     ./toggleable/python
     ./toggleable/r
     ./toggleable/scripts
-    ./toggleable/stylix
+    ./toggleable/stylixHm
     ./toggleable/tmux
     ./toggleable/waybar
     ./toggleable/zsh

@@ -18,10 +18,10 @@
         name = "rose-pine";
       };
 
-      iconTheme = {
-        package = pkgs.papirus-icon-theme;
-        name = "Papirus";
-      };
+      # iconTheme = {
+      #   package = pkgs.papirus-icon-theme;
+      #   name = "Papirus";
+      # };
 
       font = {
         name = "Ubuntu Nerd Font";

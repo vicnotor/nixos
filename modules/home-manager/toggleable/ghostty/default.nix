@@ -37,7 +37,7 @@
         # Cursor
         cursor-style = "block";
         cursor-style-blink = false;
-        shell-integration-features = ["no-cursor"];
+        shell-integration-features = "no-cursor";
 
         # Window
         window-padding-x = 2;
