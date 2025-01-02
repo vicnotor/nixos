@@ -27,6 +27,12 @@
             set -g @plugin 'tmux-plugins/tmux-sensible'
           '';
         }
+        {
+          plugin = tmuxPlugins.resurrect;
+          extraConfig = ''
+            set -g @plugin 'tmux-plugins/tmux-resurrect'
+          '';
+        }
       ];
 
       extraConfig = ''

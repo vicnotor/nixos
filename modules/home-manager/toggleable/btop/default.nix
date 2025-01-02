@@ -16,7 +16,7 @@
       enable = true;
       settings = {
         # Theme
-        color_theme = "tokyo-night";
+        # color_theme = "tokyo-night"; # Not needed because of Stylix
         theme_background = false;
 
         # Looks

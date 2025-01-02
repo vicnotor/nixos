@@ -21,20 +21,20 @@
         global = {
           origin = "top-right";
           transparency = 10;
-          font = "Ubuntu Nerd Font 11";
+          # font = "Ubuntu Nerd Font 11"; # Not needed because of Stylix
         };
 
-        urgency_low = {
+        urgency_low = lib.mkForce {
           background = "#24273a";
           foreground = "#f4dbd6";
           frame_color = "#24273a";
         };
-        urgency_normal = {
+        urgency_normal = lib.mkForce {
           background = "#24273a";
           foreground = "#f4dbd6";
           frame_color = "#24273a";
         };
-        urgency_critical = {
+        urgency_critical = lib.mkForce {
           background = "#24273a";
           foreground = "#ed8796";
           frame_color = "#24273a";

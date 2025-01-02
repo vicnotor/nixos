@@ -16,7 +16,7 @@
       enable = true;
       settings = {
         window = {
-          opacity = 1;
+          # opacity = 1; # Not needed because of Stylix
           dimensions = {
             columns = 110;
             lines = 25;
@@ -37,36 +37,37 @@
             style = "Italic";
           };
         };
-        colors = {
-          cursor = {
-            cursor = "#FFFFFF";
-            text = "#000000";
-          };
-          primary = {
-            background = "#1E1D23";
-            foreground = "#F9F0F0";
-          };
-          normal = {
-            black = "#1a1a1a";
-            blue = "#9d65ff";
-            cyan = "#58d1eb";
-            green = "#98e024";
-            magenta = "#f4008f";
-            red = "#f4005f";
-            white = "#c4c5b5";
-            yellow = "#fa8419";
-          };
-          bright = {
-            black = "#9e9778";
-            blue = "#9d65ff";
-            cyan = "#58d1eb";
-            green = "#98e024";
-            magenta = "#f4008f";
-            red = "#f4005f";
-            white = "#f6f6ef";
-            yellow = "#e0d561";
-          };
-        };
+        # Now set by Stylix:
+        # colors = {
+        #   cursor = {
+        #     cursor = "#FFFFFF";
+        #     text = "#000000";
+        #   };
+        #   primary = {
+        #     background = "#1E1D23";
+        #     foreground = "#F9F0F0";
+        #   };
+        #   normal = {
+        #     black = "#1a1a1a";
+        #     blue = "#9d65ff";
+        #     cyan = "#58d1eb";
+        #     green = "#98e024";
+        #     magenta = "#f4008f";
+        #     red = "#f4005f";
+        #     white = "#c4c5b5";
+        #     yellow = "#fa8419";
+        #   };
+        #   bright = {
+        #     black = "#9e9778";
+        #     blue = "#9d65ff";
+        #     cyan = "#58d1eb";
+        #     green = "#98e024";
+        #     magenta = "#f4008f";
+        #     red = "#f4005f";
+        #     white = "#f6f6ef";
+        #     yellow = "#e0d561";
+        #   };
+        # };
         keyboard.bindings = [
           {
             key = "Backspace";

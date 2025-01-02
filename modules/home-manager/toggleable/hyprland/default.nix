@@ -56,8 +56,8 @@
           border_size = 2;
 
           # https://wiki.hyprland.org/Configuring/Variables/#variable-types for info about colors
-          "col.active_border" = "rgba(1c3afcee) rgba(fa5b05ee) 135deg";
-          "col.inactive_border" = "rgba(595959aa)";
+          "col.active_border" = lib.mkForce "rgba(1c3afcee) rgba(fa5b05ee) 135deg";
+          "col.inactive_border" = lib.mkForce "rgba(595959aa)";
 
           # Set to true enable resizing windows by clicking and dragging on borders and gaps
           resize_on_border = false;
@@ -72,14 +72,14 @@
           rounding = 10;
 
           # Change transparency of focused and unfocused windows
-          active_opacity = "1.0";
-          inactive_opacity = "1.0";
+          # active_opacity = "1.0";
+          # inactive_opacity = "1.0";
 
           shadow = {
             enabled = true;
             range = 4;
             render_power = 3;
-            color = "rgba(1a1a1aee)";
+            color = lib.mkForce "rgba(1a1a1aee)";
           };
 
           # https://wiki.hyprland.org/Configuring/Variables/#blur
@@ -320,7 +320,7 @@
         # See https://wiki.hyprland.org/Configuring/Workspace-Rules/ for workspace rules
 
         windowrule = [
-          "opacity 0.88, ^(Alacritty)$"
+          # "opacity 0.88, ^(Alacritty)$"
           "opacity 0.88, ^(com.mitchellh.ghostty)$"
         ];
         # windowrule = input.touchpad.scroll_factor 1.0, ^(Alacritty)$

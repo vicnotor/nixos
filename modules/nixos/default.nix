@@ -23,6 +23,7 @@
     ./toggleable/polkit
     ./toggleable/sound
     ./toggleable/ssd
+    ./toggleable/stylix
     ./toggleable/thunar
     ./toggleable/virtualisation
     ./toggleable/xdgportal
@@ -41,6 +42,7 @@
   polkitModule.enable = lib.mkDefault true;
   soundModule.enable = lib.mkDefault true;
   ssdModule.enable = lib.mkDefault true;
+  stylixModule.enable = lib.mkDefault true;
   thunarModule.enable = lib.mkDefault true;
   virtualisationModule.enable = lib.mkDefault true;
   xdgportalModule.enable = lib.mkDefault true;

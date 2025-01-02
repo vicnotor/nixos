@@ -10,6 +10,7 @@
     ./toggleable/direnv
     ./toggleable/dunst
     ./toggleable/extraDotfiles
+    ./toggleable/fzf
     ./toggleable/ghostty
     ./toggleable/git
     ./toggleable/gtk
@@ -22,6 +23,7 @@
     ./toggleable/python
     ./toggleable/r
     ./toggleable/scripts
+    ./toggleable/stylix
     ./toggleable/tmux
     ./toggleable/waybar
     ./toggleable/zsh
@@ -33,21 +35,23 @@
   direnvModule.enable = lib.mkDefault true;
   dunstModule.enable = lib.mkDefault true;
   extraDotfilesModule.enable = lib.mkDefault true;
+  fzfModule.enable = lib.mkDefault true;
   ghosttyModule.enable = lib.mkDefault true;
   gitModule.enable = lib.mkDefault true;
-  gtkModule.enable = lib.mkDefault true;
   hyprlandModule.enable = lib.mkDefault true;
   miscModule.enable = lib.mkDefault true;
   mpvModule.enable = lib.mkDefault true;
   nvimModule.enable = lib.mkDefault true;
-  pointerCursorModule.enable = lib.mkDefault true;
   pythonModule.enable = lib.mkDefault true;
   rModule.enable = lib.mkDefault true;
   scriptsModule.enable = lib.mkDefault true;
+  stylixModule.enable = lib.mkDefault true;
   tmuxModule.enable = lib.mkDefault true;
   waybarModule.enable = lib.mkDefault true;
   zshModule.enable = lib.mkDefault true;
 
   # Disabled by default
+  gtkModule.enable = lib.mkDefault false; # Not needed because of Stylix
   htopModule.enable = lib.mkDefault false;
+  pointerCursorModule.enable = lib.mkDefault false; # Not needed because of Stylix
 }

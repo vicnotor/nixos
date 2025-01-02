@@ -24,7 +24,6 @@
     evince # pdf
     fastfetch # Neofetch
     fd # Finding files
-    fzf # Amazing tool
     zapzap # Whatsapp
     libreoffice
     teams-for-linux
