@@ -45,7 +45,7 @@
   pythonModule.enable = lib.mkDefault true;
   rModule.enable = lib.mkDefault true;
   scriptsModule.enable = lib.mkDefault true;
-  stylixModule.enable = lib.mkDefault true;
+  stylixHmModule.enable = lib.mkDefault true;
   tmuxModule.enable = lib.mkDefault true;
   waybarModule.enable = lib.mkDefault true;
   zshModule.enable = lib.mkDefault true;
