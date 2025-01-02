@@ -23,21 +23,21 @@
           };
         };
         # Now set by Stylix:
-        # font = {
-        #   size = 15;
-        #   normal = {
-        #     family = "UbuntuMono Nerd Font";
-        #     style = "Regular";
-        #   };
-        #   bold = {
-        #     family = "UbuntuMono Nerd Font";
-        #     style = "Bold";
-        #   };
-        #   italic = {
-        #     family = "UbuntuMono Nerd Font";
-        #     style = "Italic";
-        #   };
-        # };
+        font = {
+          size = lib.mkForce 15;
+          # normal = {
+          #   family = "UbuntuMono Nerd Font";
+          #   style = "Regular";
+          # };
+          # bold = {
+          #   family = "UbuntuMono Nerd Font";
+          #   style = "Bold";
+          # };
+          # italic = {
+          #   family = "UbuntuMono Nerd Font";
+          #   style = "Italic";
+          # };
+        };
         # colors = {
         #   cursor = {
         #     cursor = "#FFFFFF";
