@@ -29,6 +29,7 @@
         ];
 
         # Theme
+        theme = "tokyonight";
         # background = lib.mkForce #1E1D23 # My old Alacritty background
         foreground = lib.mkForce "#F9F0F0";
         selection-background = lib.mkForce "#3b3e40";

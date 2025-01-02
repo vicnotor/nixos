@@ -22,22 +22,22 @@
             lines = 25;
           };
         };
-        font = {
-          size = 15;
-          normal = {
-            family = "UbuntuMono Nerd Font";
-            style = "Regular";
-          };
-          bold = {
-            family = "UbuntuMono Nerd Font";
-            style = "Bold";
-          };
-          italic = {
-            family = "UbuntuMono Nerd Font";
-            style = "Italic";
-          };
-        };
         # Now set by Stylix:
+        # font = {
+        #   size = 15;
+        #   normal = {
+        #     family = "UbuntuMono Nerd Font";
+        #     style = "Regular";
+        #   };
+        #   bold = {
+        #     family = "UbuntuMono Nerd Font";
+        #     style = "Bold";
+        #   };
+        #   italic = {
+        #     family = "UbuntuMono Nerd Font";
+        #     style = "Italic";
+        #   };
+        # };
         # colors = {
         #   cursor = {
         #     cursor = "#FFFFFF";

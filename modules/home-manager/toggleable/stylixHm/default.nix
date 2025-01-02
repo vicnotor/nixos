@@ -12,12 +12,14 @@
   config = lib.mkIf config.stylixHmModule.enable {
     stylix = {
       targets = {
-        # dunst.enable = false;
+        ghostty.enable = false;
+        tmux.enable = false;
       };
       iconTheme = {
         enable = true;
         package = pkgs.papirus-icon-theme;
-        name = "Papirus";
+        light = "Papirus";
+        dark = "Papirus";
       };
     };
   };

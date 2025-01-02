@@ -14,6 +14,7 @@
       enableDefaultPackages = true;
       packages = with pkgs; [
         helvetica-neue-lt-std
+        nerd-fonts.jetbrains-mono
         nerd-fonts.ubuntu
         nerd-fonts.ubuntu-mono
         nerd-fonts.ubuntu-sans
@@ -24,7 +25,7 @@
         defaultFonts = {
           serif = ["Ubuntu Nerd Font"];
           sansSerif = ["UbuntuSans Nerd Font"];
-          monospace = ["UbuntuMono Nerd Font"];
+          monospace = ["JetBrainsMono Nerd Font"];
           emoji = ["Noto Color Emoji"];
         };
       };

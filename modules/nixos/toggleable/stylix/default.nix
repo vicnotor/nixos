@@ -14,11 +14,12 @@
     stylix = {
       enable = true;
       image = ./dune_2_top_down.jpeg;
-      polarity = "dark";
-      base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-dark.yaml";
       targets = {
         chromium.enable = false;
+        console.enable = false;
       };
+      polarity = "dark";
+      base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-dark.yaml";
       fonts = {
         serif = {
           package = pkgs.nerd-fonts.ubuntu;
@@ -31,8 +32,8 @@
         };
 
         monospace = {
-          package = pkgs.nerd-fonts.ubuntu-mono;
-          name = "UbuntuMono Nerd Font";
+          package = pkgs.nerd-fonts.jetbrains-mono;
+          name = "JetBrainsMono Nerd Font";
         };
 
         emoji = {
