@@ -19,6 +19,7 @@
       ripgrep
       unzip
       wget
+      # mako # Notification deamon
     ];
   };
 }

@@ -41,8 +41,6 @@
         shell-integration-features = "no-cursor";
 
         # Window
-        window-padding-x = 2;
-        window-padding-y = 2;
         window-padding-balance = true;
         window-decoration = false;
         window-width = 110;
