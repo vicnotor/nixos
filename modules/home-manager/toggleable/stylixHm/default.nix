@@ -13,6 +13,7 @@
     stylix = {
       targets = {
         ghostty.enable = false;
+        neovim.enable = false;
         tmux.enable = false;
       };
       iconTheme = {

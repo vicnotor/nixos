@@ -321,10 +321,8 @@
         # See https://wiki.hyprland.org/Configuring/Workspace-Rules/ for workspace rules
 
         windowrule = [
-          # "opacity 0.88, ^(Alacritty)$"
           "opacity 0.88, ^(com.mitchellh.ghostty)$"
         ];
-        # windowrule = input.touchpad.scroll_factor 1.0, ^(Alacritty)$
 
         windowrulev2 = [
           # Some custom rules for certain things

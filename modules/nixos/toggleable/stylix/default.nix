@@ -4,8 +4,8 @@
   pkgs,
   ...
 }: let
-  scheme = "tokyo-night-dark";
-  schemeFile = "${pkgs.base16-schemes}/share/themes/${scheme}.yaml";
+  # scheme = "tokyo-night-dark";
+  # schemeFile = "${pkgs.base16-schemes}/share/themes/${scheme}.yaml";
   customSchemeFile = ./tokyonight-custom.yaml;
 in {
   options = {
@@ -14,10 +14,9 @@ in {
   };
 
   config = lib.mkIf config.stylixModule.enable {
-    # environment.systemPackages = [pkgs.base16-schemes];
     stylix = {
       enable = true;
-      image = ./dune_2_top_down.jpeg;
+      image = ./black.jpg;
       targets = {
         chromium.enable = false;
         console.enable = false;
@@ -46,7 +45,7 @@ in {
         };
         sizes = {
           applications = 11;
-          terminal = 15;
+          terminal = 13;
           desktop = 11;
           popups = 11;
         };
