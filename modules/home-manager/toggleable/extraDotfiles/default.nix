@@ -6,7 +6,7 @@
 }: {
   options = {
     extraDotfilesModule.enable =
-      lib.mkEnableOption "enables importing of all extraa little dotfiles";
+      lib.mkEnableOption "enables module for all extra little dotfiles";
   };
 
   config = lib.mkIf config.extraDotfilesModule.enable {

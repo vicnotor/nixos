@@ -3,6 +3,7 @@
     # Always enabled
     ./always/home-manager
     ./always/packages
+    ./always/scripts
 
     # Toggleable (see below)
     ./toggleable/alacritty
@@ -22,7 +23,6 @@
     ./toggleable/pointerCursor
     ./toggleable/python
     ./toggleable/r
-    ./toggleable/scripts
     ./toggleable/stylixHm
     ./toggleable/tmux
     ./toggleable/waybar
@@ -44,7 +44,6 @@
   nvimModule.enable = lib.mkDefault true;
   pythonModule.enable = lib.mkDefault true;
   rModule.enable = lib.mkDefault true;
-  scriptsModule.enable = lib.mkDefault true;
   stylixHmModule.enable = lib.mkDefault true;
   tmuxModule.enable = lib.mkDefault true;
   waybarModule.enable = lib.mkDefault true;

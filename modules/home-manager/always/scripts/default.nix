@@ -1,4 +1,3 @@
-# TODO: Change this to some other solution (like with home-manager or so)
 {
   lib,
   config,
@@ -12,7 +11,7 @@
   config = lib.mkIf config.scriptsModule.enable {
     home = {
       file = {
-        ".local/bin".source = config.lib.file.mkOutOfStoreSymlink /home/vic/Git/xxheyhey/nixos-xx/extraDotfiles/scripts;
+        ".local/bin".source = config.lib.file.mkOutOfStoreSymlink /home/vic/Git/xxheyhey/nixos-xx/extraFiles/shellScripts;
       };
     };
   };
