@@ -233,6 +233,7 @@
             "$MOD2, M, exec, uwsm app -- thunderbird"
             "$MOD2, C, exec, uwsm app -- hyprpicker --autocopy"
             "$MOD2, D, exec, uwsm app -- webcord"
+            "$MOD2, T, exec, uwsm app -- teams-for-linux"
 
             # Commands
             "$MOD, End, exec, busctl --user set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 6500"
@@ -329,16 +330,20 @@
           # Some custom rules for certain things
           "scrollmouse 1.8, class:(com.rtosta.zapzap)"
 
+          # Floating windows
+          "float, class:(org.pulseaudio.pavucontrol)"
+          "size 1200 800, class:(org.pulseaudio.pavucontrol)"
+          ## Some useful default floating windows using titles
+          "float, title:FloatingWindow"
+          "float, title:LargeFloatingWindow"
+          "size 1200 800, title:LargeFloatingWindow"
+
           # Ignore maximize requests from apps.
           "suppressevent maximize, class:.*"
 
           # Fix some dragging issues with XWayland
           "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
 
-          # Some useful floating window rules
-          "float, title:FloatingWindow"
-          "float, title:LargeFloatingWindow"
-          "size 1200 800, title:LargeFloatingWindow"
 
           # Special workspace rules
           ## scratchpad

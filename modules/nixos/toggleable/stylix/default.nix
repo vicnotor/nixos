@@ -3,7 +3,11 @@
   config,
   pkgs,
   ...
-}: {
+}: let
+  scheme = "tokyo-night-dark";
+  schemeFile = "${pkgs.base16-schemes}/share/themes/${scheme}.yaml";
+  customSchemeFile = ./tokyonight-custom.yaml;
+in {
   options = {
     stylixModule.enable =
       lib.mkEnableOption "enables Stylix module";
@@ -19,7 +23,7 @@
         console.enable = false;
       };
       polarity = "dark";
-      base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-dark.yaml";
+      base16Scheme = customSchemeFile;
       fonts = {
         serif = {
           package = pkgs.nerd-fonts.ubuntu;

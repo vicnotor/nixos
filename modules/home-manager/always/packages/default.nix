@@ -38,7 +38,6 @@
     hyprpicker # Color picker
     unrar
     godot_4
-    pulsemixer # cli audio mixer
     youtube-music
     snes9x-gtk
 

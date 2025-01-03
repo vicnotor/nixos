@@ -24,7 +24,6 @@
   outputs = {
     nixpkgs,
     home-manager,
-    stylix,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -45,7 +44,7 @@
               backupFileExtension = "hmbak";
             };
           }
-          stylix.nixosModules.stylix
+          inputs.stylix.nixosModules.stylix
         ];
       };
       nixosModules = import ./modules/nixos {inherit inputs;};
