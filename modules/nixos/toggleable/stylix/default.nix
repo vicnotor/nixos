@@ -16,7 +16,7 @@ in {
   config = lib.mkIf config.stylixModule.enable {
     stylix = {
       enable = true;
-      image = ./black.jpg;
+      image = ./dune_2_top_down.jpeg;
       targets = {
         chromium.enable = false;
         console.enable = false;
