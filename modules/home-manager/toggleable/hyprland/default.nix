@@ -237,6 +237,7 @@
             "$MOD, End, exec, busctl --user set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 6500"
             "$MOD, B, exec, pkill -SIGUSR1 waybar"
             "$MOD SHIFT, B, exec, pkill -SIGUSR2 waybar"
+            "$MOD, Delete, exec, dunstctl close"
 
             # Screenshot
             ", Print, exec, screenshot"

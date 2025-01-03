@@ -25,19 +25,19 @@
         };
 
         urgency_low = {
-          background = "#24273add";
+          background = "#24273afd";
           foreground = "#f4dbd6";
           frame_color = "#24273a";
         };
         urgency_normal = {
-          background = "#24273add";
+          background = "#24273afd";
           foreground = "#f4dbd6";
           frame_color = "#24273a";
         };
         urgency_critical = {
-          background = "#24273add";
+          background = "#24273afd";
           foreground = "#ed8796";
-          frame_color = "#24273a";
+          frame_color = "#ed8796";
         };
       };
     };

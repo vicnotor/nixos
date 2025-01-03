@@ -36,19 +36,19 @@ in {
     services.dunst = {
       settings = {
         urgency_low = lib.mkForce {
-          background = "${colors.base02}";
-          foreground = "${colors.base07}";
-          frame_color = "${colors.base02}";
+          background = "#${colors.base02}fd";
+          foreground = "#${colors.base07}";
+          frame_color = "#${colors.base02}";
         };
         urgency_normal = lib.mkForce {
-          background = "${colors.base02}";
-          foreground = "${colors.base07}";
-          frame_color = "${colors.base02}";
+          background = "#${colors.base02}fd";
+          foreground = "#${colors.base07}";
+          frame_color = "#${colors.base02}";
         };
         urgency_critical = lib.mkForce {
-          background = "${colors.base02}";
-          foreground = "${colors.base08}";
-          frame_color = "${colors.base02}";
+          background = "#${colors.base02}fd";
+          foreground = "#${colors.base08}";
+          frame_color = "#${colors.base08}";
         };
       };
     };
