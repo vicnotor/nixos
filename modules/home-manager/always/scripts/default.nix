@@ -1,18 +1,7 @@
-{
-  lib,
-  config,
-  ...
-}: {
-  options = {
-    scriptsModule.enable =
-      lib.mkEnableOption "enables linking all custom scripts to .local/bin";
-  };
-
-  config = lib.mkIf config.scriptsModule.enable {
-    home = {
-      file = {
-        ".local/bin".source = config.lib.file.mkOutOfStoreSymlink /home/vic/Git/xxheyhey/nixos-xx/extraFiles/shellScripts;
-      };
+{config, ...}: {
+  home = {
+    file = {
+      ".local/bin".source = config.lib.file.mkOutOfStoreSymlink /home/vic/Git/xxheyhey/nixos-xx/extraFiles/shellScripts;
     };
   };
 }
