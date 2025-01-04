@@ -27,6 +27,7 @@
           "-liga"
           "-dlig"
         ];
+        bold-is-bright = true; # Bold text will use the bright color palette
 
         # Theme
         theme = "tokyonight";
