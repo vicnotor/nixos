@@ -27,7 +27,6 @@
     ./toggleable/thunar
     ./toggleable/virtualisation
     ./toggleable/xdgportal
-    ./toggleable/yazi
     ./toggleable/zsh
   ];
 
@@ -47,7 +46,6 @@
   thunarModule.enable = lib.mkDefault true;
   virtualisationModule.enable = lib.mkDefault true;
   xdgportalModule.enable = lib.mkDefault true;
-  yaziModule.enable = lib.mkDefault true;
   zshModule.enable = lib.mkDefault true;
 
   # Disabled by default
