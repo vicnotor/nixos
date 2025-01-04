@@ -11,9 +11,7 @@
   };
 
   config = lib.mkIf config.ghosttyModule.enable {
-    home.packages = [
-      inputs.ghostty.packages.${pkgs.system}.default
-    ];
+    home.packages = [inputs.ghostty.packages.${pkgs.system}.default];
     programs.ghostty = {
       enable = true;
       package = inputs.ghostty.packages.${pkgs.system}.default;
