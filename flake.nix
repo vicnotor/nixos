@@ -24,6 +24,10 @@
       url = "github:yazi-rs/plugins";
       flake = false;
     };
+    yazi-tokyo-night = {
+      url = "github:BennyOe/tokyo-night.yazi";
+      flake = false;
+    };
   };
 
   outputs = {

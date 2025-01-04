@@ -2,6 +2,7 @@
   lib,
   config,
   pkgs,
+  inputs,
   ...
 }: let
   colors = config.lib.stylix.colors;
@@ -14,10 +15,12 @@ in {
   config = lib.mkIf config.stylixHmModule.enable {
     stylix = {
       targets = {
-        ghostty.enable = false; # See below
-        hyprland.enable = false; # See below
+        # Manual theming can often be done in this file for the following programs
+        ghostty.enable = false; # Change below
+        hyprland.enable = false; # Change below
         neovim.enable = false;
         tmux.enable = false;
+        yazi.enable = false; # Change below
       };
       iconTheme = {
         enable = true;
@@ -61,6 +64,16 @@ in {
           background = "#${colors.base01}ee";
           foreground = "#${colors.base08}";
           frame_color = "#${colors.base08}";
+        };
+      };
+    };
+    programs.yazi = {
+      flavors = lib.mkForce {
+        tokyo-night = inputs.yazi-tokyo-night;
+      };
+      theme = lib.mkForce {
+        flavor = {
+          dark = "tokyo-night";
         };
       };
     };

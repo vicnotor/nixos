@@ -1117,6 +1117,8 @@
         "swww": "swww",
         "waybar": "waybar",
         "yazi": "yazi",
+        "yazi-plugins": "yazi-plugins",
+        "yazi-tokyo-night": "yazi-tokyo-night",
         "zig": "zig_2"
       }
     },
@@ -1468,6 +1470,38 @@
       "original": {
         "owner": "sxyazi",
         "repo": "yazi",
+        "type": "github"
+      }
+    },
+    "yazi-plugins": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1735830840,
+        "narHash": "sha256-mQkivPt9tOXom78jgvSwveF/8SD8M2XCXxGY8oijl+o=",
+        "owner": "yazi-rs",
+        "repo": "plugins",
+        "rev": "600614a9dc59a12a63721738498c5541c7923873",
+        "type": "github"
+      },
+      "original": {
+        "owner": "yazi-rs",
+        "repo": "plugins",
+        "type": "github"
+      }
+    },
+    "yazi-tokyo-night": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1735574429,
+        "narHash": "sha256-MRlvOVW7o9M/bPUDZbajjUA2nUtcIm8S1CJZLgMHYjI=",
+        "owner": "BennyOe",
+        "repo": "tokyo-night.yazi",
+        "rev": "caa00abcce9886373d687d8aea8b812870f74da7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "BennyOe",
+        "repo": "tokyo-night.yazi",
         "type": "github"
       }
     },
