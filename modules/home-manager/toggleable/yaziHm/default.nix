@@ -2,7 +2,6 @@
   lib,
   config,
   pkgs,
-  inputs,
   ...
 }: let
   yazi-plugins = pkgs.fetchFromGitHub {
@@ -13,15 +12,13 @@
   };
 in {
   options = {
-    yaziModule.enable =
-      lib.mkEnableOption "enables Yazi module";
+    yaziHmModule.enable =
+      lib.mkEnableOption "enables Yazi home-manager module";
   };
 
-  config = lib.mkIf config.yaziModule.enable {
-    environment.systemPackages = [inputs.yazi.packages.${pkgs.system}.default];
+  config = lib.mkIf config.yaziHmModule.enable {
     programs.yazi = {
       enable = true;
-      package = inputs.yazi.packages.${pkgs.system}.default;
       enableZshIntegration = true;
       shellWrapperName = "y";
       settings = {

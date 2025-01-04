@@ -19,7 +19,7 @@
       ripgrep
       unzip
       wget
-      # mako # Notification deamon
+      inputs.yazi.packages.${pkgs.system}.default # TUI file manager
     ];
   };
 }
