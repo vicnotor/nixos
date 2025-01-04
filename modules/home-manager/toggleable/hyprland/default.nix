@@ -57,7 +57,7 @@
 
           # https://wiki.hyprland.org/Configuring/Variables/#variable-types for info about colors
           "col.active_border" = "rgba(1c3afcee) rgba(fa5b05ee) 135deg";
-          "col.inactive_border" = "rgba(595959aa)";
+          "col.inactive_border" = "rgba(595959ee)";
 
           # Set to true enable resizing windows by clicking and dragging on borders and gaps
           resize_on_border = false;

@@ -20,7 +20,7 @@
       enableZshIntegration = true;
       settings = {
         # Font
-        font-size = lib.mkForce 13;
+        font-size = 13;
         # The next three lines disable all ligatures
         font-feature = [
           "-calt"
@@ -31,10 +31,10 @@
 
         # Theme
         theme = "tokyonight";
-        # background = lib.mkForce #1E1D23 # My old Alacritty background
-        foreground = lib.mkForce "#F9F0F0";
-        selection-background = lib.mkForce "#3b3e40";
-        selection-foreground = lib.mkForce "#f06090";
+        # background = #1E1D23 # My old Alacritty background
+        # foreground = "#F9F0F0";
+        selection-background = "#3b3e40";
+        selection-foreground = "#f06090";
 
         # Cursor
         cursor-style = "block";
