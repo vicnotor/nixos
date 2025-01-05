@@ -32,7 +32,7 @@
         # See https://wiki.hyprland.org/Configuring/Keywords/
 
         "$terminal" = "ghostty";
-        "$fileManager" = "ghostty -e yazi";
+        "$fileManager" = "thunar";
         "$menu" = "rofi -show drun -show-icons -run-command 'uwsm app -- {cmd}'";
         "$menu2" = "rofi -show run -run-command 'uwsm app -- {cmd}' ";
         "$browser" = "google-chrome-stable";
