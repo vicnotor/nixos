@@ -28,7 +28,6 @@
       url = "github:BennyOe/tokyo-night.yazi";
       flake = false;
     };
-    quickemu.url = "github:quickemu-project/quickemu";
   };
 
   outputs = {

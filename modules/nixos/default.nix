@@ -41,7 +41,6 @@
   nvidiaModule.enable = lib.mkDefault true;
   nvidiahybridModule.enable = lib.mkDefault true;
   polkitModule.enable = lib.mkDefault true;
-  quickemuModule.enable = lib.mkDefault true;
   soundModule.enable = lib.mkDefault true;
   ssdModule.enable = lib.mkDefault true;
   stylixModule.enable = lib.mkDefault true;
@@ -51,4 +50,5 @@
   zshModule.enable = lib.mkDefault true;
 
   # Disabled by default
+  quickemuModule.enable = lib.mkDefault false;
 }
