@@ -9,9 +9,10 @@
   };
 
   config = lib.mkIf config.virtualisationModule.enable {
-    virtualisation.podman = {
-      enable = true;
-      dockerCompat = true;
+    users.groups.libvirtd.members = ["vic"];
+    virtualisation = {
+      libvirtd.enable = true;
+      spiceUSBRedirection.enable = true;
     };
   };
 }

@@ -22,7 +22,6 @@
     ./toggleable/nvim
     ./toggleable/pointerCursor
     ./toggleable/python
-    ./toggleable/quickemu
     ./toggleable/r
     ./toggleable/stylixHm
     ./toggleable/tmux
@@ -46,7 +45,6 @@
   mpvModule.enable = lib.mkDefault true;
   nvimModule.enable = lib.mkDefault true;
   pythonModule.enable = lib.mkDefault true;
-  quickemuModule.enable = lib.mkDefault true;
   rModule.enable = lib.mkDefault true;
   stylixHmModule.enable = lib.mkDefault true;
   tmuxModule.enable = lib.mkDefault true;

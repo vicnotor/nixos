@@ -11,6 +11,6 @@
   };
 
   config = lib.mkIf config.quickemuModule.enable {
-    home.packages = [inputs.quickemu.packages.${pkgs.system}.default];
+    environment.systemPackages = [inputs.quickemu.packages.${pkgs.system}.default];
   };
 }
