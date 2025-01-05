@@ -59,6 +59,9 @@ return {
 			require("colorizer").setup({
 				"*",
 				css = { rgb_fn = true },
+			}, {
+				names = false,
+				RRGGBBAA = true,
 			})
 		end,
 	},

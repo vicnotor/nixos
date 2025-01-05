@@ -47,8 +47,8 @@
 
         # Keybinds
         keybind = [
-          "ctrl+backspace=unbind"
-          "shift+enter=unbind"
+          "ctrl+backspace=ignore"
+          "shift+enter=ignore"
           "ctrl+enter=text:✗"
           "ctrl+shift+enter=text:✓"
           "ctrl+shift+enter=text:✓"
