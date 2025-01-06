@@ -6,11 +6,11 @@
 }: {
   imports = [./quickemu];
   options = {
-    virtualizationModule.enable =
-      lib.mkEnableOption "enables virtualization module";
+    virtualisationModule.enable =
+      lib.mkEnableOption "enables virtualisation module";
   };
 
-  config = lib.mkIf config.virtualizationModule.enable {
+  config = lib.mkIf config.virtualisationModule.enable {
     quickemuModule.enable = true; # See ./quickemu/default.nix
 
     programs.dconf.enable = true;
