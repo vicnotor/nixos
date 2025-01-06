@@ -4,12 +4,15 @@
   pkgs,
   ...
 }: {
+  imports = [./quickemu];
   options = {
-    virtualisationModule.enable =
-      lib.mkEnableOption "enables virtualisation module";
+    virtualizationModule.enable =
+      lib.mkEnableOption "enables virtualization module";
   };
 
-  config = lib.mkIf config.virtualisationModule.enable {
+  config = lib.mkIf config.virtualizationModule.enable {
+    quickemuModule.enable = true; # See ./quickemu/default.nix
+
     programs.dconf.enable = true;
 
     users.groups.libvirtd.members = ["vic"];

@@ -21,7 +21,6 @@
     ./toggleable/nvidia
     ./toggleable/nvidiahybrid
     ./toggleable/polkit
-    ./toggleable/quickemu
     ./toggleable/sound
     ./toggleable/ssd
     ./toggleable/stylix
@@ -45,10 +44,9 @@
   ssdModule.enable = lib.mkDefault true;
   stylixModule.enable = lib.mkDefault true;
   thunarModule.enable = lib.mkDefault true;
-  virtualisationModule.enable = lib.mkDefault true;
   xdgportalModule.enable = lib.mkDefault true;
   zshModule.enable = lib.mkDefault true;
 
   # Disabled by default
-  quickemuModule.enable = lib.mkDefault false;
+  virtualisationModule.enable = lib.mkDefault false;
 }
