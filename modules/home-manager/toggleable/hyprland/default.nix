@@ -256,7 +256,7 @@
 
             # Special workspaces
             "$MOD, grave, togglespecialworkspace, scratchpad"
-            "$MOD SHIFT, grave, togglespecialworkspace, ghosttyfirstlaunch"
+            "$MOD SHIFT, grave, togglespecialworkspace, firstlaunchapps"
 
             # Scroll through existing workspaces with MOD + scroll
             "$MOD, mouse_down, workspace, e+1"
@@ -348,10 +348,10 @@
           "bordersize 4, onworkspace:special:scratchpad"
           "size 900 700, onworkspace:special:scratchpad"
 
-          ## ghosttyfirstlaunch
-          "float, onworkspace:special:ghosttyfirstlaunch"
-          "bordersize 8, onworkspace:special:ghosttyfirstlaunch"
-          "size 600 400, onworkspace:special:ghosttyfirstlaunch"
+          ## firstlaunchapps
+          "float, onworkspace:special:firstlaunchapps"
+          "bordersize 8, onworkspace:special:firstlaunchapps"
+          "size 800 600, onworkspace:special:firstlaunchapps"
 
           # Needed for smart gaps
           "bordersize 0, floating:0, onworkspace:w[tv1]"
@@ -362,7 +362,11 @@
 
         workspace = [
           "special:scratchpad, on-created-empty:uwsm app -- $terminal"
-          "special:ghosttyfirstlaunch, on-created-empty:uwsm app -- $terminal"
+
+          # Apps that launch in the firstlaunchapps special workspace that have
+          # a slow initial startup
+          "special:firstlaunchapps, on-created-empty:uwsm app -- $terminal"
+          "special:firstlaunchapps, on-created-empty:uwsm app -- $fileManager"
 
           # Needed for smart gaps
           "w[tv1], gapsout:0, gapsin:0"

@@ -1,6 +1,7 @@
 [
-  "[workspace special:ghosttyfirstlaunch silent] uwsm app -- ghostty" # Fixes slow ghostty window launches
-  # "ghostty --gtk-single-instance=true --quit-after-last-window-closed=false --initial-window=false" # Other (slower) ghostty fix
+  # Fixes some apps with slow initial startup
+  "[workspace special:firstlaunchapps silent] uwsm app -- $terminal"
+  "[workspace special:firstlaunchapps silent] uwsm app -- $fileManager"
   "swww-daemon &"
   "wpdefault"
 
