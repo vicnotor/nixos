@@ -40,6 +40,7 @@
     godot_4
     youtube-music
     snes9x-gtk
+    imagemagick
 
     # Languages
     nodejs
