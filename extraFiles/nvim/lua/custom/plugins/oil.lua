@@ -1,3 +1,19 @@
+-- Map the left mouse button to pressing Enter while in oil buffer
+vim.api.nvim_create_augroup("OilMouseBindings", { clear = true })
+vim.api.nvim_create_autocmd("FileType", {
+	group = "OilMouseBindings",
+	pattern = "oil",
+	callback = function()
+		vim.api.nvim_buf_set_keymap(
+			0,
+			"n",
+			"<LeftMouse>",
+			[[<Cmd>lua local mouse = vim.fn.getmousepos(); vim.api.nvim_win_set_cursor(0, { mouse.line, mouse.column }); require("oil").select()<CR>]],
+			{ noremap = true, silent = true }
+		)
+	end,
+})
+
 return {
 	{
 		"stevearc/oil.nvim",
@@ -38,6 +54,8 @@ return {
 				override = function(conf)
 					return conf
 				end,
+
+				-- Custom keymaps in oil buffer
 			})
 		end,
 	},
