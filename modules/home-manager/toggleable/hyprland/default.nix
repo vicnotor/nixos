@@ -363,11 +363,6 @@
         workspace = [
           "special:scratchpad, on-created-empty:uwsm app -- $terminal"
 
-          # Apps that launch in the firstlaunchapps special workspace that have
-          # a slow initial startup
-          "special:firstlaunchapps, on-created-empty:uwsm app -- $terminal"
-          "special:firstlaunchapps, on-created-empty:uwsm app -- $fileManager"
-
           # Needed for smart gaps
           "w[tv1], gapsout:0, gapsin:0"
           "f[1], gapsout:0, gapsin:0"
