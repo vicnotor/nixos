@@ -79,4 +79,5 @@
   mv = "mv -v";
   godot = "godot4 --display-driver wayland";
   batterystatus = "acpi";
+  y = "yazi";
 }

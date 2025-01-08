@@ -15,7 +15,6 @@ in {
     programs.yazi = {
       enable = true;
       enableZshIntegration = true;
-      shellWrapperName = "y";
       settings = {
         manager.show_hidden = true;
         preview = {
@@ -87,17 +86,5 @@ in {
         ];
       };
     };
-
-    # Activate `y` command
-    programs.zsh.initExtra = ''
-      function y() {
-        local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-        yazi "$@" --cwd-file="$tmp"
-        if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-          builtin cd -- "$cwd"
-        fi
-        rm -f -- "$tmp"
-      }
-    '';
   };
 }
