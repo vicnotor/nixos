@@ -130,6 +130,7 @@ return {
 				--     },
 				--   },
 				-- },
+        zls = {},
 			}
 
 			-- Setup neovim lua configuration

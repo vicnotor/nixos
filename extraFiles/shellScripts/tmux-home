@@ -17,11 +17,11 @@ has_session() {
 }
 
 new_session() {
-    tmux new-session -s "$1" -c "$2"
+    tmux new-session -s "$1" -c "$2" "$3"
 }
 
 new_session_uwsm() {
-    uwsm app -- tmux new-session -s "$1" -c "$2"
+    uwsm app -- tmux new-session -s "$1" -c "$2" "$3"
 }
 
 

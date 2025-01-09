@@ -107,4 +107,10 @@ return {
 	-- 		hide_target_hack = false,
 	-- 	},
 	-- },
+	{
+		"huy-hng/anyline.nvim",
+		dependencies = { "nvim-treesitter/nvim-treesitter" },
+		config = true,
+		event = "VeryLazy",
+	},
 }
