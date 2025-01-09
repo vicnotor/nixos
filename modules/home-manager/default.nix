@@ -15,6 +15,7 @@
     ./toggleable/ghostty
     ./toggleable/git
     ./toggleable/gtk
+    ./toggleable/haskell
     ./toggleable/htop
     ./toggleable/hyprland
     ./toggleable/misc
@@ -40,6 +41,7 @@
   fzfModule.enable = lib.mkDefault true;
   ghosttyModule.enable = lib.mkDefault true;
   gitModule.enable = lib.mkDefault true;
+  haskellModule.enable = lib.mkDefault true;
   hyprlandModule.enable = lib.mkDefault true;
   miscModule.enable = lib.mkDefault true;
   mpvModule.enable = lib.mkDefault true;

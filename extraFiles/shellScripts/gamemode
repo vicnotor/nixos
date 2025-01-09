@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 # Arbitrary but unique message tag
-msgTag="GameMode"
+msgTag="Gamemode"
 
 HYPRGAMEMODE=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
 
@@ -14,9 +14,10 @@ if [ "$HYPRGAMEMODE" = 1 ] ; then
         keyword general:gaps_out 0;\
         keyword general:border_size 1;\
         keyword decoration:rounding 0"
-    dunstify -a "GameMode" -u low -i colors-chromagreen -h string:x-dunst-stack-tag:$msgTag "Gamemode" "on"
+    hyprctl keyword windowrule "opacity 1.0, ^(com.mitchellh.ghostty)$"
+    dunstify -a $msgTag -u low -i colors-chromagreen -h string:x-dunst-stack-tag:$msgTag $msgTag "on"
     exit
 fi
 
 hyprctl reload
-dunstify -a "GameMode" -u low -i colors-chromared -h string:x-dunst-stack-tag:$msgTag "Gamemode" "off"
+dunstify -a $msgTag -u low -i colors-chromared -h string:x-dunst-stack-tag:$msgTag $msgTag "off"

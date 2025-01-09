@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  pkgs,
   ...
 }: {
   options = {
@@ -9,8 +10,13 @@
   };
 
   config = lib.mkIf config.nvimModule.enable {
-    home.file = {
-      ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink /home/vic/Git/xxheyhey/nixos-xx/extraFiles/nvim;
+    home = {
+      packages = [
+        pkgs.yarn # Needed for plugins
+      ];
+      file = {
+        ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink /home/vic/Git/xxheyhey/nixos-xx/extraFiles/nvim;
+      };
     };
   };
 }

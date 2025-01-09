@@ -71,10 +71,6 @@
         decoration = {
           rounding = 10;
 
-          # Change transparency of focused and unfocused windows
-          # active_opacity = "1.0";
-          # inactive_opacity = "1.0";
-
           shadow = {
             enabled = false;
             color = "rgba(1a1a1aee)";

@@ -44,7 +44,6 @@
 
     # Languages
     nodejs
-    yarn # Needed for vim ( TODO: find out what for exactly)
     inputs.zig.packages.${pkgs.system}.default # Zig compiler
 
     # # You can also create simple shell scripts directly inside your
