@@ -21,6 +21,7 @@
     ./toggleable/misc
     ./toggleable/mpv
     ./toggleable/nvim
+    ./toggleable/ocaml
     ./toggleable/pointerCursor
     ./toggleable/python
     ./toggleable/r
@@ -46,6 +47,7 @@
   miscModule.enable = lib.mkDefault true;
   mpvModule.enable = lib.mkDefault true;
   nvimModule.enable = lib.mkDefault true;
+  ocamlModule.enable = lib.mkDefault true;
   pythonModule.enable = lib.mkDefault true;
   rModule.enable = lib.mkDefault true;
   stylixHmModule.enable = lib.mkDefault true;

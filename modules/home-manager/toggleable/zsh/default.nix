@@ -56,7 +56,6 @@
       sessionVariables = {
         DIRSTACKSIZE = 16;
         HYPHEN_INSENSITIVE = "true";
-        PATH= "~/bin:$PATH";
       };
       shellAliases = import ./aliases.nix;
     };
