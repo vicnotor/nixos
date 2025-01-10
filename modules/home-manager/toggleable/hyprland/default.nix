@@ -328,8 +328,11 @@
           "size 1200 800, class:(org.pulseaudio.pavucontrol)"
           ## Some useful default floating windows using titles
           "float, title:Nice Window"
+          "center, title:Nice Window"
           "float, title:FloatingWindow"
+          "center, title:FloatingWindow"
           "float, title:LargeFloatingWindow"
+          "center, title:LargeFloatingWindow"
           "size 1200 800, title:LargeFloatingWindow"
 
           # Ignore maximize requests from apps.
@@ -337,7 +340,6 @@
 
           # Fix some dragging issues with XWayland
           "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
-
 
           # Special workspace rules
           ## scratchpad

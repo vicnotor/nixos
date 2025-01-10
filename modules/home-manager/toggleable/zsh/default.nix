@@ -27,7 +27,6 @@
         }
 
         # Keep history of `cd` as in with `pushd` and make `cd -<TAB>` work.
-        DIRSTACKSIZE=16
         setopt auto_pushd
         setopt pushd_ignore_dups
         setopt pushd_minus
@@ -57,6 +56,7 @@
       sessionVariables = {
         DIRSTACKSIZE = 16;
         HYPHEN_INSENSITIVE = "true";
+        PATH= "~/bin:$PATH";
       };
       shellAliases = import ./aliases.nix;
     };
