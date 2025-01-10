@@ -111,25 +111,6 @@ return {
 				},
 				marksman = {},
 				bashls = {},
-				-- ocamllsp = {
-				-- 	manual_install = true,
-				-- 	settings = {
-				-- 		codelens = { enable = true },
-				-- 	},
-				--  	filetypes = {
-				-- 		"ocaml",
-				-- 		"ocaml.interface",
-				-- 		"ocaml.menhir",
-				-- 		"ocaml.cram",
-				-- 	},
-				-- },
-				-- hls = {
-				--   haskell = {
-				--     plugin = {
-				--       rename = { config = { crossModule = true } },
-				--     },
-				--   },
-				-- },
 				zls = {},
 			}
 
@@ -193,7 +174,7 @@ return {
 				},
 			})
 			lspconfig.hls.setup({
-        filetypes = { 'haskell', 'lhaskell', 'cabal' },
+				filetypes = { "haskell", "lhaskell", "cabal" },
 				settings = {
 					hls = {
 						haskell = {
@@ -204,6 +185,7 @@ return {
 					},
 				},
 			})
+			lspconfig.ocamllsp.setup({})
 		end,
 	},
 }
