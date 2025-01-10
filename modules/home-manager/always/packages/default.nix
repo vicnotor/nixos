@@ -41,6 +41,8 @@
     youtube-music
     snes9x-gtk
     imagemagick
+    fiji # ImageJ2 distribution
+    aseprite
 
     # Languages
     nodejs

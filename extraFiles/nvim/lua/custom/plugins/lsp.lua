@@ -130,7 +130,7 @@ return {
 				--     },
 				--   },
 				-- },
-        zls = {},
+				zls = {},
 			}
 
 			-- Setup neovim lua configuration
@@ -187,6 +187,18 @@ return {
 						options = {
 							nixos = {
 								expr = '(builtins.getFlake "/home/vic/Git/xxheyhey/nixos-xx").nixosConfigurations.nixlap.options',
+							},
+						},
+					},
+				},
+			})
+			lspconfig.hls.setup({
+        filetypes = { 'haskell', 'lhaskell', 'cabal' },
+				settings = {
+					hls = {
+						haskell = {
+							plugin = {
+								rename = { config = { crossModule = true } },
 							},
 						},
 					},

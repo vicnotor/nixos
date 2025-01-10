@@ -69,7 +69,7 @@
         };
         # https://wiki.hyprland.org/Configuring/Variables/#decoration
         decoration = {
-          rounding = 10;
+          rounding = 5;
 
           shadow = {
             enabled = false;
@@ -327,6 +327,7 @@
           "float, class:(org.pulseaudio.pavucontrol)"
           "size 1200 800, class:(org.pulseaudio.pavucontrol)"
           ## Some useful default floating windows using titles
+          "float, title:Nice Window"
           "float, title:FloatingWindow"
           "float, title:LargeFloatingWindow"
           "size 1200 800, title:LargeFloatingWindow"
