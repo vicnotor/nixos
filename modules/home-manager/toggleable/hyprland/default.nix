@@ -223,7 +223,7 @@
             "$MOD2, S, exec, uwsm app -- spotify"
             "$MOD2, I, exec, uwsm app -- blueman-manager"
             "$MOD2, W, exec, uwsm app -- zapzap"
-            "$MOD2, A, exec, uwsm app -- audiomixer"
+            "$MOD2, A, exec, uwsm app -- pavucontrol"
             "$MOD2, M, exec, uwsm app -- thunderbird"
             "$MOD2, C, exec, uwsm app -- hyprpicker --autocopy"
             "$MOD2, D, exec, uwsm app -- webcord"

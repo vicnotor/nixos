@@ -67,11 +67,8 @@
           backlight = {
             format = "{icon} {percent}%";
             format-icons = ["󰃞" "󰃟" "󰃠"];
-            exec = "brightnessctl i";
             on-click-right = "brightnessctl s 50%";
             on-click-middle = "brightnessctl s 50%";
-            tooltip = true;
-            tooltip-format = "{}";
           };
           clock = {
             interval = 1;

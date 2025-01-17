@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-# alacritty -T FloatingWindow -e pulsemixer
-uwsm app -- pavucontrol

@@ -26,7 +26,7 @@
   ls = "ls -l --color=tty --group-directories-first --human-readable";
   ll = "ls -alF";
   la = "ls -A";
-  l = "ls -CF";
+  l = "ls";
 
   # Tmux
   t = "tmux";
@@ -65,7 +65,7 @@
   chx = "chmod +x";
   open = "xdg-open";
   py = "python";
-  valias = "vim $HOME/Git/xxheyhey/nixos-xx/modules/home-manager/zsh/aliases.nix";
+  valias = "vim $HOME/Git/xxheyhey/nixos-xx/modules/home-manager/toggleable/zsh/aliases.nix";
   view = "qimgv";
   wp = "swww img";
   ev = "silent evince";
