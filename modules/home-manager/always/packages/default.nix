@@ -43,6 +43,7 @@
     imagemagick
     fiji # ImageJ2 distribution
     aseprite
+    qbittorrent
 
     # Languages
     nodejs
