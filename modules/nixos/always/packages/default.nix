@@ -19,7 +19,6 @@
       ripgrep
       unzip
       wget
-      inputs.yazi.packages.${pkgs.system}.default # TUI file manager
     ];
   };
 }

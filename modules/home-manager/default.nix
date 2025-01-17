@@ -28,7 +28,6 @@
     ./toggleable/stylixHm
     ./toggleable/tmux
     ./toggleable/waybar
-    ./toggleable/yazi
     ./toggleable/zoxide
     ./toggleable/zsh
   ];
@@ -53,7 +52,6 @@
   stylixHmModule.enable = lib.mkDefault true;
   tmuxModule.enable = lib.mkDefault true;
   waybarModule.enable = lib.mkDefault true;
-  yaziModule.enable = lib.mkDefault true;
   zoxideModule.enable = lib.mkDefault true;
   zshModule.enable = lib.mkDefault true;
 

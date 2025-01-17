@@ -19,15 +19,6 @@
     ghostty.url = "github:ghostty-org/ghostty";
     zig.url = "github:mitchellh/zig-overlay";
     stylix.url = "github:danth/stylix";
-    yazi.url = "github:sxyazi/yazi";
-    yazi-plugins = {
-      url = "github:yazi-rs/plugins";
-      flake = false;
-    };
-    yazi-tokyo-night = {
-      url = "github:BennyOe/tokyo-night.yazi";
-      flake = false;
-    };
   };
 
   outputs = {

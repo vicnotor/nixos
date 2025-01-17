@@ -20,7 +20,6 @@ in {
         hyprland.enable = false; # Change below
         neovim.enable = false;
         tmux.enable = false;
-        yazi.enable = false; # Change below
       };
       iconTheme = {
         enable = true;
@@ -64,16 +63,6 @@ in {
           background = "#${colors.base01}ee";
           foreground = "#${colors.base08}";
           frame_color = "#${colors.base08}";
-        };
-      };
-    };
-    programs.yazi = {
-      flavors = lib.mkForce {
-        tokyo-night = inputs.yazi-tokyo-night;
-      };
-      theme = lib.mkForce {
-        flavor = {
-          dark = "tokyo-night";
         };
       };
     };
