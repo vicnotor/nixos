@@ -60,7 +60,7 @@
             tooltip-format = " {}K";
           };
           tray = {
-            icon-size = 18;
+            icon-size = 16;
             spacing = 6;
             reverse-direction = true;
           };
@@ -124,6 +124,7 @@
             on-click-middle = "wpctl set-mute @DEFAULT_SOURCE@ toggle";
             on-scroll-up = "wpctl set-volume @DEFAULT_SOURCE@ 1%+";
             on-scroll-down = "wpctl set-volume @DEFAULT_SOURCE@ 1%-";
+            tooltip-format = "{desc}";
           };
         }
       ];
