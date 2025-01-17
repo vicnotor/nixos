@@ -260,6 +260,11 @@
 
             # Hyprexpo
             # "$MOD2, 0, hyprexpo:expo, toggle" # can be: toggle, off/disable or on/enable
+
+            # Zooming
+            # "$MOD2, mouse_down, exec, hyprctl keyword cursor:zoom_factor \"$(hyprctl getoption cursor:zoom_factor | awk 'NR==1 {factor = $2; if (factor < 1) {factor = 1}; print factor / 1.25}')\""
+            # "$MOD2, mouse_up, exec, hyprctl keyword cursor:zoom_factor \"$(hyprctl getoption cursor:zoom_factor | awk 'NR==1 {factor = $2; if (factor < 1) {factor = 1}; print factor * 1.25}')\""
+            # "$MOD2, Z, exec, hyprctl keyword cursor:zoom_factor 1"
           ]
           ++ (
             # workspaces
