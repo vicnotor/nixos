@@ -19,6 +19,9 @@ set("n", "<Leader>l", require("lsp_lines").toggle, { desc = "Toggle lsp_lines" }
 -- Open the Oil file explorer
 set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
+-- Open the Thunar file explorer
+set("n", "<leader>th", "<CMD>silent !silent thunar .<CR>", { desc = "Open Thunar in working directory", silent = true })
+
 -- Move lines up and down
 set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move line down" })
 set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move line up" })
@@ -56,7 +59,9 @@ set("n", "<tab>", "<cmd>winc w<CR>", { desc = "Change focus to next vim window",
 set("n", "<leader>tw", "<cmd>set wrap!<CR>", { desc = "Toggle wrap", silent = true })
 
 -- Toggle the color scheme
-set("n", "<leader>th", "<cmd>lua ToggleColorScheme()<CR>", { desc = "Toggle theme", silent = true })
+set("n", "<leader>co", function()
+	ToggleColorScheme()
+end, { desc = "Toggle theme", silent = true })
 
 -- Toggle transparency (custom scripts)
 set("n", "<leader>tro", "<cmd>silent !transon<CR>", { desc = "Transparency on" })
