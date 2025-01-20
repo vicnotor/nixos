@@ -117,6 +117,8 @@ end, { desc = "Toggle Biscuits" })
 -- Undotree
 set("n", "<leader>u", vim.cmd.UndotreeToggle, { desc = "Undotree" })
 
+set("n", "<F5>", "<CMD>e<CR>", { desc = "Undotree" })
+
 -- Other
 set("n", "J", "mzJ`z")
 set("n", "<C-d>", "<C-d>zz")

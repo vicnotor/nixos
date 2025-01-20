@@ -29,11 +29,8 @@
         vulkan-queue-count = 1;
         vd-lavc-dr = "yes";
         hwdec = "auto-safe";
-        hwdev = "auto-safe";
-        priority = "high"; # Makes PC prioritize MPV for allocating resources.
 
         # General
-        no-hidpi-window-scale = true; # This Disables High DPI scaling
         target-colorspace-hint = true;
 
         # Audio
