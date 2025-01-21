@@ -11,7 +11,6 @@
       gcc # C compiler
       git
       gnumake # Make
-      htop # Task manager of Linux
       inputs.neovim-nightly-overlay.packages.${pkgs.system}.default # nvim nightly build
       killall
       nh # Nix helper that I use to collect garbage except last couple rebuilds

@@ -34,16 +34,13 @@
     grim # screenshot tool
     slurp # select part of screen for screenshot
     grimblast # Hyprland wrapper for grim and slurp
-    webcord # Discord agent
     hyprpicker # Color picker
     unrar
-    godot_4
-    youtube-music
     snes9x-gtk
-    imagemagick
     fiji # ImageJ2 distribution
     aseprite
     qbittorrent
+    discord
 
     # Languages
     nodejs
