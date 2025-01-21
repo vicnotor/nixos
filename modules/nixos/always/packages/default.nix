@@ -15,7 +15,7 @@
       killall
       nh # Nix helper that I use to collect garbage except last couple rebuilds
       ntfs3g # Needed to mount windows drive
-      ripgrep
+      ripgrep # nice grep tool, needed for Telescope.nvim
       unzip
       wget
     ];
