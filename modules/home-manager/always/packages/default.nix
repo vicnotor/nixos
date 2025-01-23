@@ -41,6 +41,7 @@
     wl-gammarelay-rs # blue light filter
     xorg.xeyes # Run `xeyes` to show xwayland windows
     zapzap # Whatsapp
+    zotero
 
     # Languages
     nodejs
