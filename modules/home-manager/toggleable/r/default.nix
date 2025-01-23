@@ -7,13 +7,14 @@
 with pkgs; let
   R-with-packages = rWrapper.override {
     packages = with rPackages; [
-      languageserver
-      ggplot2
-      dplyr
-      deSolve
-      rootSolve
       coda
+      deSolve
+      dplyr
+      rmarkdown
+      rootSolve
       FME
+      ggplot2
+      languageserver
     ];
   };
 in {

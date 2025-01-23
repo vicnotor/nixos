@@ -111,7 +111,7 @@
               car = "";
               default = ["" "" ""];
             };
-            on-click = "audiomixer";
+            on-click = "pavucontrol";
             on-click-right = "wpctl set-mute @DEFAULT_SINK@ toggle";
             on-click-middle = "wpctl set-mute @DEFAULT_SINK@ toggle";
           };
@@ -119,7 +119,7 @@
             format-source = "󰍬 {volume}%";
             format-source-muted = "󰍭";
             format = "{format_source}";
-            on-click = "audiomixer";
+            on-click = "pavucontrol";
             on-click-right = "wpctl set-mute @DEFAULT_SOURCE@ toggle";
             on-click-middle = "wpctl set-mute @DEFAULT_SOURCE@ toggle";
             on-scroll-up = "wpctl set-volume @DEFAULT_SOURCE@ 1%+";

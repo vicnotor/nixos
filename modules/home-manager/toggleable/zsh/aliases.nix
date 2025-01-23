@@ -80,4 +80,5 @@
   godot = "godot4 --display-driver wayland";
   batterystatus = "acpi";
   vpak = "vim $HOME/Git/xxheyhey/nixos-xx/modules/home-manager/always/packages/default.nix";
+  vrpak = "vim $HOME/Git/xxheyhey/nixos-xx/modules/home-manager/toggleable/r/default.nix";
 }
