@@ -11,7 +11,6 @@
 
   config = lib.mkIf config.extraDotfilesModule.enable {
     home.file = {
-      # Setting file contents immediately:
       ".config/uwsm/env".text = ''
         export XCURSOR_THEME,BreezeX-RosePine-Linux
         export XCURSOR_SIZE,20

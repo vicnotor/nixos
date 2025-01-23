@@ -24,5 +24,8 @@ in {
 
   config = lib.mkIf config.rModule.enable {
     home.packages = [R-with-packages];
+    home.file = {
+      ".Rprofile".source = config.lib.file.mkOutOfStoreSymlink ./.Rprofile;
+    };
   };
 }

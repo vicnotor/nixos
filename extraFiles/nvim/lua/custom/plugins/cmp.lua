@@ -11,7 +11,7 @@ return {
 			"hrsh7th/cmp-buffer",
 			{ "L3MON4D3/LuaSnip", version = "v2.*", build = "make install_jsregexp" },
 			"saadparwaiz1/cmp_luasnip",
-            "R-nvim/cmp-r",
+			"R-nvim/cmp-r",
 		},
 		config = function()
 			vim.opt.completeopt = { "menu", "menuone", "noselect" }
@@ -65,6 +65,9 @@ return {
 					ls.jump(-1)
 				end
 			end, { silent = true })
+
+			-- R autocompletion
+			require("cmp_r").setup({})
 		end,
 	},
 }
