@@ -12,6 +12,7 @@
     fastfetch # Neofetch
     fd # Finding files
     fiji # ImageJ2 distribution
+    gimp
     google-chrome
     grim # screenshot tool
     grimblast # Hyprland wrapper for grim and slurp

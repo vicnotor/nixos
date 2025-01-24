@@ -15,7 +15,7 @@
         pkgs.yarn # Needed for plugins
       ];
       file = {
-        ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink ../../../../extraFiles/nvim;
+        ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink /home/vic/Git/xxheyhey/nixos-xx/extraFiles/nvim;
       };
     };
   };

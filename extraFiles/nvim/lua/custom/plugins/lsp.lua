@@ -165,11 +165,14 @@ return {
 						formatting = {
 							command = { "alejandra" },
 						},
-						options = {
-							nixos = {
-								expr = '(builtins.getFlake "/home/vic/Git/xxheyhey/nixos-xx").nixosConfigurations.nixlap.options',
-							},
-						},
+						-- options = {
+						-- 	nixos = {
+						-- 		expr = '(builtins.getFlake "/home/vic/Git/xxheyhey/nixos-xx").nixosConfigurations.nixlap.options',
+						-- 	},
+						-- 	home_manager = {
+						-- 		expr = '(builtins.getFlake "/home/vic/Git/xxheyhey/nixos-xx").homeConfigurations."nixlap@vic".options',
+						-- 	},
+						-- },
 					},
 				},
 			})
