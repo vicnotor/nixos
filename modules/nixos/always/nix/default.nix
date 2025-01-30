@@ -13,7 +13,7 @@
         "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
         "ghostty.cachix.org-1:QB389yTa6gTyneehvqG58y0WnHjQOqgnA+wBnpWWxns="
       ];
-      stalled-download-timeout = 1000;
+      stalled-download-timeout = 10000;
     };
   };
   nixpkgs.config.allowUnfree = true;
