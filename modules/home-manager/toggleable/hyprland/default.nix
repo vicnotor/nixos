@@ -255,21 +255,8 @@
             "$MOD SHIFT, grave, movetoworkspace, special:scratchpad"
             "$MOD2 , grave, togglespecialworkspace, firstlaunchapps"
 
-            # Scroll through existing workspaces with MOD + scroll
-            "$MOD, mouse_down, workspace, e+1"
-            "$MOD, mouse_up, workspace, e-1"
-
             # Hyprexpo
             # "$MOD2, 0, hyprexpo:expo, toggle" # can be: toggle, off/disable or on/enable
-
-            # Zooming
-            "$MOD SUPER, mouse_up, exec, hyprctl keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor | awk '/^float.*/ {print $2 + 0.01}')"
-            "$MOD SUPER, mouse_down, exec, hyprctl keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor | awk '/^float.*/ {print $2 - 0.01}')"
-            "$MOD SUPER, Z, exec, hyprctl keyword cursor:zoom_factor 1"
-
-            "$MOD SUPER, equal, exec, hyprctl keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor | awk '/^float.*/ {print $2 + 0.01}')"
-            "$MOD SUPER, minus, exec, hyprctl keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor | awk '/^float.*/ {print $2 - 0.01}')"
-            "$MOD SUPER, 0, exec, hyprctl keyword cursor:zoom_factor 1"
           ]
           ++ (
             # workspaces
@@ -284,6 +271,21 @@
               )
               10)
           );
+
+        binde = [
+          # Zooming
+          ## In
+          "$MOD SUPER, mouse_up, exec, hyprctl keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor | awk '/^float.*/ {print $2 - 0.04}')"
+          "$MOD SUPER, minus, exec, hyprctl keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor | awk '/^float.*/ {print $2 - 0.02}')"
+
+          ## Out
+          "$MOD SUPER, mouse_down, exec, hyprctl keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor | awk '/^float.*/ {print $2 + 0.04}')"
+          "$MOD SUPER, equal, exec, hyprctl keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor | awk '/^float.*/ {print $2 + 0.02}')"
+
+          ## Reset
+          "$MOD SUPER, Z, exec, hyprctl keyword cursor:zoom_factor 1"
+          "$MOD SUPER, 0, exec, hyprctl keyword cursor:zoom_factor 1"
+        ];
 
         bindl = [
           # Laptop multimedia keys for volume and LCD brightness
