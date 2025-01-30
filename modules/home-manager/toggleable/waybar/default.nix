@@ -44,7 +44,7 @@
             sort-by-number = true;
           };
           "hyprland/window" = {
-            format = "{}";
+            format = "";
             max-length = 50;
             separate-outputs = true;
             hide-empty-text = true;

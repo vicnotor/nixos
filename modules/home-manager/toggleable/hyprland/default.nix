@@ -252,7 +252,8 @@
 
             # Special workspaces
             "$MOD, grave, togglespecialworkspace, scratchpad"
-            "$MOD SHIFT, grave, togglespecialworkspace, firstlaunchapps"
+            "$MOD SHIFT, grave, movetoworkspace, special:scratchpad"
+            "$MOD2 , grave, togglespecialworkspace, firstlaunchapps"
 
             # Scroll through existing workspaces with MOD + scroll
             "$MOD, mouse_down, workspace, e+1"
@@ -260,6 +261,15 @@
 
             # Hyprexpo
             # "$MOD2, 0, hyprexpo:expo, toggle" # can be: toggle, off/disable or on/enable
+
+            # Zooming
+            "$MOD SUPER, mouse_up, exec, hyprctl keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor | awk '/^float.*/ {print $2 + 0.01}')"
+            "$MOD SUPER, mouse_down, exec, hyprctl keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor | awk '/^float.*/ {print $2 - 0.01}')"
+            "$MOD SUPER, Z, exec, hyprctl keyword cursor:zoom_factor 1"
+
+            "$MOD SUPER, equal, exec, hyprctl keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor | awk '/^float.*/ {print $2 + 0.01}')"
+            "$MOD SUPER, minus, exec, hyprctl keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor | awk '/^float.*/ {print $2 - 0.01}')"
+            "$MOD SUPER, 0, exec, hyprctl keyword cursor:zoom_factor 1"
           ]
           ++ (
             # workspaces
@@ -274,17 +284,6 @@
               )
               10)
           );
-
-        binde = [
-          # Zooming
-          "$MOD SUPER, mouse_up, exec, hyprctl keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor | awk '/^float.*/ {print $2 + 0.01}')"
-          "$MOD SUPER, mouse_down, exec, hyprctl keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor | awk '/^float.*/ {print $2 - 0.01}')"
-          "$MOD SUPER, Z, exec, hyprctl keyword cursor:zoom_factor 1"
-
-          "$MOD SUPER, equal, exec, hyprctl keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor | awk '/^float.*/ {print $2 + 0.01}')"
-          "$MOD SUPER, minus, exec, hyprctl keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor | awk '/^float.*/ {print $2 - 0.01}')"
-          "$MOD SUPER, 0, exec, hyprctl keyword cursor:zoom_factor 1"
-        ];
 
         bindl = [
           # Laptop multimedia keys for volume and LCD brightness
@@ -359,9 +358,7 @@
           "size 900 700, onworkspace:special:scratchpad"
 
           ## firstlaunchapps
-          "float, onworkspace:special:firstlaunchapps"
           "bordersize 8, onworkspace:special:firstlaunchapps"
-          "size 800 600, onworkspace:special:firstlaunchapps"
 
           # Needed for smart gaps
           "bordersize 0, floating:0, onworkspace:w[tv1]"

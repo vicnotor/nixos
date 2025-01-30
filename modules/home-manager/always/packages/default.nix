@@ -11,10 +11,8 @@
     evince # pdf
     fastfetch # Neofetch
     fd # Finding files
-    fiji # ImageJ2 distribution
     gimp
     google-chrome
-    grim # screenshot tool
     grimblast # Hyprland wrapper for grim and slurp
     hyprpicker # Color picker
     libreoffice
@@ -29,7 +27,6 @@
     qimgv # Image viewer
     qbittorrent
     rofi-wayland # App launcher
-    slurp # select part of screen for screenshot
     snes9x-gtk
     spotify
     inputs.swww.packages.${pkgs.system}.default # swww: wallpaper service
@@ -42,7 +39,6 @@
     wl-gammarelay-rs # blue light filter
     xorg.xeyes # Run `xeyes` to show xwayland windows
     zapzap # Whatsapp
-    zotero
 
     # Languages
     nodejs
