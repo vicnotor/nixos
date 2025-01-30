@@ -69,7 +69,7 @@
         };
         # https://wiki.hyprland.org/Configuring/Variables/#decoration
         decoration = {
-          rounding = 3;
+          rounding = 4;
 
           shadow = {
             enabled = false;
