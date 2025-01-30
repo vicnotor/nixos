@@ -112,9 +112,9 @@
             "layersOut, 1, 1.5, linear, fade"
             "fadeLayersIn, 1, 1.79, almostLinear"
             "fadeLayersOut, 1, 1.39, almostLinear"
-            "workspaces, 1, 1.94, default"
-            "workspacesIn, 1, 1.21, default"
-            "workspacesOut, 1, 1.94, default"
+            "workspaces, 1, 3.81, default"
+            "workspacesIn, 1, 3.81, default"
+            "workspacesOut, 1, 3.81, default"
           ];
         };
 
