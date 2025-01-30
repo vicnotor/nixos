@@ -107,7 +107,7 @@ fzf_directory() {
         dirs=$(cat $config | tr '\n' ' ')
         eval "find $symlinks $dirs -maxdepth 1 -type d 2> /dev/null| fzf"
     else
-        fd --type d --base-directory "$HOME" --search-path "$HOME" --exclude Git/alacritty --exclude Git/colorout --exclude Git/envycontrol --exclude Git/neovim --exclude anaconda3 --exclude x86_64-pc-linux-gnu-library --exclude go | fzf
+        fd --type d --base-directory "$HOME" --search-path "$HOME" --exclude mnt | fzf
     fi
 }
 

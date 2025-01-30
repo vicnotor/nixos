@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
-sudo mount /dev/disk/by-label/Acer ~/mounts/windows
+if [ ! -d ~/mnt/windows ]; then
+  mkdir -p ~/mnt/windows
+fi
 
-cd ~/mounts/windows/Users/victe/
+sudo mount /dev/disk/by-label/Acer ~/mnt/windows
+
+cd ~/mnt/windows/Users/victe/

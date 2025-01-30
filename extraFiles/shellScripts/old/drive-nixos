@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+if [ ! -d ~/mnt/nixos ]; then
+  mkdir -p ~/mnt/nixos
+fi
+
+sudo mount /dev/disk/by-label/nixos ~/mnt/nixos
+
+cd ~/mnt/nixos/home/vic
