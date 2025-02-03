@@ -81,4 +81,6 @@
   batterystatus = "acpi";
   vpak = "vim $HOME/Git/xxheyhey/nixos-xx/modules/home-manager/always/packages/default.nix";
   vrpak = "vim $HOME/Git/xxheyhey/nixos-xx/modules/home-manager/toggleable/r/default.nix";
+  vospak = "vim $HOME/Git/xxheyhey/nixos-xx/modules/nixos/always/packages/default.nix";
+  vlib = "vim $HOME/Git/xxheyhey/nixos-xx/modules/nixos/toggleable/nix-ld/libraries.nix";
 }
