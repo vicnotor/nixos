@@ -10,8 +10,10 @@ with pkgs; let
       coda
       deSolve
       dplyr
+      plot3D
       rmarkdown
       rootSolve
+      tidyverse
       FME
       ggplot2
       languageserver

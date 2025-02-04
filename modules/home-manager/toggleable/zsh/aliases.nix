@@ -15,6 +15,7 @@
   gP = "git push";
   gpo = "git push origin";
   gpom = "git push origin main";
+  gpoM = "git push origin master";
   gpuom = "git push -u origin main";
   gp = "git pull --rebase";
   ga = "git add";
