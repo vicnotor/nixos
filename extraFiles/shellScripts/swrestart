@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+swww kill
+sleep 0.1
+swww-daemon

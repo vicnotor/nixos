@@ -23,7 +23,11 @@
       # Actual Hyprland config
       settings = {
         # See https://wiki.hyprland.org/Configuring/Monitors/
-        monitor = ",preferred,auto,auto";
+        # monitor = ",preferred,auto,auto";
+        monitor = [
+          "eDP-1,2560x1440@165,0x0,1.6"
+          "HDMI-A-1,highrr,1600x0,1"
+        ];
 
         ###################
         ### MY PROGRAMS ###
@@ -300,6 +304,7 @@
 
           # Powersaving with NitroSense button on my Acer Nitro 5 laptop
           ", XF86Presentation, exec, gamemode"
+          "SHIFT, XF86Presentation, exec, swrestart" # Restart swww (fixes background scale changing after waking from sleep
         ];
 
         bindel = [
