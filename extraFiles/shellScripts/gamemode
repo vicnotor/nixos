@@ -16,6 +16,7 @@ if [ "$HYPRGAMEMODE" = 1 ] ; then
         keyword decoration:rounding 0"
     hyprctl keyword windowrule "opacity 1.0, ^(com.mitchellh.ghostty)$"
     dunstify -a $msgTag -u low -i colors-chromagreen -h string:x-dunst-stack-tag:$msgTag $msgTag "on"
+    swrestart
     exit
 fi
 
