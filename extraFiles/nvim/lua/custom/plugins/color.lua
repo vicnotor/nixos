@@ -32,7 +32,7 @@ function ToggleColorScheme()
 	elseif Mycolor == "rose-pine" then
 		Mycolor = "vague"
 	else
-		Mycolor = "gruvbox"
+		Mycolor = "tokyonight"
 	end
 	Color()
 end
