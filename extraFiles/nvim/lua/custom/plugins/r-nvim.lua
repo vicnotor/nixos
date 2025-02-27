@@ -17,13 +17,6 @@ return {
 					vim.api.nvim_buf_set_keymap(
 						0,
 						"n",
-						"<LocalLeader>h",
-						"<Cmd>lua require('r.run').action('levels')<CR>",
-						{}
-					)
-					vim.api.nvim_buf_set_keymap(
-						0,
-						"n",
 						"<LocalLeader>sg",
 						"<Cmd>RSourceDir ~/personal/R/RobDeBoer<CR>",
 						{}
@@ -32,9 +25,10 @@ return {
 			},
 			R_args = { "--quiet", "--no-save" },
 			min_editor_width = 10,
-			rconsole_width = 66,
+			rconsole_width = 50,
+			rconsole_height = 4,
 			auto_start = "always",
-			objbr_auto_start = true,
+			objbr_auto_start = false,
 			objbr_place = "console,below",
 			objbr_opendf = true,
 			objbr_openlist = false,
