@@ -24,7 +24,7 @@ return {
 				end,
 			},
 			R_args = { "--quiet", "--no-save" },
-			min_editor_width = 10,
+			min_editor_width = 20,
 			rconsole_width = 50,
 			rconsole_height = 4,
 			auto_start = "always",
