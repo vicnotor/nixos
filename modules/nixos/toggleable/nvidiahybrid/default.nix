@@ -38,7 +38,7 @@
           };
         };
         nvidia-reverseSync.configuration = {
-          system.nixos.tags = ["nvidia-sync"];
+          system.nixos.tags = ["nvidia-reverseSync"];
           hardware.nvidia = {
             prime = {
               offload = {
