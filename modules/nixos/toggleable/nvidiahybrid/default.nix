@@ -37,6 +37,19 @@
             sync.enable = lib.mkForce true;
           };
         };
+        nvidia-reverseSync.configuration = {
+          system.nixos.tags = ["nvidia-sync"];
+          hardware.nvidia = {
+            prime = {
+              offload = {
+                enable = lib.mkForce false;
+                enableOffloadCmd = lib.mkForce false;
+              };
+              sync.enable = lib.mkForce false;
+              reverseSync.enable = lib.mkForce true;
+            };
+          };
+        };
       };
     };
   };

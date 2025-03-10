@@ -119,6 +119,7 @@ return {
 		},
 		ft_ignore = {
 			"markdown",
+      "rmd",
 		},
 	},
 }
