@@ -44,7 +44,6 @@
         sub-scale = "0.5";
         sub-auto = "fuzzy";
         sub-gray = "yes"; # Monochrome subs makes yellow font grey
-        sub-font = "Trebuchet MS";
         sub-bold = "yes"; # Set the font to bold.
         #sub-font-size = 55 # Set default subtitle size if not specified.
       };
