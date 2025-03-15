@@ -44,8 +44,8 @@
   syncreboot = "onedrive --sync && reboot";
 
   # NixOS
-  rebuild = "sudo nixos-rebuild switch --flake ~/Git/xxheyhey/nixos-xx#nixlap";
-  update = "sudo echo -n && nix flake update --flake ~/Git/xxheyhey/nixos-xx && sudo nixos-rebuild switch --flake ~/Git/xxheyhey/nixos-xx#nixlap";
+  rebuild = "sudo nixos-rebuild switch --flake ~/Git/vicnotor/nixos-xx#nixlap";
+  update = "sudo echo -n && nix flake update --flake ~/Git/vicnotor/nixos-xx && sudo nixos-rebuild switch --flake ~/Git/vicnotor/nixos-xx#nixlap";
   clean = "sudo echo -n && nh clean all --keep 10";
 
   # Pandoc
@@ -66,7 +66,7 @@
   chx = "chmod +x";
   open = "xdg-open";
   py = "python";
-  valias = "vim $HOME/Git/xxheyhey/nixos-xx/modules/home-manager/toggleable/zsh/aliases.nix";
+  valias = "vim $HOME/Git/vicnotor/nixos-xx/modules/home-manager/toggleable/zsh/aliases.nix";
   view = "qimgv";
   wp = "swww img";
   ev = "silent evince";
@@ -80,8 +80,8 @@
   mv = "mv -v";
   godot = "godot4 --display-driver wayland";
   batterystatus = "acpi";
-  vpak = "vim $HOME/Git/xxheyhey/nixos-xx/modules/home-manager/always/packages/default.nix";
-  vrpak = "vim $HOME/Git/xxheyhey/nixos-xx/modules/home-manager/toggleable/r/default.nix";
-  vospak = "vim $HOME/Git/xxheyhey/nixos-xx/modules/nixos/always/packages/default.nix";
-  vlib = "vim $HOME/Git/xxheyhey/nixos-xx/modules/nixos/toggleable/nix-ld/libraries.nix";
+  vpak = "vim $HOME/Git/vicnotor/nixos-xx/modules/home-manager/always/packages/default.nix";
+  vrpak = "vim $HOME/Git/vicnotor/nixos-xx/modules/home-manager/toggleable/r/default.nix";
+  vospak = "vim $HOME/Git/vicnotor/nixos-xx/modules/nixos/always/packages/default.nix";
+  vlib = "vim $HOME/Git/vicnotor/nixos-xx/modules/nixos/toggleable/nix-ld/libraries.nix";
 }

@@ -48,5 +48,5 @@
   zshModule.enable = lib.mkDefault true;
 
   # Disabled by default
-  virtualisationModule.enable = lib.mkDefault false;
+  virtualisationModule.enable = lib.mkDefault true;
 }

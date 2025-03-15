@@ -2,7 +2,7 @@
   environment = {
     sessionVariables = {
       NIXOS_OZONE_WL = "1";
-      NH_FLAKE = "/home/vic/Git/xxheyhey/nixos-xx";
+      NH_FLAKE = "/home/vic/Git/vicnotor/nixos-xx";
 
       EDITOR = "nvim";
       BROWSER = "google-chrome-stable";

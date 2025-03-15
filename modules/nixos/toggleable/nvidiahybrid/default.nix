@@ -37,20 +37,6 @@
           };
         };
       };
-      # A third entrt for reverseSync
-      nvidia-reverseSync.configuration = {
-        system.nixos.tags = ["nvidia-reverseSync"];
-        hardware.nvidia = {
-          prime = {
-            offload = {
-              enable = lib.mkForce false;
-              enableOffloadCmd = lib.mkForce false;
-            };
-            sync.enable = lib.mkForce false;
-            reverseSync.enable = lib.mkForce true;
-          };
-        };
-      };
     };
   };
 }
