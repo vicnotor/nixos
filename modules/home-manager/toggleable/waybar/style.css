@@ -30,7 +30,7 @@
 
 /* Style */
 * {
-  font-family: "Ubuntu Nerd Font", "Helvetica Neue LT Std", sans-serif;
+  font-family: "Helvetica Neue LT Std", sans-serif;
   font-size: 15px;
 }
 
@@ -39,6 +39,7 @@ window#waybar {
   border-radius: 0px;
   transition-property: background-color;
   transition-duration: .5s;
+  padding: 2px 0px 0px 0px;
 }
 
 window#waybar.empty {  

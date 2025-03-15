@@ -25,7 +25,7 @@
         {
           layer = "top";
           margin = "0px";
-          height = 24;
+          height = 27;
           modules-left = ["hyprland/workspaces"];
           modules-center = ["hyprland/window"];
           modules-right = [

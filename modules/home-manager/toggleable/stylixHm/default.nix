@@ -20,6 +20,7 @@ in {
         hyprland.enable = false; # Change below
         neovim.enable = false;
         tmux.enable = false;
+        waybar.enable = false;
       };
       iconTheme = {
         enable = true;
