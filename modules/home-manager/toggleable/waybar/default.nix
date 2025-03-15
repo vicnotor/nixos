@@ -50,7 +50,7 @@
             hide-empty-text = true;
           };
           "custom/wl-gammarelay" = {
-            format = " ";
+            format = "  ";
             exec = "wl-gammarelay-rs watch {t}";
             on-scroll-up = "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n +100";
             on-scroll-down = "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n -100";
@@ -72,8 +72,21 @@
           };
           clock = {
             interval = 1;
-            format = "{:%d-%m  %H:%M:%S}";
-            tooltip-format = "<tt><big>{calendar}</big></tt>";
+            format = "{:%d-%m %H:%M:%S}";
+            tooltip-format = "<tt><small>{calendar}</small></tt>";
+            calendar = {
+              "mode" = "month";
+              "mode-mon-col" = 3;
+              "weeks-pos" = "right";
+              "on-scroll" = 1;
+              "format" = {
+                "months" = "<span color='#ffead3'><b>{}</b></span>";
+                "days" = "<span color='#ecc6d9'><b>{}</b></span>";
+                "weeks" = "<span color='#99ffdd'><b>W{}</b></span>";
+                "weekdays" = "<span color='#ffcc66'><b>{}</b></span>";
+                "today" = "<span color='#ff6699'><b><u>{}</u></b></span>";
+              };
+            };
           };
           cpu = {
             format = "C {usage}%";
@@ -101,7 +114,7 @@
             format-icons = ["" "" "" "" ""];
           };
           "pulseaudio#output" = {
-            format = "{icon}  {volume}%";
+            format = "{icon} {volume}%";
             format-muted = "";
             format-icons = {
               headphone = "";
