@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  pkgs,
   ...
 }: {
   options = {
@@ -13,16 +14,23 @@
       nvidia = {
         modesetting.enable = true;
         powerManagement = {
-          enable = false;
+          enable = true;
           finegrained = false;
         };
-        open = true;
+        open = false;
         nvidiaSettings = true;
         package = config.boot.kernelPackages.nvidiaPackages.beta;
       };
     };
+
     services.xserver = {
       videoDrivers = ["nvidia"];
     };
+
+    environment.systemPackages = with pkgs; [
+      egl-wayland
+    ];
+
+    boot.kernelParams = ["nvidia.NVreg_PreserveVideoMemoryAllocations=1"];
   };
 }
