@@ -331,9 +331,10 @@
         # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
         # See https://wiki.hyprland.org/Configuring/Workspace-Rules/ for workspace rules
 
-        windowrule = [
-          "opacity 0.88, ^(com.mitchellh.ghostty)$"
-        ];
+        # Temporary commented out because of blur lag (see the blur.enable setting)
+        # windowrule = [
+        #   "opacity 0.88, ^(com.mitchellh.ghostty)$"
+        # ];
 
         windowrulev2 = [
           # Some custom rules for certain things
