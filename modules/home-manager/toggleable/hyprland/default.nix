@@ -82,7 +82,7 @@
 
           # https://wiki.hyprland.org/Configuring/Variables/#blur
           blur = {
-            enabled = true;
+            enabled = false; # Disabled due to update 0.47 making everything slow
             size = 3;
             passes = 4;
             popups = true;
@@ -93,7 +93,6 @@
         animations = {
           enabled = true;
 
-          # Default animations from the generated config, see https://wiki.hyprland.org/Configuring/Animations/ for more
           bezier = [
             "easeOutQuint,0.23,1,0.32,1"
             "easeInOutCubic,0.65,0.05,0.36,1"
