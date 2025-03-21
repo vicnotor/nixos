@@ -107,19 +107,19 @@ return {
 	-- 		hide_target_hack = false,
 	-- 	},
 	-- },
-	{
-		"huy-hng/anyline.nvim",
-		dependencies = { "nvim-treesitter/nvim-treesitter" },
-		config = true,
-		event = "VeryLazy",
-		opts = {
-			context_highlight = "NvimIdentifierScope",
-			fps = 60,
-			length_acceleration = 0.04,
-		},
-		ft_ignore = {
-			"markdown",
-      "rmd",
-		},
-	},
+	-- {
+	-- 	"huy-hng/anyline.nvim",
+	-- 	dependencies = { "nvim-treesitter/nvim-treesitter" },
+	-- 	config = true,
+	-- 	event = "VeryLazy",
+	-- 	opts = {
+	-- 		context_highlight = "NvimIdentifierScope",
+	-- 		fps = 60,
+	-- 		length_acceleration = 0.04,
+	-- 	},
+	-- 	ft_ignore = {
+	-- 		"markdown",
+	--      "rmd",
+	-- 	},
+	-- },
 }
