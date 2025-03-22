@@ -48,10 +48,6 @@
   update = "nix flake update --flake ~/Git/vicnotor/nixos";
   clean = "sudo echo -n && nh clean all --keep 10";
 
-  # Pandoc
-  mdtopdf = "pandoc --from=markdown --to=pdf -o pdf.pdf";
-  mdtohtml = "pandoc --from=markdown --to=html -o html.html";
-
   # Markdown
   md = "glow";
 

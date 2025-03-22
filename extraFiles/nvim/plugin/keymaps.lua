@@ -93,7 +93,7 @@ set(
 
 -- Simpler search and replace than nvim-spectre:
 -- Search and replace in regex mode, '[]' means match bracket and not open atom
-set("n", "<leader>sr", ":%s/[]v", { desc = "Search and replace" })
+set("n", "<leader>sr", ":%s/", { desc = "Search and replace" })
 -- Search and replace current word
 set(
 	"n",
@@ -118,6 +118,9 @@ end, { desc = "Toggle Biscuits" })
 set("n", "<leader>u", vim.cmd.UndotreeToggle, { desc = "Undotree" })
 
 set("n", "<F5>", "<CMD>e<CR>", { desc = "Undotree" })
+
+-- mdtopdf
+set("n", "<leader>mdp", "<cmd>!mdtopdf %<CR>", { desc = "Markdown to pdf" })
 
 -- Other
 set("n", "J", "mzJ`z")

@@ -4,7 +4,4 @@
 if [ -n "$TMUX" ]; then
     # Inside a tmux session, open a new pane
     tmux split-window -h
-else
-    # Not inside a tmux session, open a new terminal
-    uwsm app -- alacritty --working-directory="$PWD" &
 fi

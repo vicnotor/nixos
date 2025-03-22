@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+input=$1
+name=${input%.md}
+
+pandoc --from=markdown --to=html -o $input.html $1
