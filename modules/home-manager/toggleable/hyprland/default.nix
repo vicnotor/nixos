@@ -303,7 +303,7 @@
 
           # Powersaving with NitroSense button on my Acer Nitro 5 laptop
           ", XF86Presentation, exec, gamemode"
-          "SHIFT, XF86Presentation, exec, swrestart" # Restart swww (fixes background scale changing after waking from sleep
+          "SHIFT, XF86Presentation, exec, swrestart" # Restart swww (fixes background scale changing after waking from sleep)
         ];
 
         bindel = [
