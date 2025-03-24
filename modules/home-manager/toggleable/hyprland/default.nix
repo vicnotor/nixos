@@ -322,7 +322,7 @@
           # Move/resize windows with MOD + LMB/RMB and dragging
           "$MOD2, mouse:272, movewindow"
           "$MOD2, mouse:273, resizewindow"
-          "mouse:272, mouse:273, movewindow"
+          # "mouse:272, mouse:273, movewindow"
         ];
 
         ##############################
