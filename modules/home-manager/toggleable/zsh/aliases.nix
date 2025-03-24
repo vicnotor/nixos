@@ -3,11 +3,12 @@
   vim = "nvim";
   vi = "vim";
   v = "vim";
-  im = "nvim";
+  im = "vim";
   svim = "sudo nvim";
   svi = "svim";
   sv = "svim";
-  gvim = "nvim --listen ~/.cache/nvim/godot.pipe .";
+  gvim = "vim --listen ~/.cache/nvim/godot.pipe .";
+  "v." = "vim .";
 
   # Git
   g = "git";
