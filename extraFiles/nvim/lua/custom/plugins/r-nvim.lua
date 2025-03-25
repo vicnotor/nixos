@@ -5,7 +5,6 @@ return {
 	-- R.nvim is still young and we may make some breaking changes from time
 	-- to time. For now we recommend pinning to the latest minor version
 	-- like so:
-	version = "~0.1.0",
 	config = function()
 		require("r").setup({
 			hook = {
@@ -35,10 +34,6 @@ return {
 			config_tmux = false,
 			pdfviewer = "evince",
 			setwd = "nvim", -- working directory becomes the current nvim working directory
-			csv_app = "terminal:vd",
-			assignment_keymap = "",
-			rmdchunk = 0, -- '```' inserts R chunk in insert mode
-			rnowebchunk = false,
 		})
 	end,
 }
