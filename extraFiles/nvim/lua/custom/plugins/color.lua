@@ -13,7 +13,7 @@ function Color(color)
 	vim.api.nvim_set_hl(0, "TreesitterContext", { bg = "#333033" })
 	vim.api.nvim_set_hl(0, "TreesitterContextLineNumber", { fg = "#999099", bg = "#333033" })
 
-  -- Needed for some themes as a Lualine bug fix
+	-- Needed for some themes as a Lualine bug fix
 	-- vim.api.nvim_set_hl(0, "StatusLine", { reverse = false })
 	-- vim.api.nvim_set_hl(0, "StatusLineNC", { reverse = false })
 
@@ -27,7 +27,7 @@ end
 function ToggleColorScheme()
 	if Mycolor == "tokyonight" then
 		Mycolor = "gruvbox"
-  elseif Mycolor == "gruvbox" then
+	elseif Mycolor == "gruvbox" then
 		Mycolor = "rose-pine"
 	elseif Mycolor == "rose-pine" then
 		Mycolor = "vague"
