@@ -35,6 +35,7 @@
             "backlight"
             "custom/wl-gammarelay"
             "memory"
+            "temperature"
             "battery"
             "clock"
           ];
