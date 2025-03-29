@@ -98,8 +98,8 @@
           };
           temperature = {
             critical-threshold = 80;
-            format = "{icon} {temperatureC}°C";
-            format-icons = [""];
+            format = "{temperatureC}°C";
+            on-click = "taskmanager";
           };
           battery = {
             interval = 10;

@@ -67,7 +67,8 @@ button:hover {
 #custom-wl-gammarelay:hover,
 #pulseaudio.output:hover,
 #pulseaudio.input:hover,
-#memory:hover {
+#memory:hover,
+#temperature:hover {
   background-color: @surface2;
 }
 
@@ -106,9 +107,9 @@ button:hover {
 #pulseaudio.input,
 #backlight,
 #network,
-#temperature,
 #cpu,
 #memory,
+#temperature,
 #battery,
 #clock {
   padding: 0 6px;
@@ -133,6 +134,10 @@ button:hover {
 
 #memory {
   color: @sky;
+}
+
+#temperature {
+  color: @maroon;
 }
 
 #cpu {
