@@ -98,6 +98,7 @@
             on-click = "taskmanager";
           };
           temperature = {
+            thermal-zone = 5;
             critical-threshold = 80;
             format = "{icon} {temperatureC}°C";
             format-icons = ["" "" ""];
