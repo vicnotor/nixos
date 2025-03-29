@@ -117,7 +117,7 @@ end, { desc = "Toggle Biscuits" })
 -- Undotree
 set("n", "<leader>u", vim.cmd.UndotreeToggle, { desc = "Undotree" })
 
-set("n", "<F5>", "<CMD>e<CR>", { desc = "Undotree" })
+set("n", "<F5>", "<CMD>e<CR>", { desc = "Reload buffer" })
 
 -- mdtopdf
 set("n", "<leader>mdp", "<cmd>!mdtopdf %<CR>", { desc = "Markdown to pdf" })
