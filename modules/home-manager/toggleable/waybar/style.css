@@ -203,6 +203,11 @@ button:hover {
   color: #000000;
 }
 
+#temperature.critical {
+  background-color: #f53c3c;
+  color: #000000;
+}
+
 label:focus {
   background-color: #000000;
 }
