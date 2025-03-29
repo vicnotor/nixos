@@ -99,7 +99,8 @@
           };
           temperature = {
             critical-threshold = 80;
-            format = "{temperatureC}°C";
+            format = "{icon} {temperatureC}°C";
+            format-icons = ["" "" ""];
             on-click = "taskmanager";
           };
           battery = {
