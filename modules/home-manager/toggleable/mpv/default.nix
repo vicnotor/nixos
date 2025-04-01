@@ -41,12 +41,14 @@
         # Subtitles
         subs-with-matching-audio = "no"; # Won't ignore subtitles tagged as "Forced"
         sub-fix-timing = "yes";
-        sub-scale = "0.5";
-        sub-auto = "fuzzy";
-        sub-gray = "yes"; # Monochrome subs makes yellow font grey
         sub-font = lib.mkForce "Trebuchet MS";
+        #sub-font-size = 30 # Set default subtitle size if not specified.
+        sub-scale = "2";
         sub-bold = "yes"; # Set the font to bold.
-        #sub-font-size = 55 # Set default subtitle size if not specified.
+        sub-blur = 2.25;
+        sub-border-color = "#000000";
+        sub-border-size = 0.1;
+        sub-shadow-offset = 0;
       };
     };
   };
