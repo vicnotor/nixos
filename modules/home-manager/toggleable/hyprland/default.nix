@@ -26,7 +26,7 @@
         # monitor = ",preferred,auto,auto";
         monitor = [
           "eDP-1,2560x1440@165,0x0,1.6"
-          "HDMI-A-1,highrr,1600x0,1"
+          "HDMI-A-1,highrr,auto,auto"
         ];
 
         ###################
