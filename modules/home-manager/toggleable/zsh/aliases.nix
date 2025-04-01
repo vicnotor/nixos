@@ -82,4 +82,6 @@
   vrpak = "vim $HOME/Git/vicnotor/nixos/modules/home-manager/toggleable/r/default.nix";
   vospak = "vim $HOME/Git/vicnotor/nixos/modules/nixos/always/packages/default.nix";
   vlib = "vim $HOME/Git/vicnotor/nixos/modules/nixos/toggleable/nix-ld/libraries.nix";
+  wifion = "nmcli radio wifi on";
+  wifioff = "nmcli radio wifi off";
 }
