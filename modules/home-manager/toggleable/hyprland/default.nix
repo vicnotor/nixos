@@ -316,6 +316,11 @@
           ",XF86AudioLowerVolume, exec, changeVolume 2%-"
           ",XF86MonBrightnessUp, exec, brightnessctl s 400+"
           ",XF86MonBrightnessDown, exec, brightnessctl s 400-"
+
+          "$MOD2, l, resizeactive, 30 0"
+          "$MOD2, h, resizeactive, -30 0"
+          "$MOD2, k, resizeactive, 0 -30"
+          "$MOD2, j, resizeactive, 0 30"
         ];
 
         bindm = [
