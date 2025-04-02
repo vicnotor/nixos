@@ -13,10 +13,6 @@ function Color(color)
 	vim.api.nvim_set_hl(0, "TreesitterContext", { bg = "#333033" })
 	vim.api.nvim_set_hl(0, "TreesitterContextLineNumber", { fg = "#999099", bg = "#333033" })
 
-	-- Needed for some themes as a Lualine bug fix
-	-- vim.api.nvim_set_hl(0, "StatusLine", { reverse = false })
-	-- vim.api.nvim_set_hl(0, "StatusLineNC", { reverse = false })
-
 	-- The following is needed for some themes to fix the background
 	-- of some windows or parts of the screen (for transparent mode)
 	-- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
@@ -51,7 +47,7 @@ return {
 					operators = false,
 					folds = false,
 				},
-				inverse = false, -- might be needed to fix some color issues
+				inverse = false,
 				overrides = {
 					["@function.call"] = { fg = "#d1832e", bold = false },
 					["@variable"] = { fg = "#ebdbb2", bold = false },
