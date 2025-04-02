@@ -11,6 +11,13 @@
   };
 
   config = lib.mkIf config.waybarModule.enable {
+    home = {
+      file = {
+        # Out of store symlink for the style file to quickly modify the style without needing to rebuild
+        ".config/waybar/style.css".source = config.lib.file.mkOutOfStoreSymlink /home/vic/Git/vicnotor/nixos/modules/home-manager/toggleable/waybar/style.css;
+      };
+    };
+
     programs.waybar = {
       enable = true;
       package = (
@@ -19,8 +26,6 @@
           mesonFlags = oldAttrs.mesonFlags ++ ["-Dexperimental=true"];
         })
       );
-      style = builtins.readFile ./style.css;
-
       settings = [
         {
           layer = "top";
@@ -31,12 +36,19 @@
           modules-right = [
             "tray"
             "pulseaudio#input"
+            "custom/seperator"
             "pulseaudio#output"
+            "custom/seperator"
             "backlight"
+            "custom/seperator"
             "custom/wl-gammarelay"
+            "custom/seperator"
             "memory"
+            "custom/seperator"
             "temperature"
+            "custom/seperator"
             "battery"
+            "custom/seperator"
             "clock"
           ];
           "hyprland/workspaces" = {
@@ -59,6 +71,11 @@
             on-click-middle = "busctl --user set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 6500";
             tooltip = true;
             tooltip-format = " {}K";
+          };
+          "custom/seperator" = {
+            "format" = "|";
+            "interval" = "once";
+            "tooltip" = false;
           };
           tray = {
             icon-size = 16;
