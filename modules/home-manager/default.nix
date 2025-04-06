@@ -20,6 +20,7 @@
     ./toggleable/hyprland
     ./toggleable/misc
     ./toggleable/mpv
+    ./toggleable/mypkgs
     ./toggleable/nvim
     ./toggleable/ocaml
     ./toggleable/pointerCursor

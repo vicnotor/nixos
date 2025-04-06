@@ -84,4 +84,5 @@
   vlib = "vim $HOME/Git/vicnotor/nixos/modules/nixos/toggleable/nix-ld/libraries.nix";
   wifion = "nmcli radio wifi on";
   wifioff = "nmcli radio wifi off";
+  diral = "direnv allow";
 }
