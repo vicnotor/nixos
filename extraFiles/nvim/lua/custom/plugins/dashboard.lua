@@ -19,7 +19,6 @@ return {
 							key = "s",
 						},
 						{ action = "Lazy", desc = " Lazy", icon = "󰒲 ", key = "l" },
-						{ action = "Mason", desc = " Mason", icon = "◍ ", key = "m" },
 						{ action = "qa", desc = " Quit", icon = " ", key = "q" },
 					},
 					footer = function()

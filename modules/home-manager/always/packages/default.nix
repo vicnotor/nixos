@@ -42,7 +42,7 @@
     # Languages
     alejandra # Nix formatting
     bash-language-server
-    marksman # Markdown formatting
+    mdformat # Markdown formatting
     inputs.nixd.packages.${pkgs.system}.default # nixd: Nix lsp
   ];
 }
