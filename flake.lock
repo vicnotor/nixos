@@ -920,6 +920,26 @@
         "type": "github"
       }
     },
+    "mydev": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1744025762,
+        "narHash": "sha256-8014MG3bd/oagYp6toByrlSEuhmwMeAflNEgxAIlCQg=",
+        "owner": "vicnotor",
+        "repo": "my-devshells",
+        "rev": "57912335997787a9c5510fde4f569bc5c780289a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vicnotor",
+        "repo": "my-devshells",
+        "type": "github"
+      }
+    },
     "neovim-nightly-overlay": {
       "inputs": {
         "flake-compat": "flake-compat_3",
@@ -1205,6 +1225,7 @@
         "home-manager": "home-manager",
         "hyprland": "hyprland",
         "hyprland-plugins": "hyprland-plugins",
+        "mydev": "mydev",
         "neovim-nightly-overlay": "neovim-nightly-overlay",
         "nixd": "nixd",
         "nixpkgs": "nixpkgs_4",

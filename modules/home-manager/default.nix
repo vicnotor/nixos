@@ -46,6 +46,7 @@
   hyprlandModule.enable = lib.mkDefault true;
   miscModule.enable = lib.mkDefault true;
   mpvModule.enable = lib.mkDefault true;
+  mypkgsModule.enable = lib.mkDefault true;
   nvimModule.enable = lib.mkDefault true;
   ocamlModule.enable = lib.mkDefault true;
   pythonModule.enable = lib.mkDefault true;
