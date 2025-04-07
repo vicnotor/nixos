@@ -920,26 +920,6 @@
         "type": "github"
       }
     },
-    "my-devshells": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1744035801,
-        "narHash": "sha256-cFtfUbdmE9hOs6/pSUsFCfZErY00FerTpaUPwuO6YfQ=",
-        "owner": "vicnotor",
-        "repo": "my-devshells",
-        "rev": "8745c0609839dee457da6513b6221fbaa608b174",
-        "type": "github"
-      },
-      "original": {
-        "owner": "vicnotor",
-        "repo": "my-devshells",
-        "type": "github"
-      }
-    },
     "neovim-nightly-overlay": {
       "inputs": {
         "flake-compat": "flake-compat_3",
@@ -977,6 +957,26 @@
       "original": {
         "owner": "neovim",
         "repo": "neovim",
+        "type": "github"
+      }
+    },
+    "nix-devshells": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1744038254,
+        "narHash": "sha256-gRwAV1a19328BUhKAtXXvOkZ+c+/sb1bF6MK9LV3pyo=",
+        "owner": "vicnotor",
+        "repo": "nix-devshells",
+        "rev": "3ec901428648234ce9b7c01c6a2d73cb2cb3fa24",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vicnotor",
+        "repo": "nix-devshells",
         "type": "github"
       }
     },
@@ -1225,8 +1225,8 @@
         "home-manager": "home-manager",
         "hyprland": "hyprland",
         "hyprland-plugins": "hyprland-plugins",
-        "my-devshells": "my-devshells",
         "neovim-nightly-overlay": "neovim-nightly-overlay",
+        "nix-devshells": "nix-devshells",
         "nixd": "nixd",
         "nixpkgs": "nixpkgs_4",
         "stylix": "stylix",

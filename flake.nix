@@ -19,8 +19,8 @@
     ghostty.url = "github:ghostty-org/ghostty";
     zig.url = "github:mitchellh/zig-overlay";
     stylix.url = "github:danth/stylix";
-    my-devshells = {
-      url = "github:vicnotor/my-devshells";
+    nix-devshells = {
+      url = "github:vicnotor/nix-devshells";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
