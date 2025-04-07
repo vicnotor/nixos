@@ -5,7 +5,7 @@
 }: {
   options = {
     nvidiahybridModule.enable =
-      lib.mkEnableOption "enables nvidiahybrid module";
+      lib.mkEnableOption "nvidiahybrid module";
   };
 
   config = lib.mkIf config.nvidiahybridModule.enable {

@@ -6,7 +6,7 @@
   imports = [./quickemu];
   options = {
     virtualisationModule.enable =
-      lib.mkEnableOption "enables virtualisation module";
+      lib.mkEnableOption "virtualisation module";
   };
 
   config = lib.mkIf config.virtualisationModule.enable {

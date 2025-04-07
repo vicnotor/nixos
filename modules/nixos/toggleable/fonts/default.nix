@@ -6,7 +6,7 @@
 }: {
   options = {
     fontsModule.enable =
-      lib.mkEnableOption "enables fonts module";
+      lib.mkEnableOption "fonts module";
   };
 
   config = lib.mkIf config.fontsModule.enable {

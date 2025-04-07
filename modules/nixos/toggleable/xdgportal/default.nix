@@ -6,7 +6,7 @@
 }: {
   options = {
     xdgportalModule.enable =
-      lib.mkEnableOption "enables xdg portal settings module";
+      lib.mkEnableOption "xdg portal settings module";
   };
 
   config = lib.mkIf config.xdgportalModule.enable {

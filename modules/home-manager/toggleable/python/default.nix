@@ -6,16 +6,19 @@
 }: {
   options = {
     pythonModule.enable =
-      lib.mkEnableOption "enables Python module";
+      lib.mkEnableOption "Python module";
   };
 
   config = lib.mkIf config.pythonModule.enable {
-    home.packages = [
-      (pkgs.python3.withPackages (ps:
-        with ps; [
-          m2crypto # Needed for Python SSL support
-          numpy
-        ]))
+    home.packages = with pkgs; [
+      ([
+          pyright
+        ]
+        ++ python3.withPackages (ps:
+          with ps; [
+            m2crypto # Needed for Python SSL support
+            numpy
+          ]))
     ];
   };
 }

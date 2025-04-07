@@ -6,7 +6,7 @@
 }: {
   options = {
     nix-ldModule.enable =
-      lib.mkEnableOption "enables nix-ld module";
+      lib.mkEnableOption "nix-ld module";
   };
 
   config = lib.mkIf config.nix-ldModule.enable {

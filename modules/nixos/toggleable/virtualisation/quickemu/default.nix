@@ -7,7 +7,7 @@
 }: {
   options = {
     quickemuModule.enable =
-      lib.mkEnableOption "enables Quickemu module";
+      lib.mkEnableOption "Quickemu module";
   };
 
   config = lib.mkIf config.quickemuModule.enable {

@@ -5,7 +5,7 @@
 }: {
   options = {
     gitModule.enable =
-      lib.mkEnableOption "enables git module";
+      lib.mkEnableOption "git module";
   };
 
   config = lib.mkIf config.gitModule.enable {

@@ -7,7 +7,7 @@
 }: {
   options = {
     hyprlandModule.enable =
-      lib.mkEnableOption "enables Hyprland module";
+      lib.mkEnableOption "Hyprland module";
   };
 
   config = lib.mkIf config.hyprlandModule.enable {

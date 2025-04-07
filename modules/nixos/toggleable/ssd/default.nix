@@ -5,7 +5,7 @@
 }: {
   options = {
     ssdModule.enable =
-      lib.mkEnableOption "enables ssd module";
+      lib.mkEnableOption "ssd module";
   };
 
   config = lib.mkIf config.ssdModule.enable {

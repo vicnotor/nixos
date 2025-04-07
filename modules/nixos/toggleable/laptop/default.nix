@@ -5,7 +5,7 @@
 }: {
   options = {
     laptopModule.enable =
-      lib.mkEnableOption "enables module with some laptop-specific settings";
+      lib.mkEnableOption "module with some laptop-specific settings";
   };
 
   config = lib.mkIf config.laptopModule.enable {

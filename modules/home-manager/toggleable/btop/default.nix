@@ -6,7 +6,7 @@
 }: {
   options = {
     btopModule.enable =
-      lib.mkEnableOption "enables btop module";
+      lib.mkEnableOption "btop module";
   };
 
   config = lib.mkIf config.btopModule.enable {

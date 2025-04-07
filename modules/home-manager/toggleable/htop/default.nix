@@ -6,7 +6,7 @@
 }: {
   options = {
     htopModule.enable =
-      lib.mkEnableOption "enables htop module";
+      lib.mkEnableOption "htop module";
   };
 
   config = lib.mkIf config.htopModule.enable {

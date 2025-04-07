@@ -6,7 +6,7 @@
 }: {
   options = {
     alacrittyModule.enable =
-      lib.mkEnableOption "enables Alacritty module";
+      lib.mkEnableOption "Alacritty module";
   };
 
   config = lib.mkIf config.alacrittyModule.enable {

@@ -15,14 +15,12 @@
     ./toggleable/ghostty
     ./toggleable/git
     ./toggleable/gtk
-    ./toggleable/haskell
     ./toggleable/htop
     ./toggleable/hyprland
     ./toggleable/misc
     ./toggleable/mpv
     ./toggleable/mypkgs
     ./toggleable/nvim
-    ./toggleable/ocaml
     ./toggleable/pointerCursor
     ./toggleable/python
     ./toggleable/r
@@ -42,13 +40,11 @@
   fzfModule.enable = lib.mkDefault true;
   ghosttyModule.enable = lib.mkDefault true;
   gitModule.enable = lib.mkDefault true;
-  haskellModule.enable = lib.mkDefault true;
   hyprlandModule.enable = lib.mkDefault true;
   miscModule.enable = lib.mkDefault true;
   mpvModule.enable = lib.mkDefault true;
   mypkgsModule.enable = lib.mkDefault true;
   nvimModule.enable = lib.mkDefault true;
-  ocamlModule.enable = lib.mkDefault true;
   pythonModule.enable = lib.mkDefault true;
   rModule.enable = lib.mkDefault true;
   stylixHmModule.enable = lib.mkDefault true;

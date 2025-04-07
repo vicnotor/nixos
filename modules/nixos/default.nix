@@ -44,9 +44,9 @@
   ssdModule.enable = lib.mkDefault true;
   stylixModule.enable = lib.mkDefault true;
   thunarModule.enable = lib.mkDefault true;
+  virtualisationModule.enable = lib.mkDefault true;
   xdgportalModule.enable = lib.mkDefault true;
   zshModule.enable = lib.mkDefault true;
 
   # Disabled by default
-  virtualisationModule.enable = lib.mkDefault true;
 }

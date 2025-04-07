@@ -7,7 +7,7 @@
 }: {
   options = {
     waybarModule.enable =
-      lib.mkEnableOption "enables waybar module";
+      lib.mkEnableOption "waybar module";
   };
 
   config = lib.mkIf config.waybarModule.enable {

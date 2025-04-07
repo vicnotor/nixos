@@ -6,7 +6,7 @@
 }: {
   options = {
     nvidiaModule.enable =
-      lib.mkEnableOption "enables nvidia module";
+      lib.mkEnableOption "nvidia module";
   };
 
   config = lib.mkIf config.nvidiaModule.enable {

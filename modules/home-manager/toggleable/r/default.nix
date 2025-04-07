@@ -22,7 +22,7 @@ with pkgs; let
 in {
   options = {
     rModule.enable =
-      lib.mkEnableOption "enables R module";
+      lib.mkEnableOption "R module";
   };
 
   config = lib.mkIf config.rModule.enable {

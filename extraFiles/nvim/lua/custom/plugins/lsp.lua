@@ -91,16 +91,7 @@ return {
 			--  If you want to override the default filetypes that your language server will attach to you can
 			--  define the property 'filetypes' to the map in question.
 			local servers = {
-				clangd = {},
-				pyright = {
-					analysis = {
-						diagnosticSeverityOverrides = {
-							reportUnusedVariable = false,
-						},
-					},
-				},
 				ts_ls = {},
-				html = { filetypes = { "html", "twig", "hbs" } },
 				lua_ls = {
 					Lua = {
 						workspace = { checkThirdParty = false },
@@ -111,7 +102,6 @@ return {
 				},
 				marksman = {},
 				bashls = {},
-				zls = {},
 			}
 
 			-- Setup neovim lua configuration
@@ -149,8 +139,8 @@ return {
 
 			-- Manual installed LSP's (i.e. without Mason)
 
-			-- Godot setup
 			local lspconfig = require("lspconfig")
+			lspconfig.clangd.setup({})
 			lspconfig["gdscript"].setup({
 				name = "godot",
 				cmd = vim.lsp.rpc.connect("127.0.0.1", 6005),
@@ -165,19 +155,15 @@ return {
 						formatting = {
 							command = { "alejandra" },
 						},
-						-- options = {
-						-- 	nixos = {
-						-- 		expr = '(builtins.getFlake "/home/vic/Git/vicnotor/nixos").nixosConfigurations.nixlap.options',
-						-- 	},
-						-- 	home_manager = {
-						-- 		expr = '(builtins.getFlake "/home/vic/Git/vicnotor/nixos").homeConfigurations."nixlap@vic".options',
-						-- 	},
-						-- },
+						options = {
+							nixos = {
+								expr = '(builtins.getFlake "/home/vic/Git/vicnotor/nixos").nixosConfigurations.nixlap.options',
+							},
+						},
 					},
 				},
 			})
 			lspconfig.hls.setup({
-				filetypes = { "haskell", "lhaskell", "cabal" },
 				settings = {
 					hls = {
 						haskell = {
@@ -189,6 +175,8 @@ return {
 				},
 			})
 			lspconfig.ocamllsp.setup({})
+			lspconfig.pyright.setup({})
+			lspconfig.zls.setup({})
 		end,
 	},
 }

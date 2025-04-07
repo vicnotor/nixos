@@ -5,7 +5,7 @@
 }: {
   options = {
     miscModule.enable =
-      lib.mkEnableOption "enables module with all miscellaneous home-manager stuff";
+      lib.mkEnableOption "module with all miscellaneous home-manager stuff";
   };
 
   config =

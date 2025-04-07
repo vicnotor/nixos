@@ -6,7 +6,7 @@
 }: {
   options = {
     thunarModule.enable =
-      lib.mkEnableOption "enables thunar module";
+      lib.mkEnableOption "thunar module";
   };
 
   config = lib.mkIf config.thunarModule.enable {

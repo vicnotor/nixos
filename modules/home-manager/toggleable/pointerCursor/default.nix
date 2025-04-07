@@ -6,7 +6,7 @@
 }: {
   options = {
     pointerCursorModule.enable =
-      lib.mkEnableOption "enables pointerCursor module";
+      lib.mkEnableOption "pointerCursor module";
   };
 
   config = lib.mkIf config.pointerCursorModule.enable {

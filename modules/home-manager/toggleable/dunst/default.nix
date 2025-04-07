@@ -6,7 +6,7 @@
 }: {
   options = {
     dunstModule.enable =
-      lib.mkEnableOption "enables dunst module";
+      lib.mkEnableOption "dunst module";
   };
 
   config = lib.mkIf config.dunstModule.enable {

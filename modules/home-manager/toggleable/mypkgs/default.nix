@@ -7,7 +7,7 @@
 }: {
   options = {
     mypkgsModule.enable =
-      lib.mkEnableOption "enables mypkgs module";
+      lib.mkEnableOption "mypkgs module";
   };
 
   config = lib.mkIf config.mypkgsModule.enable {

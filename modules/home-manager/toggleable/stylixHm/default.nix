@@ -9,7 +9,7 @@
 in {
   options = {
     stylixHmModule.enable =
-      lib.mkEnableOption "enables Stylix home-manager module";
+      lib.mkEnableOption "Stylix home-manager module";
   };
 
   config = lib.mkIf config.stylixHmModule.enable {

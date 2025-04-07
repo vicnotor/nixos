@@ -5,7 +5,7 @@
 }: {
   options = {
     vic.enable =
-      lib.mkEnableOption "enables vic user module";
+      lib.mkEnableOption "vic user module";
   };
 
   config = lib.mkIf config.vic.enable {
@@ -13,7 +13,7 @@
       users.vic = {
         isNormalUser = true;
         home = "/home/vic";
-        extraGroups = ["wheel" "networkmanager"]; # wheel enables ‘sudo’ for the user
+        extraGroups = ["wheel" "networkmanager"]; # wheel ‘sudo’ for the user
         initialPassword = "password";
       };
     };

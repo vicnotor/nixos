@@ -6,7 +6,7 @@
 }: {
   options = {
     fzfModule.enable =
-      lib.mkEnableOption "enables fzf module";
+      lib.mkEnableOption "fzf module";
   };
 
   config = lib.mkIf config.fzfModule.enable {

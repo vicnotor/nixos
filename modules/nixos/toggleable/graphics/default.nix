@@ -6,7 +6,7 @@
 }: {
   options = {
     graphicsModule.enable =
-      lib.mkEnableOption "enables graphics (opengl) module";
+      lib.mkEnableOption "graphics (opengl) module";
   };
 
   config = lib.mkIf config.graphicsModule.enable {

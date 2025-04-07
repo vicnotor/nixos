@@ -5,7 +5,7 @@
 }: {
   options = {
     zshModule.enable =
-      lib.mkEnableOption "enables zsh module";
+      lib.mkEnableOption "zsh module";
   };
 
   config = lib.mkIf config.zshModule.enable {

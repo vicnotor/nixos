@@ -17,7 +17,6 @@
     hyprpicker # Color picker
     libreoffice
     networkmanagerapplet
-    inputs.nixd.packages.${pkgs.system}.default # nixd: Nix lsp
     obs-studio
     onedrive
     openssl # Needed for onedrive
@@ -42,7 +41,7 @@
     zotero-beta
 
     # Languages
+    inputs.nixd.packages.${pkgs.system}.default # nixd: Nix lsp
     nodejs
-    inputs.zig.packages.${pkgs.system}.default # Zig compiler
   ];
 }

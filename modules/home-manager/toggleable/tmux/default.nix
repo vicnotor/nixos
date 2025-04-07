@@ -6,7 +6,7 @@
 }: {
   options = {
     tmuxModule.enable =
-      lib.mkEnableOption "enables tmux module";
+      lib.mkEnableOption "tmux module";
   };
 
   config = lib.mkIf config.tmuxModule.enable {

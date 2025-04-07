@@ -5,7 +5,7 @@
 }: {
   options = {
     soundModule.enable =
-      lib.mkEnableOption "enables sound settings module";
+      lib.mkEnableOption "sound settings module";
   };
 
   config = lib.mkIf config.soundModule.enable {

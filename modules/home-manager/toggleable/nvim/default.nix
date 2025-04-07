@@ -6,7 +6,7 @@
 }: {
   options = {
     nvimModule.enable =
-      lib.mkEnableOption "enables importing of nvim config";
+      lib.mkEnableOption "importing of nvim config";
   };
 
   config = lib.mkIf config.nvimModule.enable {

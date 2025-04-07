@@ -5,7 +5,7 @@
 }: {
   options = {
     polkitModule.enable =
-      lib.mkEnableOption "enables polkit module";
+      lib.mkEnableOption "polkit module";
   };
 
   config = lib.mkIf config.polkitModule.enable {

@@ -10,7 +10,7 @@
 in {
   options = {
     stylixModule.enable =
-      lib.mkEnableOption "enables Stylix module";
+      lib.mkEnableOption "Stylix module";
   };
 
   config = lib.mkIf config.stylixModule.enable {

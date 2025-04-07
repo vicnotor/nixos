@@ -6,7 +6,7 @@
 }: {
   options = {
     mpvModule.enable =
-      lib.mkEnableOption "enables mpv module";
+      lib.mkEnableOption "mpv module";
   };
 
   config = lib.mkIf config.mpvModule.enable {
