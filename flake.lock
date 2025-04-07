@@ -920,18 +920,18 @@
         "type": "github"
       }
     },
-    "mydev": {
+    "my-devshells": {
       "inputs": {
         "nixpkgs": [
           "nixpkgs"
         ]
       },
       "locked": {
-        "lastModified": 1744034615,
-        "narHash": "sha256-rYIPUYQLHelEuDSCy5f6O4qtMqBFkn2rHOhGBEAs9GU=",
+        "lastModified": 1744035564,
+        "narHash": "sha256-Oc9OvycNqqzH5Zig4/2p+vsj2+HTRAy8z+WBw8lhekM=",
         "owner": "vicnotor",
         "repo": "my-devshells",
-        "rev": "deb48c7594525fc82eb944191b94c05bdfdbbe72",
+        "rev": "d880fdcf06b2e99bed1788d5f38a33be01b949a4",
         "type": "github"
       },
       "original": {
@@ -1225,7 +1225,7 @@
         "home-manager": "home-manager",
         "hyprland": "hyprland",
         "hyprland-plugins": "hyprland-plugins",
-        "mydev": "mydev",
+        "my-devshells": "my-devshells",
         "neovim-nightly-overlay": "neovim-nightly-overlay",
         "nixd": "nixd",
         "nixpkgs": "nixpkgs_4",

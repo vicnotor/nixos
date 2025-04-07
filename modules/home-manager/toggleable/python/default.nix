@@ -10,15 +10,16 @@
   };
 
   config = lib.mkIf config.pythonModule.enable {
-    home.packages = with pkgs; [
-      ([
-          pyright
-        ]
-        ++ python3.withPackages (ps:
+    home.packages = with pkgs;
+      [
+        pyright
+      ]
+      ++ [
+        (pkgs.python3.withPackages (ps:
           with ps; [
             m2crypto # Needed for Python SSL support
             numpy
           ]))
-    ];
+      ];
   };
 }
