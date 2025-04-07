@@ -927,11 +927,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1744027974,
-        "narHash": "sha256-ETM0zrWu/YIkpb7tsTf03Z08hCT8L8T1bzaFxMjXGfg=",
+        "lastModified": 1744033099,
+        "narHash": "sha256-c2qANwDXYZ0NP50OjCnL5scyn3VTQFtCXl30icYG50E=",
         "owner": "vicnotor",
         "repo": "my-devshells",
-        "rev": "7f0077ea9b905dfed35552aed7bb99aa8cdb3cc6",
+        "rev": "44e841d7f2af7136462142a4d6cd99944574be41",
         "type": "github"
       },
       "original": {
