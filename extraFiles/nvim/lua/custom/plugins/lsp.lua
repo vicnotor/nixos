@@ -2,9 +2,6 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
-			"folke/neodev.nvim",
-			"williamboman/mason.nvim",
-			"williamboman/mason-lspconfig.nvim",
 			{
 				"j-hui/fidget.nvim",
 				opts = {
@@ -15,13 +12,34 @@ return {
 					},
 				},
 			},
+			{
+				"folke/lazydev.nvim",
+				ft = "lua", -- only load on lua files
+				opts = {
+					library = {
+						-- See the configuration section for more details
+						-- Load luvit types when the `vim.uv` word is found
+						{ path = "${3rd}/luv/library", words = { "vim%.uv" } },
+					},
+				},
+			},
+			{ -- optional cmp completion source for require statements and module annotations
+				"hrsh7th/nvim-cmp",
+				opts = function(_, opts)
+					opts.sources = opts.sources or {}
+					table.insert(opts.sources, {
+						name = "lazydev",
+						group_index = 0, -- set group index to 0 to skip loading LuaLS completions
+					})
+				end,
+			},
 
 			-- Autoformatting
 			"stevearc/conform.nvim",
 		},
 		config = function()
 			--  This function gets run when an LSP connects to a particular buffer.
-			local on_attach = function(_, bufnr)
+			local on_attach = function(bufnr)
 				-- We create a function that lets us more easily define mappings specific
 				-- for LSP related items. It sets the mode, buffer and description for us each time.
 
@@ -56,13 +74,13 @@ return {
 				lspmap("<leader>wl", function()
 					print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
 				end, "[W]orkspace [L]ist Folders")
-
-				-- Create a command `:Format` local to the LSP buffer
-				vim.api.nvim_buf_create_user_command(bufnr, "Format", function(_)
-					vim.lsp.buf.format()
-				end, { desc = "Format current buffer with LSP" })
 			end
 
+			vim.api.nvim_create_autocmd("LspAttach", {
+				callback = function(args)
+					on_attach(args.buf)
+				end,
+			})
 			-- document existing key chains
 			require("which-key").add({
 				{ "<leader>wr", group = "[R]ename" },
@@ -71,63 +89,10 @@ return {
 				{ "<leader>ws_", hidden = true },
 				{ "<leader>", group = "VISUAL <leader>", mode = "v" },
 			})
-			-- mason-lspconfig requires that these setup functions are called in this order
-			-- before setting up the servers.
-			require("mason").setup({
-				ui = {
-					icons = {
-						package_installed = "✓",
-						package_pending = "➜",
-						package_uninstalled = "✗",
-					},
-				},
-			})
-			require("mason-lspconfig").setup()
-
-			-- Enable the following language servers
-			--  Add any additional override configuration in the following tables. They will be passed to
-			--  the `settings` field of the server config. You must look up that documentation yourself.
-			--
-			--  If you want to override the default filetypes that your language server will attach to you can
-			--  define the property 'filetypes' to the map in question.
-			local servers = {
-				ts_ls = {},
-				lua_ls = {
-					Lua = {
-						workspace = { checkThirdParty = false },
-						telemetry = { enable = false },
-						-- Ignore Lua_LS's noisy `missing-fields` warnings
-						diagnostics = { disable = { "missing-fields" } },
-					},
-				},
-				marksman = {},
-				bashls = {},
-			}
-
-			-- Setup neovim lua configuration
-			require("neodev").setup()
 
 			-- nvim-cmp supports additional completion capabilities, so broadcast that to servers
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
 			capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
-
-			-- Ensure the servers above are installed
-			local mason_lspconfig = require("mason-lspconfig")
-
-			mason_lspconfig.setup({
-				ensure_installed = vim.tbl_keys(servers),
-			})
-
-			mason_lspconfig.setup_handlers({
-				function(server_name)
-					require("lspconfig")[server_name].setup({
-						capabilities = capabilities,
-						on_attach = on_attach,
-						settings = servers[server_name],
-						filetypes = (servers[server_name] or {}).filetypes,
-					})
-				end,
-			})
 
 			-- Autoformatting Setup
 			require("conform").setup({
@@ -137,13 +102,45 @@ return {
 				},
 			})
 
-			-- Manual installed LSP's (i.e. without Mason)
-
+			-- LSP config
 			local lspconfig = require("lspconfig")
+
+      -- No setup required for these
+			lspconfig.bashls.setup({})
 			lspconfig.clangd.setup({})
+			lspconfig.marksman.setup({})
+			lspconfig.ocamllsp.setup({})
+			lspconfig.pyright.setup({})
+			lspconfig.ts_ls.setup({})
+			lspconfig.zls.setup({})
+
+      -- With additional setup
 			lspconfig["gdscript"].setup({
 				name = "godot",
 				cmd = vim.lsp.rpc.connect("127.0.0.1", 6005),
+			})
+			lspconfig.hls.setup({
+				settings = {
+					hls = {
+						haskell = {
+							plugin = {
+								rename = { config = { crossModule = true } },
+							},
+						},
+					},
+				},
+			})
+			lspconfig.lua_ls.setup({
+				settings = {
+					lua_ls = {
+						Lua = {
+							workspace = { checkThirdParty = false },
+							telemetry = { enable = false },
+							-- Ignore Lua_LS's noisy `missing-fields` warnings
+							diagnostics = { disable = { "missing-fields" } },
+						},
+					},
+				},
 			})
 			lspconfig.nixd.setup({
 				cmd = { "nixd" },
@@ -163,20 +160,6 @@ return {
 					},
 				},
 			})
-			lspconfig.hls.setup({
-				settings = {
-					hls = {
-						haskell = {
-							plugin = {
-								rename = { config = { crossModule = true } },
-							},
-						},
-					},
-				},
-			})
-			lspconfig.ocamllsp.setup({})
-			lspconfig.pyright.setup({})
-			lspconfig.zls.setup({})
 		end,
 	},
 }

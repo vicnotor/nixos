@@ -17,6 +17,8 @@
     ./toggleable/gtk
     ./toggleable/htop
     ./toggleable/hyprland
+    ./toggleable/javascript
+    ./toggleable/lua
     ./toggleable/misc
     ./toggleable/mpv
     ./toggleable/mypkgs
@@ -41,6 +43,8 @@
   ghosttyModule.enable = lib.mkDefault true;
   gitModule.enable = lib.mkDefault true;
   hyprlandModule.enable = lib.mkDefault true;
+  javascriptModule.enable = lib.mkDefault true;
+  luaModule.enable = lib.mkDefault true;
   miscModule.enable = lib.mkDefault true;
   mpvModule.enable = lib.mkDefault true;
   mypkgsModule.enable = lib.mkDefault true;

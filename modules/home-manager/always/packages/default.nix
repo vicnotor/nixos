@@ -4,7 +4,6 @@
   ...
 }: {
   home.packages = with pkgs; [
-    alejandra # Nix formatting
     aseprite
     brightnessctl
     discord
@@ -41,7 +40,9 @@
     zotero-beta
 
     # Languages
+    alejandra # Nix formatting
+    bash-language-server
+    marksman # Markdown formatting
     inputs.nixd.packages.${pkgs.system}.default # nixd: Nix lsp
-    nodejs
   ];
 }

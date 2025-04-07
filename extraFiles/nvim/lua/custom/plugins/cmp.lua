@@ -13,7 +13,13 @@ return {
 			"saadparwaiz1/cmp_luasnip",
 			"R-nvim/cmp-r",
 		},
-		config = function()
+		config = function(_, opts)
+			opts.sources = opts.sources or {}
+			table.insert(opts.sources, {
+				name = "lazydev",
+				group_index = 0, -- set group index to 0 to skip loading LuaLS completions
+			})
+
 			vim.opt.completeopt = { "menu", "menuone", "noselect" }
 			vim.opt.shortmess:append("c")
 
