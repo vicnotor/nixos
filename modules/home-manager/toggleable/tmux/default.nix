@@ -49,7 +49,6 @@
 
         # Custom key-binds
         bind-key -r f run-shell "tmux neww tmux-sessionizer"
-        bind-key -r g run-shell "open-current-dir"
         bind-key -r h run-shell "tmux-home"
 
         # Style by JackDerksen/tmux
@@ -59,7 +58,8 @@
         set -g status-style 'bg=default'  # transparent background
 
         set -g status-left '#[fg=#2b2a30,bg=default]#[fg=#b4befe,bg=#2b2a30] #S #[fg=#2b2a30,bg=default]#[fg=#45475a,bg=default] |'
-        set -g status-right '#[fg=#2b2a30,bg=default]#[fg=#f2dcdc,bg=#2b2a30]%d/%m/%y %H:%M#[fg=#2b2a30,bg=default]'
+        # set -g status-right '#[fg=#2b2a30,bg=default]#[fg=#f2dcdc,bg=#2b2a30]%d/%m/%y %H:%M#[fg=#2b2a30,bg=default]'
+        set -g status-right ""
         set -g window-status-current-format '#[fg=#2b2a30,bg=default] #[fg=#b4befe,bg=#2b2a30]#I #W#[fg=#2b2a30,bg=default]'
         set -g window-status-format '#[fg=gray,bg=default]  #I #W '
 

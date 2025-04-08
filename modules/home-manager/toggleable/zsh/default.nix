@@ -18,7 +18,6 @@
         # Keybindings
         bindkey -s ^f "tmux-sessionizer\n"
         bindkey -s ^t "tmux attach\n"
-        bindkey -s ^g "open-current-dir\n"
         bindkey -s ● "tmux-home\n"
 
         # Fixes slow git autocompletion

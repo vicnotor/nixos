@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-# Check if inside a tmux session
-if [ -n "$TMUX" ]; then
-    # Inside a tmux session, open a new pane
-    tmux split-window -h
-fi
