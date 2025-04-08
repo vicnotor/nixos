@@ -43,7 +43,7 @@ in {
     wayland.windowManager.hyprland = {
       settings = {
         general = {
-          "col.active_border" = lib.mkForce "rgba(${colors.base08}ee) rgba(${colors.base0D}ee) 45deg";
+          "col.active_border" = lib.mkForce "rgba(${colors.base0D}ee) rgba(${colors.base0C}ee) 45deg";
           "col.inactive_border" = lib.mkForce "rgba(${colors.base01}ee)";
         };
       };
