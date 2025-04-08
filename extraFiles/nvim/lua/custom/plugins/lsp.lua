@@ -108,7 +108,6 @@ return {
       -- No setup required for these
 			lspconfig.bashls.setup({})
 			lspconfig.clangd.setup({})
-			lspconfig.marksman.setup({})
 			lspconfig.ocamllsp.setup({})
 			lspconfig.pyright.setup({})
 			lspconfig.ts_ls.setup({})
