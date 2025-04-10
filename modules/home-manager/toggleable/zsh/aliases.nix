@@ -53,6 +53,14 @@
   # Markdown
   md = "glow";
 
+  # On/off switches
+  wifion = "nmcli radio wifi on";
+  wifioff = "nmcli radio wifi off";
+  ethon = "sudo ifconfig enp2s0 up";
+  ethoff = "sudo ifconfig enp2s0 down";
+  virshon = "sudo virsh net-start --network default";
+  virshoff = "sudo virsh net-destroy --network default";
+
   # Nice ones
   ":q" = "exit";
   ":Q" = "exit";
@@ -82,8 +90,5 @@
   vrpak = "vim $HOME/Git/vicnotor/nixos/modules/home-manager/toggleable/r/default.nix";
   vospak = "vim $HOME/Git/vicnotor/nixos/modules/nixos/always/packages/default.nix";
   vlib = "vim $HOME/Git/vicnotor/nixos/modules/nixos/toggleable/nix-ld/libraries.nix";
-  wifion = "nmcli radio wifi on";
-  ethon = "sudo ifconfig enp2s0 up";
-  wifioff = "nmcli radio wifi off";
   diral = "direnv allow";
 }
