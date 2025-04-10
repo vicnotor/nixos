@@ -83,6 +83,7 @@
   vospak = "vim $HOME/Git/vicnotor/nixos/modules/nixos/always/packages/default.nix";
   vlib = "vim $HOME/Git/vicnotor/nixos/modules/nixos/toggleable/nix-ld/libraries.nix";
   wifion = "nmcli radio wifi on";
+  ethon = "sudo ifconfig enp2s0 up";
   wifioff = "nmcli radio wifi off";
   diral = "direnv allow";
 }

@@ -26,7 +26,7 @@
         # monitor = ",preferred,auto,auto";
         monitor = [
           "eDP-1,2560x1440@165,0x0,1.6"
-          "HDMI-A-1,highrr,auto,auto"
+          "HDMI-A-1,highres,auto,auto"
         ];
 
         ###################
@@ -167,6 +167,7 @@
           scroll_factor = "0.7";
 
           touchpad = {
+            disable_while_typing = false;
             natural_scroll = true;
             scroll_factor = "0.15";
           };

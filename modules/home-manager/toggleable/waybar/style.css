@@ -120,9 +120,8 @@ button:hover {
   padding: 0 10px 0 0;
 }
 
-#custom-separator {
-  color: #484848;
-  margin: 0 5px;
+#custom-seperator {
+  color: @surface2;
 }
 
 #window {
