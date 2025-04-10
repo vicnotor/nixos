@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+hyprctl --batch "\
+  keyword monitor \"HDMI-A-1,disable\"
+"

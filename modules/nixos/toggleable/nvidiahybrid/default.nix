@@ -13,9 +13,10 @@
       nvidia = {
         prime = {
           offload = {
-            enable = true;
-            enableOffloadCmd = true;
+            enable = false;
+            enableOffloadCmd = false;
           };
+          sync.enable = true;
           intelBusId = "PCI:0:2:0";
           nvidiaBusId = "PCI:1:0:0";
         };
@@ -23,18 +24,18 @@
     };
 
     specialisation = {
-      # Enable a second boot entry with nvidia sync instead of offload when having
+      # Enable a second boot entry with nvidia offload instead of sync when having
       # a dual gpu setup
-      nvidia-sync.configuration = {
-        environment.etc."specialisation".text = "nvidia-sync"; # Needed for nh (see https://github.com/nix-community/nh#specialisations-support)
-        system.nixos.tags = ["nvidia-sync"];
+      nvidia-offload.configuration = {
+        environment.etc."specialisation".text = "nvidia-offload"; # Needed for nh (see https://github.com/nix-community/nh#specialisations-support)
+        system.nixos.tags = ["nvidia-offload"];
         hardware.nvidia = {
           prime = {
             offload = {
-              enable = lib.mkForce false;
-              enableOffloadCmd = lib.mkForce false;
+              enable = lib.mkForce true;
+              enableOffloadCmd = lib.mkForce true;
             };
-            sync.enable = lib.mkForce true;
+            sync.enable = lib.mkForce false;
           };
         };
       };
