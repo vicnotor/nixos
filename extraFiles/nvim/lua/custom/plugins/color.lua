@@ -12,6 +12,7 @@ function Color(color)
 	vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#4d567d" })
 	vim.api.nvim_set_hl(0, "TreesitterContext", { bg = "#333033" })
 	vim.api.nvim_set_hl(0, "TreesitterContextLineNumber", { fg = "#999099", bg = "#333033" })
+	vim.api.nvim_set_hl(0, "SnacksIndent", { fg = "#1A1B26"})
 
 	-- The following is needed for some themes to fix the background
 	-- of some windows or parts of the screen (for transparent mode)

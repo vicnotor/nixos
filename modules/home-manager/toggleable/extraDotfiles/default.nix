@@ -21,8 +21,9 @@
         sync_dir="~/personal"
         skip_dir=".git"
       '';
+      ".config/rofi/spotlight-dark.rasi".source = ./spotlight-dark.rasi;
       ".config/rofi/config.rasi".text = ''
-        @theme "${pkgs.rofi-wayland}/share/rofi/themes/arthur.rasi"
+        @theme "spotlight-dark.rasi"
       '';
     };
   };

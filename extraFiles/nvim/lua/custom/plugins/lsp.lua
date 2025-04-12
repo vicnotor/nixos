@@ -2,16 +2,17 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
-			{
-				"j-hui/fidget.nvim",
-				opts = {
-					notification = {
-						window = {
-							winblend = 0, -- Background color opacity in the notification window
-						},
-					},
-				},
-			},
+      -- Enable again if removing noice.nvim
+			-- {
+			-- 	"j-hui/fidget.nvim",
+			-- 	opts = {
+			-- 		notification = {
+			-- 			window = {
+			-- 				winblend = 0, -- Background color opacity in the notification window
+			-- 			},
+			-- 		},
+			-- 	},
+			-- },
 			{
 				"folke/lazydev.nvim",
 				ft = "lua", -- only load on lua files
@@ -80,14 +81,6 @@ return {
 				callback = function(args)
 					on_attach(args.buf)
 				end,
-			})
-			-- document existing key chains
-			require("which-key").add({
-				{ "<leader>wr", group = "[R]ename" },
-				{ "<leader>wr_", hidden = true },
-				{ "<leader>ws", group = "[S]earch" },
-				{ "<leader>ws_", hidden = true },
-				{ "<leader>", group = "VISUAL <leader>", mode = "v" },
 			})
 
 			-- nvim-cmp supports additional completion capabilities, so broadcast that to servers

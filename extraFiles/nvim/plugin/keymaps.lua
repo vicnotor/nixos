@@ -124,8 +124,8 @@ set("n", "<leader>mdp", "<cmd>!mdtopdf %<CR>", { desc = "Markdown to pdf" })
 
 -- Other
 set("n", "J", "mzJ`z")
-set("n", "<C-d>", "<C-d>zz")
-set("n", "<C-u>", "<C-u>zz")
+-- set("n", "<C-d>", "<C-d>zz")
+-- set("n", "<C-u>", "<C-u>zz")
 set("n", "n", "nzzzv")
 set("n", "N", "Nzzzv")
 set("i", "<C-c>", "<Esc>")

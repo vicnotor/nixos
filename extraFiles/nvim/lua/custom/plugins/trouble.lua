@@ -25,6 +25,11 @@ return {
 				"<cmd>Trouble symbols toggle focus=false pinned=true results.win.relative=win results.win.position=right<cr>",
 				desc = "Toggle symbols (Trouble)",
 			},
+			{
+				"<leader>tc",
+				"<cmd>Trouble todo<cr>",
+				desc = "Toggle TODO comments (Trouble)",
+			},
 		},
 	},
 }

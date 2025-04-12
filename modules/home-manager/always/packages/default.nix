@@ -6,15 +6,19 @@
   home.packages = with pkgs; [
     aseprite
     brightnessctl
+    comma # Wrapper for nix shell -c
     discord
     evince # pdf
     fastfetch # Neofetch
     fd # Finding files
+    ghostscript
     gimp
     google-chrome
     grimblast # Hyprland wrapper for grim and slurp
     hyprpicker # Color picker
+    imagemagick
     libreoffice
+    mermaid-cli
     networkmanagerapplet
     obs-studio
     onedrive
@@ -30,6 +34,7 @@
     inputs.swww.packages.${pkgs.system}.default # swww: wallpaper service
     teams-for-linux
     texlive.combined.scheme-full # Needed for pandoc and for knitting RMarkdown
+    tree-sitter
     thunderbird-latest # Mail client
     unrar
     wev # xev for wayland

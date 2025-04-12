@@ -4,7 +4,7 @@
   "[workspace special:firstlaunchapps silent] uwsm app -- $fileManager"
 
   # Wallpaper
-  "swww-daemon &"
+  "uwsm app -- swww-daemon &"
   "wpdefault"
 
   # Other startup apps

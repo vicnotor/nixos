@@ -1,20 +1,19 @@
 {
-  pkgs,
   lib,
   config,
-  inputs,
   ...
 }: {
   options = {
-    hyprlandModule.enable =
-      lib.mkEnableOption "hyprland module";
+    hyprlandHmModule.enable =
+      lib.mkEnableOption "hyprland home-manager module";
   };
 
-  config = lib.mkIf config.hyprlandModule.enable {
+  config = lib.mkIf config.hyprlandHmModule.enable {
     wayland.windowManager.hyprland = {
       enable = true;
       systemd.enable = false; # Needed if using uwsm to launch Hyprland
-      package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+      package = null; # Using the package defined in NixOS module
+      portalPackage = null; # Using the package defined in NixOS module
 
       # plugins = [
       #   inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
@@ -279,12 +278,12 @@
         binde = [
           # Zooming
           ## In
-          "$MOD SUPER, mouse_up, exec, hyprctl keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor | awk '/^float.*/ {print $2 - 0.15}')"
-          "$MOD SUPER, minus, exec, hyprctl keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor | awk '/^float.*/ {print $2 - 0.15}')"
+          "$MOD SUPER, mouse_up, exec, hyprctl keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor | awk '/^float.*/ {print $2 - 0.3}')"
+          "$MOD SUPER, minus, exec, hyprctl keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor | awk '/^float.*/ {print $2 - 0.3}')"
 
           ## Out
-          "$MOD SUPER, mouse_down, exec, hyprctl keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor | awk '/^float.*/ {print $2 + 0.15}')"
-          "$MOD SUPER, equal, exec, hyprctl keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor | awk '/^float.*/ {print $2 + 0.15}')"
+          "$MOD SUPER, mouse_down, exec, hyprctl keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor | awk '/^float.*/ {print $2 + 0.3}')"
+          "$MOD SUPER, equal, exec, hyprctl keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor | awk '/^float.*/ {print $2 + 0.3}')"
 
           ## Reset
           "$MOD SUPER, Z, exec, hyprctl keyword cursor:zoom_factor 1"

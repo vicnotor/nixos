@@ -16,7 +16,7 @@
     ./toggleable/git
     ./toggleable/gtk
     ./toggleable/htop
-    ./toggleable/hyprland
+    ./toggleable/hyprlandHm
     ./toggleable/javascript
     ./toggleable/lua
     ./toggleable/misc
@@ -42,7 +42,7 @@
   fzfModule.enable = lib.mkDefault true;
   ghosttyModule.enable = lib.mkDefault true;
   gitModule.enable = lib.mkDefault true;
-  hyprlandModule.enable = lib.mkDefault true;
+  hyprlandHmModule.enable = lib.mkDefault true;
   javascriptModule.enable = lib.mkDefault true;
   luaModule.enable = lib.mkDefault true;
   miscModule.enable = lib.mkDefault true;
