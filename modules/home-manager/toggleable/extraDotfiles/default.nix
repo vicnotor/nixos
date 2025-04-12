@@ -22,8 +22,9 @@
         skip_dir=".git"
       '';
       ".config/rofi/spotlight-dark.rasi".source = ./spotlight-dark.rasi;
+      ".config/rofi/launchpad.rasi".source = ./launchpad.rasi;
       ".config/rofi/config.rasi".text = ''
-        @theme "spotlight-dark.rasi"
+        @theme "launchpad.rasi"
       '';
     };
   };
