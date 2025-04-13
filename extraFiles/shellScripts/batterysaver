@@ -1,11 +1,11 @@
 #!/usr/bin/env sh
 
 # Arbitrary but unique message tag
-msgTag="Gamemode"
+msgTag="Battery Saver"
 
-HYPRGAMEMODE=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
+HYPRBATTERYSAVER=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
 
-if [ "$HYPRGAMEMODE" = 1 ] ; then
+if [ "$HYPRBATTERYSAVER" = 1 ] ; then
     hyprctl --batch "\
         keyword animations:enabled 0;\
         keyword decoration:shadow:enabled 0;\
@@ -15,11 +15,11 @@ if [ "$HYPRGAMEMODE" = 1 ] ; then
         keyword general:border_size 1;\
         keyword decoration:rounding 0"
     hyprctl keyword windowrule "opacity 1.0, ^(com.mitchellh.ghostty)$"
-    dunstify -a $msgTag -u low -i colors-chromagreen -h string:x-dunst-stack-tag:$msgTag $msgTag "on"
+    dunstify -a "$msgTag" -u low -i colors-chromagreen -h string:x-dunst-stack-tag:"$msgTag" "$msgTag" "on"
     swrestart
     exit
 fi
 
 hyprctl reload
-dunstify -a $msgTag -u low -i colors-chromared -h string:x-dunst-stack-tag:$msgTag $msgTag "off"
+dunstify -a "$msgTag" -u low -i colors-chromared -h string:x-dunst-stack-tag:"$msgTag" "$msgTag" "off"
 swrestart

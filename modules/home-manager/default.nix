@@ -26,6 +26,7 @@
     ./toggleable/pointerCursor
     ./toggleable/python
     ./toggleable/r
+    ./toggleable/rofi
     ./toggleable/stylixHm
     ./toggleable/tmux
     ./toggleable/waybar
@@ -51,6 +52,7 @@
   nvimModule.enable = lib.mkDefault true;
   pythonModule.enable = lib.mkDefault true;
   rModule.enable = lib.mkDefault true;
+  rofiModule.enable = lib.mkDefault true;
   stylixHmModule.enable = lib.mkDefault true;
   tmuxModule.enable = lib.mkDefault true;
   waybarModule.enable = lib.mkDefault true;

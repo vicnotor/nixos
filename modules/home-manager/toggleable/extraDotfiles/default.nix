@@ -21,10 +21,6 @@
         sync_dir="~/personal"
         skip_dir=".git"
       '';
-      ".config/rofi/launchpad.rasi".source = config.lib.file.mkOutOfStoreSymlink /home/vic/Git/vicnotor/nixos/extraFiles/rofi/launchpad.rasi;
-      ".config/rofi/config.rasi".text = ''
-        @theme "launchpad.rasi"
-      '';
     };
   };
 }
