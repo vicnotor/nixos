@@ -1,0 +1,165 @@
+{
+  "height": 27,
+  "layer": "top",
+  "position": "top",
+  "margin": "0px",
+  "reload_style_on_change": true,
+
+  "modules-center": [
+    "hyprland/window"
+  ],
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+  "modules-right": [
+    "tray",
+    "pulseaudio#input",
+    "custom/seperator",
+    "pulseaudio#output",
+    "custom/seperator",
+    "backlight",
+    "custom/seperator",
+    "custom/wl-gammarelay",
+    "custom/seperator",
+    "memory",
+    "custom/seperator",
+    "temperature",
+    "custom/seperator",
+    "battery",
+    "custom/seperator",
+    "clock",
+    "custom/rofi"
+  ],
+
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-icons": [
+      "󰃞",
+      "󰃟",
+      "󰃠"
+    ],
+    "on-click-middle": "brightnessctl s 50%",
+    "on-click-right": "brightnessctl s 50%"
+  },
+  "battery": {
+    "format": "{icon}  {capacity}%",
+    "format-charging": "󱐌 {capacity}%",
+    "format-full": " {capacity}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "format-plugged": " {capacity}%",
+    "interval": 10,
+    "states": {
+      "critical": 15,
+      "warning": 25
+    }
+  },
+  "clock": {
+    "calendar": {
+      "format": {
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>"
+      },
+      "mode": "month",
+      "mode-mon-col": 3,
+      "on-scroll": 1,
+      "weeks-pos": "right"
+    },
+    "format": "{:%d-%m %H:%M:%S}",
+    "interval": 1,
+    "tooltip-format": "<tt><small>{calendar}</small></tt>"
+  },
+  "cpu": {
+    "format": "C {usage}%",
+    "tooltip": false
+  },
+  "custom/rofi": {
+    "format": "  ",
+    "on-click": "rofi -show drun -show-icons -run-command 'uwsm app -- {cmd}'",
+    "tooltip": false
+  },
+  "custom/seperator": {
+    "format": "|",
+    "interval": "once",
+    "tooltip": false
+  },
+  "custom/wl-gammarelay": {
+    "exec": "wl-gammarelay-rs watch {t}",
+    "format": "  ",
+    "on-click-middle": "busctl --user set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 6500",
+    "on-click-right": "busctl --user set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 6500",
+    "on-scroll-down": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n -100",
+    "on-scroll-up": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n +100",
+    "tooltip": true,
+    "tooltip-format": " {}K"
+  },
+  "hyprland/window": {
+    "format": "",
+    "hide-empty-text": true,
+    "max-length": 50,
+    "separate-outputs": true
+  },
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "sort-by-number": true
+  },
+  "memory": {
+    "format": "󰍛 {}%",
+    "on-click": "taskmanager"
+  },
+  "pulseaudio#input": {
+    "format": "{format_source}",
+    "format-source": "󰍬 {volume}%",
+    "format-source-muted": "󰍭",
+    "on-click": "pavucontrol",
+    "on-click-middle": "wpctl set-mute @DEFAULT_SOURCE@ toggle",
+    "on-click-right": "wpctl set-mute @DEFAULT_SOURCE@ toggle",
+    "on-scroll-down": "wpctl set-volume @DEFAULT_SOURCE@ 1%-",
+    "on-scroll-up": "wpctl set-volume @DEFAULT_SOURCE@ 1%+",
+    "tooltip-format": "{desc}"
+  },
+  "pulseaudio#output": {
+    "format": "{icon} {volume}%",
+    "format-icons": {
+      "car": "",
+      "default": [
+        "",
+        "",
+        ""
+      ],
+      "headphone": "",
+      "headset": "",
+      "phone": "",
+      "portable": ""
+    },
+    "format-muted": "",
+    "on-click": "pavucontrol",
+    "on-click-middle": "wpctl set-mute @DEFAULT_SINK@ toggle",
+    "on-click-right": "wpctl set-mute @DEFAULT_SINK@ toggle"
+  },
+  "temperature": {
+    "critical-threshold": 80,
+    "format": "{icon} {temperatureC}°C",
+    "format-icons": [
+      "",
+      "",
+      ""
+    ],
+    "on-click": "taskmanager",
+    "thermal-zone": 5
+  },
+  "tray": {
+    "icon-size": 16,
+    "reverse-direction": true,
+    "spacing": 6
+  }
+}
