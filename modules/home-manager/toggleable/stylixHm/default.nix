@@ -19,6 +19,7 @@ in {
         ghostty.enable = false; # Change below
         hyprland.enable = false; # Change below
         neovim.enable = false;
+        rofi.enable = false;
         tmux.enable = false;
         waybar.enable = false;
       };

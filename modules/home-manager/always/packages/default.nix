@@ -28,7 +28,6 @@
     playerctl # Needed for pausing, skipping songs, etc.
     qimgv # Image viewer
     qbittorrent
-    rofi-wayland # App launcher
     snes9x-gtk
     spotify
     inputs.swww.packages.${pkgs.system}.default # swww: wallpaper service
