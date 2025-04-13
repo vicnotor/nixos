@@ -46,7 +46,7 @@
 
   # NixOS
   rebuild = "sudo nixos-rebuild switch --flake ~/Git/vicnotor/nixos#nixlap";
-  update = "sudo echo -n && nix flake update --flake ~/Git/vicnotor/nixos && sudo nixos-rebuild switch --flake ~/Git/vicnotor/nixos#nixlap";
+  update = "sudo nixos-rebuild switch --recreate-lock-file --flake ~/Git/vicnotor/nixos#nixlap";
   clean = "sudo echo -n && nh clean all --keep 10";
   optimise = "sudo echo -n && sudo nix-store --optimise --verbose"; # If both garbage collecting and optimising, run this after garbage collecting
 

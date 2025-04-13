@@ -20,6 +20,7 @@
     libreoffice
     mermaid-cli
     networkmanagerapplet
+    inputs.nix-alien.packages.${pkgs.system}.default
     obs-studio
     onedrive
     openssl # Needed for onedrive
