@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+dir="${HOME}/personal/Pictures/wallpapers"
+image="$(ls $dir | shuf -n1)"
+
+wp "$dir"/"$image"

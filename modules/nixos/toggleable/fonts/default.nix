@@ -14,11 +14,11 @@
       enableDefaultPackages = true;
       packages = with pkgs; [
         helvetica-neue-lt-std
+        noto-fonts-emoji
         nerd-fonts.jetbrains-mono
         nerd-fonts.ubuntu
         nerd-fonts.ubuntu-mono
         nerd-fonts.ubuntu-sans
-        noto-fonts-emoji
       ];
 
       fontconfig = {

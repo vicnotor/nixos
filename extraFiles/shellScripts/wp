@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+image=$1
+
+trans_type="grow"
+fps=165
+duration=1
+
+swww img "$image" --transition-fps $fps --transition-type $trans_type --transition-duration $duration

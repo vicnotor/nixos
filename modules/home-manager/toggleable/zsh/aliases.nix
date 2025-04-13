@@ -74,7 +74,6 @@
   py = "python";
   valias = "vim $HOME/Git/vicnotor/nixos/modules/home-manager/toggleable/zsh/aliases.nix";
   view = "qimgv";
-  wp = "swww img";
   ev = "silent evince";
   thu = "silent thunar .";
   cabalclean = "rm -r dist-newstyle";

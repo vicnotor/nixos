@@ -60,6 +60,9 @@
     }
   },
   "clock": {
+    "format": "{:%d-%m %H:%M:%S}",
+    "interval": 1,
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
       "format": {
         "days": "<span color='#ecc6d9'><b>{}</b></span>",
@@ -72,10 +75,7 @@
       "mode-mon-col": 3,
       "on-scroll": 1,
       "weeks-pos": "right"
-    },
-    "format": "{:%d-%m %H:%M:%S}",
-    "interval": 1,
-    "tooltip-format": "<tt><small>{calendar}</small></tt>"
+    }
   },
   "cpu": {
     "format": "C {usage}%",

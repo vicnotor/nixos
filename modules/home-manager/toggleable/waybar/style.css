@@ -30,11 +30,12 @@
 
 /* Style */
 * {
-  font-family: "JetBrainsMono Nerd Font", "Helvetica Neue LT Std", sans-serif;
+  font-family: "Ubuntu Nerd Font", "JetBrainsMono Nerd Font", sans-serif;
   font-size: 15px;
 }
 
 window#waybar {
+  all:unset;
   background-color: rgba(0, 0, 0, 0);
   border-radius: 0px;
   transition-property: background-color;
@@ -47,6 +48,18 @@ window#waybar.empty {
 
 window#waybar.empty #window {
   background-color: transparent;
+}
+
+.modules-right,
+.modules-left {
+  background: alpha(@mantle, .8);
+  padding: 0 10px;
+  margin: 0 2 0 2;
+  border-radius: 10;
+}
+
+tooltip {
+  background: alpha(@mantle, .9);
 }
 
 button {
@@ -130,64 +143,6 @@ button:hover {
 
 #window {
   color: @white;
-}
-
-/* #pulseaudio.output, */
-/* #pulseaudio.input { */
-/*   color: @maroon; */
-/* } */
-/**/
-/* #custom-wl-gammarelay { */
-/*   color: @peach; */
-/* } */
-/**/
-/* #backlight { */
-/*   color: @yellow; */
-/* } */
-/**/
-/* #memory { */
-/*   color: @sky; */
-/* } */
-/**/
-/* #temperature { */
-/*   color: @maroon; */
-/* } */
-/**/
-/* #cpu { */
-/*   color: @rosewater; */
-/* } */
-/**/
-/* #battery { */
-/*   color: @green; */
-/* } */
-/**/
-/* #clock { */
-/*   color: @white; */
-/* } */
-/**/
-/* #battery.charging, */
-/* #battery.plugged { */
-/*   color: @sapphire; */
-/* } */
-
-.modules-right,
-.modules-left {
-  background-color: @mantle;
-}
-
-.modules-right {
-  padding: 0 10px;
-  border-radius: 15px 0 0 15px;
-}
-
-.modules-left {
-  padding: 0 10px;
-  border-radius: 0 15px 15px 0;
-}
-
-.modules-center {
-  padding: 0 10px;
-  border-radius: 15px;
 }
 
 #battery.warning:not(.charging) {
