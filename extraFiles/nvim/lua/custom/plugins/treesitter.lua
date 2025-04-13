@@ -2,6 +2,12 @@ return {
   {
     -- Highlight, edit, and navigate code
     "nvim-treesitter/nvim-treesitter",
+    dependencies = {
+      {
+        "nvim-treesitter/nvim-treesitter-context",
+        opts = { max_lines = 3 }
+      },
+    },
     build = ":TSUpdate",
     lazy = false,
     config = function()

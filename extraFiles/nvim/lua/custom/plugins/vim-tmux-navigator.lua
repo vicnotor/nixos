@@ -1,7 +1,7 @@
 return {
 	{
 		"vim-tmux-navigator-custom",
-		dir = "~/.config/nvim/my-plugins/vim-tmux-navigator-custom",
+		dir = "~/.config/nvim/custom-plugins/vim-tmux-navigator-custom",
 		cmd = {
 			"TmuxNavigateLeft",
 			"TmuxNavigateDown",

@@ -1,4 +1,5 @@
 return {
+  { "echasnovski/mini.icons", version = false, opts = {} },
   {
     'echasnovski/mini.move',
     version = false,

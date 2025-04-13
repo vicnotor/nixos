@@ -6,7 +6,7 @@ return {
     init = function()
       vim.g.mkdp_filetypes = { "markdown" }
     end,
-    ft = { "markdown", "rmd" },
+    ft = { "markdown" },
     config = function()
       vim.keymap.set("n", "<leader>mdl", function()
         vim.g.mkdp_theme = "light"
