@@ -9,7 +9,7 @@
     ./always/networking
     ./always/nix
     ./always/packages
-    ./always/systemd
+    # ./always/systemd
     ./always/users
 
     # Toggleable (see below)

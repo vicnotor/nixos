@@ -8,7 +8,7 @@
     };
   };
 
-  systemd.services."hello-world" = {
+  systemd.services."cycle-wallpaper" = {
     script = ''
       wpcycle
     '';
