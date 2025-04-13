@@ -10,9 +10,6 @@
   };
 
   config = lib.mkIf config.rofiModule.enable {
-    home.packages = [
-      pkgs.rofi-wayland
-    ];
     programs.rofi = {
       enable = true;
       package = pkgs.rofi-wayland;

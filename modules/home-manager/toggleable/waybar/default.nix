@@ -13,8 +13,7 @@
   config = lib.mkIf config.waybarModule.enable {
     home = {
       file = {
-        # Out of store symlink for the style file to quickly modify the style without needing to rebuild
-        ".config/waybar/style.css".source = config.lib.file.mkOutOfStoreSymlink /home/vic/Git/vicnotor/nixos/modules/home-manager/toggleable/waybar/style.css;
+        ".config/waybar/style.css".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/Git/vicnotor/nixos/modules/home-manager/toggleable/waybar/style.css";
       };
     };
 
@@ -50,6 +49,7 @@
             "battery"
             "custom/seperator"
             "clock"
+            "custom/rofi"
           ];
           "hyprland/workspaces" = {
             format = "{icon}";
@@ -73,9 +73,14 @@
             tooltip-format = " {}K";
           };
           "custom/seperator" = {
-            "format" = "|";
-            "interval" = "once";
-            "tooltip" = false;
+            format = "|";
+            interval = "once";
+            tooltip = false;
+          };
+          "custom/rofi" = {
+            format = "  ";
+            on-click = "rofi -show drun -show-icons -run-command 'uwsm app -- {cmd}'";
+            tooltip = false;
           };
           tray = {
             icon-size = 16;

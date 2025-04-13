@@ -8,22 +8,6 @@ return {
   { "folke/persistence.nvim",                  event = "BufReadPre",                                                        opts = {} },
   { "echasnovski/mini.icons",                  version = false,                                                             opts = {} },
   {
-    "folke/which-key.nvim",
-    event = "VeryLazy",
-    opts = {
-      preset = "modern"
-    },
-    keys = {
-      {
-        "<leader>?",
-        function()
-          require("which-key").show({ global = false })
-        end,
-        desc = "Buffer Local Keymaps (which-key)",
-      },
-    },
-  },
-  {
     "nvim-pack/nvim-spectre",
     opts = {
       default = {

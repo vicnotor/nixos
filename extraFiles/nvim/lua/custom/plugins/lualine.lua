@@ -39,12 +39,6 @@ return {
               },
             },
             { "filename", path = 4, },
-            {
-              require("noice").api.status.mode.get,
-              cond = require("noice").api.status.mode.has,
-              separator = { left = " ", right = "" },
-              color = { fg = "#ff9e64" },
-            },
           },
           lualine_x = {
             "progress",

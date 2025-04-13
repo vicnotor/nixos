@@ -1,7 +1,6 @@
 {
   lib,
   config,
-  pkgs,
   ...
 }: {
   options = {
@@ -10,7 +9,6 @@
   };
 
   config = lib.mkIf config.htopModule.enable {
-    home.packages = [pkgs.htop];
     programs.htop = {
       enable = true;
       settings =

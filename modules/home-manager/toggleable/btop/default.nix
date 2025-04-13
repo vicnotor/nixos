@@ -1,7 +1,6 @@
 {
   lib,
   config,
-  pkgs,
   ...
 }: {
   options = {
@@ -10,8 +9,6 @@
   };
 
   config = lib.mkIf config.btopModule.enable {
-    home.packages = [pkgs.alacritty];
-
     programs.btop = {
       enable = true;
       settings = {

@@ -23,8 +23,8 @@ set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 set("n", "<leader>th", "<CMD>silent !silent thunar .<CR>", { desc = "Open Thunar in working directory", silent = true })
 
 -- Move lines up and down
-set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move line down" })
-set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move line up" })
+-- set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move line down" })
+-- set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move line up" })
 
 -- Paste and delete without changing paste buffer
 set("x", "<leader>p", [["_dP]], { desc = "Paste without changing paste buffer" })
@@ -49,8 +49,8 @@ set("n", "<leader>f", function()
 end, { desc = "Format file" })
 
 -- Quickfix list
-set("n", "<C-k>", "<cmd>cnext<CR>zz", { desc = "Quickfix list next" })
-set("n", "<C-j>", "<cmd>cprev<CR>zz", { desc = "Quickfix list previous" })
+set("n", "<C-k>", "<cmd>cnext<CR>", { desc = "Quickfix list next" })
+set("n", "<C-j>", "<cmd>cprev<CR>", { desc = "Quickfix list previous" })
 
 -- Switch to next window
 set("n", "<tab>", "<cmd>winc w<CR>", { desc = "Change focus to next vim window", silent = true })
@@ -126,8 +126,8 @@ set("n", "<leader>mdp", "<cmd>!mdtopdf %<CR>", { desc = "Markdown to pdf" })
 set("n", "J", "mzJ`z")
 -- set("n", "<C-d>", "<C-d>zz")
 -- set("n", "<C-u>", "<C-u>zz")
-set("n", "n", "nzzzv")
-set("n", "N", "Nzzzv")
+-- set("n", "n", "nzzzv")
+-- set("n", "N", "Nzzzv")
 set("i", "<C-c>", "<Esc>")
 set("n", "Q", "<nop>")
 

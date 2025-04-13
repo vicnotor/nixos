@@ -64,7 +64,7 @@ return {
           end,
         })
 
-        Snacks.toggle.animate():map("<leader>a")
+        Snacks.toggle.animate():map("<leader>da")
         Snacks.toggle.indent():map("<leader>i")
       end,
     })

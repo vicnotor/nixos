@@ -1,7 +1,6 @@
 {
   lib,
   config,
-  pkgs,
   ...
 }: {
   options = {
@@ -10,8 +9,6 @@
   };
 
   config = lib.mkIf config.alacrittyModule.enable {
-    home.packages = [pkgs.alacritty];
-
     programs.alacritty = {
       enable = true;
       settings = {
