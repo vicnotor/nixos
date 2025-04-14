@@ -70,6 +70,14 @@ return {
           },
           opts = { skip = true },
         },
+        {
+          filter = {
+            event = "msg_show",
+            kind = "",
+            find = "more",
+          },
+          opts = { skip = true },
+        },
       },
     },
   }

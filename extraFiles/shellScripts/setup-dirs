@@ -1,0 +1,33 @@
+#!/usr/bin/env sh
+
+if [ ! -d ~/personal ]; then
+  mkdir -p ~/personal
+fi
+
+if [ ! -d ~/Documents ]; then
+  mkdir ~/Documents
+fi
+
+if [ ! -d ~/Downloads ]; then
+  mkdir ~/Downloads
+fi
+
+if [ ! -d ~/Git/web ]; then
+  mkdir -p ~/Git/web
+fi
+
+if [ ! -d ~/Git/vicnotor ]; then
+  mkdir -p ~/Git/vicnotor
+fi
+
+if [ ! -d ~/mnt/windows ]; then
+  mkdir -p ~/mnt/windows
+fi
+
+if [ ! -d ~/mnt/sata ]; then
+  mkdir -p ~/mnt/sata
+fi
+
+if [ ! -d ~/mnt/temp ]; then
+  mkdir -p ~/mnt/temp
+fi
