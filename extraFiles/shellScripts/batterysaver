@@ -16,10 +16,10 @@ if [ "$HYPRBATTERYSAVER" = 1 ] ; then
         keyword decoration:rounding 0"
     hyprctl keyword windowrule "opacity 1.0, ^(com.mitchellh.ghostty)$"
     dunstify -a "$msgTag" -u low -i colors-chromagreen -h string:x-dunst-stack-tag:"$msgTag" "$msgTag" "on"
-    swrestart
+    wprestart
     exit
 fi
 
 hyprctl reload
 dunstify -a "$msgTag" -u low -i colors-chromared -h string:x-dunst-stack-tag:"$msgTag" "$msgTag" "off"
-swrestart
+wprestart
