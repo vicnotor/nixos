@@ -4,7 +4,6 @@
   ...
 }: {
   home.packages = with pkgs; [
-    aseprite
     brightnessctl
     comma # Wrapper for nix shell -c
     discord
