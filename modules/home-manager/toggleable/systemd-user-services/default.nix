@@ -4,17 +4,17 @@
   ...
 }: {
   options = {
-    systemd-servicesModule.enable =
+    systemd-user-servicesModule.enable =
       lib.mkEnableOption "custom systemd user services";
   };
 
-  config = lib.mkIf config.systemd-servicesModule.enable {
+  config = lib.mkIf config.systemd-user-servicesModule.enable {
     systemd.user = {
       enable = true;
       services = {
         wprestart = {
           Unit = {
-            Description = "Restart swww on resume after suspend";
+            Description = "Restart swww on resume";
             After = ["suspend.target" "hibernate.target" "sleep.target"];
           };
           Install = {

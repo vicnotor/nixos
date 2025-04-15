@@ -141,15 +141,11 @@ button:hover {
   color: @blue;
 }
 
-#window {
-  color: @white;
-}
-
 #battery.warning:not(.charging) {
   color: #f53c3c;
 }
 
-#temperature.critical:not(.charging) {
+#battery.critical:not(.charging) {
   color: #000000;
   background-color: #f53c3c;
 }

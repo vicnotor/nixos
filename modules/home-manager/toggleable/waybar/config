@@ -128,7 +128,7 @@
     "tooltip-format": "{desc}"
   },
   "pulseaudio#output": {
-    "format": "{icon} {volume}%",
+    "format": "{icon}  {volume}%",
     "format-icons": {
       "car": "",
       "default": [
