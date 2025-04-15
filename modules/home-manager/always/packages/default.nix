@@ -30,7 +30,6 @@
     qbittorrent
     snes9x-gtk
     spotify
-    inputs.swww.packages.${pkgs.system}.default # swww: wallpaper service
     teams-for-linux
     texlive.combined.scheme-full # Needed for pandoc and for knitting RMarkdown
     tree-sitter

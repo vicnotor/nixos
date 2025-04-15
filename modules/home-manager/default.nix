@@ -17,7 +17,6 @@
     ./toggleable/gtk
     ./toggleable/htop
     ./toggleable/hyprlandHm
-    ./toggleable/hyprpaper
     ./toggleable/javascript
     ./toggleable/lua
     ./toggleable/misc
@@ -45,7 +44,6 @@
   ghosttyModule.enable = lib.mkDefault true;
   gitModule.enable = lib.mkDefault true;
   hyprlandHmModule.enable = lib.mkDefault true;
-  hyprpaperModule.enable = lib.mkDefault true;
   javascriptModule.enable = lib.mkDefault true;
   luaModule.enable = lib.mkDefault true;
   miscModule.enable = lib.mkDefault true;
