@@ -8,4 +8,4 @@ export DBUS_SESSION_BUS_ADDRESS=unix:path=$XDG_RUNTIME_DIR/bus
 
 swww kill
 sleep 0.1
-uwsm app -- swww-daemon
+uwsm app -- swww-daemon &
