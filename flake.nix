@@ -12,6 +12,7 @@
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
+    hyprpaper.url = "github:hyprwm/hyprpaper";
     waybar.url = "github:Alexays/Waybar";
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     swww.url = "github:LGFae/swww";
