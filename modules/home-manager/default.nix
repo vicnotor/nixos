@@ -28,6 +28,7 @@
     ./toggleable/r
     ./toggleable/rofi
     ./toggleable/stylixHm
+    ./toggleable/systemd-services
     ./toggleable/tmux
     ./toggleable/waybar
     ./toggleable/zoxide
@@ -54,6 +55,7 @@
   rModule.enable = lib.mkDefault true;
   rofiModule.enable = lib.mkDefault true;
   stylixHmModule.enable = lib.mkDefault true;
+  systemd-serviceModule.enable = lib.mkDefault true;
   tmuxModule.enable = lib.mkDefault true;
   waybarModule.enable = lib.mkDefault true;
   zoxideModule.enable = lib.mkDefault true;
