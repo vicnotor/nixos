@@ -30,32 +30,33 @@
 
 /* Style */
 * {
-  font-family: "Ubuntu Nerd Font", "JetBrainsMono Nerd Font", sans-serif;
+  font-family: "Ubuntu Nerd Font", sans-serif;
   font-size: 15px;
 }
 
 window#waybar {
   all:unset;
-  background-color: rgba(0, 0, 0, 0);
+  background: alpha(@crust, 0);
   border-radius: 0px;
-  transition-property: background-color;
+  transition-property: background;
   transition-duration: .5s;
 }
 
 window#waybar.empty {  
-  background-color: rgba(0, 0, 0, 0);
+  background: alpha(@crust, 0);
 }
 
 window#waybar.empty #window {
-  background-color: transparent;
+  background: alpha(@crust, 0);
 }
 
+.modules-left,
 .modules-right,
-.modules-left {
+.modules-center {
   background: alpha(@mantle, .8);
-  padding: 0 10px;
-  margin: 0 2px 0 2px;
+  padding: 0 5px;
   border-radius: 10px;
+  margin: 0 2px 0 2px;
 }
 
 tooltip {
@@ -133,7 +134,7 @@ button:hover {
   padding: 0 10px 0 0;
 }
 
-#custom-seperator {
+#custom-separator {
   color: @surface2;
 }
 
