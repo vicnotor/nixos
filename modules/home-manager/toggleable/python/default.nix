@@ -19,6 +19,7 @@
           with ps; [
             m2crypto # Needed for Python SSL support
             numpy
+            markitdown
           ]))
       ];
   };
