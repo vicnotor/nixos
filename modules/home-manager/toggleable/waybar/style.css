@@ -56,7 +56,7 @@ window#waybar.empty #window {
   background: alpha(@mantle, .8);
   padding: 0 5px;
   border-radius: 10px;
-  margin: 0 2px 0 2px;
+  margin: 0 8px;
 }
 
 tooltip {
