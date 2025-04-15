@@ -28,7 +28,6 @@
     ./toggleable/r
     ./toggleable/rofi
     ./toggleable/stylixHm
-    ./toggleable/systemd-user-services
     ./toggleable/tmux
     ./toggleable/waybar
     ./toggleable/zoxide
@@ -64,5 +63,4 @@
   gtkModule.enable = lib.mkDefault false; # Not needed because of Stylix
   htopModule.enable = lib.mkDefault false;
   pointerCursorModule.enable = lib.mkDefault false; # Not needed because of Stylix
-  systemd-user-servicesModule.enable = lib.mkDefault false;
 }
