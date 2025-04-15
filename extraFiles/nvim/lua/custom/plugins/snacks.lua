@@ -5,10 +5,6 @@ return {
   opts = {
     bigfile = { enabled = true },
     image = { enabled = true },
-    -- notifier = {
-    --   enabled = true,
-    --   top_down = false,
-    -- },
     quickfile = { enabled = true },
     input = { enable = true },
     rename = { enable = true },
@@ -61,6 +57,13 @@ return {
           pattern = "MiniFilesActionRename",
           callback = function(event)
             Snacks.rename.on_rename_file(event.data.from, event.data.to)
+          end,
+        })
+
+        vim.api.nvim_create_autocmd("FileType", {
+          pattern = "markdown",
+          callback = function(event)
+            Snacks.indent.disable()
           end,
         })
 

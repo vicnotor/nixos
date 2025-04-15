@@ -78,6 +78,14 @@ return {
           },
           opts = { skip = true },
         },
+        { -- Check once in a while if the bug is fixed where the written to file notification happens way too late
+          filter = {
+            event = "msg_show",
+            kind = "",
+            find = "written",
+          },
+          opts = { skip = true },
+        },
       },
     },
   }
