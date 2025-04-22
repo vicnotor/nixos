@@ -7,6 +7,13 @@
 
   "modules-left": [
     "custom/rofi",
+    "custom/whitespace",
+    "tray"
+  ],
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+  "modules-right": [
     "pulseaudio#output",
     "custom/separator",
     "pulseaudio#input",
@@ -15,14 +22,6 @@
     "custom/separator",
     "custom/wl-gammarelay",
     "custom/separator",
-    "custom/whitespace",
-    "custom/whitespace",
-    "tray"
-  ],
-  "modules-center": [
-    "hyprland/workspaces"
-  ],
-  "modules-right": [
     "memory",
     "custom/separator",
     "temperature",
