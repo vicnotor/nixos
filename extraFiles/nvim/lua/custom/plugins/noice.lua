@@ -10,7 +10,7 @@ return {
           render = "minimal",
           stages = "slide_out",
           fps = 165,
-          timeout = 2000,
+          timeout = 5000,
           top_down = false,
         },
       },
