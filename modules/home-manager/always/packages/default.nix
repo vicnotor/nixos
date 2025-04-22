@@ -5,7 +5,6 @@
 }: {
   home.packages = with pkgs; [
     brightnessctl
-    comma # Wrapper for nix shell -c
     discord
     evince # pdf
     fastfetch # Neofetch

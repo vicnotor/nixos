@@ -22,6 +22,7 @@
     ./toggleable/misc
     ./toggleable/mpv
     ./toggleable/mypkgs
+    ./toggleable/nix-index
     ./toggleable/nvim
     ./toggleable/pointerCursor
     ./toggleable/python
@@ -49,6 +50,7 @@
   miscModule.enable = lib.mkDefault true;
   mpvModule.enable = lib.mkDefault true;
   mypkgsModule.enable = lib.mkDefault true;
+  nix-indexModule.enable = lib.mkDefault true;
   nvimModule.enable = lib.mkDefault true;
   pythonModule.enable = lib.mkDefault true;
   rModule.enable = lib.mkDefault true;
