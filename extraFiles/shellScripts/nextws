@@ -1,13 +1,26 @@
 #!/usr/bin/env sh
 
-# Get a list of used workspaces (numbers only)
-USED_WS=$(hyprctl workspaces -j | jq '.[].id' | sort -n)
+# Max workspace number
+MAX_WS=10
 
-# Start from 1 and find the first unused workspace
-for i in $(seq 1 20); do
-    if ! echo "$USED_WS" | grep -q -x "$i"; then
+# Get the current workspace
+current_ws=$(hyprctl activeworkspace -j | jq '.id')
+
+# Get all used workspaces, sorted
+used_ws=$(hyprctl workspaces -j | jq '.[].id' | sort -n)
+
+# Start searching forward from the current workspace
+for ((i = current_ws + 1; i <= MAX_WS; i++)); do
+    if ! echo "$used_ws" | grep -q -x "$i"; then
         hyprctl dispatch workspace "$i"
         exit 0
     fi
 done
 
+# Second try: wrap around to search from 1 up to current - 1
+for ((i = 1; i < current_ws; i++)); do
+    if ! echo "$used_ws" | grep -q -x "$i"; then
+        hyprctl dispatch workspace "$i"
+        exit 0
+    fi
+done
