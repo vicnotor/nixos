@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+filetype="$1"
+file="$2"
+name="${file%.md}"
+
+echo "$name"."$filetype"
