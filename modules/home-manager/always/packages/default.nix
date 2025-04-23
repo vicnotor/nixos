@@ -15,6 +15,7 @@
     grimblast # Hyprland wrapper for grim and slurp
     hyprpicker # Color picker
     imagemagick
+    jq
     libreoffice
     mermaid-cli
     networkmanagerapplet

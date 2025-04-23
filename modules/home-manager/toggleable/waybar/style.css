@@ -142,6 +142,10 @@ button:hover {
   color: @blue;
 }
 
+#custom-nextws {
+  color: @overlay2;
+}
+
 #battery.warning:not(.charging) {
   color: #f53c3c;
 }

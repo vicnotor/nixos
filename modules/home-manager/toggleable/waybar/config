@@ -11,7 +11,9 @@
     "tray"
   ],
   "modules-center": [
-    "hyprland/workspaces"
+    "hyprland/workspaces",
+    "custom/whitespace",
+    "custom/nextws"
   ],
   "modules-right": [
     "pulseaudio#output",
@@ -105,6 +107,12 @@
     "on-scroll-up": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n +100",
     "tooltip": true,
     "tooltip-format": " {}K"
+  },
+  "custom/nextws": {
+    "format": "",
+    "tooltip": true,
+    "tooltip-format": "Go to next empty workspace",
+    "on-click": "nextws"
   },
   "hyprland/window": {
     "format": "",
