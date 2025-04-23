@@ -44,7 +44,6 @@
     # Languages
     alejandra # Nix formatting
     bash-language-server
-    mdformat # Markdown formatting
     inputs.nixd.packages.${pkgs.system}.default # nixd: Nix lsp
   ];
 }

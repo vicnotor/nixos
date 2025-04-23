@@ -30,7 +30,7 @@ set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>", { desc = "Launc
 
 -- Format file
 set("n", "<leader>f", function()
-  require("conform").format({ lsp_fallback = true, quiet = true })
+  require("conform").format({ async = true, lsp_format = "fallback" })
 end, { desc = "Format file" })
 
 -- Switch to next window

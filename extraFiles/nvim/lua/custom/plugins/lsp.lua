@@ -87,14 +87,6 @@ return {
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
 			capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
-			-- Autoformatting Setup
-			require("conform").setup({
-				formatters_by_ft = {
-					lua = { "stylua" },
-					markdown = { "mdformat" },
-				},
-			})
-
 			-- LSP config
 			local lspconfig = require("lspconfig")
 

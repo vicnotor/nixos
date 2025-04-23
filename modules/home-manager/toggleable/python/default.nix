@@ -20,6 +20,13 @@
             m2crypto # Needed for Python SSL support
             numpy
             markitdown
+
+            # Markdown formatting
+            mdformat
+            # Extensions
+            mdformat-frontmatter
+            mdformat-gfm
+            mdformat-gfm-alerts
           ]))
       ];
   };
