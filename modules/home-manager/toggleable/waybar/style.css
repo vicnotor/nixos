@@ -76,13 +76,11 @@ button:hover {
   background: inherit;
 }
 
-/* you can set a style on hover for any module like this */
+/* Hovering color on scrollable items */
 #backlight:hover,
 #custom-wl-gammarelay:hover,
 #pulseaudio.output:hover,
-#pulseaudio.input:hover,
-#memory:hover,
-#temperature:hover {
+#pulseaudio.input:hover {
   background-color: @surface1;
 }
 

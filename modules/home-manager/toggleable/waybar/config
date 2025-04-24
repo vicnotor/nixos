@@ -65,6 +65,7 @@
     "format": "{:%d-%m %H:%M:%S}",
     "interval": 1,
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "on-click": "xdg-open https://calendar.google.com > /dev/null 2>&1 &",
     "calendar": {
       "format": {
         "days": "<span color='#ecc6d9'><b>{}</b></span>",
@@ -78,10 +79,6 @@
       "on-scroll": 1,
       "weeks-pos": "right"
     }
-  },
-  "cpu": {
-    "format": "C {usage}%",
-    "tooltip": false
   },
   "custom/rofi": {
     "format": "  ",
