@@ -32,6 +32,7 @@
 
         # General
         target-colorspace-hint = true;
+        loop-file = "inf";
 
         # Audio
         audio-pitch-correction = "yes"; # automatically insert scaletempo when playing with higher speed

@@ -9,6 +9,7 @@
     evince # pdf
     fastfetch # Neofetch
     fd # Finding files
+    ffmpeg
     ghostscript
     gimp
     google-chrome
