@@ -61,7 +61,7 @@ return {
         })
 
         vim.api.nvim_create_autocmd("FileType", {
-          pattern = "markdown",
+          pattern = {"markdown", "tex"},
           callback = function(event)
             Snacks.indent.disable()
           end,
