@@ -10,5 +10,8 @@
       VISUAL = "nvim";
     };
     localBinInPath = true;
+    etc."nsswitch.conf".text = ''
+      hosts: files dns
+    '';
   };
 }

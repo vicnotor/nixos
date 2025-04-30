@@ -35,17 +35,22 @@
     ];
 
     systemd = {
-      user.services.hyprpolkitagent = {
-        description = "Hyprpolkitagent service";
-        wantedBy = ["graphical-session.target"];
-        wants = ["graphical-session.target"];
-        after = ["graphical-session.target"];
-        serviceConfig = {
-          Type = "simple";
-          ExecStart = "${pkgs.hyprpolkitagent}/libexec/hyprpolkitagent";
-          Restart = "on-failure";
-          RestartSec = 1;
-          TimeoutStopSec = 10;
+      services = {
+        "NetworkManager-wait-online.service".wantedBy = lib.mkForce [];
+      };
+      user.services = {
+        hyprpolkitagent = {
+          description = "Hyprpolkitagent service";
+          wantedBy = ["graphical-session.target"];
+          wants = ["graphical-session.target"];
+          after = ["graphical-session.target"];
+          serviceConfig = {
+            Type = "simple";
+            ExecStart = "${pkgs.hyprpolkitagent}/libexec/hyprpolkitagent";
+            Restart = "on-failure";
+            RestartSec = 1;
+            TimeoutStopSec = 10;
+          };
         };
       };
     };

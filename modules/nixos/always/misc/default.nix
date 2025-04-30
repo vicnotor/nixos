@@ -12,4 +12,14 @@
     appimage.enable = true;
     appimage.binfmt = true;
   };
+
+  fileSystems."/home/vic/.cache/google-chrome" = {
+    fsType = "tmpfs";
+    options = [
+      "size=512M"
+      "mode=700"
+      "uid=1000"
+      "gid=100"
+    ];
+  };
 }
