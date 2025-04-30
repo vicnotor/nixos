@@ -36,7 +36,11 @@
 
     systemd = {
       services = {
-        "NetworkManager-wait-online.service".wantedBy = lib.mkForce [];
+        "NetworkManager-wait-online" = {
+          enable = false;
+          wantedBy = lib.mkForce [];
+        };
+        "docker".wantedBy = lib.mkForce [];
       };
       user.services = {
         hyprpolkitagent = {
