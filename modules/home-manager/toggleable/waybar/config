@@ -30,7 +30,8 @@
     "custom/separator",
     "battery",
     "custom/separator",
-    "clock"
+    "clock",
+    "custom/screenoff"
   ],
 
   "backlight": {
@@ -83,6 +84,11 @@
   "custom/rofi": {
     "format": "  ",
     "on-click": "rofi -show drun -show-icons -run-command 'uwsm app -- {cmd}'",
+    "tooltip": false
+  },
+  "custom/screenoff": {
+    "format": "󱠑",
+    "on-click": "sleep 0.1 && hyprctl dispatch dpms toggle",
     "tooltip": false
   },
   "custom/separator": {
