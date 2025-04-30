@@ -22,9 +22,9 @@
       enable = true;
       package = inputs.hyprpaper.packages.${pkgs.system}.default;
       settings = {
-        preload = ["${home}/personal/Pictures/wallpapers/destiny.png"];
+        preload = ["${home}/personal/Pictures/wallpapers/dune_2_ending.jpeg"];
 
-        wallpaper = [",${home}/personal/Pictures/wallpapers/destiny.png"];
+        wallpaper = [",${home}/personal/Pictures/wallpapers/dune_2_ending.jpeg"];
       };
     };
   };
