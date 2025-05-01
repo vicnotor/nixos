@@ -6,36 +6,43 @@ return {
     config = function()
       vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
       require("oil").setup({
-        -- Oil will take over directory buffers (e.g. `vim .` or `:e src/`)
-        -- Set to false if you still want to use netrw.
         default_file_explorer = true,
-        -- Id is automatically added at the beginning, and name at the end
-        -- See :help oil-columns
         columns = {
           "icon",
           -- "permissions",
           -- "size",
           -- "mtime",
         },
-        -- Window-local options to use for oil buffers
+        buf_options = {
+          buflisted = true, -- Makes <C-o> and <C-i> work with oil buffers
+        },
         win_options = {
           signcolumn = "yes",
         },
         preview_win = {
-          -- How to open the preview window "load"|"scratch"|"fast_scratch"
-          preview_method = "load",
+          preview_method = "load", --"load"|"scratch"|"fast_scratch"
         },
-        -- Send deleted files to the trash instead of permanently deleting them (:help oil-trash)
-        delete_to_trash = false,
-        -- Skip the confirmation popup for simple operations (:help oil.skip_confirm_for_simple_edits)
         skip_confirm_for_simple_edits = true,
-        -- Selecting a new/moved/renamed file or directory will prompt you to save changes first
-        -- (:help prompt_save_on_select_new_entry)
         prompt_save_on_select_new_entry = true,
-        -- See :help oil-actions for a list of all available actions
         keymaps = {
           ["<C-h>"] = false,
           ["<C-l>"] = false,
+          ["gp"] = function()
+            require("oil").open_preview()
+          end,
+          ["gd"] = {
+            desc = "Toggle file detail view",
+            callback = function()
+              Detail = not Detail
+              if Detail then
+                require("oil").set_columns({ "icon", "permissions", "size", "mtime" })
+              else
+                require("oil").set_columns({ "icon" })
+              end
+            end,
+          },
+
+          -- img-clip integration
           ["<leader>pi"] = function()
             local oil = require("oil")
             local filename = oil.get_cursor_entry().name
@@ -47,7 +54,7 @@ return {
           end,
         },
         view_options = {
-          show_hidden = true,
+          show_hidden = false,
         },
       })
     end,
