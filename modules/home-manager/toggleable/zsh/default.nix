@@ -52,6 +52,13 @@
       sessionVariables = {
         DIRSTACKSIZE = 16;
         HYPHEN_INSENSITIVE = "true";
+
+        EDITOR = "nvim";
+        BROWSER = "google-chrome-stable";
+        TERMINAL = "ghostty";
+        VISUAL = "nvim";
+
+        WPDEFAULT = "${config.home.homeDirectory}/personal/Pictures/wallpapers/dune_2_ending.jpeg";
       };
       shellAliases = import ./aliases.nix;
     };
