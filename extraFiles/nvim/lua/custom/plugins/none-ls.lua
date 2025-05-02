@@ -7,7 +7,7 @@ return {
         null_ls.builtins.formatting.mdformat.with({
           extra_args = {
             "--number",
-            "--wrap", "80",
+            "--wrap", "77",
           },
         }),
         null_ls.builtins.formatting.ocamlformat.with({
