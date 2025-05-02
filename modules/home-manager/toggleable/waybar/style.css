@@ -124,6 +124,7 @@ button:hover {
 #temperature,
 #battery,
 #clock,
+#custom-wl-gammarelay,
 #custom-screenoff {
   padding: 0 6px;
   color: @subtext1;

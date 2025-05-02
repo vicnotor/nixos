@@ -32,7 +32,7 @@ in {
     programs.ghostty = {
       settings = {
         # Font
-        font-size = lib.mkForce 13;
+        font-size = lib.mkForce 12;
         theme = lib.mkForce "tokyonight";
         # background = lib.mkForce #1E1D23 # My old Alacritty background
         # foreground = lib.mkForce "#F9F0F0";

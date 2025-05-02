@@ -17,7 +17,7 @@
       enableZshIntegration = true;
       settings = {
         # Font
-        font-size = 13;
+        font-size = 12;
         # The next three lines disable all ligatures
         font-feature = [
           "-calt"
