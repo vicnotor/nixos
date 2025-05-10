@@ -14,7 +14,7 @@
       enableCompletion = true;
       autocd = true;
       dotDir = ".config/zsh";
-      initExtra = ''
+      initContent = ''
         # Keybindings
         bindkey -s ^f "tmux-sessionizer\n"
         bindkey -s ^t "tmux attach\n"

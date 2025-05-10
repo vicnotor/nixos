@@ -26,7 +26,6 @@
             # Extensions
             mdformat-frontmatter
             mdformat-gfm
-            mdformat-gfm-alerts
           ]))
       ];
   };
