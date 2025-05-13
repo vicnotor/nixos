@@ -33,6 +33,9 @@ set("n", "<leader>f", function()
   require("conform").format({ async = true, lsp_format = "fallback" })
 end, { desc = "Format file" })
 
+-- Format paragraph with gq
+set("n", "<leader>F", "gqap", { desc = "Format paragraph with gq" })
+
 -- Switch to next window
 set("n", "<tab>", "<cmd>winc w<CR>", { desc = "Change focus to next vim window", silent = true })
 
