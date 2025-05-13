@@ -62,16 +62,17 @@ vim.opt.incsearch = true
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "78"
+vim.opt.textwidth = 77
 vim.diagnostic.config({ virtual_text = false, virtual_lines = false })
 
 -- Highlight on yank
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
 vim.api.nvim_create_autocmd("TextYankPost", {
-	callback = function()
-		vim.highlight.on_yank()
-	end,
-	group = highlight_group,
-	pattern = "*",
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+  group = highlight_group,
+  pattern = "*",
 })
