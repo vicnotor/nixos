@@ -54,8 +54,9 @@ vim.opt.backup = false
 vim.opt.undodir = os.getenv("HOME") .. "/.nvim/undodir"
 
 -- Formatting options
-vim.opt.formatoptions = vim.opt.formatoptions - 't'
-vim.opt.formatoptions = vim.opt.formatoptions - 'c'
+vim.opt.formatoptions:remove("o")
+vim.opt.formatoptions:remove("t")
+vim.opt.formatoptions:remove("c")
 
 -- Other settings
 vim.opt.termguicolors = true
@@ -64,7 +65,6 @@ vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 vim.opt.colorcolumn = "78"
-vim.opt.textwidth = 77
 vim.diagnostic.config({ virtual_text = false, virtual_lines = false })
 
 -- Highlight on yank

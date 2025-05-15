@@ -41,6 +41,7 @@
     wl-clipboard # Clipboard manager
     wl-gammarelay-rs # blue light filter
     xorg.xeyes # Run `xeyes` to show xwayland windows
+    youtube-music
     zapzap # Whatsapp
     zotero-beta
 
