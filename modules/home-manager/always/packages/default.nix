@@ -31,6 +31,7 @@
     qbittorrent
     snes9x-gtk
     spotify
+    sshfs
     stremio
     teams-for-linux
     texlive.combined.scheme-full # Needed for pandoc and for knitting RMarkdown
