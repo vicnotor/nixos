@@ -24,6 +24,7 @@
     ./toggleable/sound
     ./toggleable/ssd
     ./toggleable/stylix
+    ./toggleable/tailscale
     ./toggleable/thunar
     ./toggleable/virtualisation
     ./toggleable/xdgportal
@@ -43,6 +44,7 @@
   soundModule.enable = lib.mkDefault true;
   ssdModule.enable = lib.mkDefault true;
   stylixModule.enable = lib.mkDefault true;
+  tailscaleModule.enable = lib.mkDefault true;
   thunarModule.enable = lib.mkDefault true;
   virtualisationModule.enable = lib.mkDefault true;
   xdgportalModule.enable = lib.mkDefault true;
