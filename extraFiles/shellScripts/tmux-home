@@ -13,31 +13,33 @@ no_tmux() {
 }
 
 has_session() {
-    tmux has-session -t "$1" &>/dev/null
+    tmux has-session -t "$1" 2>/dev/null
 }
 
 new_session() {
-    tmux new-session -s "$1" -c "$2" "$3"
+    tmux new-session -s "$1" -c "$2" -d
 }
 
 new_session_uwsm() {
-    uwsm app -- tmux new-session -s "$1" -c "$2" "$3"
+    # Ensure a shell is started (bash or sh)
+    uwsm app -- tmux new-session -s "$1" -c "$2" "$SHELL"
 }
 
-
-if no_tmux; then
-    if has_session $name; then
-        debug "Attach to tmux session $name"
-        tmux attach-session -t $name
+if has_session "$name"; then
+    if no_tmux; then
+        debug "Attaching to tmux session $name"
+        tmux attach-session -t "$name"
     else
-        debug "Create new session $name"
-        new_session_uwsm $name $directory
+        debug "Switching to tmux session $name"
+        tmux switch-client -t "$name"
     fi
 else
-    if ! has_session $name; then
-        debug "Tmux active. Create new session $name"
-        new_session $name $directory -d
+    debug "Creating new session $name"
+    if no_tmux; then
+        new_session "$name" "$directory"
+        tmux attach-session -t "$name"
+    else
+        new_session "$name" "$directory"
+        tmux switch-client -t "$name"
     fi
-    debug "Switch to tmux session $name"
-    tmux switch-client -t $name
 fi

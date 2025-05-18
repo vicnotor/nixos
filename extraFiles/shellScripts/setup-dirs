@@ -31,3 +31,7 @@ fi
 if [ ! -d ~/mnt/temp ]; then
   mkdir -p ~/mnt/temp
 fi
+
+if [ ! -d ~/mnt/ssh ]; then
+  mkdir -p ~/mnt/ssh
+fi
