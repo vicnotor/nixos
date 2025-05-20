@@ -16,6 +16,7 @@ in {
   config = lib.mkIf config.stylixModule.enable {
     stylix = {
       enable = true;
+      enableReleaseChecks = false; # Remove warning message
       targets = {
         chromium.enable = false;
         console.enable = false;

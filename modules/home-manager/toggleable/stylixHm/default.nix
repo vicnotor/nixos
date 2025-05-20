@@ -13,6 +13,7 @@ in {
 
   config = lib.mkIf config.stylixHmModule.enable {
     stylix = {
+      enableReleaseChecks = false; # Remove warning message
       targets = {
         # Manual theming can often be done in this file for the following programs
         ghostty.enable = false; # Change below
