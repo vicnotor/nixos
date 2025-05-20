@@ -4,7 +4,10 @@ return {
   lazy = false,
   opts = {
     bigfile = { enabled = true },
-    image = { enabled = true },
+    image = {
+      enabled = true,
+      doc = { max_width = 60 }
+    },
     quickfile = { enabled = true },
     input = { enable = true },
     rename = { enable = true },
@@ -61,7 +64,7 @@ return {
         })
 
         vim.api.nvim_create_autocmd("FileType", {
-          pattern = {"markdown", "tex"},
+          pattern = { "markdown", "tex" },
           callback = function(event)
             Snacks.indent.disable()
           end,
