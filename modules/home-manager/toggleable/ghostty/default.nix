@@ -4,7 +4,11 @@
   pkgs,
   inputs,
   ...
-}: {
+}: let
+  ghosttyPatched = inputs.ghostty.packages.${pkgs.system}.default.overrideAttrs (old: {
+    patches = (old.patches or []) ++ [./ghostty-capsescape.patch];
+  });
+in {
   options = {
     ghosttyModule.enable =
       lib.mkEnableOption "Ghostty module";
@@ -13,7 +17,7 @@
   config = lib.mkIf config.ghosttyModule.enable {
     programs.ghostty = {
       enable = true;
-      package = inputs.ghostty.packages.${pkgs.system}.default;
+      package = ghosttyPatched;
       enableZshIntegration = true;
       settings = {
         # Font
