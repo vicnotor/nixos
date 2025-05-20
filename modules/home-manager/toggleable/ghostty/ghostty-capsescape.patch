@@ -1,8 +1,8 @@
 --- a/src/apprt/gtk/Surface.zig
 +++ b/src/apprt/gtk/Surface.zig
-@@ -1864,6 +1864,49 @@
-+    // If we're not in a dead key state, we want to translate our text
-+    // to some input.Key.
+@@ -1862,6 +1863,49 @@
+     };
++
 +    const key = if (!self.im_composing) key: {
 +        // First, try to convert the keyval directly to a key. This allows the
 +        // use of key remapping and identification of keypad numerics (as
@@ -20,7 +20,7 @@
 +            }
 +        }
 +
-+        // If that doesn't work then we try to translate the kevval..
++        // If that doesn't work then we try to translate the keyval..
 +        if (keyval_unicode != 0) {
 +            if (std.math.cast(u8, keyval_unicode)) |byte| {
 +                if (input.Key.fromASCII(byte)) |key| {
@@ -42,7 +42,7 @@
 +        // it can be simply wrong. For example on "Turkish Q" the "i" key
 +        // on a US layout results in "ı" which is not the same as "i" so
 +        // we shouldn't use the physical key.
-+        if (self.im_len > 0 or keyval_unicode_unshifted != 0) break :key .unidentified;
++        if (self.im_len > 0 or keyval_unicode_unshifted != 0) break :key .invalid;
 +
 +        break :key physical_key;
-+    } else .unidentified;
++    } else .invalid;
