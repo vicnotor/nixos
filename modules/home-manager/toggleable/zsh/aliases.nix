@@ -90,4 +90,5 @@
   vospak = "vim $HOME/Git/vicnotor/nixos/modules/nixos/always/packages/default.nix";
   vlib = "vim $HOME/Git/vicnotor/nixos/modules/nixos/toggleable/nix-ld/libraries.nix";
   diral = "direnv allow";
+  ssh-nixtop = "TERM=xterm-256color ssh vic@nixos.tail4046c4.ts.net";
 }
