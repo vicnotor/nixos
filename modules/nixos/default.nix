@@ -52,5 +52,5 @@
   zshModule.enable = lib.mkDefault true;
 
   # Disabled by default
-  thunarModule.enable = lib.mkDefault true;
+  thunarModule.enable = lib.mkDefault false;
 }
