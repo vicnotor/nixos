@@ -1,15 +1,12 @@
 return {
   {
-    "norcalli/nvim-colorizer.lua",
-    config = function()
-      vim.opt.termguicolors = true
-      require("colorizer").setup({
-        "*",
-        css = { rgb_fn = true },
-      }, {
+    "catgoose/nvim-colorizer.lua",
+    event = "BufReadPre",
+    opts = { -- set to setup table
+      user_default_options = {
         names = false,
-        RRGGBBAA = true,
-      })
-    end,
-  },
+        RRGGBBAA = true, -- #RRGGBBAA hex codes
+      },
+    },
+  }
 }
