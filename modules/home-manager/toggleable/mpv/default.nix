@@ -43,7 +43,7 @@
         subs-with-matching-audio = "no"; # Won't ignore subtitles tagged as "Forced"
         sub-fix-timing = "yes";
         sub-font = lib.mkForce "Trebuchet MS";
-        #sub-font-size = 30 # Set default subtitle size if not specified.
+        # sub-font-size = 30 # Set default subtitle size if not specified.
         # sub-scale = "1";
         sub-bold = "yes"; # Set the font to bold.
         sub-blur = 2.25;
