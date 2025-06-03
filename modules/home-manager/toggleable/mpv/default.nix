@@ -44,7 +44,7 @@
         sub-fix-timing = "yes";
         sub-font = lib.mkForce "Trebuchet MS";
         #sub-font-size = 30 # Set default subtitle size if not specified.
-        sub-scale = "2";
+        # sub-scale = "1";
         sub-bold = "yes"; # Set the font to bold.
         sub-blur = 2.25;
         sub-border-color = "#000000";
