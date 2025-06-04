@@ -35,7 +35,6 @@
     spotify
     sshfs
     stremio
-    teams-for-linux
     texlive.combined.scheme-full # Needed for pandoc and for knitting RMarkdown
     tree-sitter
     thunderbird-latest # Mail client
