@@ -15,6 +15,7 @@
     gimp
     google-chrome
     grimblast # Hyprland wrapper for grim and slurp
+    gtk3 # Just for `gtk-launch <.desktop file>`
     hyprpicker # Color picker
     imagemagick
     jq
