@@ -14,8 +14,8 @@ set("n", "]d", function()
 end, { desc = "Go to next diagnostic message" })
 set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
 
--- Open the Thunar file explorer
-set("n", "<leader>th", "<CMD>silent !silent thunar .<CR>", { desc = "Open Thunar in working directory", silent = true })
+-- Open the file explorer
+set("n", "<leader>ex", "<CMD>silent !silent dolphin .<CR>", { desc = "Open file [e][x]plorer in working directory", silent = true })
 
 -- yank to clipboard
 set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank to clipboard" })
