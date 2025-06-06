@@ -90,4 +90,5 @@
   vospak = "vim $HOME/Git/vicnotor/nixos/modules/nixos/always/packages/default.nix";
   vlib = "vim $HOME/Git/vicnotor/nixos/modules/nixos/toggleable/nix-ld/libraries.nix";
   diral = "direnv allow";
+  hibernate = "systemctl hibernate";
 }
