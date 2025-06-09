@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  pkgs,
   ...
 }: {
   options = {
@@ -59,6 +60,9 @@
         VISUAL = "nvim";
 
         WPDEFAULT = "${config.home.homeDirectory}/personal/Pictures/wallpapers/dune_2_ending.jpeg";
+
+        FILE_PICKER = "thunar"; # File picker alias for use in scripts
+        GIO_EXTRA_MODULES = "${pkgs.gvfs}/lib/gio/modules"; # potential thunar fix?
       };
       shellAliases = import ./aliases.nix;
     };

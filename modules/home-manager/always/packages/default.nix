@@ -6,7 +6,6 @@
   home.packages = with pkgs; [
     brightnessctl
     discord
-    kdePackages.dolphin
     evince # pdf
     fastfetch # Neofetch
     fd # Finding files
