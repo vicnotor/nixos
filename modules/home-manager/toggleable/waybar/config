@@ -30,8 +30,7 @@
     "custom/separator",
     "battery",
     "custom/separator",
-    "clock",
-    "custom/screenoff"
+    "clock"
   ],
 
   "backlight": {
