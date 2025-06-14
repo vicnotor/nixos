@@ -158,7 +158,7 @@
     },
     "format-muted": "",
     "on-click": "pavucontrol",
-    "on-click-middle": "wpctl set-mute @DEFAULT_SINK@ toggle",
+    "on-click-middle": "wpctl set-volume @DEFAULT_SINK@ 25%",
     "on-click-right": "wpctl set-mute @DEFAULT_SINK@ toggle"
   },
   "temperature": {
