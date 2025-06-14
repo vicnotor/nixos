@@ -22,9 +22,10 @@
       enable = true;
       package = inputs.hyprpaper.packages.${pkgs.system}.default;
       settings = {
-        preload = ["${home}/personal/Pictures/wallpapers/dune_2_ending.jpeg"];
 
-        wallpaper = [",${home}/personal/Pictures/wallpapers/dune_2_ending.jpeg"];
+        # CHANGE THIS FOR DEFAULT WALLPAPER, ALONG WITH $HOME/Git/vicnotor/nixos/modules/home-manager/toggleable/zsh/default.nix
+        preload = ["${home}/personal/Pictures/wallpapers/destiny.png"];
+        wallpaper = [",${home}/personal/Pictures/wallpapers/destiny.png"];
       };
     };
   };
