@@ -58,11 +58,11 @@
         BROWSER = "google-chrome-stable";
         TERMINAL = "ghostty";
         VISUAL = "nvim";
+        FILE_PICKER = "thunar";
 
         # CHANGE THIS FOR DEFAULT WALLPAPER, ALONG WITH $HOME/Git/vicnotor/nixos/modules/home-manager/toggleable/hyprlandHm/default.nix
         WPDEFAULT = "${config.home.homeDirectory}/personal/Pictures/wallpapers/destiny.png";
 
-        FILE_PICKER = "thunar"; # File picker alias for use in scripts
         GIO_EXTRA_MODULES = "${pkgs.gvfs}/lib/gio/modules"; # potential thunar fix?
       };
       shellAliases = import ./aliases.nix;
