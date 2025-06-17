@@ -16,6 +16,7 @@ with pkgs; let
       tidyverse
       FME
       ggplot2
+      ggpubr
       languageserver
     ];
   };
