@@ -4,6 +4,7 @@
   ...
 }: {
   home.packages = with pkgs; [
+    bibclean # For BibTeX files
     brightnessctl
     discord
     evince # pdf
@@ -19,10 +20,12 @@
     imagemagick
     jq
     libreoffice
+    ltex-ls-plus
     mermaid-cli
     networkmanagerapplet
     inputs.nix-alien.packages.${pkgs.system}.default
     obs-studio
+    kdePackages.okular
     onedrive
     openssl # Needed for onedrive
     pandoc # markdown to pdf
@@ -34,7 +37,7 @@
     spotify
     sshfs
     stremio
-    texlive.combined.scheme-full # Needed for pandoc and for knitting RMarkdown
+    texlive.combined.scheme-full
     tree-sitter
     thunderbird-latest # Mail client
     unrar
@@ -44,6 +47,7 @@
     xorg.xeyes # Run `xeyes` to show xwayland windows
     youtube-music
     zapzap # Whatsapp
+    zip
     zotero-beta
 
     # Languages

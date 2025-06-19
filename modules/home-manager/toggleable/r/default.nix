@@ -18,6 +18,7 @@ with pkgs; let
       ggplot2
       ggpubr
       languageserver
+      zoo
     ];
   };
 in {

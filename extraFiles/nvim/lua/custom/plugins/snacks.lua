@@ -6,7 +6,8 @@ return {
     bigfile = { enabled = true },
     image = {
       enabled = true,
-      doc = { max_width = 60 }
+      doc = { max_width = 60 },
+      math = { enabled = false }
     },
     quickfile = { enabled = true },
     input = { enable = true },

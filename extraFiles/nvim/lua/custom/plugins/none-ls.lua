@@ -21,7 +21,8 @@ return {
             "--exp-grouping", "preserve",
             "--cases-exp-indent", "2",
           },
-        })
+        }),
+        null_ls.builtins.formatting.bibclean,
       },
     })
   end,
