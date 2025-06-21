@@ -20,6 +20,7 @@
         noto-fonts-emoji
         helvetica-neue-lt-std
         lmodern
+        libertine
       ];
 
       fontconfig = {

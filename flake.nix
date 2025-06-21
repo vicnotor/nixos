@@ -28,6 +28,10 @@
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    auto-cpufreq = {
+      url = "github:AdnanHodzic/auto-cpufreq";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -54,6 +58,7 @@
             };
           }
           inputs.stylix.nixosModules.stylix
+          inputs.auto-cpufreq.nixosModules.default
         ];
       };
       nixosModules = import ./modules/nixos {inherit inputs;};

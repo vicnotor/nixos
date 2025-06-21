@@ -98,12 +98,13 @@ return {
       lspconfig.ts_ls.setup({})
       lspconfig.zls.setup({})
       lspconfig.ltex_plus.setup({
+        filetypes = { "tex", },
         settings = {
           ltex = {
             language = "en-GB",
+            checkFrequency = "save",
           },
         },
-        filetypes = { "bib", "tex", },
       })
 
       -- With additional setup

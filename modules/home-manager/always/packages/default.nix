@@ -30,6 +30,7 @@
     openssl # Needed for onedrive
     pandoc # markdown to pdf
     pavucontrol # Audio controls
+    pinta
     playerctl # Needed for pausing, skipping songs, etc.
     qimgv # Image viewer
     qbittorrent

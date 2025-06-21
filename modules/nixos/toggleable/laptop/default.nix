@@ -10,10 +10,10 @@
 
   config = lib.mkIf config.laptopModule.enable {
     powerManagement.enable = true;
-    services = {
-      thermald.enable = true;
-      auto-cpufreq.enable = true;
-      auto-cpufreq.settings = {
+    services.thermald.enable = true;
+    programs.auto-cpufreq = {
+      enable = true;
+      settings = {
         battery = {
           governor = "powersave";
           turbo = "never";
