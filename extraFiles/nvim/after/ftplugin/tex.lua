@@ -1,4 +1,4 @@
-vim.opt.textwidth = 76
+vim.opt.textwidth = 75
 -- Open the file explorer
 vim.keymap.set("n", "vv", "<CMD>VimtexView<CR>", {
   desc   = "[V]imtex[V]iew",

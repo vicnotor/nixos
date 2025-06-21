@@ -5,19 +5,19 @@ return {
       require("conform").setup({
         default_format_opts = {
           lsp_format = "fallback",
-          timeout_ms = 10000,
+          async = true,
         },
         formatters = {
           latexindent = {
             prepend_args = {
-              '-y=modifyLineBreaks:textWrapOptions:columns:76',
+              '-y=modifyLineBreaks:textWrapOptions:columns:75',
               "-m",
             },
           },
           mdformat = {
             prepend_args = {
               "--number",
-              "--wrap", "76",
+              "--wrap", "75",
             }
           },
           ocamlformat = {
