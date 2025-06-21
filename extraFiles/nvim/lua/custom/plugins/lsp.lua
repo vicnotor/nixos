@@ -34,9 +34,6 @@ return {
           })
         end,
       },
-
-      -- Autoformatting
-      "stevearc/conform.nvim",
     },
     config = function()
       --  This function gets run when an LSP connects to a particular buffer.

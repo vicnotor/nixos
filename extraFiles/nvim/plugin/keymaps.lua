@@ -30,7 +30,7 @@ set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>", { desc = "Launc
 
 -- Format file
 set("n", "<leader>f", function()
-  require("conform").format({ async = true, lsp_format = "fallback" })
+  require("conform").format()
 end, { desc = "Format file" })
 
 -- Format paragraph with gq
