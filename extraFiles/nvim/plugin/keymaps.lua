@@ -97,6 +97,9 @@ set("n", "<leader>mdh", function()
   vim.cmd("!mdto html" .. file)
 end, { desc = "Markdown to pdf" })
 
+-- Dismiss Noice message
+set("n", "<Del>", "<CMD>NoiceDismiss<CR>", { desc = "Dismiss Noice message" })
+
 -- Other
 set("n", "J", "mzJ`z")
 set("i", "<C-c>", "<Esc>")
