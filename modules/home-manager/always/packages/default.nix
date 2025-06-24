@@ -4,6 +4,8 @@
   ...
 }: {
   home.packages = with pkgs; [
+    aspell # Spell checker
+    aspellDicts.en
     bibclean # For BibTeX files
     brightnessctl
     discord
