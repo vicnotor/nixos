@@ -5,7 +5,7 @@ return {
   opts = {
     bigfile = { enabled = true },
     image = {
-      enabled = false,
+      enabled = true,
       doc = { max_width = 60 },
       math = { enabled = false }
     },
