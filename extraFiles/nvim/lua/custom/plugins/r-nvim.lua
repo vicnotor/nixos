@@ -27,7 +27,7 @@ return {
       rconsole_width = 50,
       rconsole_height = 4,
       auto_start = "always",
-      objbr_auto_start = false,
+      objbr_auto_start = true,
       objbr_place = "console,below",
       objbr_opendf = true,
       objbr_openlist = false,

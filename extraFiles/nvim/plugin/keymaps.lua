@@ -15,7 +15,7 @@ end, { desc = "Go to next diagnostic message" })
 set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
 
 -- Open the file explorer
-set("n", "<leader>ex", "<CMD>silent !silent $FILE_PICKER .<CR>", { desc = "Open file [e][x]plorer in working directory", silent = true })
+set("n", "<leader>th", "<CMD>silent !silent $FILE_PICKER .<CR>", { desc = "Open file [e][x]plorer in working directory", silent = true })
 
 -- yank to clipboard
 set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank to clipboard" })
@@ -89,13 +89,13 @@ set("n", "<leader>mdp", function()
   local file = vim.fn.expand("%")
   local escaped_file = vim.fn.shellescape(file)
   vim.cmd("!mdto pdf " .. escaped_file)
-end, { desc = "Markdown to pdf" })
+end, { desc = "[M]ark[d]own to [p]df" })
 
 -- mdto html
 set("n", "<leader>mdh", function()
   local file = vim.fn.expand("%")
   vim.cmd("!mdto html" .. file)
-end, { desc = "Markdown to pdf" })
+end, { desc = "[M]ark[d]own to [h]tml" })
 
 -- Dismiss Noice message
 set("n", "<Del>", "<CMD>NoiceDismiss<CR>", { desc = "Dismiss Noice message" })

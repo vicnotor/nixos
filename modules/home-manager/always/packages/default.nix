@@ -20,6 +20,7 @@
     gtk3 # Just for `gtk-launch <.desktop file>`
     hyprpicker # Color picker
     imagemagick
+    inkscape
     jq
     libreoffice
     ltex-ls-plus
