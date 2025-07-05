@@ -24,6 +24,7 @@
     ./toggleable/polkit
     ./toggleable/sound
     ./toggleable/ssd
+    ./toggleable/steam
     ./toggleable/stylix
     ./toggleable/tailscale
     ./toggleable/thunar
@@ -44,6 +45,7 @@
   polkitModule.enable = lib.mkDefault true;
   soundModule.enable = lib.mkDefault true;
   ssdModule.enable = lib.mkDefault true;
+  steamModule.enable = lib.mkDefault true;
   stylixModule.enable = lib.mkDefault true;
   tailscaleModule.enable = lib.mkDefault true;
   thunarModule.enable = lib.mkDefault true;

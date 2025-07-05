@@ -10,6 +10,7 @@
   };
 
   config = lib.mkIf config.nvidiaModule.enable {
+    services.xserver.videoDrivers = ["nvidia"];
     hardware = {
       nvidia = {
         modesetting.enable = true;
@@ -17,10 +18,6 @@
         open = true;
         package = config.boot.kernelPackages.nvidiaPackages.beta;
       };
-    };
-
-    services.xserver = {
-      videoDrivers = ["nvidia"];
     };
 
     environment.systemPackages = with pkgs; [
