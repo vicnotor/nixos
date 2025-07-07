@@ -19,7 +19,7 @@
       };
       gamescope.enable = true;
       gamemode = {
-        enable = true;
+        enable = false; # Set to true if needed
         settings = {
           custom = {
             start = "${pkgs.libnotify}/bin/notify-send 'GameMode started'";
