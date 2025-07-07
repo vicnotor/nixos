@@ -14,9 +14,22 @@
       steam = {
         enable = true;
         gamescopeSession.enable = true;
+        remotePlay.openFirewall = true;
+        dedicatedServer.openFirewall = true;
       };
-      gamemode.enable = true;
+      gamescope.enable = true;
+      gamemode = {
+        enable = true;
+        settings = {
+          custom = {
+            start = "${pkgs.libnotify}/bin/notify-send 'GameMode started'";
+            end = "${pkgs.libnotify}/bin/notify-send 'GameMode ended'";
+          };
+        };
+      };
     };
+
+    users.users.vic.extraGroups = ["gamemode"];
 
     # proton GE. NOTE: do not forget to run `protonup` to actually install proton
     environment = {

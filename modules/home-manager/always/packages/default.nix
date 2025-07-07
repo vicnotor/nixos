@@ -45,6 +45,7 @@
     tree-sitter
     thunderbird-latest # Mail client
     unrar
+    vulkan-tools
     wev # xev for wayland
     wl-clipboard # Clipboard manager
     wl-gammarelay-rs # blue light filter
