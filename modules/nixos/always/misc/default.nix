@@ -24,10 +24,10 @@
   };
 
   # Mounting SATA drive
-  boot.supportedFilesystems = ["ntfs"];
-  fileSystems."/home/vic/mnt/sata" = {
-    device = "/dev/disk/by-label/SATA";
-    fsType = "ntfs-3g";
-    options = ["rw" "uid=1000"];
-  };
+  # boot.supportedFilesystems = ["ntfs"];
+  # fileSystems."/home/vic/mnt/sata" = {
+  #   device = "/dev/disk/by-label/SATA";
+  #   fsType = "ntfs-3g";
+  #   options = ["rw" "uid=1000"];
+  # };
 }
