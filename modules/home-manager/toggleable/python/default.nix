@@ -10,23 +10,16 @@
   };
 
   config = lib.mkIf config.pythonModule.enable {
-    home.packages = with pkgs;
-      [
-        pyright
-      ]
-      ++ [
-        (pkgs.python3.withPackages (ps:
-          with ps; [
-            m2crypto # Needed for Python SSL support
-            numpy
-            markitdown
+    home.packages = [
+      (pkgs.python3.withPackages (ps:
+        with ps; [
+          markitdown
 
-            # Markdown formatting
-            mdformat
-            # Extensions
-            mdformat-frontmatter
-            mdformat-gfm
-          ]))
-      ];
+          # Markdown formatting
+          mdformat
+          mdformat-frontmatter
+          mdformat-gfm
+        ]))
+    ];
   };
 }

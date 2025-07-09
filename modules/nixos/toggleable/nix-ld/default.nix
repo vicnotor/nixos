@@ -1,7 +1,7 @@
 {
   lib,
   config,
-  pkgs,
+  # pkgs,
   ...
 }: {
   options = {
@@ -12,7 +12,7 @@
   config = lib.mkIf config.nix-ldModule.enable {
     programs.nix-ld = {
       enable = true;
-      libraries = import ./libraries.nix {inherit pkgs;};
+      # libraries = import ./libraries.nix {inherit pkgs;};
     };
   };
 }

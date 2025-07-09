@@ -7,7 +7,7 @@
 }: {
   options = {
     mypkgsModule.enable =
-      lib.mkEnableOption "mypkgs module";
+      lib.mkEnableOption "mypkgs module for all own made packages with a flake.nix file";
   };
 
   config = lib.mkIf config.mypkgsModule.enable {

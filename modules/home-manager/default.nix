@@ -17,9 +17,8 @@
     ./toggleable/gtk
     ./toggleable/htop
     ./toggleable/hyprlandHm
-    ./toggleable/javascript
+    ./toggleable/latex
     ./toggleable/lua
-    ./toggleable/misc
     ./toggleable/mpv
     ./toggleable/mypkgs
     ./toggleable/nix-index
@@ -45,9 +44,8 @@
   ghosttyModule.enable = lib.mkDefault true;
   gitModule.enable = lib.mkDefault true;
   hyprlandHmModule.enable = lib.mkDefault true;
-  javascriptModule.enable = lib.mkDefault true;
+  latexModule.enable = lib.mkDefault true;
   luaModule.enable = lib.mkDefault true;
-  miscModule.enable = lib.mkDefault true;
   mpvModule.enable = lib.mkDefault true;
   mypkgsModule.enable = lib.mkDefault true;
   nix-indexModule.enable = lib.mkDefault true;

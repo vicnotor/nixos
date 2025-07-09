@@ -11,8 +11,13 @@
 
   config = lib.mkIf config.nvimModule.enable {
     home = {
-      packages = [
-        pkgs.yarn # Needed for plugins
+      packages = with pkgs; [
+        yarn
+        nodejs
+        lua5_1
+        lua-language-server
+        luajitPackages.luarocks
+        ripgrep # Needed for Telescope.nvim
       ];
       file = {
         ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/Git/vicnotor/nixos/extraFiles/nvim";
