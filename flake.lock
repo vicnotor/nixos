@@ -1081,11 +1081,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1745515102,
-        "narHash": "sha256-seKa51uBokt4bxrvZFpeG2OpC/Y6wzKGp9P4wFteLSo=",
+        "lastModified": 1752085355,
+        "narHash": "sha256-AAm7zfPWhIMkux1H+zufi4IEcUx2RZZkawDoQc+AFpQ=",
         "owner": "vicnotor",
         "repo": "nix-devshells",
-        "rev": "3ca177619793eeba8d3ddaf2e8a73aaaec9a4fda",
+        "rev": "db0f669ffa2656f1d04bbbe37d35563363d46271",
         "type": "github"
       },
       "original": {
