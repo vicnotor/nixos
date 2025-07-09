@@ -18,7 +18,6 @@
     ./toggleable/htop
     ./toggleable/hyprlandHm
     ./toggleable/latex
-    ./toggleable/lua
     ./toggleable/mpv
     ./toggleable/mypkgs
     ./toggleable/nix-index
@@ -45,7 +44,6 @@
   gitModule.enable = lib.mkDefault true;
   hyprlandHmModule.enable = lib.mkDefault true;
   latexModule.enable = lib.mkDefault true;
-  luaModule.enable = lib.mkDefault true;
   mpvModule.enable = lib.mkDefault true;
   mypkgsModule.enable = lib.mkDefault true;
   nix-indexModule.enable = lib.mkDefault true;
