@@ -31,7 +31,7 @@
   l = "ls";
 
   # Tmux
-  t = "tmux";
+  t = "uwsm app -- tmux";
   ta = "tmux attach";
   tl = "tmux ls";
   tls = "tmux ls";

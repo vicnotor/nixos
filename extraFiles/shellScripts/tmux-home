@@ -36,7 +36,7 @@ if has_session "$name"; then
 else
     debug "Creating new session $name"
     if no_tmux; then
-        new_session "$name" "$directory"
+        new_session_uwsm "$name" "$directory"
         tmux attach-session -t "$name"
     else
         new_session "$name" "$directory"
