@@ -77,7 +77,7 @@
   ev = "silent evince";
   thu = "silent thunar .";
   cabalclean = "rm -r dist-newstyle";
-  R = "R --no-save --quiet";
+  R = "R --quiet";
   pf = "fd --type f | fzf | xargs nvim";
   direnvnix = "echo 'use nix' >> .envrc && direnv allow";
   direnvflake = "echo 'use flake' >> .envrc && direnv allow";

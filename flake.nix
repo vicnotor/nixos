@@ -18,6 +18,7 @@
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     nixd.url = "github:nix-community/nixd";
     ghostty.url = "github:ghostty-org/ghostty?rev=7f9bb3c0e54f585e11259bc0c9064813d061929c";
+    # ghostty.url = "github:weskoerber/ghostty";
     zig.url = "github:mitchellh/zig-overlay";
     stylix.url = "github:danth/stylix";
     nix-devshells = {
