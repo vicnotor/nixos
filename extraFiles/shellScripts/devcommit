@@ -3,3 +3,4 @@
 cd $HOME/Git/vicnotor/nixos
 git add .
 git commit -m "automated dev env commit"
+git push
