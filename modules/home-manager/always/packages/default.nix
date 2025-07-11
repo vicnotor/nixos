@@ -47,6 +47,7 @@
     wl-gammarelay-rs # blue light filter
     xorg.xeyes # Run `xeyes` to show xwayland windows
     youtube-music
+    yt-dlp
     zapzap # Whatsapp
     zip
     zotero-beta
