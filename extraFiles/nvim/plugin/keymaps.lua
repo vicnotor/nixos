@@ -104,9 +104,3 @@ set("n", "<Del>", "<CMD>NoiceDismiss<CR>", { desc = "Dismiss Noice message" })
 set("n", "J", "mzJ`z")
 set("i", "<C-c>", "<Esc>")
 set("n", "Q", "<nop>")
-
--- Functions
-vim.cmd([[command! -nargs=0 W :w]])
-vim.cmd([[command! -nargs=0 WQ :wq]])
-vim.cmd([[command! -nargs=0 Wq :wq]])
-vim.cmd([[command! -nargs=0 Q :q]])
