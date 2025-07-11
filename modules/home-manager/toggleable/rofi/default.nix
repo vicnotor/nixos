@@ -13,7 +13,7 @@
     programs.rofi = {
       enable = true;
       package = pkgs.rofi-wayland;
-      theme = ./default.rasi;
+      theme = "/home/vic/Git/vicnotor/nixos/modules/home-manager/toggleable/rofi/default.rasi";
     };
   };
 }
