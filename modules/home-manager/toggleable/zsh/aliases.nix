@@ -41,7 +41,7 @@
   ev = "silent evince";
   thu = "silent thunar .";
   cabalclean = "rm -r dist-newstyle";
-  R = "R --quiet";
+  R = "R --save --quiet";
   pf = "fd --type f | fzf | xargs nvim";
   cp = "cp -v";
   mv = "mv -v";
