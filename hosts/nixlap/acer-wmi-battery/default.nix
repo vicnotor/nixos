@@ -5,7 +5,7 @@
 }:
 stdenv.mkDerivation {
   pname = "acer-wmi-battery";
-  version = "1.0";
+  version = "${kernel.modDirVersion}";
 
   src = ./.;
   hardeningDisable = ["pic" "format"]; # 1
@@ -24,4 +24,8 @@ stdenv.mkDerivation {
     maintainers = ["Frederik Harwath"];
     platforms = lib.platforms.linux;
   };
+  installPhase = ''
+    mkdir -p $out/lib/modules/${kernel.modDirVersion}
+    cp -r *.ko $out/lib/modules/${kernel.modDirVersion}/
+  '';
 }

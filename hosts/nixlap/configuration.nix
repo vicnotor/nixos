@@ -7,4 +7,8 @@ in {
   ];
 
   boot.extraModulePackages = [acer-wmi-battery];
+  boot.kernelModules = ["acer-wmi-battery"];
+  boot.extraModprobeConfig = ''
+    options acer-wmi-battery enable_health_mode=1
+  '';
 }
