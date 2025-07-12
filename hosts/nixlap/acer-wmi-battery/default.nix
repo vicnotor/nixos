@@ -8,13 +8,13 @@ stdenv.mkDerivation {
   version = "${kernel.modDirVersion}";
 
   src = ./.;
-  hardeningDisable = ["pic" "format"]; # 1
-  nativeBuildInputs = kernel.moduleBuildDependencies; # 2
+  hardeningDisable = ["pic" "format"];
+  nativeBuildInputs = kernel.moduleBuildDependencies;
 
   makeFlags = [
-    "KERNELRELEASE=${kernel.modDirVersion}" # 3
-    "KERNEL_DIR=${kernel.dev}/lib/modules/${kernel.modDirVersion}/build" # 4
-    "INSTALL_MOD_PATH=$(out)" # 5
+    "KERNELRELEASE=${kernel.modDirVersion}"
+    "KERNEL_DIR=${kernel.dev}/lib/modules/${kernel.modDirVersion}/build"
+    "INSTALL_MOD_PATH=$(out)"
   ];
 
   meta = {
