@@ -33,7 +33,6 @@
   ":q" = "exit";
   off = "poweroff";
   hibernate = "systemctl hibernate";
-  browser = "uwsm app -- google-chrome";
   goto = "source";
   open = "xdg-open";
   valias = "vim $HOME/Git/vicnotor/nixos/modules/home-manager/toggleable/zsh/aliases.nix";
