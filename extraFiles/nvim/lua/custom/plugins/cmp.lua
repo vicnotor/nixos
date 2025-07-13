@@ -33,7 +33,7 @@ return {
         sources = cmp.config.sources({
           { name = "nvim_lsp" },
           { name = "path" },
-          -- { name = "buffer" },
+          { name = "buffer" },
           { name = "cmp_r" },
           { name = "luasnip" },
           { name = "vimtex" },
