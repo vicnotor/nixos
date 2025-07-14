@@ -55,7 +55,7 @@
         HYPHEN_INSENSITIVE = "true";
 
         EDITOR = "nvim";
-        BROWSER = "app.zen_browser.zen";
+        BROWSER = "zen";
         TERMINAL = "ghostty";
         VISUAL = "nvim";
         FILE_PICKER = "thunar";
