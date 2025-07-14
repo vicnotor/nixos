@@ -15,7 +15,6 @@
     ./toggleable/bluetooth
     ./toggleable/dolphin
     ./toggleable/fonts
-    ./toggleable/ghostty-systemd
     ./toggleable/graphics
     ./toggleable/hyprland
     ./toggleable/laptop
@@ -37,7 +36,6 @@
   # Enabled by default
   bluetoothModule.enable = lib.mkDefault true;
   fontsModule.enable = lib.mkDefault true;
-  ghostty-systemdModule.enable = lib.mkDefault true;
   graphicsModule.enable = lib.mkDefault true;
   hyprlandModule.enable = lib.mkDefault true;
   laptopModule.enable = lib.mkDefault true;

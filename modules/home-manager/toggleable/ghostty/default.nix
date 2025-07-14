@@ -24,7 +24,7 @@
           "-liga"
           "-dlig"
         ];
-        bold-is-bright = true; # Bold text will use the bright color palette
+        bold-color = "bright"; # Bold text will use the bright color palette
 
         # Theme
         theme = "tokyonight";
@@ -62,8 +62,9 @@
         clipboard-trim-trailing-spaces = true;
         confirm-close-surface = false;
         # This makes every startup after the first one faster
-        gtk-single-instance = true;
+        # gtk-single-instance = true;
       };
     };
+    systemd.user.services."com.mitchellh.ghostty.service".enable = true;
   };
 }

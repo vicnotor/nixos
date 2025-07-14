@@ -9,6 +9,7 @@
       btop # New htop
       distrobox # Escape route
       git
+      glib
       inputs.neovim-nightly-overlay.packages.${pkgs.system}.default # nvim nightly build
       killall
       nh # Nix helper that I use to collect garbage except last couple rebuilds
