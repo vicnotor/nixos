@@ -30,6 +30,7 @@
     ./toggleable/tmux
     ./toggleable/waybar
     ./toggleable/zoxide
+    ./toggleable/zen
     ./toggleable/zsh
   ];
 
@@ -55,6 +56,7 @@
   tmuxModule.enable = lib.mkDefault true;
   waybarModule.enable = lib.mkDefault true;
   zoxideModule.enable = lib.mkDefault true;
+  zenModule.enable = lib.mkDefault true;
   zshModule.enable = lib.mkDefault true;
 
   # Disabled by default
