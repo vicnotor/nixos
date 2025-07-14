@@ -36,7 +36,7 @@
 
   # Enabled by default
   bluetoothModule.enable = lib.mkDefault true;
-  flatpakModule.enable = lib.mkDefault true;
+  flatpakModule.enable = lib.mkDefault false;
   fontsModule.enable = lib.mkDefault true;
   graphicsModule.enable = lib.mkDefault true;
   hyprlandModule.enable = lib.mkDefault true;
