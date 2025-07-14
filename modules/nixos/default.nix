@@ -3,7 +3,6 @@
     # Always enabled
     ./always/boot
     ./always/environment
-    ./always/flatpak
     ./always/keyboard
     ./always/location
     ./always/misc
@@ -15,6 +14,7 @@
     # Toggleable (see below)
     ./toggleable/bluetooth
     ./toggleable/dolphin
+    ./toggleable/flatpak
     ./toggleable/fonts
     ./toggleable/graphics
     ./toggleable/hyprland

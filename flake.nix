@@ -32,6 +32,7 @@
       url = "github:AdnanHodzic/auto-cpufreq";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-flatpak.url = "github:gmodena/nix-flatpak";
   };
 
   outputs = {
@@ -59,6 +60,7 @@
           }
           inputs.stylix.nixosModules.stylix
           inputs.auto-cpufreq.nixosModules.default
+          inputs.nix-flatpak.nixosModules.nix-flatpak
         ];
       };
       nixosModules = import ./modules/nixos {inherit inputs;};
