@@ -28,8 +28,6 @@
 
         # Theme
         theme = "tokyonight";
-        # background = #1E1D23 # My old Alacritty background
-        # foreground = "#F9F0F0";
         selection-background = "#3b3e40";
         selection-foreground = "#f06090";
 
@@ -61,10 +59,7 @@
         # Other
         clipboard-trim-trailing-spaces = true;
         confirm-close-surface = false;
-        # This makes every startup after the first one faster
-        # gtk-single-instance = true;
       };
     };
-    systemd.user.services."com.mitchellh.ghostty.service".enable = true;
   };
 }
