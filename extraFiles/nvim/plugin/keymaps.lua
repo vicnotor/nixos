@@ -51,7 +51,7 @@ end, { desc = "Toggle theme", silent = true })
 set("n", "<F11>", "<cmd>ZenMode<CR>", { desc = "Start ZenMode", silent = true })
 
 -- Open current file in browser
-set("n", "gX", "<cmd>silent !xdg-open % &<CR>", { desc = "Open current file in Chrome" })
+set("n", "gX", "<cmd>silent !zen % &<CR>", { desc = "Open current file in Chrome" })
 
 -- nvim-spectre
 set("n", "<leader>Sr", '<cmd>lua require("spectre").toggle()<CR>', { desc = "Toggle Spectre" })
