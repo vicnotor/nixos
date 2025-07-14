@@ -14,6 +14,7 @@
     # Toggleable (see below)
     ./toggleable/bluetooth
     ./toggleable/dolphin
+    ./toggleable/flatpak
     ./toggleable/fonts
     ./toggleable/graphics
     ./toggleable/hyprland
@@ -35,6 +36,7 @@
 
   # Enabled by default
   bluetoothModule.enable = lib.mkDefault true;
+  flatpakModule.enable = lib.mkDefault true;
   fontsModule.enable = lib.mkDefault true;
   graphicsModule.enable = lib.mkDefault true;
   hyprlandModule.enable = lib.mkDefault true;
