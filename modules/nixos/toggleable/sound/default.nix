@@ -9,17 +9,21 @@
   };
 
   config = lib.mkIf config.soundModule.enable {
-    services = {
-      pipewire = {
+    security.rtkit.enable = true;
+    services.pipewire = {
+      enable = false;
+      alsa = {
         enable = true;
-        alsa = {
-          enable = true;
-          support32Bit = true;
-        };
-        jack.enable = true;
-        pulse.enable = true;
-        wireplumber.enable = true;
+        support32Bit = true;
       };
+      jack.enable = true;
+      pulse.enable = true;
+      wireplumber.enable = true;
     };
+    services.pulseaudio = {
+      enable = true;
+      support32Bit = true;
+    };
+    users.users.vic.extraGroups = ["audio"];
   };
 }

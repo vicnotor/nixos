@@ -11,7 +11,11 @@
     # AppImage support
     appimage.enable = true;
     appimage.binfmt = true;
+
+    dconf.enable = true;
   };
+
+  hardware.enableAllFirmware = true;
 
   fileSystems."/home/vic/.cache/google-chrome" = {
     fsType = "tmpfs";
