@@ -68,6 +68,7 @@
         # Other
         clipboard-trim-trailing-spaces = true;
         confirm-close-surface = false;
+        quit-after-last-window-closed = false;
       };
     };
   };
