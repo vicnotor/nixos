@@ -136,10 +136,10 @@
     "format-source": "󰍬 {volume}%",
     "format-source-muted": "󰍭",
     "on-click": "pavucontrol",
-    "on-click-middle": "pactl set-source-volume @DEFAULT_SOURCE@ 25%",
-    "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
-    "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -1%",
-    "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +1%",
+    "on-click-middle": "wpctl set-volume @DEFAULT_SOURCE@ 25%",
+    "on-click-right": "wpctl set-mute @DEFAULT_SOURCE@ toggle",
+    "on-scroll-down": "wpctl set-volume @DEFAULT_SOURCE@ 1%-",
+    "on-scroll-up": "wpctl set-volume @DEFAULT_SOURCE@ 1%+",
     "tooltip-format": "{desc}"
   },
   "pulseaudio#output": {
@@ -158,8 +158,8 @@
     },
     "format-muted": "",
     "on-click": "pavucontrol",
-    "on-click-middle": "pactl set-sink-volume @DEFAULT_SINK@ 25%",
-    "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+    "on-click-middle": "wpctl set-volume @DEFAULT_SINK@ 25%",
+    "on-click-right": "wpctl set-mute @DEFAULT_SINK@ toggle"
   },
   "temperature": {
     "critical-threshold": 80,

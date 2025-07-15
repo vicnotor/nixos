@@ -13,7 +13,16 @@
   config = lib.mkIf config.ghosttyModule.enable {
     programs.ghostty = {
       enable = true;
-      package = inputs.ghostty.packages.${pkgs.system}.default;
+      package = inputs.ghostty.packages.${pkgs.system}.default.overrideAttrs (drv: {
+        patches =
+          drv.patches or []
+          ++ [
+            (pkgs.fetchpatch {
+              url = "https://github.com/Opposite34/ghostty/commit/5b871c595254eece6bf44ab48f71409b7ed36088.patch";
+              hash = "sha256-hCWp2MdoD89oYN3I+Pq/HW4k4RcozS1tDuXHO3Nd+Y8=";
+            })
+          ];
+      });
       enableZshIntegration = true;
       settings = {
         # Font
