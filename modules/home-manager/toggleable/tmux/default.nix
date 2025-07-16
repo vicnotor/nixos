@@ -13,12 +13,11 @@
     programs.tmux = {
       enable = true;
       shell = "${pkgs.zsh}/bin/zsh";
-      shortcut = "a";
+      shortcut = "b";
       baseIndex = 1;
       mouse = true;
       keyMode = "vi";
       clock24 = true;
-      # disableConfirmationPrompt = true;
 
       plugins = with pkgs; [
         {
@@ -36,20 +35,13 @@
       ];
 
       extraConfig = ''
-        set -ga terminal-overrides ",screen-256color*:Tc" # Colors stuff
-        set-option -sg set-titles # Title in DWM bar
-
-        # These must exist
-        bind C-a send-prefix
-        bind a last-window
-
         # Copying and pasting in tmux
-        bind -T copy-mode-vi v send-keys -X begin-selection
-        bind -T copy-mode-vi y send-keys -X copy-pipe-and-cancel 'xclip -in -selection clipboard'
+        bind-key -T copy-mode-vi v send-keys -X begin-selection
+        bind-key -T copy-mode-vi y send-keys -X copy-pipe-and-cancel 'xclip -in -selection clipboard'
 
         # Custom key-binds
         bind-key -r f run-shell "tmux neww tmux-sessionizer"
-        bind-key -r h run-shell "tmux-home"
+        bind-key -r 'C-h' run-shell "tmux-home"
 
         # Style by JackDerksen/tmux
         set -g status-justify left
@@ -75,6 +67,7 @@
         set -g @prefix_highlight_output_suffix ""
 
         # Proper colors
+        set -ga terminal-overrides ",screen-256color*:Tc" # Colors stuff
         set-option -sa terminal-features ',ghostty:RGB' # Makes sure that colors in tmux are the same as without tmux
 
         # Undercurl support
@@ -86,15 +79,25 @@
         is_vim="ps -o state= -o comm= -t '#{pane_tty}' \
             | grep -iqE '^[^TXZ ]+ +(\\S+\\/)?g?(view|l?n?nvim?x?|fzf)(diff)?$'"
 
-        bind-key -r 'C-h' if-shell "$is_vim" 'send-keys F1'  'select-pane -L'
-        bind-key -r 'C-j' if-shell "$is_vim" 'send-keys F2'  'select-pane -D'
-        bind-key -r 'C-k' if-shell "$is_vim" 'send-keys F3'  'select-pane -U'
-        bind-key -r 'C-l' if-shell "$is_vim" 'send-keys F4'  'select-pane -R'
+        bind-key -n 'M-1' select-window -t 1
+        bind-key -n 'M-2' select-window -t 2
+        bind-key -n 'M-3' select-window -t 3
+        bind-key -n 'M-4' select-window -t 4
+        bind-key -n 'M-5' select-window -t 5
+        bind-key -n 'M-6' select-window -t 6
+        bind-key -n 'M-7' select-window -t 7
+        bind-key -n 'M-8' select-window -t 8
+        bind-key -n 'M-9' select-window -t 9
 
-        bind-key -T copy-mode-vi 'C-h' select-pane -L
-        bind-key -T copy-mode-vi 'C-j' select-pane -D
-        bind-key -T copy-mode-vi 'C-k' select-pane -U
-        bind-key -T copy-mode-vi 'C-l' select-pane -R
+        bind-key -n 'M-h' if-shell "$is_vim" 'send-keys F1' 'select-pane -L'
+        bind-key -n 'M-j' if-shell "$is_vim" 'send-keys F2' ' 'select-pane -D'
+        bind-key -n 'M-k' if-shell "$is_vim" 'send-keys F3' ' 'select-pane -U'
+        bind-key -n 'M-l' if-shell "$is_vim" 'send-keys F4' ' 'select-pane -R'
+
+        bind-key -T copy-mode-vi 'M-h' select-pane -L
+        bind-key -T copy-mode-vi 'M-j' select-pane -D
+        bind-key -T copy-mode-vi 'M-k' select-pane -U
+        bind-key -T copy-mode-vi 'M-l' select-pane -R
 
         # Undercurl support again? (taken from github:folke/tokyonight)
         set -g default-terminal "''${TERM}"

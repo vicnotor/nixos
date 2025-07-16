@@ -62,7 +62,6 @@
           "ctrl+m=text:▶"
           "ctrl+comma=text:★"
           "ctrl+shift+h=text:●"
-          "ctrl+shift+h=text:●"
         ];
 
         # Other

@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+# Use an argument if passed
+if [[ $# -eq 1 ]]; then
+    selected_path=$1
+else
+    # If no argument was provided, interactively choose a directory
+    selected_path=$(fd --type d --base-directory "$HOME" --search-path "$HOME" --exclude mnt | fzf)
+fi
+
+# If no directory was selected, exit the script
+if [[ -z $selected_path ]]; then
+    exit 0
+fi
+
+# Get the name of the selected directory, replacing "." with "_"
+session_name=$(basename "$selected_path" | tr . _)
+
+# We're outside of zellij, so lets create a new session or attach to a new one.
+if [[ -z $ZELLIJ ]]; then
+	cd $selected_path
+  
+  # -c will make zellij to either create a new session or to attach into an existing one
+	zellij attach $session_name -c
+	exit 0
+fi
+
+
+# We're inside zellij
+zellij action detach
+zellij attach $session_name -c

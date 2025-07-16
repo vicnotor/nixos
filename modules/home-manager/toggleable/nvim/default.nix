@@ -17,7 +17,7 @@
         lua5_1
         lua-language-server
         luajitPackages.luarocks
-        ripgrep # Needed for Telescope.nvim
+        ripgrep
         gcc
       ];
       file = {
