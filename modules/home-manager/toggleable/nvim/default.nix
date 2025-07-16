@@ -18,6 +18,7 @@
         lua-language-server
         luajitPackages.luarocks
         ripgrep # Needed for Telescope.nvim
+        gcc
       ];
       file = {
         ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/Git/vicnotor/nixos/extraFiles/nvim";
