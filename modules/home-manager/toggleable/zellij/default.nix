@@ -13,5 +13,6 @@
     programs.zellij = {
       enable = true;
     };
+    home.file.".config/zellij/config.kdl".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/Git/vicnotor/nixos/modules/home-manager/toggleable/zellij/config.kdl";
   };
 }
