@@ -10,5 +10,4 @@ Every non-declarative part of this sytem setup is listed in
 # TODO
 
 - Start using BTRFS with compression, noatime, subvolumes and snapper (for
-  automatic snapshots)
-- Start using impermanence for most subvolumes
+  automatic snapshots) + impermanence for some subvolumes

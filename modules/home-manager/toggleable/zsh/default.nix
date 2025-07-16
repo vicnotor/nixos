@@ -47,7 +47,7 @@
       };
       profileExtra = ''
         if [ -z $DISPLAY ] && [ $(tty) = /dev/tty1 ] && uwsm check may-start; then
-          exec uwsm start -S hyprland-uwsm.desktop
+          exec uwsm start hyprland-uwsm.desktop
         fi
       '';
       sessionVariables = {
@@ -63,7 +63,7 @@
         # CHANGE THIS FOR DEFAULT WALLPAPER, ALONG WITH $HOME/Git/vicnotor/nixos/modules/home-manager/toggleable/hyprlandHm/default.nix
         WPDEFAULT = "${config.home.homeDirectory}/personal/Pictures/wallpapers/destiny.png";
 
-        GIO_EXTRA_MODULES = "${pkgs.gvfs}/lib/gio/modules"; # potential thunar fix?
+        # GIO_EXTRA_MODULES = "${pkgs.gvfs}/lib/gio/modules"; # potential thunar fix?
       };
       shellAliases = import ./aliases.nix;
     };
