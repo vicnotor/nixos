@@ -9,9 +9,9 @@ stdenv.mkDerivation {
   version = "${kernel.modDirVersion}";
 
   src = fetchgit {
-    url = "https://github.com/vicnotor/acer-wmi-battery"; # NOTE: currently using vicnotor's fork until PR merge
-    branchName = "main";
-    sha256 = "sha256-XwcJFBT3KPAkfj8nZX1G0fHwjv2Od7DYh3MD1DICxf4=";
+    url = "https://github.com/vicnotor/acer-wmi-battery"; # NOTE: currently using own fork until PR merge
+    branchName = "nix-support";
+    sha256 = "sha256-13ciKwtetVUJkG/in+pm97dAwKWh9hHo9Vsu7R42eYk=";
   };
 
   hardeningDisable = ["pic" "format"];
