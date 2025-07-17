@@ -2,18 +2,12 @@
   stdenv,
   lib,
   kernel,
-  fetchgit,
 }:
 stdenv.mkDerivation {
   pname = "acer-wmi-battery";
   version = "${kernel.modDirVersion}";
 
-  src = fetchgit {
-    url = "https://github.com/vicnotor/acer-wmi-battery";
-    branchName = "main";
-    sha256 = "sha256-13ciKwtetVUJkG/in+pm97dAwKWh9hHo9Vsu7R42eYk=";
-  };
-
+  src = ./.;
   hardeningDisable = ["pic" "format"];
   nativeBuildInputs = kernel.moduleBuildDependencies;
 
