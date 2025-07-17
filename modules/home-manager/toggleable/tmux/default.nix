@@ -46,7 +46,7 @@
 
         bind-key -n 'M-c' new-window
         bind-key -n 'M-s' split-window -h
-        bind-key -n 'M-q' kill-pane
+        bind-key -n 'M-q' confirm-before -p "kill-pane #P? (y/n)" kill-pane
 
         bind-key -n 'M-n' next-window
         bind-key -n 'M-p' previous-window
