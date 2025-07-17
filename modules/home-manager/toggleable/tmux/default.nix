@@ -18,7 +18,7 @@
       mouse = true;
       keyMode = "vi";
       clock24 = true;
-      disableConfirmationPrompt = true;
+      # disableConfirmationPrompt = true;
 
       plugins = with pkgs; [
         {
@@ -46,6 +46,7 @@
 
         bind-key -n 'M-c' new-window
         bind-key -n 'M-s' split-window -h
+        bind-key -n 'M-q' kill-pane
 
         bind-key -n 'M-n' next-window
         bind-key -n 'M-p' previous-window
