@@ -13,7 +13,7 @@
   t = "uwsm app -- tmux";
 
   # Syncing
-  syncy = "onedrive --sync";
+  odsync = "onedrive --sync";
 
   # NixOS
   rebuild = "sudo echo -n && nixos-rebuild switch --sudo --flake ~/Git/vicnotor/nixos#nixlap";
