@@ -40,28 +40,19 @@
         bind-key -T copy-mode-vi v send-keys -X begin-selection
         bind-key -T copy-mode-vi y send-keys -X copy-pipe-and-cancel 'xclip -in -selection clipboard'
 
-        # Custom key-binds
         bind-key -r f run-shell "tmux neww tmux-sessionizer"
+        bind-key -n 'M-f' run-shell "tmux neww tmux-sessionizer"
         bind-key -r 'C-h' run-shell "tmux-home"
 
         bind-key -n 'M-c' new-window
-        bind-key -n 'M-s' split-window -h
+        bind-key -n 'M-Enter' split-window -h
         bind-key -n 'M-q' confirm-before -p "kill-pane #P? (y/n)" kill-pane
+        bind-key -n 'M-s' choose-tree -s
 
         bind-key -n 'M-n' next-window
         bind-key -n 'M-p' previous-window
         bind-key -n 'M-Tab' next-window
         bind-key -n 'M-BTab' previous-window
-
-        bind-key -n 'M-1' select-window -t 1
-        bind-key -n 'M-2' select-window -t 2
-        bind-key -n 'M-3' select-window -t 3
-        bind-key -n 'M-4' select-window -t 4
-        bind-key -n 'M-5' select-window -t 5
-        bind-key -n 'M-6' select-window -t 6
-        bind-key -n 'M-7' select-window -t 7
-        bind-key -n 'M-8' select-window -t 8
-        bind-key -n 'M-9' select-window -t 9
 
         bind-key -T copy-mode-vi 'M-h' select-pane -L
         bind-key -T copy-mode-vi 'M-j' select-pane -D

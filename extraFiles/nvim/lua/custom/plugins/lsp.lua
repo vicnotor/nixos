@@ -88,6 +88,7 @@ return {
       local lspconfig = require("lspconfig")
 
       -- No setup required for these
+      lspconfig.bashls.setup({})
       lspconfig.clangd.setup({})
       lspconfig.ocamllsp.setup({})
       lspconfig.pyright.setup({})

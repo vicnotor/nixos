@@ -5,6 +5,7 @@
 }: {
   home.packages = with pkgs; [
     alejandra # Nix formatting
+    bash-language-server
     brightnessctl
     discord
     evince # pdf
