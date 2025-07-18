@@ -48,6 +48,7 @@
         bind-key -n 'M-Enter' split-window -h
         bind-key -n 'M-q' confirm-before -p "kill-pane #P? (y/n)" kill-pane
         bind-key -n 'M-s' choose-tree -s
+        bind-key -n 'M-L' switch-client -l
 
         bind-key -n 'M-n' next-window
         bind-key -n 'M-p' previous-window

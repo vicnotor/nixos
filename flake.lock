@@ -982,11 +982,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1752855203,
-        "narHash": "sha256-QQ0yVbx0WA7WubHh9m29UBk6m7iqbqlM1kkhAD23kYw=",
+        "lastModified": 1752856086,
+        "narHash": "sha256-9b5phgYt2q5pK8Ri5k05RvzD6U3E5eJ5PI8I7IX7F7I=",
         "owner": "vicnotor",
         "repo": "nix-devshells",
-        "rev": "0352a183a220413401cc444ffa35669700c3b4cf",
+        "rev": "587e288e8dec4c3ffc1f62871644194818138380",
         "type": "github"
       },
       "original": {
