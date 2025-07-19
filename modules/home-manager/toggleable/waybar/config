@@ -2,7 +2,7 @@
   "height": 27,
   "layer": "top",
   "position": "top",
-  "margin": "2px",
+  "margin": "0px 2px 2px 2px",
   "reload_style_on_change": true,
 
   "modules-left": [

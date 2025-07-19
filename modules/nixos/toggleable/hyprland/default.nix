@@ -30,8 +30,9 @@
       };
     };
 
-    environment.systemPackages = with pkgs; [
-      hyprpolkitagent # Polkit agent needed for apps that request elevated privileges
+    environment.systemPackages = [
+      inputs.hyprpolkitagent.packages.${pkgs.stdenv.hostPlatform.system}.default
+      inputs.hyprland-qtutils.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
 
     systemd = {
@@ -50,7 +51,7 @@
           after = ["graphical-session.target"];
           serviceConfig = {
             Type = "simple";
-            ExecStart = "${pkgs.hyprpolkitagent}/libexec/hyprpolkitagent";
+            ExecStart = "${inputs.hyprpolkitagent.packages.${pkgs.stdenv.hostPlatform.system}.default}/libexec/hyprpolkitagent";
             Restart = "on-failure";
             RestartSec = 1;
             TimeoutStopSec = 10;
