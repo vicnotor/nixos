@@ -53,9 +53,9 @@ window#waybar.empty #window {
 .modules-left,
 .modules-right,
 .modules-center {
-  background: alpha(@mantle, .8);
+  background: alpha(@mantle, .9);
   padding: 0 5px;
-  border-radius: 10px;
+  border-radius: 7px;
   margin: 0 8px;
 }
 

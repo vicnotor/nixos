@@ -2,7 +2,7 @@
   "height": 27,
   "layer": "top",
   "position": "top",
-  "margin": "0px",
+  "margin": "2px",
   "reload_style_on_change": true,
 
   "modules-left": [
@@ -170,7 +170,7 @@
       ""
     ],
     "on-click": "taskmanager",
-    "thermal-zone": 5
+    "thermal-zone": 4
   },
   "tray": {
     "icon-size": 16,
