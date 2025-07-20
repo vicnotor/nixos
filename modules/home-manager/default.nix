@@ -11,7 +11,6 @@
     ./toggleable/direnv
     ./toggleable/dunst
     ./toggleable/extraDotfiles
-    ./toggleable/fuzzel
     ./toggleable/fzf
     ./toggleable/ghostty
     ./toggleable/git
@@ -42,7 +41,6 @@
   direnvModule.enable = lib.mkDefault true;
   dunstModule.enable = lib.mkDefault true;
   extraDotfilesModule.enable = lib.mkDefault true;
-  fuzzelModule.enable = lib.mkDefault true;
   fzfModule.enable = lib.mkDefault true;
   ghosttyModule.enable = lib.mkDefault true;
   gitModule.enable = lib.mkDefault true;

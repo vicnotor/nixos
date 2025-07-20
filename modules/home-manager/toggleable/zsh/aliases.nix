@@ -10,7 +10,7 @@
   ll = "ls -alF";
 
   # Tmux
-  t = "uwsm app -- tmux";
+  t = "app2unit -- tmux";
 
   # Syncing
   odsync = "onedrive --sync";
@@ -34,16 +34,16 @@
   off = "poweroff";
   hibernate = "systemctl hibernate";
   goto = "source";
-  open = "uwsm app -- xdg-open";
+  open = "xdg-open";
   valias = "vim $HOME/Git/vicnotor/nixos/modules/home-manager/toggleable/zsh/aliases.nix";
-  view = "uwsm app -- qimgv";
-  ev = "uwsm app -- silent evince";
-  thu = "uwsm app -- silent thunar .";
+  view = "app2unit -- qimgv";
+  ev = "silent evince";
+  thu = "silent thunar .";
   R = "R --save --quiet";
   pf = "fd --type f | fzf | xargs nvim";
   cp = "cp -v";
   mv = "mv -v";
-  godot = "uwsm app -- godot4 --display-driver wayland";
+  godot = "app2unit -- godot4 --display-driver wayland";
   batterystatus = "acpi";
   vpak = "nvim $HOME/Git/vicnotor/nixos/modules/home-manager/always/packages/default.nix";
   vrpak = "nvim $HOME/Git/vicnotor/nixos/modules/home-manager/toggleable/r/default.nix";

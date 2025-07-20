@@ -34,7 +34,6 @@
       inputs.hyprpolkitagent.packages.${pkgs.stdenv.hostPlatform.system}.default
       inputs.hyprland-qtutils.packages.${pkgs.stdenv.hostPlatform.system}.default
       pkgs.app2unit
-      pkgs.xdg-terminal-exec
     ];
 
     systemd = {

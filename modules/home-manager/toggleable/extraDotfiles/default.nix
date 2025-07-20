@@ -20,12 +20,6 @@
         sync_dir="~/personal"
         skip_dir=".git"
       '';
-      # If using Dolphin:
-      # ".config/xdg-desktop-portal/hyprland-portals.conf".text = ''
-      #   [preferred]
-      #   default = hyprland;gtk
-      #   org.freedesktop.impl.portal.FileChooser = kde
-      # '';
     };
   };
 }

@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-uwsm app -- alacritty -T LargeFloatingWindow -e btop
+app2unit -- alacritty -T LargeFloatingWindow -e btop

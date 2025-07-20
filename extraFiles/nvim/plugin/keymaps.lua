@@ -15,7 +15,7 @@ end, { desc = "Go to next diagnostic message" })
 set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
 
 -- Open the file explorer
-set("n", "<leader>th", "<CMD>silent !uwsm app -- silent $FILE_PICKER .<CR>", { desc = "Open file [e][x]plorer in working directory", silent = true })
+set("n", "<leader>th", "<CMD>silent !app2unit -- silent $FILE_PICKER .<CR>", { desc = "Open file [e][x]plorer in working directory", silent = true })
 
 -- yank to clipboard
 set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank to clipboard" })

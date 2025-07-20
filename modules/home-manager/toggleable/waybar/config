@@ -82,7 +82,7 @@
   },
   "custom/rofi": {
     "format": "  ",
-    "on-click": "rofi -show drun -show-icons -run-command 'uwsm app -- {cmd}'",
+    "on-click": "rofi -show drun -show-icons -run-command 'app2unit -- {cmd}'",
     "tooltip": false
   },
   "custom/screenoff": {
