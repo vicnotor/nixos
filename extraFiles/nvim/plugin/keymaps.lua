@@ -15,7 +15,7 @@ end, { desc = "Go to next diagnostic message" })
 set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
 
 -- Open the file explorer
-set("n", "<leader>th", "<CMD>silent !silent $FILE_PICKER .<CR>", { desc = "Open file [e][x]plorer in working directory", silent = true })
+set("n", "<leader>th", "<CMD>silent !uwsm app -- silent $FILE_PICKER .<CR>", { desc = "Open file [e][x]plorer in working directory", silent = true })
 
 -- yank to clipboard
 set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank to clipboard" })
@@ -51,7 +51,7 @@ end, { desc = "Toggle theme", silent = true })
 set("n", "<F11>", "<cmd>ZenMode<CR>", { desc = "Start ZenMode", silent = true })
 
 -- Open current file in browser
-set("n", "gX", "<cmd>silent !zen % &<CR>", { desc = "Open current file in Chrome" })
+set("n", "gX", "<cmd>silent !xdg-open % &<CR>", { desc = "Open current file in Chrome" })
 
 -- nvim-spectre
 set("n", "<leader>Sr", '<cmd>lua require("spectre").toggle()<CR>', { desc = "Toggle Spectre" })
