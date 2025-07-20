@@ -1219,11 +1219,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1752856086,
-        "narHash": "sha256-9b5phgYt2q5pK8Ri5k05RvzD6U3E5eJ5PI8I7IX7F7I=",
+        "lastModified": 1753033303,
+        "narHash": "sha256-/vp1xuzhlMgPiS/4zXCNz0QIsQFZVgpOk+kMN9VINrc=",
         "owner": "vicnotor",
         "repo": "nix-devshells",
-        "rev": "587e288e8dec4c3ffc1f62871644194818138380",
+        "rev": "4ca575d22b0a2c7044767c56038560687c3d243d",
         "type": "github"
       },
       "original": {
