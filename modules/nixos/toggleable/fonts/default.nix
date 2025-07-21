@@ -22,6 +22,7 @@
         lmodern
         libertine
         corefonts # Microsoft
+        vista-fonts # Microsoft
       ];
 
       fontconfig = {
