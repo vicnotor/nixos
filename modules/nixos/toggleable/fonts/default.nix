@@ -21,6 +21,7 @@
         helvetica-neue-lt-std
         lmodern
         libertine
+        corefonts # Microsoft
       ];
 
       fontconfig = {

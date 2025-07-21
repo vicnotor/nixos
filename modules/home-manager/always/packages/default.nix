@@ -21,7 +21,6 @@
     imagemagick
     inkscape
     jq
-    libreoffice
     mermaid-cli
     networkmanagerapplet
     inputs.nixd.packages.${pkgs.system}.default # nixd: Nix lsp
