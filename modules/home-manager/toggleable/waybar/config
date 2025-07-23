@@ -6,7 +6,6 @@
   "reload_style_on_change": true,
 
   "modules-left": [
-    "custom/rofi",
     "custom/whitespace",
     "tray"
   ],
@@ -17,36 +16,27 @@
   ],
   "modules-right": [
     "pulseaudio#output",
-    "custom/separator",
     "pulseaudio#input",
-    "custom/separator",
     "backlight",
-    "custom/separator",
     "custom/wl-gammarelay",
-    "custom/separator",
     "memory",
-    "custom/separator",
-    "temperature",
-    "custom/separator",
     "battery",
-    "custom/separator",
     "clock"
   ],
 
   "backlight": {
-    "format": "{icon} {percent}%",
+    "format": "{icon}",
     "format-icons": [
       "󰃞",
       "󰃟",
       "󰃠"
     ],
     "on-click-middle": "brightnessctl s 25%",
-    "on-click-right": "brightnessctl s 50%"
+    "on-click-right": "brightnessctl s 50%",
+    "tooltip-format": "{percent}%"
   },
   "battery": {
-    "format": "{icon}  {capacity}%",
-    "format-charging": "󱐌 {capacity}%",
-    "format-full": " {capacity}%",
+    "format": "{icon}",
     "format-icons": [
       "",
       "",
@@ -54,7 +44,10 @@
       "",
       ""
     ],
-    "format-plugged": " {capacity}%",
+    "format-charging": "󱐌",
+    "format-full": "",
+    "format-plugged": "",
+    "tooltip-format": "{capacity}%",
     "interval": 10,
     "states": {
       "critical": 15,
@@ -68,11 +61,10 @@
     "on-click": "xdg-open https://calendar.google.com > /dev/null 2>&1 &",
     "calendar": {
       "format": {
-        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "days": "<span color='#ECC6D9'><b>{}</b></span>",
         "months": "<span color='#ffead3'><b>{}</b></span>",
         "today": "<span color='#ff6699'><b><u>{}</u></b></span>",
-        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-        "weeks": "<span color='#99ffdd'><b>W{}</b></span>"
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>"
       },
       "mode": "month",
       "mode-mon-col": 3,
@@ -102,13 +94,13 @@
   },
   "custom/wl-gammarelay": {
     "exec": "wl-gammarelay-rs watch {t}",
-    "format": "  ",
+    "format": "",
     "on-click-middle": "busctl --user set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 3800",
     "on-click-right": "busctl --user set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 6500",
     "on-scroll-down": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n -100",
     "on-scroll-up": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n +100",
     "tooltip": true,
-    "tooltip-format": " {}K"
+    "tooltip-format": "{}K"
   },
   "custom/nextws": {
     "format": "",
@@ -128,22 +120,22 @@
     "sort-by-number": true
   },
   "memory": {
-    "format": "󰍛 {}%",
+    "format": "󰍛",
     "on-click": "taskmanager"
   },
   "pulseaudio#input": {
     "format": "{format_source}",
-    "format-source": "󰍬 {volume}%",
+    "format-source": "󰍬",
     "format-source-muted": "󰍭",
     "on-click": "pavucontrol",
     "on-click-middle": "wpctl set-volume @DEFAULT_SOURCE@ 25%",
     "on-click-right": "wpctl set-mute @DEFAULT_SOURCE@ toggle",
     "on-scroll-down": "wpctl set-volume @DEFAULT_SOURCE@ 1%-",
     "on-scroll-up": "wpctl set-volume @DEFAULT_SOURCE@ 1%+",
-    "tooltip-format": "{desc}"
+    "tooltip-format": "{format_source}"
   },
   "pulseaudio#output": {
-    "format": "{icon}  {volume}%",
+    "format": "{icon}",
     "format-icons": {
       "car": "",
       "default": [
@@ -157,6 +149,7 @@
       "portable": ""
     },
     "format-muted": "",
+    "tooltip-format": "{volume}%",
     "on-click": "pavucontrol",
     "on-click-middle": "wpctl set-volume @DEFAULT_SINK@ 25%",
     "on-click-right": "wpctl set-mute @DEFAULT_SINK@ toggle"

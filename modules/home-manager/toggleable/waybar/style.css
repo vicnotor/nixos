@@ -155,6 +155,11 @@ button:hover {
   background-color: #f53c3c;
 }
 
+#temperature.critical {
+  color: #000000;
+  background-color: #f53c3c;
+}
+
 label:focus {
   background-color: #000000;
 }
