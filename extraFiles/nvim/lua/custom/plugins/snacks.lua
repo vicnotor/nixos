@@ -17,7 +17,7 @@ return {
       fps = 165,
     },
     indent = {
-      enabled = true,
+      enabled = false,
       only_scope = true,
       animate = {
         duration = {
