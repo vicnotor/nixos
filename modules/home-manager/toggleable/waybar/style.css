@@ -126,7 +126,7 @@ button:hover {
 #clock,
 #custom-wl-gammarelay,
 #custom-screenoff {
-  padding: 0 6px;
+  padding: 0 4px;
   color: @subtext1;
 }
 
