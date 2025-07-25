@@ -7,7 +7,8 @@
 
   "modules-left": [
     "custom/whitespace",
-    "tray"
+    "tray",
+    "mpris"
   ],
   "modules-center": [
     "hyprland/workspaces",
@@ -170,5 +171,13 @@
     "reverse-direction": false,
     "spacing": 6,
     "show-passive-items": true,
+  },
+  "mpris": {
+    "format": "{title} {status_icon}",
+    "format-paused": "{title} {status_icon}",
+    "status-icons": {
+      "default": "",
+      "paused": ""
+    },
   }
 }
