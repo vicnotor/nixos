@@ -175,6 +175,7 @@
   "mpris": {
     "format": "{status_icon} {title}",
     "format-paused": "{status_icon} {title}",
+    "title-len": 30,
     "status-icons": {
       "default": "",
       "paused": ""
