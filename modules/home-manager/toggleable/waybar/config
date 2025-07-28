@@ -16,7 +16,6 @@
     "custom/nextws"
   ],
   "modules-right": [
-    "pulseaudio/slider",
     "pulseaudio#output",
     "pulseaudio#input",
     "backlight",
