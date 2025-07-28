@@ -8,6 +8,7 @@
     # Toggleable (see below)
     ./toggleable/alacritty
     ./toggleable/btop
+    ./toggleable/caelestia
     ./toggleable/direnv
     ./toggleable/dunst
     ./toggleable/extraDotfiles
@@ -25,6 +26,7 @@
     ./toggleable/nvim
     ./toggleable/pointerCursor
     ./toggleable/python
+    ./toggleable/quickshell
     ./toggleable/r
     ./toggleable/rofi
     ./toggleable/stylixHm
@@ -53,6 +55,7 @@
   nix-indexModule.enable = lib.mkDefault true;
   nvimModule.enable = lib.mkDefault true;
   pythonModule.enable = lib.mkDefault true;
+  quickshellModule.enable = lib.mkDefault true;
   rModule.enable = lib.mkDefault true;
   rofiModule.enable = lib.mkDefault true;
   stylixHmModule.enable = lib.mkDefault true;
@@ -63,6 +66,7 @@
   zshModule.enable = lib.mkDefault true;
 
   # Disabled by default
+  caelestiaModule.enable = lib.mkDefault false;
   gtkModule.enable = lib.mkDefault false; # Not needed because of Stylix
   htopModule.enable = lib.mkDefault false;
   pointerCursorModule.enable = lib.mkDefault false; # Not needed because of Stylix

@@ -13,7 +13,6 @@
 
     # Toggleable (see below)
     ./toggleable/bluetooth
-    ./toggleable/caelestia
     ./toggleable/dolphin
     ./toggleable/fonts
     ./toggleable/graphics
@@ -55,6 +54,5 @@
   zshModule.enable = lib.mkDefault true;
 
   # Disabled by default
-  caelestiaModule.enable = lib.mkDefault false;
   dolphinModule.enable = lib.mkDefault false;
 }
