@@ -32,11 +32,17 @@ return {
               "--cases-exp-indent", "2",
             }
           },
+          qmlformat = {
+            inherit = false,
+            command = "qmlformat",
+            args = { "-w", "2", "$FILENAME" },
+          },
         },
         formatters_by_ft = {
           tex      = { "latexindent" },
-          markdown = { "mdformat", },
-          ocaml    = { "ocamlformat", },
+          markdown = { "mdformat" },
+          ocaml    = { "ocamlformat" },
+          qml      = { "qmlformat" },
         },
       })
     end,

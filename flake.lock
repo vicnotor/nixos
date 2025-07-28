@@ -1289,11 +1289,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1753117238,
-        "narHash": "sha256-m31gjAnpyr2fbVxliNDg4CUEkvnu1tzzZ6ejblyy5Yw=",
+        "lastModified": 1753704407,
+        "narHash": "sha256-VPfxXV2T8DTZlNce3db9IgzsXu3DYmc6V01TS4OVOOI=",
         "owner": "vicnotor",
         "repo": "nix-devshells",
-        "rev": "a68ef3bcce4af8312f9c8237ef6e9db67b8e2733",
+        "rev": "a6135e3dacde7d03aae983678ce0564b6992c622",
         "type": "github"
       },
       "original": {
@@ -1628,6 +1628,26 @@
         "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
       }
     },
+    "quickshell_2": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1753595452,
+        "narHash": "sha256-vqkSDvh7hWhPvNjMjEDV4KbSCv2jyl2Arh73ZXe274k=",
+        "ref": "refs/heads/master",
+        "rev": "a5431dd02dc23d9ef1680e67777fed00fe5f7cda",
+        "revCount": 665,
+        "type": "git",
+        "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
+      }
+    },
     "root": {
       "inputs": {
         "auto-cpufreq": "auto-cpufreq",
@@ -1645,6 +1665,7 @@
         "nixd": "nixd",
         "nixpkgs": "nixpkgs_9",
         "nixpkgs-stable": "nixpkgs-stable",
+        "quickshell": "quickshell_2",
         "stylix": "stylix",
         "waybar": "waybar",
         "zen-browser": "zen-browser"

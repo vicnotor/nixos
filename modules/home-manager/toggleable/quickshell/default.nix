@@ -11,7 +11,7 @@
   };
 
   config = lib.mkIf config.quickshellModule.enable {
-    environment.systemPackages = [
+    home.packages = [
       inputs.quickshell.packages.${pkgs.system}.default
       pkgs.kdePackages.qtdeclarative # Contains qmlls and qmllint
     ];

@@ -38,7 +38,7 @@
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs"; # THIS IS IMPORTANT
     };
-    caelestia.url = "github:caelestia-dots/shell";
+    # caelestia.url = "github:caelestia-dots/shell";
   };
 
   outputs = {

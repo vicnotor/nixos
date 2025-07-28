@@ -11,7 +11,7 @@
   };
 
   config = lib.mkIf config.caelestiaModule.enable {
-    environment.systemPackages = [
+    home.packages = [
       inputs.caelestia.packages.${pkgs.system}.default
     ];
   };

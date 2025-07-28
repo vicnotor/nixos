@@ -92,17 +92,9 @@ return {
       lspconfig.clangd.setup({})
       lspconfig.ocamllsp.setup({})
       lspconfig.pyright.setup({})
+      lspconfig.qmlls.setup({})
       lspconfig.ts_ls.setup({})
       lspconfig.zls.setup({})
-      lspconfig.ltex_plus.setup({
-        filetypes = { "tex", },
-        settings = {
-          ltex = {
-            language = "en-GB",
-            checkFrequency = "save",
-          },
-        },
-      })
 
       -- With additional setup
       lspconfig["gdscript"].setup({
@@ -129,6 +121,15 @@ return {
               -- Ignore Lua_LS's noisy `missing-fields` warnings
               diagnostics = { disable = { "missing-fields" } },
             },
+          },
+        },
+      })
+      lspconfig.ltex_plus.setup({
+        filetypes = { "tex", },
+        settings = {
+          ltex = {
+            language = "en-GB",
+            checkFrequency = "save",
           },
         },
       })
