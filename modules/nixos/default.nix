@@ -13,6 +13,7 @@
 
     # Toggleable (see below)
     ./toggleable/bluetooth
+    ./toggleable/caelestia
     ./toggleable/dolphin
     ./toggleable/fonts
     ./toggleable/graphics
@@ -35,6 +36,7 @@
 
   # Enabled by default
   bluetoothModule.enable = lib.mkDefault true;
+  caelestiaModule.enable = lib.mkDefault true;
   fontsModule.enable = lib.mkDefault true;
   graphicsModule.enable = lib.mkDefault true;
   hyprlandModule.enable = lib.mkDefault true;

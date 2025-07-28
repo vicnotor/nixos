@@ -1,5 +1,5 @@
 {
-  "height": 27,
+  "height": 32,
   "layer": "top",
   "position": "top",
   "margin": "0px 2px 2px 2px",
@@ -16,6 +16,7 @@
     "custom/nextws"
   ],
   "modules-right": [
+    "pulseaudio/slider",
     "pulseaudio#output",
     "pulseaudio#input",
     "backlight",
@@ -179,5 +180,10 @@
       "default": "",
       "paused": ""
     },
+  },
+  "pulseaudio/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "horizontal"
   }
 }
