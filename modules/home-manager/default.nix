@@ -41,6 +41,7 @@
   # Enabled by default
   alacrittyModule.enable = lib.mkDefault true;
   btopModule.enable = lib.mkDefault true;
+  caelestiaModule.enable = lib.mkDefault true;
   direnvModule.enable = lib.mkDefault true;
   dunstModule.enable = lib.mkDefault true;
   extraDotfilesModule.enable = lib.mkDefault true;
@@ -66,7 +67,6 @@
   zshModule.enable = lib.mkDefault true;
 
   # Disabled by default
-  caelestiaModule.enable = lib.mkDefault false;
   gtkModule.enable = lib.mkDefault false; # Not needed because of Stylix
   htopModule.enable = lib.mkDefault false;
   pointerCursorModule.enable = lib.mkDefault false; # Not needed because of Stylix
