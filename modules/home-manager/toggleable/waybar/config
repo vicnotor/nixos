@@ -6,6 +6,7 @@
   "reload_style_on_change": true,
 
   "modules-left": [
+    "custom/rofi",
     "custom/whitespace",
     "tray",
     "mpris"
@@ -37,7 +38,7 @@
     "tooltip-format": "{percent}%"
   },
   "battery": {
-    "format": "{icon}",
+    "format": "{icon} {capacity}%",
     "format-icons": [
       "",
       "",
@@ -45,7 +46,7 @@
       "",
       ""
     ],
-    "format-charging": "󱐌",
+    "format-charging": "󱐌 {capacity}%",
     "format-full": "",
     "format-plugged": "",
     "tooltip-format": "{capacity}%",
@@ -56,7 +57,7 @@
     }
   },
   "clock": {
-    "format": "{:%d-%m %H:%M:%S}",
+    "format": "{:%H:%M:%S}",
     "interval": 1,
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "on-click": "xdg-open https://calendar.google.com > /dev/null 2>&1 &",
