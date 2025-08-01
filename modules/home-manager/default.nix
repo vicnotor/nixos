@@ -21,12 +21,12 @@
     ./toggleable/latex
     ./toggleable/libreoffice
     ./toggleable/mpv
+    ./toggleable/my-quickshell
     ./toggleable/mypkgs
     ./toggleable/nix-index
     ./toggleable/nvim
     ./toggleable/pointerCursor
     ./toggleable/python
-    ./toggleable/quickshell
     ./toggleable/r
     ./toggleable/rofi
     ./toggleable/stylixHm
@@ -52,11 +52,11 @@
   latexModule.enable = lib.mkDefault true;
   libreofficeModule.enable = lib.mkDefault true;
   mpvModule.enable = lib.mkDefault true;
+  my-quickshellModule.enable = lib.mkDefault true;
   mypkgsModule.enable = lib.mkDefault true;
   nix-indexModule.enable = lib.mkDefault true;
   nvimModule.enable = lib.mkDefault true;
   pythonModule.enable = lib.mkDefault true;
-  quickshellModule.enable = lib.mkDefault true;
   rModule.enable = lib.mkDefault true;
   rofiModule.enable = lib.mkDefault true;
   stylixHmModule.enable = lib.mkDefault true;

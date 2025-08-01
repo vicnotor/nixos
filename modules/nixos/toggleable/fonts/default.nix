@@ -23,6 +23,8 @@
         libertine
         corefonts # Microsoft
         vista-fonts # Microsoft
+        material-symbols
+        ibm-plex
       ];
 
       fontconfig = {
