@@ -14,7 +14,7 @@
       enable = true;
       enableCompletion = true;
       autocd = true;
-      dotDir = ".config/zsh";
+      dotDir = "${config.xdg.configHome}/zsh";
       initContent = ''
         # Keybindings
         bindkey -s ^f "tmux-sessionizer\n"
