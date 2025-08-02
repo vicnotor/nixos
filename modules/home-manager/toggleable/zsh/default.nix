@@ -1,7 +1,6 @@
 {
   lib,
   config,
-  pkgs,
   ...
 }: {
   options = {
@@ -14,7 +13,7 @@
       enable = true;
       enableCompletion = true;
       autocd = true;
-      dotDir = "${config.xdg.configHome}/zsh";
+      dotDir = ".config/zsh";
       initContent = ''
         # Keybindings
         bindkey -s ^f "tmux-sessionizer\n"
