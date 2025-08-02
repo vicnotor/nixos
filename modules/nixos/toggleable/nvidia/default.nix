@@ -23,5 +23,10 @@
     environment.systemPackages = with pkgs; [
       egl-wayland
     ];
+
+    boot.kernelParams = [
+      "nvidia.NVreg_PreserveVideoMemoryAllocations=1"
+      "nvidia-drm.modeset=1"
+    ];
   };
 }
