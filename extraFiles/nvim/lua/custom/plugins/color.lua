@@ -1,5 +1,5 @@
 -- theme customization
-Mycolor = "tokyonight" -- Change this to switch themes
+Mycolor = "rose-pine" -- Change this to switch themes
 
 -- This function sets the theme the right way
 function Color(color)
@@ -55,25 +55,10 @@ return {
     end,
   },
   {
-    -- Copied from Coding with Sphere (youtube)
     "vague2k/vague.nvim",
     config = function()
       require("vague").setup({
-        style = {
-          comments = "none",
-          strings = "none",
-        },
-        colors = {
-          func = "#bc96b0",
-          keyword = "#787bab",
-          -- string = "#d4bd98",
-          string = "#8a739a",
-          -- string = "#f2e6ff",
-          -- number = "#f2e6ff",
-          -- string = "#d8d5b1",
-          number = "#8f729e",
-          -- type = "#dcaed7",
-        },
+        italic = false
       })
     end,
   },
@@ -92,11 +77,6 @@ return {
           italic = false,
         },
         highlight_groups = {
-          -- Normal background color
-          -- Normal = { bg = "#1f1d2e" }, -- Rosé pine normal "surface"
-          -- NormalFloat = { bg = "#1f1d2e", fg = "#FFFFFF" }, -- Rosé pine normal "surface"
-          -- Normal = { bg = "#191724" }, -- Rosé pine normal "base"
-          -- NormalFloat = { bg = "#191724" }, -- Rosé pine normal "base"
           Pmenu = { bg = "#2f1d54" },
           ["@markup.italic"] = { italic = true },
         },

@@ -36,7 +36,8 @@
         bold-color = "bright"; # Bold text will use the bright color palette
 
         # Theme
-        theme = "/home/vic/Git/vicnotor/nixos/modules/home-manager/toggleable/ghostty/theme.txt";
+        theme = "rose-pine";
+        background = "#141318";
 
         # Cursor
         cursor-style = "block";
