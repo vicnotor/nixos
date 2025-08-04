@@ -11,6 +11,10 @@
   };
 
   config = lib.mkIf config.ghosttyModule.enable {
+    home.file = {
+      ".config/ghostty/themes/caelestia".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/Git/vicnotor/nixos/modules/home-manager/toggleable/ghostty/caelestia";
+    };
+
     programs.ghostty = {
       enable = true;
       package = inputs.ghostty.packages.${pkgs.system}.default.overrideAttrs (drv: {
@@ -36,9 +40,7 @@
         bold-color = "bright"; # Bold text will use the bright color palette
 
         # Theme
-        theme = ./theme.txt;
-        selection-background = "#3b3e40";
-        selection-foreground = "#f06090";
+        theme = "caelestia";
 
         # Cursor
         cursor-style = "block";
