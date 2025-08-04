@@ -36,7 +36,7 @@
         bold-color = "bright"; # Bold text will use the bright color palette
 
         # Theme
-        theme = "tokyonight";
+        theme = ./theme.txt;
         selection-background = "#3b3e40";
         selection-foreground = "#f06090";
 
