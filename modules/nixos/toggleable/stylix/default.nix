@@ -6,7 +6,7 @@
 }: let
   # scheme = "tokyo-night-dark";
   # schemeFile = "${pkgs.base16-schemes}/share/themes/${scheme}.yaml";
-  customSchemeFile = ./tokyonight-custom.yaml;
+  customSchemeFile = ./caelestia-custom.yaml;
 in {
   options = {
     stylixModule.enable =
