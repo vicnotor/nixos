@@ -55,7 +55,7 @@
 
         EDITOR = "nvim";
         BROWSER = "zen";
-        TERMINAL = "ghostty";
+        TERMINAL = "wezterm";
         VISUAL = "nvim";
         FILE_PICKER = "thunar";
 

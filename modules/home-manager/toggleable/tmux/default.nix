@@ -94,17 +94,21 @@
         set -g @prefix_highlight_output_prefix "#[fg=#e0af68]#[bg=#16161e]#[fg=#16161e]#[bg=#e0af68]"
         set -g @prefix_highlight_output_suffix ""
 
-        # Proper colors
-        set -ga terminal-overrides ",screen-256color*:Tc" # Colors stuff
-        set-option -sa terminal-features ',ghostty:RGB' # Makes sure that colors in tmux are the same as without tmux
+        set -g default-terminal "tmux-256color"
+        set -ga terminal-overrides ",*256col*:Tc"
+        set-option -sa terminal-features ',*256col*:RGB' # Makes sure that colors in tmux are the same as without tmux
 
-        # Undercurl support
-        set-option -ga terminal-features ",ghostty:usstyle"
-
-        # Undercurl support again? (taken from github:folke/tokyonight)
-        set -g default-terminal "''${TERM}"
-        set -as terminal-overrides ',*:Smulx=\E[4::%p1%dm'  # undercurl support
-        set -as terminal-overrides ',*:Setulc=\E[58::2::::%p1%{65536}%/%d::%p1%{256}%/%{255}%&%d::%p1%{255}%&%d%;m'  # underscore colours - needs tmux-3.0
+        # # Proper colors
+        # set -ga terminal-overrides ",screen-256color*:Tc" # Colors stuff
+        # set-option -sa terminal-features ',ghostty:RGB' # Makes sure that colors in tmux are the same as without tmux
+        #
+        # # Undercurl support
+        # set-option -ga terminal-features ",ghostty:usstyle"
+        #
+        # # Undercurl support again? (taken from github:folke/tokyonight)
+        # set -g default-terminal "''${TERM}"
+        # set -as terminal-overrides ',*:Smulx=\E[4::%p1%dm'  # undercurl support
+        # set -as terminal-overrides ',*:Setulc=\E[58::2::::%p1%{65536}%/%d::%p1%{256}%/%{255}%&%d::%p1%{255}%&%d%;m'  # underscore colours - needs tmux-3.0
 
         # Image preview workaround
         set -g allow-passthrough on

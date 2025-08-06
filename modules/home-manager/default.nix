@@ -32,6 +32,7 @@
     ./toggleable/stylixHm
     ./toggleable/tmux
     ./toggleable/waybar
+    ./toggleable/wezterm
     ./toggleable/zellij
     ./toggleable/zoxide
     ./toggleable/zen
@@ -61,6 +62,7 @@
   rofiModule.enable = lib.mkDefault true;
   stylixHmModule.enable = lib.mkDefault true;
   tmuxModule.enable = lib.mkDefault true;
+  weztermModule.enable = lib.mkDefault true;
   zoxideModule.enable = lib.mkDefault true;
   zenModule.enable = lib.mkDefault true;
   zshModule.enable = lib.mkDefault true;

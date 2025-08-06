@@ -20,6 +20,7 @@
         rofi.enable = false;
         tmux.enable = false;
         waybar.enable = false;
+        wezterm.enable = false;
       };
       iconTheme = {
         enable = true;
