@@ -9,6 +9,7 @@
   };
 
   config = lib.mkIf config.nvidiahybridModule.enable {
+    services.xserver.videoDrivers = ["intel"];
     hardware = {
       nvidia = {
         prime = {

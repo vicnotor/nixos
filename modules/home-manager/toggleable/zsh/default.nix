@@ -13,7 +13,7 @@
       enable = true;
       enableCompletion = true;
       autocd = true;
-      dotDir = ".config/zsh";
+      dotDir = "/home/vic/.config/zsh";
       initContent = ''
         # Keybindings
         bindkey -s ^f "tmux-sessionizer\n"
