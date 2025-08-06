@@ -21,7 +21,7 @@
         gcc
       ];
       file = {
-        ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/Git/vicnotor/nixos/extraFiles/nvim";
+        ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/Git/vicnotor/nixos/modules/home-manager/toggleable/nvim";
       };
     };
   };

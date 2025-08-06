@@ -3,7 +3,6 @@
     # Always enabled
     ./always/home-manager
     ./always/packages
-    ./always/scripts
 
     # Toggleable (see below)
     ./toggleable/alacritty
@@ -22,6 +21,7 @@
     ./toggleable/libreoffice
     ./toggleable/mpv
     ./toggleable/my-quickshell
+    ./toggleable/my-scripts
     ./toggleable/mypkgs
     ./toggleable/nix-index
     ./toggleable/nvim
@@ -54,6 +54,7 @@
   libreofficeModule.enable = lib.mkDefault true;
   mpvModule.enable = lib.mkDefault true;
   my-quickshellModule.enable = lib.mkDefault true;
+  my-scriptsModule.enable = lib.mkDefault true;
   mypkgsModule.enable = lib.mkDefault true;
   nix-indexModule.enable = lib.mkDefault true;
   nvimModule.enable = lib.mkDefault true;
