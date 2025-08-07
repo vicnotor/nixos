@@ -56,7 +56,6 @@
           "shift+enter=ignore"
           "ctrl+enter=text:✗"
           "ctrl+shift+enter=text:✓"
-          "ctrl+shift+enter=text:✓"
           "ctrl+i=text:◆"
           "ctrl+m=text:▶"
           "ctrl+comma=text:★"
