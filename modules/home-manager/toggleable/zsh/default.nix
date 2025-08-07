@@ -60,7 +60,7 @@
         FILE_PICKER = "thunar";
 
         # CHANGE THIS FOR DEFAULT WALLPAPER, ALONG WITH $HOME/Git/vicnotor/nixos/modules/home-manager/toggleable/hyprlandHm/default.nix
-        WPDEFAULT = "${config.home.homeDirectory}/personal/Pictures/wallpapers/raiden_genshin.png";
+        WPDEFAULT = "${config.home.homeDirectory}/personal/Pictures/wallpapers/cats.jpg";
 
         # GIO_EXTRA_MODULES = "${pkgs.gvfs}/lib/gio/modules"; # potential thunar fix if mounting is bugged
       };

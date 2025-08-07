@@ -24,8 +24,8 @@
       settings = {
 
         # CHANGE THIS FOR DEFAULT WALLPAPER, ALONG WITH $HOME/Git/vicnotor/nixos/modules/home-manager/toggleable/zsh/default.nix
-        preload = ["${home}/personal/Pictures/wallpapers/raiden_genshin.png"];
-        wallpaper = [",${home}/personal/Pictures/wallpapers/raiden_genshin.png"];
+        preload = ["${home}/personal/Pictures/wallpapers/cats.jpg"];
+        wallpaper = [",${home}/personal/Pictures/wallpapers/cats.jpg"];
       };
     };
   };
