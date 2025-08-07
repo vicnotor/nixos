@@ -101,6 +101,9 @@ end, { desc = "[M]ark[d]own to [h]tml" })
 -- Dismiss Noice message
 set("n", "<Del>", "<CMD>NoiceDismiss<CR>", { desc = "Dismiss Noice message" })
 
+-- vsplit
+set("n", "<leader>v", "<CMD>vsplit<CR>", { desc = "Create [v]ertical split" })
+
 -- Other
 set("n", "J", "mzJ`z")
 set("i", "<C-c>", "<Esc>")
