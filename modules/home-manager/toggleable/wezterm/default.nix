@@ -14,7 +14,7 @@
       enableZshIntegration = true;
     };
     home.file = {
-      ".config/wezterm/wezterm.lua".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/Git/vicnotor/nixos/modules/home-manager/toggleable/wezterm/wezterm.lua";
+      ".config/wezterm".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/Git/vicnotor/nixos/modules/home-manager/toggleable/wezterm";
     };
   };
 }

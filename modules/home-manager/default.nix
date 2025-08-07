@@ -47,7 +47,6 @@
   dunstModule.enable = lib.mkDefault true;
   extraDotfilesModule.enable = lib.mkDefault true;
   fzfModule.enable = lib.mkDefault true;
-  ghosttyModule.enable = lib.mkDefault true;
   gitModule.enable = lib.mkDefault true;
   hyprlandHmModule.enable = lib.mkDefault true;
   latexModule.enable = lib.mkDefault true;
@@ -69,6 +68,7 @@
   zshModule.enable = lib.mkDefault true;
 
   # Disabled by default
+  ghosttyModule.enable = lib.mkDefault false;
   gtkModule.enable = lib.mkDefault false; # Not needed because of Stylix
   htopModule.enable = lib.mkDefault false;
   pointerCursorModule.enable = lib.mkDefault false; # Not needed because of Stylix
