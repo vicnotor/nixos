@@ -52,6 +52,7 @@
 
         bind-key -n 'M-n' next-window
         bind-key -n 'M-p' previous-window
+        bind-key -n 'M-l' last-window
         bind-key -n 'M-Tab' next-window
         bind-key -n 'M-BTab' previous-window
 

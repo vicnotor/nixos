@@ -1,19 +1,19 @@
 * {
   font:   "UbuntuSans Nerd Font 18";
 
-  bg0:      #1A1B26;
-  bg1:      #16161E;
-  bg2:      #2F3549;
-  bg3:      #444B6A;
-  fg0:      #A9B1D6;
-  fg1:      #CBCCD1;
-  fg2:      #D5D6DB;
-  red:      #F7768E;
-  green:    #41A6B5;
-  yellow:   #E0AF68;
-  blue:     #7AA2F7;
-  magenta:  #BB9AF7;
-  cyan:     #7DCFFF;
+  bg0:      #141318;
+  bg1:      #1C1B20;
+  bg2:      #201F25;
+  bg3:      #35343A;
+  fg0:      #E5E1E9;
+  fg1:      #E5E1E9;
+  fg2:      #E5E1E9;
+  red:      #EA8DC1;
+  green:    #ADC6FF;
+  yellow:   #C3C0FF;
+  blue:     #B8C4FF;
+  magenta:  #F3B3E3;
+  cyan:     #B8C4FF;
 
 
   accent: @red;
