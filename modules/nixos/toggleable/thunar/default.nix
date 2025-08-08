@@ -21,8 +21,5 @@
         thunar-volman
       ];
     };
-    home.file = {
-      ".config/Thunar/uca/xml".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/Git/vicnotor/nixos/modules/nixos/toggleable/thunar/uca.xml";
-    };
   };
 }
