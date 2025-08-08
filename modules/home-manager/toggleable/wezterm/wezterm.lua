@@ -8,7 +8,7 @@ config.initial_rows = 25
 config.font_size = 14
 
 local my_rose_pine = wezterm.color.get_builtin_schemes()['rose-pine']
-my_rose_pine.background = '#141318'
+my_rose_pine.background = '#0F0F0F'
 my_rose_pine.selection_bg = '#404040'
 my_rose_pine.selection_fg = '#EA8DC1'
 

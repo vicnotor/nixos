@@ -3,7 +3,7 @@ name: "Custom Rosé Pine Moon"
 author: "vicnotor"
 variant: "dark"
 palette:
-  base00: "#141318"
+  base00: "#0F0F0F"
   base01: "#2a273f"
   base02: "#393552"
   base03: "#6e6a86"

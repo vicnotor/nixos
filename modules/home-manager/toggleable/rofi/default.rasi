@@ -1,7 +1,7 @@
 * {
   font:   "UbuntuSans Nerd Font 18";
 
-  bg0:      #141318;
+  bg0:      #0F0F0F;
   bg1:      #1C1B20;
   bg2:      #201F25;
   bg3:      #35343A;

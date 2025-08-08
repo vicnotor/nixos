@@ -37,7 +37,7 @@
 
         # Theme
         theme = "rose-pine";
-        background = "#141318";
+        background = "#0F0F0F";
 
         # Cursor
         cursor-style = "block";
