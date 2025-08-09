@@ -1,3 +1,4 @@
 #!/usr/bin/env sh
 
-hyprctl -q hyprpaper reload ,"$1"
+file_abs="$(realpath -- "$1")"
+hyprctl -q hyprpaper reload ,"$file_abs"
