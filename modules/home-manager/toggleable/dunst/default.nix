@@ -22,23 +22,23 @@
           origin = "top-right";
           transparency = 10;
           timeout = 5;
-          # font = "Ubuntu Nerd Font 11"; # Defined by Stylix
+          font = "UbuntuSans Nerd Font 11";
         };
 
         urgency_low = {
-          background = "#24273afd";
-          foreground = "#f4dbd6";
-          frame_color = "#24273a";
+          background = "#0F0F0Ffd";
+          foreground = "#E5E1E9";
+          frame_color = "#0F0F0F";
         };
         urgency_normal = {
-          background = "#24273afd";
-          foreground = "#f4dbd6";
-          frame_color = "#24273a";
+          background = "#0F0F0Ffd";
+          foreground = "#E5E1E9";
+          frame_color = "#0F0F0F";
         };
         urgency_critical = {
-          background = "#24273afd";
-          foreground = "#ed8796";
-          frame_color = "#ed8796";
+          background = "#0F0F0Ffd";
+          foreground = "#EA8DC1";
+          frame_color = "#EA8DC1";
         };
       };
     };
