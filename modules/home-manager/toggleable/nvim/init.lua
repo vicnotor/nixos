@@ -19,6 +19,6 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 -- Setup lazy.nvim
-require("lazy").setup("custom/plugins")
+require("lazy").setup("plugins")
 
 Color() -- Run colorscheme function at startup

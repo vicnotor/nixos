@@ -21,7 +21,7 @@
         global = {
           origin = "top-right";
           transparency = 10;
-          timeout = 5;
+          timeout = 3;
           font = "UbuntuSans Nerd Font 11";
         };
 
