@@ -77,7 +77,7 @@ return {
           italic = false,
         },
         highlight_groups = {
-          Pmenu = { bg = "#2f1d54" },
+          Pmenu = { bg = "#201F25" },
           ["@markup.italic"] = { italic = true },
         },
       })
