@@ -22,3 +22,10 @@ vim.g.maplocalleader = "\\"
 require("lazy").setup("plugins")
 
 Color() -- Run colorscheme function at startup
+
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = "*.str",
+  callback = function()
+    vim.bo.filetype = "javascript"
+  end,
+})

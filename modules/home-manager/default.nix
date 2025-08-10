@@ -17,6 +17,7 @@
     ./toggleable/gtk
     ./toggleable/htop
     ./toggleable/hyprlandHm
+    ./toggleable/js
     ./toggleable/latex
     ./toggleable/libreoffice
     ./toggleable/mpv
@@ -50,6 +51,7 @@
   fzfModule.enable = lib.mkDefault true;
   gitModule.enable = lib.mkDefault true;
   hyprlandHmModule.enable = lib.mkDefault true;
+  jsModule.enable = lib.mkDefault true;
   latexModule.enable = lib.mkDefault true;
   libreofficeModule.enable = lib.mkDefault true;
   mpvModule.enable = lib.mkDefault true;
