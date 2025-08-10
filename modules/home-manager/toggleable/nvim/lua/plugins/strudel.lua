@@ -6,7 +6,7 @@ return {
     build = "npm install",
     config = function()
       require("strudel").setup({
-        browser_exe = "/etc/profiles/per-user/vic/bin/google-chrome-stable",
+        browser_exe_path = "/etc/profiles/per-user/vic/bin/google-chrome-stable",
       })
     end,
   }
