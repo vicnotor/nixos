@@ -23,9 +23,11 @@ require("lazy").setup("plugins")
 
 Color() -- Run colorscheme function at startup
 
+-- Strudel.nvim .str loading issues workaround
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
   pattern = "*.str",
   callback = function()
     vim.bo.filetype = "javascript"
+    vim.keymap.set("n", "<leader>ss", require("strudel").launch, { desc = "Launch Strudel" })
   end,
 })
