@@ -28,6 +28,9 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
   pattern = "*.str",
   callback = function()
     vim.bo.filetype = "javascript"
-    vim.keymap.set("n", "<leader>ss", require("strudel").launch, { desc = "Launch Strudel" })
+    local strudel = require("strudel")
+    vim.keymap.set("n", "<leader>ss", strudel.launch, { desc = "Launch Strudel" })
+    vim.keymap.set("n", "<leader><leader>", strudel.toggle, { desc = "Strudel Toggle Play/Pause" })
+    vim.keymap.set("n", "<localLeader>", strudel.toggle, { desc = "Strudel Toggle Play/Pause" })
   end,
 })
