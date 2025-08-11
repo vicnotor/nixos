@@ -49,4 +49,7 @@
   vrpak = "nvim $HOME/Git/vicnotor/nixos/modules/home-manager/toggleable/r/default.nix";
   vospak = "nvim $HOME/Git/vicnotor/nixos/modules/nixos/always/packages/default.nix";
   vlib = "nvim $HOME/Git/vicnotor/nixos/modules/nixos/toggleable/nix-ld/libraries.nix";
+  screenrec = "wl-screenrec --low-power off --audio";
+  screenrec-history = "wl-screenrec --low-power off --audio --history 30 &";
+  screenrec-history-get = "killall -USR1 wl-screenrec";
 }

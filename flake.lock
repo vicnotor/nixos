@@ -1250,11 +1250,11 @@
         "quickshell": "quickshell_2"
       },
       "locked": {
-        "lastModified": 1754827893,
-        "narHash": "sha256-hP+4JfICRdt5j897mB0vcjb48CASM6zaDjlj6FhUI0M=",
+        "lastModified": 1754913233,
+        "narHash": "sha256-00fixKLnSHwoFAntw1+fyUK6QV9tSbuD8FDtCI9m+Js=",
         "owner": "vicnotor",
         "repo": "my-quickshell",
-        "rev": "c19844d62776203fbde08b13220de12a454266ee",
+        "rev": "df3fb4f057bd05aab0f1c0cf8eacfff6a7d18ca0",
         "type": "github"
       },
       "original": {
