@@ -9,11 +9,12 @@
     brightnessctl
     discord
     evince # pdf
+    inputs.eza.packages.${pkgs.system}.default # ls replacement
     fastfetch # Neofetch
     fd # Finding files
     ffmpeg
     ghostscript
-    gimp
+    gimp3
     google-chrome
     gtk3 # Just for `gtk-launch <.desktop file>`
     imagemagick

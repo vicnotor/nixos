@@ -6,8 +6,8 @@
   gvim = "vim --listen ~/.cache/nvim/godot.pipe .";
 
   # ls
-  ls = "ls --color=tty --group-directories-first --human-readable";
-  ll = "ls -alF";
+  ls = "eza -lh --group-directories-first --icons=auto";
+  ll = "ls -a";
 
   # Tmux
   t = "app2unit -- tmux";

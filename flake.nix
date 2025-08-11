@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    nixpkgs-stable.url = "github:nixos/nixpkgs?ref=nixos-25.05";
+    # nixpkgs-stable.url = "github:nixos/nixpkgs?ref=nixos-25.05";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -16,10 +16,10 @@
       inputs.hyprland.follows = "hyprland";
     };
     hyprpaper.url = "github:hyprwm/hyprpaper";
-    waybar.url = "github:Alexays/Waybar";
+    # waybar.url = "github:Alexays/Waybar";
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     nixd.url = "github:nix-community/nixd";
-    ghostty.url = "github:ghostty-org/ghostty";
+    # ghostty.url = "github:ghostty-org/ghostty";
     stylix.url = "github:danth/stylix";
     nix-devshells = {
       url = "github:vicnotor/nix-devshells";
@@ -39,7 +39,11 @@
       url = "github:/vicnotor/my-quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    walker.url = "github:abenz1267/walker";
+    # walker.url = "github:abenz1267/walker";
+    eza = {
+      url = "github:eza-community/eza";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {

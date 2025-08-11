@@ -1,0 +1,7 @@
+[Desktop Entry]
+Terminal=false
+Type=Application
+Name=Microsoft Teams
+Exec=google-chrome-stable --new-window --app=https://teams.microsoft.com/
+Icon=teams
+StartupWMClass=teams.com
