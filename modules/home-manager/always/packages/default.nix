@@ -9,7 +9,7 @@
     brightnessctl
     discord
     evince # pdf
-    inputs.eza.packages.${pkgs.system}.default # ls replacement
+    eza
     fastfetch # Neofetch
     fd # Finding files
     ffmpeg

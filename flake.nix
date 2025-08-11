@@ -40,10 +40,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     # walker.url = "github:abenz1267/walker";
-    eza = {
-      url = "github:eza-community/eza";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = {

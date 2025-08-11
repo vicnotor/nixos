@@ -9,6 +9,11 @@
   ls = "eza -lh --group-directories-first --icons=auto";
   ll = "ls -a";
 
+  # Git
+  g = "git";
+  gc = "git commit -m";
+  gs = "git status";
+
   # Tmux
   t = "app2unit -- tmux";
 
