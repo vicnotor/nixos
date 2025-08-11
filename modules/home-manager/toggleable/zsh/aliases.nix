@@ -16,7 +16,7 @@
   odsync = "onedrive --sync";
 
   # NixOS
-  rebuild = "sudo echo -n && nixos-rebuild switch --sudo --flake ~/Git/vicnotor/nixos#nixlap";
+  rebuild = "sudo echo -n && nh os switch";
   update = "nix flake update --flake ~/Git/vicnotor/nixos";
   clean = "sudo echo -n && nh clean all --keep 10";
   optimise = "sudo echo -n && sudo nix-store --optimise --verbose"; # If both garbage collecting and optimising, run this after garbage collecting
