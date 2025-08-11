@@ -33,6 +33,7 @@
     ./toggleable/stylixHm
     ./toggleable/thunarHm
     ./toggleable/tmux
+    ./toggleable/walker
     ./toggleable/waybar
     ./toggleable/wezterm
     ./toggleable/zellij
@@ -66,6 +67,7 @@
   stylixHmModule.enable = lib.mkDefault true;
   thunarHmModule.enable = lib.mkDefault true;
   tmuxModule.enable = lib.mkDefault true;
+  walkerModule.enable = lib.mkDefault true;
   weztermModule.enable = lib.mkDefault true;
   zoxideModule.enable = lib.mkDefault true;
   zenModule.enable = lib.mkDefault true;
