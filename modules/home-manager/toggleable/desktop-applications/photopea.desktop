@@ -2,6 +2,6 @@
 Terminal=false
 Type=Application
 Name=Photopea
-Exec=google-chrome-stable --app https://www.photopea.com/
-Icon=steam
+Exec=google-chrome-stable --new-window --app=https://www.photopea.com/
+Icon=nix-snowflake
 StartupWMClass=photopea.com
