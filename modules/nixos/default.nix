@@ -18,6 +18,7 @@
     ./toggleable/graphics
     ./toggleable/hyprland
     ./toggleable/laptop
+    ./toggleable/nh
     ./toggleable/nix-ld
     ./toggleable/nvidia
     ./toggleable/nvidiahybrid
@@ -39,6 +40,7 @@
   graphicsModule.enable = lib.mkDefault true;
   hyprlandModule.enable = lib.mkDefault true;
   laptopModule.enable = lib.mkDefault true;
+  nhModule.enable = lib.mkDefault true;
   nix-ldModule.enable = lib.mkDefault true;
   nvidiaModule.enable = lib.mkDefault true;
   nvidiahybridModule.enable = lib.mkDefault true;
