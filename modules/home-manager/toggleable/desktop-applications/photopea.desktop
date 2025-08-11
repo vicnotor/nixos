@@ -1,0 +1,7 @@
+[Desktop Entry]
+Terminal=false
+Type=Application
+Name=Photopea
+Exec=google-chrome-stable --app https://www.photopea.com/
+Icon=steam
+StartupWMClass=photopea.com

@@ -8,6 +8,7 @@
     ./toggleable/alacritty
     ./toggleable/btop
     ./toggleable/caelestia
+    ./toggleable/desktop-applications
     ./toggleable/direnv
     ./toggleable/dunst
     ./toggleable/extraDotfiles
@@ -46,6 +47,7 @@
   alacrittyModule.enable = lib.mkDefault true;
   btopModule.enable = lib.mkDefault true;
   caelestiaModule.enable = lib.mkDefault true;
+  desktop-applicationsModule.enable = lib.mkDefault true;
   direnvModule.enable = lib.mkDefault true;
   dunstModule.enable = lib.mkDefault true;
   extraDotfilesModule.enable = lib.mkDefault true;
@@ -67,7 +69,6 @@
   stylixHmModule.enable = lib.mkDefault true;
   thunarHmModule.enable = lib.mkDefault true;
   tmuxModule.enable = lib.mkDefault true;
-  walkerModule.enable = lib.mkDefault true;
   weztermModule.enable = lib.mkDefault true;
   zoxideModule.enable = lib.mkDefault true;
   zenModule.enable = lib.mkDefault true;
@@ -78,6 +79,7 @@
   gtkModule.enable = lib.mkDefault false; # Not needed because of Stylix
   htopModule.enable = lib.mkDefault false;
   pointerCursorModule.enable = lib.mkDefault false; # Not needed because of Stylix
+  walkerModule.enable = lib.mkDefault false;
   waybarModule.enable = lib.mkDefault false;
   zellijModule.enable = lib.mkDefault false;
 }
