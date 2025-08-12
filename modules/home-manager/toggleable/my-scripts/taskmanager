@@ -1,3 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
-wezterm --config window_background_opacity=0.9  start --class LargeFloatingWindow -- btop
+# wezterm --config window_background_opacity=0.9  start --class LargeFloatingWindow -- btop
+app2unit -- alacritty -T LargeFloatingTransparentWindow -e btop

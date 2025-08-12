@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  pkgs,
   ...
 }: {
   options = {
@@ -9,58 +10,9 @@
   };
 
   config = lib.mkIf config.alacrittyModule.enable {
-    programs.alacritty = {
-      enable = true;
-      settings = {
-        window = {
-          dimensions = {
-            columns = 110;
-            lines = 25;
-          };
-        };
-        keyboard.bindings = [
-          {
-            key = "Backspace";
-            mods = "Control";
-            action = "None";
-          }
-          {
-            key = "[";
-            mods = "Control";
-            action = "ToggleViMode";
-          }
-          {
-            chars = "✗";
-            key = "Return";
-            mods = "Control";
-          }
-          {
-            chars = "✓";
-            key = "Return";
-            mods = "Control|Shift";
-          }
-          {
-            chars = "◆";
-            key = "I";
-            mods = "Control";
-          }
-          {
-            chars = "▶";
-            key = "M";
-            mods = "Control";
-          }
-          {
-            chars = "★";
-            key = ",";
-            mods = "Control";
-          }
-          {
-            chars = "●";
-            key = "H";
-            mods = "Control|Shift";
-          }
-        ];
-      };
+    home.packages = [pkgs.alacritty-graphics];
+    home.file = {
+      ".config/alacritty/alacritty.toml".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/Git/vicnotor/nixos/modules/home-manager/toggleable/alacritty/alacritty.toml";
     };
   };
 }
