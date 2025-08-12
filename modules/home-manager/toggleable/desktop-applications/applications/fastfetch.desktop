@@ -1,0 +1,7 @@
+[Desktop Entry]
+Terminal=false
+Type=Application
+Name=Fastfetch
+Exec=alacritty -o "window.opacity=0.9" -T LargeFloatingWindow -e ff
+Icon=nix-snowflake
+StartupWMClass=teams.com

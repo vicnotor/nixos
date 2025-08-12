@@ -9,7 +9,6 @@
     discord
     evince # pdf
     eza
-    fastfetch # Neofetch
     fd # Finding files
     ffmpeg
     ghostscript
