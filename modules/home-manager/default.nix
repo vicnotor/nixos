@@ -68,7 +68,6 @@
   stylixHmModule.enable = lib.mkDefault true;
   thunarHmModule.enable = lib.mkDefault true;
   tmuxModule.enable = lib.mkDefault true;
-  weztermModule.enable = lib.mkDefault true;
   zoxideModule.enable = lib.mkDefault true;
   zenModule.enable = lib.mkDefault true;
   zshModule.enable = lib.mkDefault true;
@@ -81,5 +80,6 @@
   pointerCursorModule.enable = lib.mkDefault false; # Not needed because of Stylix
   walkerModule.enable = lib.mkDefault false;
   waybarModule.enable = lib.mkDefault false;
+  weztermModule.enable = lib.mkDefault false;
   zellijModule.enable = lib.mkDefault false;
 }
