@@ -73,6 +73,10 @@
       url = "github:wezterm/wezterm?dir=nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    lix-module = {
+      url = "https://git.lix.systems/lix-project/nixos-module/archive/2.93.3-1.tar.gz";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -100,6 +104,7 @@
           }
           inputs.stylix.nixosModules.stylix
           inputs.auto-cpufreq.nixosModules.default
+          inputs.lix-module.nixosModules.default
         ];
       };
       nixosModules = import ./modules/nixos {inherit inputs;};
