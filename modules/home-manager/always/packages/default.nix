@@ -1,6 +1,5 @@
 {
   pkgs,
-  inputs,
   ...
 }: {
   home.packages = with pkgs; [
@@ -22,7 +21,7 @@
     jq
     mermaid-cli
     networkmanagerapplet
-    inputs.nixd.packages.${pkgs.system}.default # nixd: Nix lsp
+    nixd # Nix lsp
     obs-studio
     kdePackages.okular
     onedrive

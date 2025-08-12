@@ -4,6 +4,7 @@ local act = wezterm.action
 
 config.initial_cols = 100
 config.initial_rows = 25
+config.adjust_window_size_when_changing_font_size = false
 
 config.font_size = 14
 

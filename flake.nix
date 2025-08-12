@@ -2,25 +2,51 @@
   description = "vicnotor's NixOS config";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    # nixpkgs-stable.url = "github:nixos/nixpkgs?ref=nixos-25.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    # nixpkgs-stable.url = "github:NixOS/nixpkgs?ref=nixos-25.05";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprland.url = "github:hyprwm/Hyprland";
-    hyprpolkitagent.url = "github:hyprwm/hyprpolkitagent";
-    hyprland-qtutils.url = "github:hyprwm/hyprland-qtutils";
+    hyprpolkitagent = {
+      url = "github:hyprwm/hyprpolkitagent";
+      inputs = {
+        nixpkgs.follows = "hyprland/nixpkgs";
+        systems.follows = "hyprland/systems";
+        hyprutils.follows = "hyprland/hyprutils";
+      };
+    };
+    hyprland-qtutils = {
+      url = "github:hyprwm/hyprland-qtutils";
+      inputs = {
+        nixpkgs.follows = "hyprland/nixpkgs";
+        systems.follows = "hyprland/systems";
+        hyprland-qt-support.follows = "hyprpolkitagent/hyprland-qt-support";
+      };
+    };
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
-    hyprpaper.url = "github:hyprwm/hyprpaper";
+    hyprpaper = {
+      url = "github:hyprwm/hyprpaper";
+      inputs = {
+        nixpkgs.follows = "hyprland/nixpkgs";
+        systems.follows = "hyprland/systems";
+        hyprgraphics.follows = "hyprland/hyprgraphics";
+        hyprutils.follows = "hyprland/hyprutils";
+        hyprlang.follows = "hyprland/hyprlang";
+        hyprwayland-scanner.follows = "hyprland/hyprwayland-scanner";
+      };
+    };
     # waybar.url = "github:Alexays/Waybar";
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
-    nixd.url = "github:nix-community/nixd";
     # ghostty.url = "github:ghostty-org/ghostty";
-    stylix.url = "github:danth/stylix";
+    stylix = {
+      url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nix-devshells = {
       url = "github:vicnotor/nix-devshells";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -33,13 +59,20 @@
       url = "github:AdnanHodzic/auto-cpufreq";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    zen-browser.url = "github:0xc000022070/zen-browser-flake";
-    caelestia.url = "github:caelestia-dots/shell";
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    # caelestia.url = "github:caelestia-dots/shell";
     my-quickshell = {
       url = "github:/vicnotor/my-quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     # walker.url = "github:abenz1267/walker";
+    wezterm = {
+      url = "github:wezterm/wezterm?dir=nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
