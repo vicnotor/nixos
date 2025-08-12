@@ -1,3 +1,5 @@
+# Colors taken from https://github.com/rose-pine/alacritty/blob/main/dist/rose-pine.toml
+
 [colors.primary]
 foreground = "#e0def4"
 background = "#0F0F0F"
