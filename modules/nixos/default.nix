@@ -17,6 +17,7 @@
     ./toggleable/fonts
     ./toggleable/graphics
     ./toggleable/hyprland
+    ./toggleable/keyd
     ./toggleable/laptop
     ./toggleable/nh
     ./toggleable/nix-ld
@@ -39,6 +40,7 @@
   fontsModule.enable = lib.mkDefault true;
   graphicsModule.enable = lib.mkDefault true;
   hyprlandModule.enable = lib.mkDefault true;
+  keydModule.enable = lib.mkDefault true;
   laptopModule.enable = lib.mkDefault true;
   nhModule.enable = lib.mkDefault true;
   nix-ldModule.enable = lib.mkDefault true;
