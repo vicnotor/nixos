@@ -6,10 +6,7 @@ return {
     priority = 100,
     dependencies = {
       "onsails/lspkind.nvim",
-      {
-        "vicnotor/cmp-nvim-lsp",
-        branch = "client.is_stopped-deprecated"
-      },
+      "hrsh7th/cmp-nvim-lsp",
       "hrsh7th/cmp-path",
       "hrsh7th/cmp-buffer",
       {

@@ -22,6 +22,7 @@
     ./toggleable/js
     ./toggleable/latex
     ./toggleable/libreoffice
+    ./toggleable/minecraft
     ./toggleable/mpv
     ./toggleable/my-quickshell
     ./toggleable/my-scripts
@@ -58,6 +59,7 @@
   jsModule.enable = lib.mkDefault true;
   latexModule.enable = lib.mkDefault true;
   libreofficeModule.enable = lib.mkDefault true;
+  minecraftModule.enable = lib.mkDefault true;
   mpvModule.enable = lib.mkDefault true;
   my-quickshellModule.enable = lib.mkDefault true;
   my-scriptsModule.enable = lib.mkDefault true;
