@@ -1,7 +1,7 @@
 [Desktop Entry]
 Terminal=false
 Type=Application
-Name=Fastfetch
-Exec=ff-terminal
-Icon=nix-snowflake
+Name=Taskmanager
+Exec=taskmanager
+Icon=btop
 StartupWMClass=teams.com

@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+alacritty -o "window.opacity=0.9" -T LargeFloatingWindow -e ff
