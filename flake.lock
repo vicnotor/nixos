@@ -1000,16 +1000,13 @@
       "locked": {
         "lastModified": 1753282722,
         "narHash": "sha256-KYMUrTV7H/RR5/HRnjV5R3rRIuBXMemyJzTLi50NFTs=",
-        "ref": "release-2.93",
         "rev": "46a9e8fcfe4be72b4c7c8082ee11d2c42da1e873",
-        "revCount": 149,
-        "type": "git",
-        "url": "https://git.lix.systems/lix-project/nixos-module"
+        "type": "tarball",
+        "url": "https://git.lix.systems/api/v1/repos/lix-project/nixos-module/archive/46a9e8fcfe4be72b4c7c8082ee11d2c42da1e873.tar.gz?rev=46a9e8fcfe4be72b4c7c8082ee11d2c42da1e873"
       },
       "original": {
-        "ref": "release-2.93",
-        "type": "git",
-        "url": "https://git.lix.systems/lix-project/nixos-module"
+        "type": "tarball",
+        "url": "https://git.lix.systems/lix-project/nixos-module/archive/2.93.3-1.tar.gz"
       }
     },
     "my-quickshell": {
