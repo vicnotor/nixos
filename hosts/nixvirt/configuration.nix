@@ -1,8 +1,13 @@
 {...}: {
   imports = [
     ../../modules/nixos
-    "${builtins.fetchTarball "https://github.com/nix-community/disko/archive/master.tar.gz"}/module.nix"
-   ./disk-config.nix
+    "${
+      builtins.fetchTarball {
+        url = "https://github.com/nix-community/disko/archive/master.tar.gz";
+        sha256 = "sha256-mI6Ob9BmNfwqT3nndWf3jkz8f7tV10odkTnfApsNo+A=";
+      }
+    }/module.nix"
+    ./disk-config.nix
   ];
 
   networking.hostName = "nixvirt";
