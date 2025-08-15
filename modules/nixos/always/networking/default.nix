@@ -1,6 +1,5 @@
 {...}: {
   networking = {
-    hostName = "nixlap";
     networkmanager.enable = true;
     firewall = {
       allowedTCPPorts = [57621]; # For Spotify

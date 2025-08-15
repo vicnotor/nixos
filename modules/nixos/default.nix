@@ -31,6 +31,7 @@
     ./toggleable/tailscale
     ./toggleable/thunar
     ./toggleable/virtualisation
+    ./toggleable/virtualisation-guest
     ./toggleable/xdgportal
     ./toggleable/zsh
   ];
@@ -59,4 +60,5 @@
 
   # Disabled by default
   dolphinModule.enable = lib.mkDefault false;
+  virtualisation-guestModule.enable = lib.mkDefault false;
 }

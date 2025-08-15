@@ -87,6 +87,10 @@
     system = "x86_64-linux";
   in {
     nixosConfigurations = {
+      nixosModules = import ./modules/nixos {inherit inputs;};
+      homeManagerModules = import ./modules/home-manager {inherit inputs;};
+
+      # Hosts
       nixlap = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         inherit system;
@@ -107,8 +111,26 @@
           inputs.lix-module.nixosModules.default
         ];
       };
-      nixosModules = import ./modules/nixos {inherit inputs;};
-      homeManagerModules = import ./modules/home-manager {inherit inputs;};
+      nixvirt = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs;};
+        inherit system;
+        modules = [
+          ./hosts/nixvirt/configuration.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              extraSpecialArgs = {inherit inputs;};
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.vic = import ./hosts/nixvirt/home.nix;
+              backupFileExtension = "hmbak";
+            };
+          }
+          inputs.stylix.nixosModules.stylix
+          inputs.auto-cpufreq.nixosModules.default
+          inputs.lix-module.nixosModules.default
+        ];
+      };
     };
   };
 }

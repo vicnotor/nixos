@@ -10,7 +10,7 @@
   };
 
   config = lib.mkIf config.alacrittyModule.enable {
-    home.packages = [pkgs.alacritty-graphics];
+    home.packages = [pkgs.alacritty];
     home.file = {
       ".config/alacritty/alacritty.toml".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/Git/vicnotor/nixos/modules/home-manager/toggleable/alacritty/alacritty.toml";
     };
