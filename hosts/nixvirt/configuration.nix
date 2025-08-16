@@ -1,5 +1,6 @@
 {...}: {
   imports = [
+    ./hardware-configuration.nix
     ../../modules/nixos
     "${
       builtins.fetchTarball {
@@ -12,6 +13,11 @@
 
   networking.hostName = "nixvirt";
   system.stateVersion = "25.05"; # NOTE: CHANGE BASED ON NIXOS INSTALL ISO VERSION
+
+  nix.settings = {
+    cores = 2;
+    max-jobs = 2;
+  };
 
   virtualisation-guestModule.enable = true;
 
