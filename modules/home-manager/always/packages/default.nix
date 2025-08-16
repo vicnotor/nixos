@@ -31,7 +31,6 @@
     playerctl # Needed for pausing, skipping songs, etc.
     qimgv # Image viewer
     qbittorrent
-    snes9x-gtk
     spotify
     sshfs
     stremio
