@@ -3,7 +3,7 @@
     disk = {
       main = {
         type = "disk";
-        device = "/dev/nvme0n1";
+        device = "/dev/disk/by-id/nvme-WDC_PC_SN530_SDBPNPZ-512G-1114_214908488605";
         content = {
           type = "gpt";
           partitions = {
@@ -21,7 +21,10 @@
               size = "100%";
               content = {
                 type = "btrfs";
-                extraArgs = ["-f"];
+                extraArgs = [
+                  "-f"
+                  "/dev/disk/by-id/nvme-WD_Blue_SN570_500GB_2239AP488612"
+                ];
                 subvolumes = {
                   "/root" = {
                     mountpoint = "/";
