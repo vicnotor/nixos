@@ -24,10 +24,6 @@ if [ ! -d ~/mnt/windows ]; then
   mkdir -p ~/mnt/windows
 fi
 
-if [ ! -d ~/mnt/sata ]; then
-  mkdir -p ~/mnt/sata
-fi
-
 if [ ! -d ~/mnt/temp ]; then
   mkdir -p ~/mnt/temp
 fi

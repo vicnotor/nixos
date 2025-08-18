@@ -4,6 +4,6 @@ if [ ! -d ~/mnt/windows ]; then
   mkdir -p ~/mnt/windows
 fi
 
-sudo mount /dev/disk/by-label/Acer ~/mnt/windows
+sudo mount /dev/disk/by-id/ata-WD_Blue_SA510_2.5_1000GB_24435Y4A6Z02-part3 ~/mnt/windows
 
-cd ~/mnt/windows/Users/victe/
+cd ~/mnt/windows/Users/vic/
