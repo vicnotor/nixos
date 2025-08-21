@@ -78,3 +78,12 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   group = highlight_group,
   pattern = "*",
 })
+
+-- Only loading strudel.nvim when opening *.str files
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = "*.str",
+  callback = function()
+    vim.bo.filetype = "javascript"
+    require("strudel")
+  end,
+})
