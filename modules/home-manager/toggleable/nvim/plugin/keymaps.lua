@@ -95,7 +95,8 @@ end, { desc = "[M]ark[d]own to [p]df" })
 -- mdto html
 set("n", "<leader>mdh", function()
   local file = vim.fn.expand("%")
-  vim.cmd("!mdto html" .. file)
+  local escaped_file = vim.fn.shellescape(file)
+  vim.cmd("!mdto html" .. escaped_file)
 end, { desc = "[M]ark[d]own to [h]tml" })
 
 -- Dismiss Noice message

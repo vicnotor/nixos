@@ -4,6 +4,6 @@ filetype="$1"
 file="$2"
 name="${file%.md}"
 
-pandoc --from=markdown --to="$filetype" -o "$name"."$filetype" "$file"
+pandoc --from=markdown --to="$filetype" -V geometry:margin=1.5in -o "$name"."$filetype" "$file"
 
 xdg-open "$name"."$filetype" > /dev/null 2>&1 &
