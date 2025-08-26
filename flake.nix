@@ -122,7 +122,6 @@
             };
           }
           inputs.stylix.nixosModules.stylix
-          inputs.auto-cpufreq.nixosModules.default
         ];
       };
     };

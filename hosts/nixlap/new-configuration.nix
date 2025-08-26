@@ -12,7 +12,7 @@
   ];
 
   networking.hostName = "nixlap";
-  system.stateVersion = "24.11"; # DO NOT CHANGE!!!!!!!!!!! See https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion
+  system.stateVersion = "25.05"; # NEVER CHANGE!!!!!!!!!!! See https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion
 
   boot.extraModulePackages = [(config.boot.kernelPackages.callPackage ./acer-wmi-battery/default.nix {})];
   boot.kernelModules = ["acer-wmi-battery"];
