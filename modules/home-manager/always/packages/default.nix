@@ -43,7 +43,6 @@
     wl-gammarelay-rs # blue light filter
     wl-screenrec
     xorg.xeyes # Run `xeyes` to show xwayland windows
-    youtube-music
     yt-dlp
     zapzap # Whatsapp
     zip

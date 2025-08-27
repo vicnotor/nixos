@@ -9,13 +9,22 @@ Every non-declarative part of this sytem setup is listed in
 
 # Install
 
-Partitioning with [disko](https://github.com/nix-community/disko/blob/master/docs/quickstart.md):
+Format any extra disks that will be a part of the BTRFS filesystem (make
+sure to add these devices to the btrfs arguments in disk-config.nix):
+
+```bash
+sudo sudo mkfs.btrfs -f /dev/disk/by-id/<device-id>
+```
+
+Partitioning with
+[disko](https://github.com/nix-community/disko/blob/master/docs/quickstart.md):
 
 ```bash
 sudo nix --experimental-features "nix-command flakes" run github:nix-community/disko/latest -- --mode destroy,format,mount /path/to/disk-config.nix
 ```
 
-Installation (limiting max-jobs and number of cores to prevent memory overflow):
+Installation (limiting max-jobs and number of cores to prevent memory
+overflow):
 
 ```bash
 sudo nixos-install --no-root-passwd --max-jobs 2 --cores 2 --flake /path/to/flake#hostname
@@ -32,8 +41,3 @@ Reboot:
 ```bash
 reboot
 ```
-
-# TODO
-
-- Start using BTRFS with compression, noatime, subvolumes and snapper (for
-  automatic snapshots) + impermanence for some subvolumes

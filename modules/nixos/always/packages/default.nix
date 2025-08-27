@@ -10,6 +10,7 @@
       btop # New htop
       btrfs-progs
       distrobox # Escape route
+      efibooteditor
       git
       glib
       inputs.neovim-nightly-overlay.packages.${pkgs.system}.default # nvim nightly build

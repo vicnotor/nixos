@@ -12,7 +12,11 @@
   config = lib.mkIf config.laptopModule.enable {
     powerManagement.enable = true;
     services.thermald.enable = true;
-    programs.auto-cpufreq = {
+
+    environment.systemPackages = [
+      pkgs.auto-cpufreq
+    ];
+    services.auto-cpufreq = {
       enable = true;
       settings = {
         battery = {
