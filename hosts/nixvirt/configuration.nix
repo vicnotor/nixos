@@ -22,6 +22,7 @@
   virtualisation-guestModule.enable = true;
 
   bluetoothModule.enable = false;
+  btrfs-maintenanceModule.enable = false;
   graphicsModule.enable = false;
   keydModule.enable = false;
   laptopModule.enable = false;

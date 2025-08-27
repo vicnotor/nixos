@@ -39,6 +39,7 @@
 
   # Enabled by default
   bluetoothModule.enable = lib.mkDefault true;
+  btrfs-maintenanceModule.enable = lib.mkDefault true;
   fontsModule.enable = lib.mkDefault true;
   graphicsModule.enable = lib.mkDefault true;
   hyprlandModule.enable = lib.mkDefault true;
@@ -60,7 +61,6 @@
   zshModule.enable = lib.mkDefault true;
 
   # Disabled by default
-  btrfs-maintenanceModule.enable = lib.mkDefault false;
   dolphinModule.enable = lib.mkDefault false;
   virtualisation-guestModule.enable = lib.mkDefault false;
 }

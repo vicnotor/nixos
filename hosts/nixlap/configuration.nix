@@ -19,6 +19,4 @@
   boot.extraModprobeConfig = ''
     options acer-wmi-battery enable_health_mode=1
   '';
-
-  btrfs-maintenanceModule.enable = true;
 }
