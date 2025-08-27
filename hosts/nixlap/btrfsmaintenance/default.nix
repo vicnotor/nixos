@@ -1,28 +1,29 @@
 {
   stdenv,
   lib,
-  kernel,
   fetchgit,
 }:
 stdenv.mkDerivation {
   pname = "btrfsmaintenance";
-  version = "${kernel.modDirVersion}";
+  version = "0.1.0";
 
   src = fetchgit {
     url = "https://github.com/kdave/btrfsmaintenance";
     branchName = "master";
-    sha256 = lib.fakeSha256;
+    sha256 = "sha256-PHrgy0vqUvKhWu0bgl1WpIPu95wOXDeibSqL+yuy00E=";
   };
 
-  buildPhase = ''
-  '';
   installPhase = ''
     mkdir -p $out/share/btrfsmaintenance
     cp btrfs-*.sh $out/share/btrfsmaintenance/
 
-    cp sysconfig.btrfsmaintenance $out/
+    mkdir -p $out/lib/systemd/system
 
-    # TODO: link $out/sysconfig.btrfsmaintenance to /etc/default/btrfsmaintenance or /etc/sysconfig/btrfsmaintenance
+    cp btrfs-*.service $out/lib/systemd/system/
+    cp btrfs-*.timer $out/lib/systemd/system/
+
+    mkdir -p $out/etc
+    cp sysconfig.btrfsmaintenance $out/etc/
   '';
 
   meta = {

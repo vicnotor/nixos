@@ -47,10 +47,6 @@
                       "noatime"
                     ];
                   };
-                  "/swap" = {
-                    mountpoint = "/.swapvol";
-                    swap.swapfile.size = "16G";
-                  };
                 };
               };
             };
