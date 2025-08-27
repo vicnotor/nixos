@@ -9,8 +9,6 @@
       }
     }/module.nix"
     ./disk-config.nix
-
-    ./btrfsmaintenance/btrfsmaintenance.nix
   ];
 
   networking.hostName = "nixlap";
@@ -22,5 +20,5 @@
     options acer-wmi-battery enable_health_mode=1
   '';
 
-  services.btrfsmaintenance.enable = true;
+  btrfs-maintenanceModule.enable = true;
 }

@@ -8,7 +8,6 @@
       acpi # For showing battery status (useful in tty)
       app2unit
       btop # New htop
-      btrfs-progs
       distrobox # Escape route
       efibooteditor
       git

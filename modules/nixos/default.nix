@@ -13,6 +13,7 @@
 
     # Toggleable (see below)
     ./toggleable/bluetooth
+    ./toggleable/btrfs-maintenance
     ./toggleable/dolphin
     ./toggleable/fonts
     ./toggleable/graphics
@@ -59,6 +60,7 @@
   zshModule.enable = lib.mkDefault true;
 
   # Disabled by default
+  btrfs-maintenanceModule.enable = lib.mkDefault false;
   dolphinModule.enable = lib.mkDefault false;
   virtualisation-guestModule.enable = lib.mkDefault false;
 }
