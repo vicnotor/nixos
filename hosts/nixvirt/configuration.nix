@@ -5,14 +5,14 @@
     "${
       builtins.fetchTarball {
         url = "https://github.com/nix-community/disko/archive/master.tar.gz";
-        sha256 = "sha256:0788zirv7d3wscp60xb5v2ah52d2lv8p8di6rb9fmka6h2f1jkm7";
+        sha256 = "sha256:04y9xcczbd6lyk5rqilkvhw4dd1w01vzrk602pbd4c4bv5b33zwa";
       }
     }/module.nix"
     ./disk-config.nix
   ];
 
   networking.hostName = "nixvirt";
-  system.stateVersion = "25.05"; # NOTE: CHANGE BASED ON NIXOS INSTALL ISO VERSION
+  system.stateVersion = "25.05"; # WARNING: CHANGE BASED ON NIXOS INSTALL ISO VERSION
 
   nix.settings = {
     cores = 2;
@@ -22,7 +22,6 @@
   virtualisation-guestModule.enable = true;
 
   bluetoothModule.enable = false;
-  btrfs-maintenanceModule.enable = false;
   graphicsModule.enable = false;
   keydModule.enable = false;
   laptopModule.enable = false;

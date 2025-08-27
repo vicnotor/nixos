@@ -13,7 +13,7 @@
 
     # Toggleable (see below)
     ./toggleable/bluetooth
-    ./toggleable/btrfs-maintenance
+    ./toggleable/btrfs
     ./toggleable/dolphin
     ./toggleable/fonts
     ./toggleable/graphics
@@ -39,7 +39,7 @@
 
   # Enabled by default
   bluetoothModule.enable = lib.mkDefault true;
-  btrfs-maintenanceModule.enable = lib.mkDefault true;
+  btrfsModule.enable = lib.mkDefault true;
   fontsModule.enable = lib.mkDefault true;
   graphicsModule.enable = lib.mkDefault true;
   hyprlandModule.enable = lib.mkDefault true;

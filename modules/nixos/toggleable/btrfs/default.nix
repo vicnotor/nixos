@@ -4,11 +4,11 @@
   pkgs,
   ...
 }: {
-  options.btrfs-maintenanceModule = {
-    enable = lib.mkEnableOption "periodic btrfs maintenance stuff";
+  options.btrfsModule = {
+    enable = lib.mkEnableOption "BTRFS maintenance and snapshot stuff";
   };
 
-  config = lib.mkIf config.btrfs-maintenanceModule.enable {
+  config = lib.mkIf config.btrfsModule.enable {
     services.btrfs.autoScrub.enable = true;
 
     systemd.services = {
@@ -37,6 +37,17 @@
           OnCalendar = "weekly";
           Persistent = "true";
           Unit = "btrfs-balance.service";
+        };
+      };
+    };
+
+    services.snapper = {
+      configs = {
+        home = {
+          SUBVOLUME = "/home";
+          ALLOW_USERS = ["vic"];
+          TIMELINE_CREATE = true;
+          TIMELINE_CLEANUP = true;
         };
       };
     };
