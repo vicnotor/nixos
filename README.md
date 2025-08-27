@@ -13,7 +13,7 @@ Format any extra disks that will be a part of the BTRFS filesystem (make
 sure to add these devices to the btrfs arguments in disk-config.nix):
 
 ```bash
-sudo sudo mkfs.btrfs -f /dev/disk/by-id/<device-id>
+sudo mkfs.btrfs -f /dev/disk/by-id/<device-id>
 ```
 
 Partitioning with
