@@ -24,7 +24,7 @@ in {
       };
       polarity = "dark";
       # CHANGE THIS FOR DEFAULT WALLPAPER, ALONG WITH $HOME/Git/vicnotor/nixos/modules/home-manager/toggleable/hyprlandHm/default.nix
-      image = "${config.home.homeDirectory}/personal/Pictures/wallpapers/cats.jpg";
+      image = ./cats.jpg;
       base16Scheme = customSchemeFile;
       fonts = {
         serif = {
