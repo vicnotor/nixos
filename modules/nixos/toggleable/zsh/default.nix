@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  pkgs,
   ...
 }: {
   options = {
@@ -11,5 +12,9 @@
   config = lib.mkIf config.zshModule.enable {
     programs.zsh.enable = true;
     environment.pathsToLink = ["/share/zsh"];
+
+    users = {
+      defaultUserShell = pkgs.zsh;
+    };
   };
 }
