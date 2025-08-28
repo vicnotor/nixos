@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   networking = {
     networkmanager.enable = true;
     firewall = {
@@ -6,4 +6,5 @@
       allowedUDPPorts = [5353]; # For Spotify
     };
   };
+  environment.systemPackages = [pkgs.unixtools.ifconfig];
 }

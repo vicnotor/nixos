@@ -1,7 +1,6 @@
 return {
   {
-    "vicnotor/strudel.nvim",
-    branch = "test-branch",
+    "gruvw/strudel.nvim",
     cmd = "StrudelLaunch",
     build = "npm install",
     config = function()
