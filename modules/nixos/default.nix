@@ -24,6 +24,7 @@
     ./toggleable/nix-ld
     ./toggleable/nvidia
     ./toggleable/nvidiahybrid
+    ./toggleable/plymouth
     ./toggleable/polkit
     ./toggleable/sound
     ./toggleable/ssd
@@ -49,6 +50,7 @@
   nix-ldModule.enable = lib.mkDefault true;
   nvidiaModule.enable = lib.mkDefault true;
   nvidiahybridModule.enable = lib.mkDefault true;
+  plymouthModule.enable = lib.mkDefault true;
   polkitModule.enable = lib.mkDefault true;
   soundModule.enable = lib.mkDefault true;
   ssdModule.enable = lib.mkDefault true;
