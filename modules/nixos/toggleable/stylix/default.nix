@@ -20,8 +20,11 @@ in {
       targets = {
         chromium.enable = false;
         console.enable = false;
+        plymouth.enable = false;
       };
       polarity = "dark";
+      # CHANGE THIS FOR DEFAULT WALLPAPER, ALONG WITH $HOME/Git/vicnotor/nixos/modules/home-manager/toggleable/hyprlandHm/default.nix
+      image = "${config.home.homeDirectory}/personal/Pictures/wallpapers/cats.jpg";
       base16Scheme = customSchemeFile;
       fonts = {
         serif = {

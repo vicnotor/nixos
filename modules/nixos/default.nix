@@ -17,6 +17,7 @@
     ./toggleable/dolphin
     ./toggleable/fonts
     ./toggleable/graphics
+    ./toggleable/greetd
     ./toggleable/hyprland
     ./toggleable/keyd
     ./toggleable/laptop
@@ -43,6 +44,7 @@
   btrfsModule.enable = lib.mkDefault true;
   fontsModule.enable = lib.mkDefault true;
   graphicsModule.enable = lib.mkDefault true;
+  greetdModule.enable = lib.mkDefault true;
   hyprlandModule.enable = lib.mkDefault true;
   keydModule.enable = lib.mkDefault true;
   laptopModule.enable = lib.mkDefault true;
