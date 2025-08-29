@@ -12,6 +12,7 @@
     ./always/users
 
     # Toggleable (see below)
+    ./toggleable/acer-wmi-battery
     ./toggleable/bluetooth
     ./toggleable/btrfs
     ./toggleable/dolphin
@@ -39,6 +40,7 @@
   ];
 
   # Enabled by default
+  acer-wmi-batteryModule.enable = lib.mkDefault true;
   bluetoothModule.enable = lib.mkDefault true;
   btrfsModule.enable = lib.mkDefault true;
   fontsModule.enable = lib.mkDefault true;

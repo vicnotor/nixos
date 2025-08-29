@@ -19,8 +19,8 @@
     max-jobs = 2;
   };
 
+  # Enabling/disabling modules inside <FLAKE_ROOT>/modules/nixos/toggleable
   virtualisation-guestModule.enable = true;
-
   bluetoothModule.enable = false;
   graphicsModule.enable = false;
   keydModule.enable = false;
