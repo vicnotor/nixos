@@ -5,7 +5,7 @@
 	<name>Open Terminal Here</name>
 	<submenu></submenu>
 	<unique-id>1744656093770959-1</unique-id>
-	<command>wezterm start --cwd %f</command>
+	<command>alacritty --working-directory %f</command>
 	<description></description>
 	<range></range>
 	<patterns>*</patterns>
@@ -17,7 +17,7 @@
 	<name>Open in Neovim</name>
 	<submenu></submenu>
 	<unique-id>1747594907956230-1</unique-id>
-	<command>wezterm start -- nvim %F</command>
+	<command>alacritty -e nvim %F</command>
 	<description></description>
 	<range>*</range>
 	<patterns>*</patterns>
