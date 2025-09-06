@@ -84,24 +84,27 @@ return {
       local capabilities = vim.lsp.protocol.make_client_capabilities()
       capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
-      -- LSP config
-      local lspconfig = require("lspconfig")
+      -- enabling LSPs
+      vim.lsp.enable("bashls")
+      vim.lsp.enable("clangd")
+      vim.lsp.enable("gdscript")
+      vim.lsp.enable("hls")
+      vim.lsp.enable("lua_ls")
+      vim.lsp.enable("ltex_plus")
+      vim.lsp.enable("nixd")
+      vim.lsp.enable("ocamllsp")
+      vim.lsp.enable("pyright")
+      vim.lsp.enable("qmlls")
+      vim.lsp.enable("ts_ls")
+      vim.lsp.enable("zls")
 
-      -- No setup required for these
-      lspconfig.bashls.setup({})
-      lspconfig.clangd.setup({})
-      lspconfig.ocamllsp.setup({})
-      lspconfig.pyright.setup({})
-      lspconfig.qmlls.setup({})
-      lspconfig.ts_ls.setup({})
-      lspconfig.zls.setup({})
-
-      -- With additional setup
-      lspconfig["gdscript"].setup({
+      -- Additional setup
+      vim.lsp.config("gdscript", {
         name = "godot",
         cmd = vim.lsp.rpc.connect("127.0.0.1", 6005),
-      })
-      lspconfig.hls.setup({
+      }
+      )
+      vim.lsp.config("hls", {
         settings = {
           hls = {
             haskell = {
@@ -112,7 +115,7 @@ return {
           },
         },
       })
-      lspconfig.lua_ls.setup({
+      vim.lsp.config("lua_ls", {
         settings = {
           lua_ls = {
             Lua = {
@@ -124,7 +127,7 @@ return {
           },
         },
       })
-      lspconfig.ltex_plus.setup({
+      vim.lsp.config("ltex_plus", {
         filetypes = { "tex", },
         settings = {
           ltex = {
@@ -133,7 +136,7 @@ return {
           },
         },
       })
-      lspconfig.nixd.setup({
+      vim.lsp.config("nixd", {
         cmd = { "nixd" },
         settings = {
           nixd = {
