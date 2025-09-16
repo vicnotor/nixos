@@ -8,7 +8,7 @@ return {
       vim.lsp.config("roslyn", {
         cmd = {
           "dotnet",
-          "/home/vic/roslyn/content/LanguageServer/neutral/Microsoft.CodeAnalysis.LanguageServer.dll",
+          "/home/vic/Git/vicnotor/nixos/non-nix/roslyn/content/LanguageServer/neutral/Microsoft.CodeAnalysis.LanguageServer.dll",
           "--logLevel",              -- this property is required by the server
           "Information",
           "--extensionLogDirectory", -- this property is required by the server
