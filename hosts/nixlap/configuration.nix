@@ -13,4 +13,8 @@
 
   networking.hostName = "nixlap";
   system.stateVersion = "25.05"; # WARNING: NEVER CHANGE!!!!!!!!!!! See https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion
+
+  nix.settings = {
+    max-jobs = 6;
+  };
 }

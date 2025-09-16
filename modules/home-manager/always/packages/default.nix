@@ -1,7 +1,4 @@
-{
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   home.packages = with pkgs; [
     alejandra # Nix formatting
     bash-language-server
@@ -33,7 +30,6 @@
     qbittorrent
     spotify
     sshfs
-    stremio
     tree-sitter
     thunderbird-latest # Mail client
     unrar

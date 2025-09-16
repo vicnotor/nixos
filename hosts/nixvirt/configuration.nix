@@ -15,7 +15,6 @@
   system.stateVersion = "25.05"; # WARNING: CHANGE BASED ON NIXOS INSTALL ISO VERSION
 
   nix.settings = {
-    cores = 2;
     max-jobs = 2;
   };
 
