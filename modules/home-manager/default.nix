@@ -34,7 +34,6 @@
     ./toggleable/r
     ./toggleable/rofi
     ./toggleable/snes9x
-    ./toggleable/stremio
     ./toggleable/stylixHm
     ./toggleable/thunarHm
     ./toggleable/tmux
@@ -71,7 +70,6 @@
   pythonModule.enable = lib.mkDefault true;
   rModule.enable = lib.mkDefault true;
   rofiModule.enable = lib.mkDefault true;
-  stremioModule.enable = lib.mkDefault true;
   stylixHmModule.enable = lib.mkDefault true;
   thunarHmModule.enable = lib.mkDefault true;
   tmuxModule.enable = lib.mkDefault true;
