@@ -39,6 +39,7 @@ set("n", "<leader>F", "gwap", { desc = "Format paragraph with gq" })
 
 -- Switch to next window
 set("n", "<tab>", "<cmd>winc w<CR>", { desc = "Change focus to next vim window", silent = true })
+set("n", "<C-tab>", "<cmd>winc w<CR>", { desc = "Change focus to next vim window", silent = true })
 
 -- Toggle wrap
 set("n", "<leader>tw", "<cmd>set wrap!<CR>", { desc = "Toggle wrap", silent = true })
