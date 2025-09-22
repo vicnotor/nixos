@@ -11,7 +11,7 @@
   config = lib.mkIf config.bluetoothModule.enable {
     hardware = {
       bluetooth.enable = true;
-      bluetooth.powerOnBoot = false;
+      # bluetooth.powerOnBoot = false;
     };
     services.blueman.enable = true;
   };
