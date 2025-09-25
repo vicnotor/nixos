@@ -29,6 +29,7 @@
     protonvpn-gui
     qimgv # Image viewer
     qbittorrent
+    signal-desktop
     spotify
     sshfs
     tree-sitter
