@@ -32,6 +32,7 @@
     signal-desktop
     spotify
     sshfs
+    stremio
     tree-sitter
     thunderbird-latest # Mail client
     unrar
