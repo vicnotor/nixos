@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    # nixpkgs-stable.url = "github:NixOS/nixpkgs?ref=nixos-25.05";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -40,9 +39,7 @@
         hyprwayland-scanner.follows = "hyprland/hyprwayland-scanner";
       };
     };
-    # waybar.url = "github:Alexays/Waybar";
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
-    # ghostty.url = "github:ghostty-org/ghostty";
     stylix = {
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -59,11 +56,16 @@
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # caelestia.url = "github:caelestia-dots/shell";
     my-quickshell = {
       url = "github:/vicnotor/my-quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Might use in future:
+    # nixpkgs-stable.url = "github:NixOS/nixpkgs?ref=nixos-25.05";
+    # waybar.url = "github:Alexays/Waybar";
+    # ghostty.url = "github:ghostty-org/ghostty";
+    # caelestia.url = "github:caelestia-dots/shell";
     # walker.url = "github:abenz1267/walker";
     # wezterm = {
     #   url = "github:wezterm/wezterm?dir=nix";

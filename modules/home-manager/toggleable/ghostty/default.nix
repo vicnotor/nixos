@@ -13,20 +13,11 @@
   config = lib.mkIf config.ghosttyModule.enable {
     programs.ghostty = {
       enable = true;
-      package = inputs.ghostty.packages.${pkgs.system}.default.overrideAttrs (drv: {
-        patches =
-          drv.patches or []
-          ++ [
-            (pkgs.fetchpatch {
-              url = "https://github.com/Opposite34/ghostty/commit/5b871c595254eece6bf44ab48f71409b7ed36088.patch";
-              hash = "sha256-hCWp2MdoD89oYN3I+Pq/HW4k4RcozS1tDuXHO3Nd+Y8=";
-            })
-          ];
-      });
+      package = inputs.ghostty.packages.${pkgs.system}.default;
       enableZshIntegration = true;
       settings = {
         # Font
-        font-size = 12;
+        font-size = 14;
         # The next three lines disable all ligatures
         font-feature = [
           "-calt"
@@ -47,7 +38,7 @@
         # Window
         window-padding-balance = true;
         window-decoration = false;
-        window-width = 110;
+        window-width = 100;
         window-height = 25;
 
         # Keybinds
