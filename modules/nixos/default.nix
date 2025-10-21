@@ -40,7 +40,6 @@
   ];
 
   # Enabled by default
-  acer-wmi-batteryModule.enable = lib.mkDefault true;
   bluetoothModule.enable = lib.mkDefault true;
   btrfsModule.enable = lib.mkDefault true;
   fontsModule.enable = lib.mkDefault true;
@@ -65,6 +64,7 @@
   zshModule.enable = lib.mkDefault true;
 
   # Disabled by default
+  acer-wmi-batteryModule.enable = lib.mkDefault false;
   dolphinModule.enable = lib.mkDefault false;
   virtualisation-guestModule.enable = lib.mkDefault false;
 }

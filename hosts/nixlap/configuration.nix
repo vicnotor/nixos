@@ -17,4 +17,7 @@
   nix.settings = {
     max-jobs = 6;
   };
+
+  # Enabling/disabling modules inside <FLAKE_ROOT>/modules/nixos/toggleable
+  acer-wmi-batteryModule.enable = true;
 }

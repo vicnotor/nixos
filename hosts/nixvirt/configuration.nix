@@ -19,7 +19,6 @@
   };
 
   # Enabling/disabling modules inside <FLAKE_ROOT>/modules/nixos/toggleable
-  virtualisation-guestModule.enable = true;
   bluetoothModule.enable = false;
   graphicsModule.enable = false;
   keydModule.enable = false;
@@ -30,4 +29,5 @@
   steamModule.enable = false;
   tailscaleModule.enable = false;
   virtualisationModule.enable = false;
+  virtualisation-guestModule.enable = true;
 }
