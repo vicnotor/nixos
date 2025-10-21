@@ -11,9 +11,11 @@
   config = lib.mkIf config.gitModule.enable {
     programs.git = {
       enable = true;
-      userName = "vicnotor";
-      userEmail = "95343562+vicnotor@users.noreply.github.com";
-      extraConfig = {
+      settings = {
+        user = {
+          name = "vicnotor";
+          email = "95343562+vicnotor@users.noreply.github.com";
+        };
         core = {editor = "nvim";};
         init = {defaultBranch = "main";};
       };
