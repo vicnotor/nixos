@@ -13,6 +13,7 @@
   g = "git";
   gc = "git commit -m";
   gs = "git status";
+  gaa = "git add --all";
 
   # Tmux
   t = "app2unit -- tmux";
