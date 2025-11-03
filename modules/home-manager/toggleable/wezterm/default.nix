@@ -14,7 +14,7 @@
     programs.wezterm = {
       enable = true;
       enableZshIntegration = true;
-      package = inputs.wezterm.packages.${pkgs.system}.default;
+      package = inputs.wezterm.packages.${pkgs.stdenv.hostPlatform.system}.default;
     };
     home.file = {
       ".config/wezterm".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/Git/vicnotor/nixos/modules/home-manager/toggleable/wezterm";

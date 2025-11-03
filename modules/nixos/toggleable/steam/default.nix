@@ -34,7 +34,7 @@
     # proton GE. NOTE: do not forget to run `protonup` to actually install proton
     environment = {
       systemPackages = with pkgs; [
-        protonup
+        protonup-ng
       ];
       sessionVariables = {
         STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d";

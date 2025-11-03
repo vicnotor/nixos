@@ -12,7 +12,7 @@
 
   config = lib.mkIf config.mypkgsModule.enable {
     home.packages = [
-      inputs.nix-devshells.packages.${pkgs.system}.default
+      inputs.nix-devshells.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
   };
 }

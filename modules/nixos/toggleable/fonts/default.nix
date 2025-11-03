@@ -17,7 +17,7 @@
         nerd-fonts.ubuntu
         nerd-fonts.ubuntu-mono
         nerd-fonts.ubuntu-sans
-        noto-fonts-emoji
+        noto-fonts-color-emoji
         helvetica-neue-lt-std
         lmodern
         libertine

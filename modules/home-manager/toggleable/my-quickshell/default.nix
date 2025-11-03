@@ -12,7 +12,7 @@
 
   config = lib.mkIf config.my-quickshellModule.enable {
     home.packages = [
-      inputs.my-quickshell.packages.${pkgs.system}.default
+      inputs.my-quickshell.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
   };
 }

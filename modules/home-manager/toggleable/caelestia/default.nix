@@ -12,7 +12,7 @@
 
   config = lib.mkIf config.caelestiaModule.enable {
     home.packages = [
-      inputs.caelestia.packages.${pkgs.system}.default
+      inputs.caelestia.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
   };
 }
