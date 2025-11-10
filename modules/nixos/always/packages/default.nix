@@ -12,6 +12,7 @@
       efibooteditor
       git
       glib
+      gnumake
       inputs.neovim-nightly-overlay.packages.${pkgs.stdenv.hostPlatform.system}.default # nvim nightly build
       killall
       pciutils
