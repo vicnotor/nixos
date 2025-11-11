@@ -10,14 +10,14 @@ return {
         formatters = {
           latexindent = {
             prepend_args = {
-              '-y=modifyLineBreaks:textWrapOptions:columns:75',
+              '-y=modifyLineBreaks:textWrapOptions:columns:60',
               "-m",
             },
           },
           mdformat = {
             prepend_args = {
               "--number",
-              "--wrap", "75",
+              "--wrap", "60",
             }
           },
           ocamlformat = {
