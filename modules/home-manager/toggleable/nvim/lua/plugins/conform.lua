@@ -38,6 +38,7 @@ return {
           markdown = { "mdformat" },
           ocaml    = { "ocamlformat" },
           qml      = { "qmlformat" },
+          python   = { "black" },
         },
       })
     end,
