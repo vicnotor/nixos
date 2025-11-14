@@ -5,6 +5,8 @@
     nixPath = ["nixpkgs=${inputs.nixpkgs}"];
     settings = {
       experimental-features = ["nix-command" "flakes"];
+      trusted-users = ["root" "vic"];
+      lazy-trees = true;
       substituters = [
         "https://hyprland.cachix.org"
         "https://nix-community.cachix.org"
