@@ -41,9 +41,3 @@ Reboot:
 ```bash
 reboot
 ```
-
-Log in to FlakeHub
-
-```bash
-determinate-nixd login
-```

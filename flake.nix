@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -102,7 +101,6 @@
             };
           }
           inputs.stylix.nixosModules.stylix
-          inputs.determinate.nixosModules.default
         ];
       };
       nixvirt = nixpkgs.lib.nixosSystem {
