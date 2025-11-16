@@ -34,11 +34,13 @@ return {
           },
         },
         formatters_by_ft = {
-          tex      = { "latexindent" },
-          markdown = { "mdformat" },
-          ocaml    = { "ocamlformat" },
-          qml      = { "qmlformat" },
-          python   = { "black" },
+          tex        = { "latexindent" },
+          markdown   = { "mdformat" },
+          ocaml      = { "ocamlformat" },
+          qml        = { "qmlformat" },
+          python     = { "black" },
+          html       = { "djlint" },
+          htmldjango = { "djlint" },
         },
       })
     end,
