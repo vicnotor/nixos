@@ -11,7 +11,7 @@
 
   # Git
   g = "git";
-  gc = "git commit -m";
+  gc = "git commit";
   gs = "git status";
   gaa = "git add --all";
 
