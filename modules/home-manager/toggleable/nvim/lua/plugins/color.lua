@@ -109,6 +109,8 @@ return {
           --colors.green = "#b4f56e"
           colors.comment = "#7d86ad"
         end,
+        on_highlights = function(colors)
+        end,
       })
     end,
   },
