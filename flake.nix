@@ -56,8 +56,8 @@
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    my-quickshell = {
-      url = "github:/vicnotor/my-quickshell";
+    vic-quickshell = {
+      url = "github:/vicnotor/vic-quickshell";
       # inputs.nixpkgs.follows = "nixpkgs-stable";
     };
 

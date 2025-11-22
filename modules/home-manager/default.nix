@@ -24,7 +24,7 @@
     ./toggleable/libreoffice
     ./toggleable/minecraft
     ./toggleable/mpv
-    ./toggleable/my-quickshell
+    ./toggleable/vic-quickshell
     ./toggleable/my-scripts
     ./toggleable/mypkgs
     ./toggleable/nix-index
@@ -62,7 +62,7 @@
   libreofficeModule.enable = lib.mkDefault true;
   minecraftModule.enable = lib.mkDefault true;
   mpvModule.enable = lib.mkDefault true;
-  my-quickshellModule.enable = lib.mkDefault true;
+  vic-quickshellModule.enable = lib.mkDefault true;
   my-scriptsModule.enable = lib.mkDefault true;
   mypkgsModule.enable = lib.mkDefault true;
   nix-indexModule.enable = lib.mkDefault true;
