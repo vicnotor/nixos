@@ -4,7 +4,9 @@
   pkgs,
   inputs,
   ...
-}: {
+}: let
+  home = config.home.homeDirectory;
+in {
   options = {
     hyprlandHmModule.enable =
       lib.mkEnableOption "hyprland home-manager module";
@@ -12,7 +14,8 @@
 
   config = lib.mkIf config.hyprlandHmModule.enable {
     home.file = {
-      ".config/hypr/hyprland.conf".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/Git/vicnotor/nixos/modules/home-manager/toggleable/hyprlandHm/hyprland.conf";
+      ".config/hypr/hyprland.conf".source = config.lib.file.mkOutOfStoreSymlink "${home}/Git/vicnotor/nixos/modules/home-manager/toggleable/hyprlandHm/hyprland.conf";
+      ".config/hypr/conf".source = config.lib.file.mkOutOfStoreSymlink "${home}/Git/vicnotor/nixos/modules/home-manager/toggleable/hyprlandHm/conf";
     };
 
     home.packages = with pkgs; [
@@ -21,9 +24,7 @@
       hyprprop # xprop for Hyprland
     ];
 
-    services.hyprpaper = let
-      home = config.home.homeDirectory;
-    in {
+    services.hyprpaper = {
       enable = true;
       package = inputs.hyprpaper.packages.${pkgs.stdenv.hostPlatform.system}.default;
       settings = {
