@@ -834,30 +834,11 @@
         "type": "github"
       }
     },
-    "my-quickshell": {
-      "inputs": {
-        "nixpkgs": "nixpkgs_2",
-        "quickshell": "quickshell"
-      },
-      "locked": {
-        "lastModified": 1762184206,
-        "narHash": "sha256-89Dmkts8swczZ0pvDZHsSuFKo5AOgc3ps/Bs3SLPi3U=",
-        "owner": "vicnotor",
-        "repo": "my-quickshell",
-        "rev": "52530a5b616f2b4246511513ca253538b7ec5597",
-        "type": "github"
-      },
-      "original": {
-        "owner": "vicnotor",
-        "repo": "my-quickshell",
-        "type": "github"
-      }
-    },
     "neovim-nightly-overlay": {
       "inputs": {
         "flake-parts": "flake-parts",
         "neovim-src": "neovim-src",
-        "nixpkgs": "nixpkgs_3"
+        "nixpkgs": "nixpkgs_2"
       },
       "locked": {
         "lastModified": 1763683496,
@@ -947,22 +928,6 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1761907660,
-        "narHash": "sha256-kJ8lIZsiPOmbkJypG+B5sReDXSD1KGu2VEPNqhRa/ew=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "2fb006b87f04c4d3bdf08cfdbc7fab9c13d94a15",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_3": {
-      "locked": {
         "lastModified": 1763618868,
         "narHash": "sha256-v5afmLjn/uyD9EQuPBn7nZuaZVV9r+JerayK/4wvdWA=",
         "owner": "NixOS",
@@ -977,7 +942,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_4": {
+    "nixpkgs_3": {
       "locked": {
         "lastModified": 1763421233,
         "narHash": "sha256-Stk9ZYRkGrnnpyJ4eqt9eQtdFWRRIvMxpNRf4sIegnw=",
@@ -988,6 +953,22 @@
       },
       "original": {
         "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_4": {
+      "locked": {
+        "lastModified": 1761907660,
+        "narHash": "sha256-kJ8lIZsiPOmbkJypG+B5sReDXSD1KGu2VEPNqhRa/ew=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "2fb006b87f04c4d3bdf08cfdbc7fab9c13d94a15",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
         "ref": "nixos-unstable",
         "repo": "nixpkgs",
         "type": "github"
@@ -1044,7 +1025,7 @@
     "quickshell": {
       "inputs": {
         "nixpkgs": [
-          "my-quickshell",
+          "vic-quickshell",
           "nixpkgs"
         ]
       },
@@ -1070,12 +1051,12 @@
         "hyprland-qtutils": "hyprland-qtutils",
         "hyprpaper": "hyprpaper",
         "hyprpolkitagent": "hyprpolkitagent",
-        "my-quickshell": "my-quickshell",
         "neovim-nightly-overlay": "neovim-nightly-overlay",
         "nix-devshells": "nix-devshells",
         "nix-index-database": "nix-index-database",
-        "nixpkgs": "nixpkgs_4",
+        "nixpkgs": "nixpkgs_3",
         "stylix": "stylix",
+        "vic-quickshell": "vic-quickshell",
         "zen-browser": "zen-browser"
       }
     },
@@ -1221,6 +1202,25 @@
       "original": {
         "owner": "tinted-theming",
         "repo": "base16-zed",
+        "type": "github"
+      }
+    },
+    "vic-quickshell": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_4",
+        "quickshell": "quickshell"
+      },
+      "locked": {
+        "lastModified": 1763827903,
+        "narHash": "sha256-wLskYCBID3LSohNrGnZrhFPwh6Y+7/5UcxNLjUjY9KA=",
+        "owner": "vicnotor",
+        "repo": "vic-quickshell",
+        "rev": "7efb21e0440864d1b2ba5f63af313d26e100f84f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vicnotor",
+        "repo": "vic-quickshell",
         "type": "github"
       }
     },
