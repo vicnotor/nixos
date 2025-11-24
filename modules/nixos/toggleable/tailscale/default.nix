@@ -10,12 +10,17 @@
   };
 
   config = lib.mkIf config.tailscaleModule.enable {
-    services.tailscale.enable = true;
+    services.tailscale = {
+      enable = true;
+      useRoutingFeatures = "client";
+    };
+
+    networking.search = ["tail4046c4.ts.net"];
 
     networking.firewall.allowedTCPPorts = [22];
 
     # Prevent autostart of tailscale
-    systemd.services.tailscaled.wantedBy = lib.mkForce [];
+    # systemd.services.tailscaled.wantedBy = lib.mkForce [];
 
     # Start and stop comment
     environment.systemPackages = [
