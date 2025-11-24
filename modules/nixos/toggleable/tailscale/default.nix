@@ -15,9 +15,11 @@
       useRoutingFeatures = "client";
     };
 
-    networking.search = ["tail4046c4.ts.net"];
-
-    networking.firewall.allowedTCPPorts = [22];
+    networking.firewall = {
+      allowedTCPPorts = [22 config.services.tailscale.port];
+      allowedUDPPorts = [config.services.tailscale.port];
+      trustedInterfaces = ["tailscale0"];
+    };
 
     # Prevent autostart of tailscale
     # systemd.services.tailscaled.wantedBy = lib.mkForce [];
