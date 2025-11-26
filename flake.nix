@@ -56,9 +56,9 @@
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    vic-quickshell = {
-      url = "github:/vicnotor/vic-quickshell";
-      # inputs.nixpkgs.follows = "nixpkgs-stable";
+    quickshell = {
+      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # Might use in future:
