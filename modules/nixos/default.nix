@@ -15,6 +15,7 @@
     ./toggleable/acer-wmi-battery
     ./toggleable/bluetooth
     ./toggleable/btrfs
+    ./toggleable/docker
     ./toggleable/dolphin
     ./toggleable/fonts
     ./toggleable/graphics
@@ -42,6 +43,7 @@
   # Enabled by default
   bluetoothModule.enable = lib.mkDefault true;
   btrfsModule.enable = lib.mkDefault true;
+  dockerModule.enable = lib.mkDefault true;
   fontsModule.enable = lib.mkDefault true;
   graphicsModule.enable = lib.mkDefault true;
   hyprlandModule.enable = lib.mkDefault true;
