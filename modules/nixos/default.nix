@@ -17,6 +17,7 @@
     ./toggleable/btrfs
     ./toggleable/docker
     ./toggleable/dolphin
+    ./toggleable/ente-auth
     ./toggleable/fonts
     ./toggleable/graphics
     ./toggleable/hyprland
@@ -44,6 +45,8 @@
   # Enabled by default
   bluetoothModule.enable = lib.mkDefault true;
   btrfsModule.enable = lib.mkDefault true;
+  dockerModule.enable = lib.mkDefault true;
+  ente-authModule.enable = lib.mkDefault true;
   fontsModule.enable = lib.mkDefault true;
   graphicsModule.enable = lib.mkDefault true;
   hyprlandModule.enable = lib.mkDefault true;
@@ -54,7 +57,6 @@
   nvidiaModule.enable = lib.mkDefault true;
   nvidiahybridModule.enable = lib.mkDefault true;
   plymouthModule.enable = lib.mkDefault true;
-  podmanModule.enable = lib.mkDefault true;
   polkitModule.enable = lib.mkDefault true;
   soundModule.enable = lib.mkDefault true;
   ssdModule.enable = lib.mkDefault true;
@@ -68,7 +70,7 @@
 
   # Disabled by default
   acer-wmi-batteryModule.enable = lib.mkDefault false;
-  dockerModule.enable = lib.mkDefault false;
   dolphinModule.enable = lib.mkDefault false;
+  podmanModule.enable = lib.mkDefault false;
   virtualisation-guestModule.enable = lib.mkDefault false;
 }

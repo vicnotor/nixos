@@ -4,6 +4,7 @@
     bash-language-server
     brightnessctl
     discord
+    ente-auth
     evince # pdf
     eza
     fd # Finding files

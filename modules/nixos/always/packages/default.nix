@@ -3,21 +3,19 @@
   inputs,
   ...
 }: {
-  environment = {
-    systemPackages = with pkgs; [
-      acpi # For showing battery status (useful in tty)
-      app2unit
-      btop # New htop
-      distrobox # Escape route
-      efibooteditor
-      git
-      glib
-      gnumake
-      inputs.neovim-nightly-overlay.packages.${pkgs.stdenv.hostPlatform.system}.default # nvim nightly build
-      killall
-      pciutils
-      unzip
-      wget
-    ];
-  };
+  environment.systemPackages = with pkgs; [
+    acpi # For showing battery status (useful in tty)
+    app2unit
+    btop # New htop
+    distrobox # Escape route
+    efibooteditor
+    git
+    glib
+    gnumake
+    inputs.neovim-nightly-overlay.packages.${pkgs.stdenv.hostPlatform.system}.default # nvim nightly build
+    killall
+    pciutils
+    unzip
+    wget
+  ];
 }
