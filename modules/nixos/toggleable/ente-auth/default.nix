@@ -5,11 +5,11 @@
   ...
 }: {
   options = {
-    bluetoothModule.enable =
-      lib.mkEnableOption "bluetooth module";
+    ente-authModule.enable =
+      lib.mkEnableOption "Ente-auth module";
   };
 
-  config = lib.mkIf config.bluetoothModule.enable {
+  config = lib.mkIf config.ente-authModule.enable {
     environment.systemPackages = [pkgs.ente-auth];
     services.gnome.gnome-keyring.enable = true;
   };
