@@ -2,6 +2,7 @@
   home.packages = with pkgs; [
     alejandra # Nix formatting
     bash-language-server
+    bitwarden-desktop
     brightnessctl
     discord
     ente-auth
