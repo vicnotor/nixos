@@ -1,6 +1,8 @@
 {
   lib,
   config,
+  pkgs,
+  inputs,
   ...
 }: {
   options = {
@@ -18,5 +20,8 @@
         storageDriver = "btrfs";
       };
     };
+    environment.systemPackages = [
+      inputs.compose2nix.packages.${pkgs.stdenv.hostPlatform.system}.default
+    ];
   };
 }

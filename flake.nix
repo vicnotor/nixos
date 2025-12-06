@@ -60,6 +60,10 @@
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    compose2nix = {
+      url = "github:aksiksi/compose2nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # Might use in future:
     # nixpkgs-stable.url = "github:NixOS/nixpkgs?ref=nixos-25.05";
