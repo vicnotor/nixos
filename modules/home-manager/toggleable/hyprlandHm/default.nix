@@ -23,7 +23,7 @@ in {
       grimblast # Hyprland wrapper for grim and slurp
       hyprpicker # Color picker
       hyprprop # xprop for Hyprland
-      hyprpaper
+      inputs.hyprpaper.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
 
     # services.hyprpaper = {
