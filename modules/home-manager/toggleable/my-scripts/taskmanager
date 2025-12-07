@@ -1,4 +1,6 @@
 #!/usr/bin/env sh
 
 # wezterm --config window_background_opacity=0.9  start --class LargeFloatingWindow -- btop
-app2unit -- alacritty -o "window.opacity=0.9" -T LargeFloatingWindow -e btop
+
+# app2unit -- alacritty -o "window.opacity=0.9" -T LargeFloatingWindow -e btop
+alacritty -o "window.opacity=0.9" -T LargeFloatingWindow -e btop

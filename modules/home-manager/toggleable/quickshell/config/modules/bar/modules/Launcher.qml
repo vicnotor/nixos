@@ -18,7 +18,8 @@ BarModule {
     Process {
       id: process
 
-      command: ["sh", "-c", "rofi -show drun -show-icons -run-command 'app2unit -- {cmd}'"]
+      // command: ["sh", "-c", "rofi -show drun -show-icons -run-command 'app2unit -- {cmd}'"]
+      command: ["sh", "-c", "rofi -show drun -show-icons"]
       running: false
     }
 

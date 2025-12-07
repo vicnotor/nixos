@@ -3,7 +3,9 @@
 if [[ $# -eq 0 ]] ; then
   echo "" | \
     rofi -dmenu rofi -theme-str '#mainbox { children: [ "inputbar" ]; }' -p "Google:" | \
-    xargs -I{} app2unit-open https://www.google.com/search?q={}
+    xargs -I{} xdg-open https://www.google.com/search?q={}
+  # xargs -I{} app2unit-open https://www.google.com/search?q={}
 else
- app2unit-open https://www.google.com/search?q="$1"
+ # app2unit-open https://www.google.com/search?q="$1"
+ xdg-open https://www.google.com/search?q="$1"
 fi

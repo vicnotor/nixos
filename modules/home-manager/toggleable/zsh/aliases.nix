@@ -16,7 +16,8 @@
   gaa = "git add --all";
 
   # Tmux
-  t = "app2unit -- tmux";
+  # t = "app2unit -- tmux";
+  t = "tmux";
 
   # Syncing
   odsync = "onedrive --sync";
@@ -42,14 +43,16 @@
   goto = "source";
   open = "xdg-open";
   valias = "vim $HOME/Git/vicnotor/nixos/modules/home-manager/toggleable/zsh/aliases.nix";
-  view = "app2unit -- qimgv";
+  # view = "app2unit -- qimgv";
+  view = "qimgv";
   ev = "silent evince";
   thu = "silent thunar .";
   R = "R --save --quiet";
   pf = "fd --type f | fzf | xargs nvim";
   cp = "cp -v";
   mv = "mv -v";
-  godot = "app2unit -- godot4 --display-driver wayland";
+  # godot = "app2unit -- godot4 --display-driver wayland";
+  godot = "godot4 --display-driver wayland";
   batterystatus = "acpi";
   vpak = "nvim $HOME/Git/vicnotor/nixos/modules/home-manager/always/packages/default.nix";
   vrpak = "nvim $HOME/Git/vicnotor/nixos/modules/home-manager/toggleable/r/default.nix";

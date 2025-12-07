@@ -28,7 +28,8 @@ CustomMouseArea {
   onClicked: event => {
     switch (event.button) {
     case Qt.LeftButton:
-      Quickshell.execDetached(["sh", "-c", "app2unit -- pavucontrol"]);
+      // Quickshell.execDetached(["sh", "-c", "app2unit -- pavucontrol"]);
+      Quickshell.execDetached(["sh", "-c", "pavucontrol"]);
       break;
     case Qt.RightButton:
       Audio.osdActive = false;

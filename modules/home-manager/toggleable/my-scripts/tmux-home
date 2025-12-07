@@ -21,8 +21,8 @@ new_session() {
 }
 
 new_session_systemd() {
-    # Ensure a shell is started (bash or sh)
-    app2unit -- tmux new-session -s "$1" -c "$2" "$SHELL"
+    # app2unit -- tmux new-session -s "$1" -c "$2" "$SHELL"
+    tmux new-session -s "$1" -c "$2" "$SHELL"
 }
 
 if has_session "$name"; then

@@ -5,7 +5,7 @@
 }: {
   environment.systemPackages = with pkgs; [
     acpi # For showing battery status (useful in tty)
-    app2unit
+    # app2unit
     btop # New htop
     distrobox # Escape route
     efibooteditor

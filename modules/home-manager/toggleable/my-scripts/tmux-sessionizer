@@ -157,7 +157,8 @@ new_session() {
 }
 
 new_session_systemd() {
-    app2unit -- tmux new-session -s $1 -c $2 $3
+    # app2unit -- tmux new-session -s $1 -c $2 $3
+    tmux new-session -s $1 -c $2 $3
     eval $hook
 }
 

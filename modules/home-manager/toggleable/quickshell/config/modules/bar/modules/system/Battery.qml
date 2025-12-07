@@ -23,7 +23,8 @@ MouseArea {
   onClicked: event => {
     switch (event.button) {
     case Qt.LeftButton:
-      Quickshell.execDetached(["sh", "-c", "app2unit -- taskmanager"]);
+      // Quickshell.execDetached(["sh", "-c", "app2unit -- taskmanager"]);
+      Quickshell.execDetached(["sh", "-c", "taskmanager"]);
       break;
     }
     event.accepted = true;

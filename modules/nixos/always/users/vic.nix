@@ -13,7 +13,7 @@
       users.vic = {
         isNormalUser = true;
         home = "/home/vic";
-        extraGroups = ["wheel" "networkmanager"]; # wheel ‘sudo’ for the user
+        extraGroups = ["wheel"]; # wheel ‘sudo’ for the user
         initialPassword = "password";
       };
     };
