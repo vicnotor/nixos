@@ -24,6 +24,7 @@ in {
       hyprpaper
       inputs.hyprshutdown.packages.${pkgs.stdenv.hostPlatform.system}.default
       hyprlock
+      hypridle
     ];
   };
 }

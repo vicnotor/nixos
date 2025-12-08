@@ -35,8 +35,6 @@
       # pkgs.app2unit
     ];
 
-    services.hypridle.enable = true;
-
     systemd = {
       services = {
         "NetworkManager-wait-online" = {
