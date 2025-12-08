@@ -10,19 +10,11 @@
     hyprland.url = "github:hyprwm/Hyprland";
     hyprpolkitagent = {
       url = "github:hyprwm/hyprpolkitagent";
-      inputs = {
-        nixpkgs.follows = "hyprland/nixpkgs";
-        systems.follows = "hyprland/systems";
-        hyprutils.follows = "hyprland/hyprutils";
-      };
+      inputs.nixpkgs.follows = "hyprland/nixpkgs";
     };
-    hyprland-qtutils = {
-      url = "github:hyprwm/hyprland-qtutils";
-      inputs = {
-        nixpkgs.follows = "hyprland/nixpkgs";
-        systems.follows = "hyprland/systems";
-        hyprland-qt-support.follows = "hyprpolkitagent/hyprland-qt-support";
-      };
+    hyprland-guiutils = {
+      url = "github:hyprwm/hyprland-guiutils";
+      inputs.nixpkgs.follows = "hyprland/nixpkgs";
     };
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
@@ -30,14 +22,11 @@
     };
     hyprpaper = {
       url = "github:hyprwm/hyprpaper";
-      inputs = {
-        nixpkgs.follows = "hyprland/nixpkgs";
-        systems.follows = "hyprland/systems";
-        hyprgraphics.follows = "hyprland/hyprgraphics";
-        hyprutils.follows = "hyprland/hyprutils";
-        hyprlang.follows = "hyprland/hyprlang";
-        hyprwayland-scanner.follows = "hyprland/hyprwayland-scanner";
-      };
+      inputs.nixpkgs.follows = "hyprland/nixpkgs";
+    };
+    hyprshutdown = {
+      url = "github:hyprwm/hyprshutdown";
+      inputs.nixpkgs.follows = "hyprland/nixpkgs";
     };
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     stylix = {

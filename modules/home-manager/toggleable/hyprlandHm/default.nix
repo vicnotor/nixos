@@ -24,6 +24,7 @@ in {
       hyprpicker # Color picker
       hyprprop # xprop for Hyprland
       inputs.hyprpaper.packages.${pkgs.stdenv.hostPlatform.system}.default
+      inputs.hyprshutdown.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
 
     # services.hyprpaper = {
