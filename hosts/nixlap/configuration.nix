@@ -5,7 +5,7 @@
     "${
       builtins.fetchTarball {
         url = "https://github.com/nix-community/disko/archive/master.tar.gz";
-        sha256 = "sha256:1zkj08izsxlkndnhnfli1sbblissd7swhpn20hpvdcrlpijz1yzj";
+        sha256 = "sha256:0ppaj3kyj6b1fg8pqh332d5hcrmhrpw7cmn2p6qbw0bw37fmrb0g";
       }
     }/module.nix"
     ./disk-config.nix
