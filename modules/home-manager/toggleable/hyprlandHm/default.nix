@@ -25,15 +25,5 @@ in {
       inputs.hyprshutdown.packages.${pkgs.stdenv.hostPlatform.system}.default
       hyprlock
     ];
-
-    # services.hyprpaper = {
-    #   enable = true;
-    #   package = inputs.hyprpaper.packages.${pkgs.stdenv.hostPlatform.system}.default;
-    #   settings = {
-    #     # CHANGE THIS FOR DEFAULT WALLPAPER, ALONG WITH $HOME/Git/vicnotor/nixos/modules/home-manager/toggleable/zsh/default.nix
-    #     preload = ["${home}/personal/Pictures/wallpapers/cats.jpg"];
-    #     wallpaper = [",${home}/personal/Pictures/wallpapers/cats.jpg"];
-    #   };
-    # };
   };
 }

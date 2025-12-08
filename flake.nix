@@ -8,22 +8,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprland.url = "github:hyprwm/Hyprland";
-    hyprpolkitagent = {
-      url = "github:hyprwm/hyprpolkitagent";
-      inputs.nixpkgs.follows = "hyprland/nixpkgs";
-    };
-    hyprland-guiutils = {
-      url = "github:hyprwm/hyprland-guiutils";
-      inputs.nixpkgs.follows = "hyprland/nixpkgs";
-    };
-    hyprland-plugins = {
-      url = "github:hyprwm/hyprland-plugins";
-      inputs.hyprland.follows = "hyprland";
-    };
-    hyprpaper = {
-      url = "github:hyprwm/hyprpaper";
-      inputs.nixpkgs.follows = "hyprland/nixpkgs";
-    };
     hyprshutdown = {
       url = "github:hyprwm/hyprshutdown";
       inputs.nixpkgs.follows = "hyprland/nixpkgs";

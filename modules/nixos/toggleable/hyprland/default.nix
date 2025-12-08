@@ -31,10 +31,11 @@
     };
 
     environment.systemPackages = [
-      inputs.hyprpolkitagent.packages.${pkgs.stdenv.hostPlatform.system}.default
-      inputs.hyprland-guiutils.packages.${pkgs.stdenv.hostPlatform.system}.default
+      pkgs.hyprpolkitagent
       # pkgs.app2unit
     ];
+
+    services.hypridle.enable = true;
 
     systemd = {
       services = {
@@ -52,7 +53,7 @@
           after = ["graphical-session.target"];
           serviceConfig = {
             Type = "simple";
-            ExecStart = "${inputs.hyprpolkitagent.packages.${pkgs.stdenv.hostPlatform.system}.default}/libexec/hyprpolkitagent";
+            ExecStart = "${pkgs.hyprpolkitagent}/libexec/hyprpolkitagent";
             Restart = "on-failure";
             RestartSec = 1;
             TimeoutStopSec = 10;
