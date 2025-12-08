@@ -90,7 +90,7 @@ Scope {
                 Audio.toggleMute();
                 break;
               case Qt.MiddleButton:
-                Audio.setVolume(0.25);
+                Audio.setVolume(0.24);
                 break;
               }
               event.accepted = true;
@@ -134,7 +134,7 @@ Scope {
                 Audio.toggleMicMute();
                 break;
               case Qt.MiddleButton:
-                Audio.setMicVolume(0.25);
+                Audio.setMicVolume(0.24);
                 break;
               }
               event.accepted = true;
