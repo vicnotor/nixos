@@ -14,17 +14,16 @@ in {
 
   config = lib.mkIf config.hyprlandHmModule.enable {
     home.file = {
-      ".config/hypr/hyprland.conf".source = config.lib.file.mkOutOfStoreSymlink "${home}/Git/vicnotor/nixos/modules/home-manager/toggleable/hyprlandHm/hyprland.conf";
-      ".config/hypr/conf".source = config.lib.file.mkOutOfStoreSymlink "${home}/Git/vicnotor/nixos/modules/home-manager/toggleable/hyprlandHm/conf";
-      ".config/hypr/hyprpaper.conf".source = config.lib.file.mkOutOfStoreSymlink "${home}/Git/vicnotor/nixos/modules/home-manager/toggleable/hyprlandHm/hyprpaper.conf";
+      ".config/hypr".source = config.lib.file.mkOutOfStoreSymlink "${home}/Git/vicnotor/nixos/modules/home-manager/toggleable/hyprlandHm";
     };
 
     home.packages = with pkgs; [
       grimblast # Hyprland wrapper for grim and slurp
       hyprpicker # Color picker
       hyprprop # xprop for Hyprland
-      inputs.hyprpaper.packages.${pkgs.stdenv.hostPlatform.system}.default
+      hyprpaper
       inputs.hyprshutdown.packages.${pkgs.stdenv.hostPlatform.system}.default
+      hyprlock
     ];
 
     # services.hyprpaper = {
