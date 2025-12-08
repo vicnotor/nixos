@@ -18,7 +18,7 @@
     ./toggleable/git
     ./toggleable/gtk
     ./toggleable/htop
-    ./toggleable/hyprlandHm
+    ./toggleable/hypr
     ./toggleable/js
     ./toggleable/latex
     ./toggleable/libreoffice
@@ -56,7 +56,7 @@
   fastfetchModule.enable = lib.mkDefault true;
   fzfModule.enable = lib.mkDefault true;
   gitModule.enable = lib.mkDefault true;
-  hyprlandHmModule.enable = lib.mkDefault true;
+  hyprModule.enable = lib.mkDefault true;
   jsModule.enable = lib.mkDefault true;
   latexModule.enable = lib.mkDefault true;
   libreofficeModule.enable = lib.mkDefault true;

@@ -23,7 +23,7 @@ in {
         plymouth.enable = false;
       };
       polarity = "dark";
-      # CHANGE THIS FOR DEFAULT WALLPAPER, ALONG WITH $HOME/Git/vicnotor/nixos/modules/home-manager/toggleable/hyprlandHm/default.nix
+      # CHANGE THIS FOR DEFAULT WALLPAPER, ALONG WITH $HOME/Git/vicnotor/nixos/modules/home-manager/toggleable/hypr/hyprpaper.conf
       image = ./cats.jpg;
       base16Scheme = customSchemeFile;
       fonts = {

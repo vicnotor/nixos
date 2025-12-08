@@ -62,7 +62,7 @@
         VISUAL = "nvim";
         FILE_PICKER = "thunar";
 
-        # CHANGE THIS FOR DEFAULT WALLPAPER, ALONG WITH $HOME/Git/vicnotor/nixos/modules/home-manager/toggleable/hyprlandHm/default.nix
+        # CHANGE THIS FOR DEFAULT WALLPAPER, ALONG WITH $HOME/Git/vicnotor/nixos/modules/home-manager/toggleable/hypr/hyprpaper.conf
         WPDEFAULT = "${config.home.homeDirectory}/personal/Pictures/wallpapers/cats.jpg";
 
         # GIO_EXTRA_MODULES = "${pkgs.gvfs}/lib/gio/modules"; # potential thunar fix if mounting is bugged
