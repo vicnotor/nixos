@@ -19,6 +19,7 @@
     ./toggleable/dolphin
     ./toggleable/ente-auth
     ./toggleable/fonts
+    ./toggleable/fwupd
     ./toggleable/graphics
     ./toggleable/hyprland
     ./toggleable/keyd
@@ -48,6 +49,7 @@
   dockerModule.enable = lib.mkDefault true;
   ente-authModule.enable = lib.mkDefault true;
   fontsModule.enable = lib.mkDefault true;
+  fwupdModule.enable = lib.mkDefault true;
   graphicsModule.enable = lib.mkDefault true;
   hyprlandModule.enable = lib.mkDefault true;
   keydModule.enable = lib.mkDefault true;
