@@ -3,6 +3,7 @@
     loader.systemd-boot = {
       enable = true;
       configurationLimit = 100;
+      consoleMode = "max";
     };
     loader.efi.canTouchEfiVariables = true;
     extraModprobeConfig = ''
