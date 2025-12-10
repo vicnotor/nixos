@@ -80,18 +80,18 @@
           inputs.stylix.nixosModules.stylix
         ];
       };
-      nixvirt = nixpkgs.lib.nixosSystem {
+      neptr = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         inherit system;
         modules = [
-          ./hosts/nixvirt/configuration.nix
+          ./hosts/neptr/configuration.nix
           home-manager.nixosModules.home-manager
           {
             home-manager = {
               extraSpecialArgs = {inherit inputs;};
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.vic = import ./hosts/nixvirt/home.nix;
+              users.vic = import ./hosts/neptr/home.nix;
               backupFileExtension = "hmbak";
             };
           }

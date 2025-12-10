@@ -11,7 +11,7 @@
     ./disk-config.nix
   ];
 
-  networking.hostName = "nixvirt";
+  networking.hostName = "neptr";
   system.stateVersion = "25.05"; # WARNING: CHANGE BASED ON NIXOS INSTALL ISO VERSION
 
   nix.settings = {
