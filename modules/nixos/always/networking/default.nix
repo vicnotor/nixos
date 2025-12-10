@@ -13,4 +13,5 @@
   };
   users.users.vic.extraGroups = ["networkmanager"];
   environment.systemPackages = [pkgs.unixtools.ifconfig];
+  systemd.network.wait-online.enable = false;
 }
