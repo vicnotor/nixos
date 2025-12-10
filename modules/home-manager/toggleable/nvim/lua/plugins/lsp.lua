@@ -148,7 +148,7 @@ return {
             },
             options = {
               nixos = {
-                expr = '(builtins.getFlake "/home/vic/Git/vicnotor/nixos").nixosConfigurations.nixlap.options',
+                expr = '(builtins.getFlake "/home/vic/Git/vicnotor/nixos").nixosConfigurations.jake.options',
               },
             },
           },

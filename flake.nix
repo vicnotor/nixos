@@ -62,18 +62,18 @@
       homeManagerModules = import ./modules/home-manager {inherit inputs;};
 
       # Hosts
-      nixlap = nixpkgs.lib.nixosSystem {
+      jake = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         inherit system;
         modules = [
-          ./hosts/nixlap/configuration.nix
+          ./hosts/jake/configuration.nix
           home-manager.nixosModules.home-manager
           {
             home-manager = {
               extraSpecialArgs = {inherit inputs;};
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.vic = import ./hosts/nixlap/home.nix;
+              users.vic = import ./hosts/jake/home.nix;
               backupFileExtension = "hmbak";
             };
           }
