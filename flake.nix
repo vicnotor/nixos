@@ -33,17 +33,14 @@
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    compose2nix = {
-      url = "github:aksiksi/compose2nix";
+    disko = {
+      url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # Might use in future:
     # nixpkgs-stable.url = "github:NixOS/nixpkgs?ref=nixos-25.05";
-    # waybar.url = "github:Alexays/Waybar";
     # ghostty.url = "github:ghostty-org/ghostty";
-    # caelestia.url = "github:caelestia-dots/shell";
-    # walker.url = "github:abenz1267/walker";
     # wezterm = {
     #   url = "github:wezterm/wezterm?dir=nix";
     #   inputs.nixpkgs.follows = "nixpkgs";

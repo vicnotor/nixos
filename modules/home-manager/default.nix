@@ -37,7 +37,6 @@
     ./toggleable/stylixHm
     ./toggleable/thunarHm
     ./toggleable/tmux
-    ./toggleable/walker
     ./toggleable/waybar
     ./toggleable/wezterm
     ./toggleable/zellij
@@ -84,7 +83,6 @@
   htopModule.enable = lib.mkDefault false;
   pointerCursorModule.enable = lib.mkDefault false; # Not needed because of Stylix
   snes9xModule.enable = lib.mkDefault false;
-  walkerModule.enable = lib.mkDefault false;
   waybarModule.enable = lib.mkDefault false;
   weztermModule.enable = lib.mkDefault false;
   zellijModule.enable = lib.mkDefault false;

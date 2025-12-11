@@ -1,13 +1,8 @@
-{...}: {
+{inputs, ...}: {
   imports = [
     ./hardware-configuration.nix
     ../../modules/nixos
-    "${
-      builtins.fetchTarball {
-        url = "https://github.com/nix-community/disko/archive/master.tar.gz";
-        sha256 = "sha256:04y9xcczbd6lyk5rqilkvhw4dd1w01vzrk602pbd4c4bv5b33zwa";
-      }
-    }/module.nix"
+    inputs.disko.nixosModules.disko
     ./disk-config.nix
   ];
 

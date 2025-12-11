@@ -2,7 +2,6 @@
   lib,
   config,
   pkgs,
-  inputs,
   ...
 }: {
   options = {
@@ -21,7 +20,7 @@
       };
     };
     environment.systemPackages = [
-      inputs.compose2nix.packages.${pkgs.stdenv.hostPlatform.system}.default
+      pkgs.compose2nix
     ];
   };
 }
