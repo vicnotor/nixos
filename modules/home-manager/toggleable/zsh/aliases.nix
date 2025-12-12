@@ -39,7 +39,7 @@
   # Nice ones
   ":q" = "exit";
   off = "hyprshutdown -t 'Shutting down...' --post-cmd 'systemctl poweroff'";
-  reboot = "hyprshutdown -t 'Restarting...' --post-cmd 'systemctl reboot";
+  reboot = "hyprshutdown -t 'Restarting...' --post-cmd 'systemctl reboot'";
   hibernate = "systemctl hibernate";
   goto = "source";
   open = "xdg-open";

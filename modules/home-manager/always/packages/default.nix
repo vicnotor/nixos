@@ -33,6 +33,7 @@
     qbittorrent
     signal-desktop
     spotify
+    spotify-qt
     sshfs
     tree-sitter
     thunderbird-latest # Mail client

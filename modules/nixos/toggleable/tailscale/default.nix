@@ -16,6 +16,7 @@
     };
 
     networking.firewall = {
+      allowedTCPPorts = [22];
       allowedUDPPorts = [config.services.tailscale.port];
       trustedInterfaces = ["tailscale0"];
     };
